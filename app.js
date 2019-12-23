@@ -27,4 +27,8 @@ $( function() {
 	    event.preventDefault();
 	});
 
+    $("social__link").click(function(event){
+        event.preventDefault();
+    });
+
 });

@@ -204,6 +204,10 @@
 
 	}
 
+	.number {
+		cursor: text;
+	}
+
 	.social__link__icon {
 		width: 60px;
 		padding-right: 10px;

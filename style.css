@@ -53,6 +53,7 @@
 		background: #373434 url("img/header/leftbg.png");
 		background-position: 200px -60px;
 	}
+		
 
 	.avatar {
 		width: 225px;
@@ -272,6 +273,8 @@
 		padding: 4px 0;
 
 		transition: .2s all linear;
+
+		position: relative;
 	}
 
 	.skill__item:hover {
@@ -315,6 +318,17 @@
 
 	.skill__level.js {
 		background: linear-gradient(to right, #363434 26%, #fff 0);
+
+		animation-name: opacity; 
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	@keyframes opacity {
+		0% {opacity: .6}
+		50% {opacity: 1}
+		100% {opacity: .6}
 	}
 
 	.skill__level.jquery {
@@ -377,6 +391,29 @@
 		width: auto;
 		height: 100%;
 		max-width: 50%;
+	}
+
+	.skill__item__loading {
+		width: 25px;
+		height: 25px;
+
+		position: absolute;
+		top: 17%;
+		right: 0;
+		z-index: 1;
+		fill: #000;
+
+		animation-name: rotation; 
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+
+	}
+
+	@keyframes rotation {
+		from {transform: rotateZ(0deg);}
+		to {transform: rotateZ(360deg);}
 	}
 
 /* Portfolio (potrolio)

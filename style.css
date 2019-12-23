@@ -1,0 +1,576 @@
+/* Global
+============================================*/
+	*,
+	*:after,
+	*:before {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 1.3;
+
+		background-color: #2a2928;
+	}
+
+	h1, h2, h3, h4, h5, h6, p {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	svg {
+		width: 30px;
+		height: 30px;
+
+		transition: .1s all linear;
+	}
+
+/* Container
+============================================*/
+	.container {
+		margin: 0 auto;
+
+		width: 100%;
+		max-width: 1300px;
+		/*2550/2=1300*/
+	}
+
+/* Header
+============================================*/
+	.header-inner {
+		padding: 55px 25px 40px;
+		display: flex;
+
+		background: #373434 url("img/header/leftbg.png");
+		background-position: 200px -60px;
+	}
+
+	.avatar {
+		width: 225px;
+		height: 225px;
+
+		overflow: hidden;
+		position: relative;
+
+		border-radius: 10px;
+		opacity: 1;
+
+		border: 3px #fff solid;
+	}
+
+	.photo {
+		width: 100%;
+		height: auto;
+		position: relative;
+		top: 45%;
+
+		transform: translateY(-55%);
+
+	}
+
+	.author {
+		display: flex;
+		flex-direction: column;
+
+		padding-left: 20px;
+	}
+
+	.name {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		font-size: 28px;
+		color: #e7e7e7;
+	
+	}
+
+	.surname {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		color: #e7e7e7;
+		font-size: 28px;
+	
+		padding-left: 20px;
+	}
+
+	.speciality-first {
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		color: #e7e7e7;
+		font-size: 23px;
+
+		margin-top: 15px;
+
+	}
+
+	.speciality-last {
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		color: #e7e7e7;
+		font-size: 23px;
+
+		padding-left: 20px;
+
+	}
+
+	.speciality-level {
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		color: #e7e7e7;
+		font-size: 23px;
+
+		padding-left: 40px;
+	}
+
+/* BiographySocial (biosoc)
+============================================*/
+	.biogsoc-inner {
+		display: flex;
+		background-color: #fff;
+	}
+
+	.biog {
+		width: 70%;
+		padding: 25px;
+		position: relative;
+	}
+
+	.biog__title {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		color: #333333;
+
+	}
+
+	.biog__text {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		font-size: 15px;
+		color: #3f3f3f;
+		letter-spacing: 1.3px;
+		line-height: 1.7;
+
+		margin-top: 10px;
+	}
+
+	.biog__line {
+		width: 2px;
+		height: 80%;
+
+		background-color: #e4e4e3;
+		color: transparent;
+		font-size: 0;
+
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+	}
+
+	.social {
+		width: 30%;
+		padding: 25px 25px 25px 6px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.social__link {
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		font-size: 15px;
+		color: #3f3f3f;
+
+		padding: 0 5px 0;
+
+		transition: .2s all linear;
+
+	}
+
+	.social__link__icon {
+		width: 60px;
+		padding-right: 10px;
+		text-align: center;
+	}
+
+
+	.social__link--twoopart {
+		color: #b1b1b0;
+		float: right;
+	}
+
+	.social__link__icon .facebook {
+		height: 25px;
+		max-width: 25px;
+	}
+
+	.social__link:hover {
+		background-color: #cacaca;
+		text-decoration: underline;
+	}
+
+	.social__link:hover .mail {
+		fill: red;
+	}
+
+	.social__link:hover .facebook {
+		fill: #29487d;
+	}
+
+	.social__link:hover .viber {
+		fill: #7d579b;
+	}
+
+	.social__link:hover .telegramm {
+		fill: #4976dc;
+	}
+
+/* Skills-Interest (skillinter)
+============================================*/
+	.skillinter-inner {
+		background-color: #fff;
+
+		display: flex;
+	}
+
+	.skill {
+		width: 50%;
+		padding: 0 25px;
+
+	}
+
+	.skill__title {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		color: #333333;
+
+		padding-bottom: 20px;
+	}
+
+	.skill__item {
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		padding: 4px 0;
+
+		transition: .2s all linear;
+	}
+
+	.skill__item:hover {
+		background-color: #cacaca;
+	}
+
+	.skill__name {
+		width: 50%;
+
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 20px;
+		color: #333333;
+
+		padding: 0 0 0 10px;
+
+	}
+
+	.skill__level {
+		width: 50%;
+		height: 12px;
+
+		border: 2px #363434 solid;
+		font-size: 0;
+		color: transparent;
+		margin: 0 30px;
+
+	}
+
+	.skill__level.html {
+		background: linear-gradient(to right, #363434 80%, #fff 0);
+	}
+	
+	.skill__level.css {
+		background: linear-gradient(to right, #363434 77%, #fff 0);
+	}
+	
+	.skill__level.photoshop {
+		background: linear-gradient(to right, #363434 85%, #fff 0);
+	}
+
+	.skill__level.js {
+		background: linear-gradient(to right, #363434 26%, #fff 0);
+	}
+
+	.skill__level.jquery {
+		background: linear-gradient(to right, #363434 30%, #fff 0);
+	}
+
+	.skill__level.eng {
+		background: linear-gradient(to right, #363434 68%, #fff 0);
+	}
+	
+	.skill__level.learnab {
+		background: linear-gradient(to right, #363434 95%, #fff 0);
+	}
+	
+	.interest {
+		width: 50%;
+		padding: 0 25px;
+
+	}
+
+	.interest__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		margin-top: -25px;
+	}
+
+	.interest__item {
+		width: 160px;
+		height: 140px;
+
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		transition: .2s all linear;
+
+		margin-top: 10px;
+	}
+
+	.interest__item:hover {
+		background-color: #cacaca;
+	}
+
+	.interest__item:hover .interest__item-svg {
+		height: 145px;
+	}
+
+	.interest__name {
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 20px;
+		color: #333333;
+
+		margin-top: -30px;
+	}
+		
+
+	.interest__item-svg {
+		width: auto;
+		height: 100%;
+		max-width: 50%;
+	}
+
+/* Portfolio (potrolio)
+============================================*/
+	.potrolio-inner {
+		background-color: #fff;
+		padding-top: 10px;
+		padding-bottom: 60px;
+
+	}
+
+	.portfolio__title {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		color: #333333;
+		text-align: center;
+
+		padding: 20px 0;
+	}
+	
+	.potrolio-works {
+		display: flex;
+		justify-content: center;
+	}	
+
+	.works__item {
+		width: 50%;
+		height: 50%;
+	
+		margin: 0 20px;
+
+		transition: .2s all linear;
+
+		background-color: #000;
+
+		position: relative;
+	}
+
+	.works__item img {
+		width: 100%;
+		display: block;
+
+		transition: .2s all linear;
+	}
+
+	.works__item:hover {
+		transform: translate3d(-10px, -10px, 0);
+		box-shadow: #cacaca 10px 10px 5px 5px;
+	}
+
+	.works__item:hover img {
+		opacity: .3;
+	}
+
+	.potrolio-about {
+		position: absolute;
+		top: 12%;
+		left: 0;
+		z-index: 1;
+
+		width: 100%;
+
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 20px;
+		color: #fff;
+		text-align: center;
+	
+		opacity: 0;
+
+		transition: opacity .2s linear;
+	}
+
+	.potrolio-about__title {
+		padding-bottom: 10px;
+	}
+	
+	.potrolio-about__info {
+		padding-bottom: 10px;
+
+		display: flex;
+	}
+
+	.pai__property {
+		width: 50%;
+
+		font-weight: 700;
+
+		text-align: right;
+	}
+
+	.pai__value {
+		width: 50%;
+
+		text-align: left;
+	}
+
+
+	.potrolio-about__link {
+		text-decoration: underline;
+		transition: all .2s linear;
+
+
+	}
+
+	.potrolio-about__link:hover {
+		font-size: 21px;
+	}
+
+	.works__item:hover .potrolio-about {
+		opacity: 1;
+	}
+
+	.potrolio-continue {
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 20px;
+		color: #333333;
+		text-align: center;
+
+		margin: 10px auto;
+
+		cursor: progress;
+
+		float: center;
+
+		width: 100%;
+		max-width: 240px;
+	}
+
+/* Footer
+============================================*/
+	.footer-inner {
+		background-color: #373434;
+
+		display: flex;
+		justify-content: center;
+
+		padding: 20px 0;
+
+		position: relative;
+	}
+
+	.footer-btn {
+		padding: 10px 10px;
+		background-color: #c0c0c0;
+		cursor: pointer;
+		border-radius: 5px;
+		transition: all .1s linear;
+
+	}
+
+	.footer-btn:hover {
+		background-color: #aaaaaa;
+	}
+
+
+	.footer-btn:active {
+		background-color: #494949;
+	}
+
+	.social.footer {
+		display: none;
+
+		position: fixed;
+		top: 30%;
+		left: 35%;
+		z-index: 3;
+	}
+
+	.footer-btn.active .social.footer {
+		display: block;
+		background-color: #fff;
+	}
+
+	.antifon {
+		display: none;
+		position: fixed;
+	    top: 0;
+	    right: 0;
+	    z-index: 2;
+	    width: 100%;
+	    height: 100%;
+	    background-color: #000;
+	    opacity: .7;
+	    cursor: default;
+	}
+
+	.footer-btn.active .antifon {
+		display: block;
+	}
+
+
+
+

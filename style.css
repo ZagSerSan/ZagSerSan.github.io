@@ -435,10 +435,6 @@
 		margin-top: 10px;
 	}
 
-	.interest__item:hover .interest__item-svg {
-		height: 145px;
-	}
-
 	.interest__name {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 500;

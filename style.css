@@ -435,10 +435,6 @@
 		margin-top: 10px;
 	}
 
-	.interest__item:hover {
-		background-color: #cacaca;
-	}
-
 	.interest__item:hover .interest__item-svg {
 		height: 145px;
 	}
@@ -1035,6 +1031,10 @@
     	transform: translateX(-13em);
     	padding: 10px 10px 10px 0px;
 	}
+	}
+
+	.interest__item:hover {
+	    
 	}
 
 /* MEDIA 360

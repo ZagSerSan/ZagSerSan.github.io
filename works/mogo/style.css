@@ -667,13 +667,15 @@
 	.ai__header {
 		display: flex;
 		align-items: center;
-
 		position: relative;
-
 		padding: 15px;
-
 		border: 1px #e5e5e5 solid;
+		cursor: pointer;
 
+	}
+
+	.ai__header:active {
+		background-color: #f8f8f8;
 	}
 
 	.ai__header img {
@@ -1992,7 +1994,7 @@
 	.testimon__item {
     	flex-direction: column;
 	}
-	
+
 	.testimon-content {
 	    padding-left: 0;
 	    padding-top: 20px;

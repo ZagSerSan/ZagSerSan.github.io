@@ -9,18 +9,23 @@ $(function() {
 	let introH = intro.innerHeight();
 	let scrollPos = $(window).scrollTop();
 
+	checkscroll (scrollPos)
+
 	$(window).on('scroll load', function() {
 		scrollPos = $(this).scrollTop();
 		scrollPos += 40;
 
+		checkscroll (scrollPos)
+	});
+
+	function checkscroll (scrollPos) {
 		if (scrollPos > introH) {
 			header.addClass('fixed');
 		}
 		else {
 			header.removeClass('fixed');
 		}
-	});
-
+	}
 
 
 //btn
@@ -39,6 +44,7 @@ $(function() {
 		
 		let elementId = $(this).data('scroll');
 		let elementOffset = $(elementId).offset().top;
+		let elemenH = $(elementId).innerHeight();
 
 		$("html, body").animate({
 			scrollTop: elementOffset -35

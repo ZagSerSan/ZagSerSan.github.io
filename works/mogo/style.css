@@ -2461,6 +2461,18 @@
 ==============================================*/
 	@media (max-width: 441px) {
 
+	.burger.active .nav {
+		flex-direction: column;
+		background: linear-gradient(to bottom, #c8706d, #e88582);
+		padding-bottom: 0;
+	}
+
+	.nav__link {
+    	text-align: center;
+    	font-size: 15px;
+    	padding-bottom: 5px; 
+	}
+
 	/* Intro */
 	.intro__suptitle {
 	    font-size: 28px;

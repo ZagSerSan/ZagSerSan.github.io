@@ -1,6 +1,6 @@
 $(function() {
 
-	// fixed header and burger menu
+// fixed header and burger menu
 
 	let header = $("#header");
 	let intro = $("#intro");
@@ -11,8 +11,6 @@ $(function() {
 		scrollPos = $(this).scrollTop();
 		scrollPos += 40;
 
-		console.log(scrollPos);
-
 		if (scrollPos > introH) {
 			header.addClass('fixed');
 		}
@@ -21,15 +19,14 @@ $(function() {
 		}
 	});
 
-	//btn
+//btn
 
 	let btn = $("#burger");
 	btn.click(function() {
 		btn.toggleClass('active');
 	});
 
-
-	// smooth scroll
+// smooth scroll
 
 	$("[data-scroll]").on('click load resize', function (event) {
 		event.preventDefault();
@@ -40,13 +37,10 @@ $(function() {
 		$("html, body").animate({
 			scrollTop: elementOffset -35
 		}, 1000);
-
-
 	});
 
+// clouse of scroll and tap
 
-
-	// clouse of scroll and tap
 	$(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
         let btn = $("#burger"); // определяем элемент, к которому будем применять условия 
         						//(можем указывать ID, класс либо любой другой идентификатор элемента)
@@ -61,5 +55,46 @@ $(function() {
             btn.removeClass("active");
         }
     });
+
+// fixed after line
+
+	let sau = $("#sau");
+	let sauH = sau.innerHeight();
+
+	let sauLink = $("#navLink");
+
+	let sauOffsetStart = sau.offset().top;
+	let sauOffsetEnd = sauOffsetStart + sauH;
+
+	$(window).on('scroll', function() {
+
+		if (scrollPos < sauOffsetStart) {
+			sau.removeClass('active');
+		}
+		else if (scrollPos > sauOffsetEnd) {
+			sauLink.removeClass('active');
+		}
+		else {
+			sauLink.addClass('active');
+		}
+
+	});
+
+// accordion
+
+	$("[data-collspace]").on('click', function(event) {
+		event.preventDefault();
+
+		$(this).toggleClass('active');
+
+	});
+
+	$("[data-slider]").slick({
+		infinite: true,
+		fade: false,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+
 
 });

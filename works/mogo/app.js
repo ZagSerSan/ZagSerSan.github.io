@@ -29,6 +29,23 @@ $(function() {
 	});
 
 
+	// smooth scroll
+
+	$("[data-scroll]").on('click load resize', function (event) {
+		event.preventDefault();
+		
+		let elementId = $(this).data('scroll');
+		let elementOffset = $(elementId).offset().top;
+
+		$("html, body").animate({
+			scrollTop: elementOffset -35
+		}, 1000);
+
+
+	});
+
+
+
 	// clouse of scroll and tap
 	$(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
         let btn = $("#burger"); // определяем элемент, к которому будем применять условия 

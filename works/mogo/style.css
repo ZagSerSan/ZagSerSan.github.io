@@ -2266,6 +2266,11 @@
     	margin-left: 0px;
 	}
 
+	.nav__link:after {
+		content: "";
+		display: none;
+	}
+
 	.burger {
 	    display: flex;
 	    flex-direction: row-reverse;

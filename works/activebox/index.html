@@ -3,7 +3,11 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans:700|Raleway:300,400,600,700&display=swap" rel="stylesheet">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ActiveBox</title>
 </head>
@@ -312,37 +316,41 @@
     <div class="reviews" id="reviews">
         <div class="container">
 
-            <div class="reviews__item">
 
-                <div class="reviews__photo">
-                    <img src="img/reviews/img1.png" alt="jenjinaa">
+
+            <div data-slider>
+                
+                <div>
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img src="img/reviews/img1.png" alt="jenjinaa">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="rc__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
+                            <div class="rc__subtitle">Susan Sims, Interaction Designer at XYZ</div>
+                            <div class="slider__btn"></div>
+
+                        </div><!-- /.reviews__content -->
+                    </div><!-- /.reviews__item -->
                 </div>
+                
+                <div>
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img src="img/reviews/img1.png" alt="jenjinaa">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="rc__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
+                            <div class="rc__subtitle">Susan Sims, Interaction Designer at XYZ</div>
+                            <div class="slider__btn"></div>
 
-                <div class="reviews__content">
-                    <div class="rc__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
-                    <div class="rc__subtitle">Susan Sims, Interaction Designer at XYZ</div>
-                    <div class="slider__btn"></div>
+                        </div><!-- /.reviews__content -->
+                    </div><!-- /.reviews__item -->
+                </div>
+                
 
-                    <div class="slider__circle">
-                        <svg class="slider__circle--item">
-                            <use xlink:href="#circle"></use>
-                        </svg>
-                        <svg class="slider__circle--item active">
-                            <use xlink:href="#circle"></use>
-                        </svg>
-                        <svg class="slider__circle--item">
-                            <use xlink:href="#circle"></use>
-                        </svg>
-                        <svg class="slider__circle--item">
-                            <use xlink:href="#circle"></use>
-                        </svg>
-                        <svg class="slider__circle--item">
-                            <use xlink:href="#circle"></use>
-                        </svg>
-                    </div><!-- /.slider__circle -->
-                </div><!-- /.reviews__content -->
-            </div><!-- /.reviews__item -->
-        
+            </div><!-- data-slider -->
+
         </div><!-- /.container -->
     </div><!-- /.reviews -->
 

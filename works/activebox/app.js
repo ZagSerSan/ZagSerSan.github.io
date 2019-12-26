@@ -7,8 +7,6 @@ $(function() {
 	let introH = intro.innerHeight();
 	let scrollPos = $(window).scrollTop();
 
-	checkscroll(scrollPos, introH);
-
 	$(window).on("scroll load resize", function() {
 		introH = intro.innerHeight();
 		scrollPos = $(this).scrollTop();
@@ -70,7 +68,16 @@ $(function() {
 
 	let navPos = $("#burger-nav");
 
-		
+
+// slider
+	$("[data-slider]").slick({
+		infinite: true,
+		fade: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+	});
 
 
 });

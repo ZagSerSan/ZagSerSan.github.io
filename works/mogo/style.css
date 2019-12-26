@@ -1970,6 +1970,11 @@
 
 	.what__item {
     	width: 100%;
+    	padding-bottom: 0;
+	}
+
+	.what__item.photo {
+		padding-bottom: 50px;
 	}
 	
 	.ai__content {
@@ -2516,7 +2521,7 @@
 	.serv-content {
 	    padding-left: 5px;
 	}
-	
+
 	/* testimon */
 	.testimon-inner {
 	    padding: 15px 15px;

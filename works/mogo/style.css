@@ -2459,7 +2459,7 @@
 
 /* MEDIA 440px
 ==============================================*/
-	@media (max-width: 441px) {
+	@media (max-width: 491px) {
 
 	.burger.active .nav {
 		flex-direction: column;

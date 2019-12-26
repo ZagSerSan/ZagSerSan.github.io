@@ -169,12 +169,12 @@
 	</svg>
 
 <!-- Header -->
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container">
 			<div class="header-inner">
 				<div class="logo">MoGo</div>
 
-				<nav class="nav">
+				<nav class="nav" id="nav">
 					<a href="#" class="nav__link" id="navLink">about</a>
 					<a href="#" class="nav__link" id="navLink">service</a>
 					<a href="#" class="nav__link" id="navLink">work</a>
@@ -192,17 +192,29 @@
 					</a>
 				</nav>
 
-				<div class="nav-burger">
-					<div class="nav-burger__item">
-						line
-					</div>
+				<div class="burger active" id="burger">
+					<div class="burger__item">line</div>
+					<nav class="nav" id="nav">
+						<a href="#" class="nav__link" id="navLink">about</a>
+						<a href="#" class="nav__link" id="navLink">service</a>
+						<a href="#" class="nav__link" id="navLink">work</a>
+						<a href="#" class="nav__link" id="navLink">blog</a>
+						<a href="#" class="nav__link" id="navLink">contact</a>
+						<a href="#" class="nav__link" id="navLink">
+							<svg><use xlink:href="#cart"></use></svg>
+						</a>
+						<a href="#" class="nav__link" id="navLink">
+							<svg><use xlink:href="#search"></use></svg>
+						</a>
+					</nav>
+				
 				</div>
 			</div><!-- /.header-inner -->
 		</div><!-- /.container -->
 	</header><!-- /.header -->
 
 <!-- Intro -->
-	<div class="intro">
+	<div class="intro" id="intro">
 		<div class="container height">
 			<div class="intro-inner">
 				<div class="intro-header">

@@ -7,13 +7,6 @@ $(function() {
 	let introH = intro.innerHeight();
 	let scrollPos = $(window).scrollTop();
 
-	//button
-	let btn = $("#btnNav").click(function() {
-		btn.toggleClass('active');
-	});
-
-	let navPos = $("#burger-nav");
-
 	checkscroll(scrollPos, introH);
 
 	$(window).on("scroll load resize", function() {
@@ -69,6 +62,13 @@ $(function() {
 		}, 700);
 
 	});
+
+	//button
+	let btn = $("#btnNav").click(function() {
+		btn.toggleClass('active');
+	});
+
+	let navPos = $("#burger-nav");
 
 		
 

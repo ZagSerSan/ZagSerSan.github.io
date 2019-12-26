@@ -191,6 +191,8 @@
 
 		position: relative;
 
+		transition: transform .1s linear;
+
 	}
 
 	.burger__item:after {
@@ -206,6 +208,8 @@
 		left: 0;
 		z-index: 1;
 
+		transition: transform .1s linear;
+
 	}
 
 	.burger__item:before {
@@ -220,7 +224,27 @@
 		top: 8px;
 		left: 0;
 		z-index: 1;
+		
+		transition: transform .1s linear;
 
+	}
+
+	.burger.active .burger__item {
+		content: "";
+
+		transform: rotateZ(45deg);	
+	}
+
+	.burger.active .burger__item:before {
+		content: "";
+		opacity: 0;
+		transition: transform .1s linear;
+	}
+
+	.burger.active .burger__item:after {
+		content: "";
+		top: 0;
+		transform: rotateZ(90deg);
 	}
 
 /* Intro

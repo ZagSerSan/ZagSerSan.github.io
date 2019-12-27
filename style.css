@@ -771,8 +771,10 @@
 	    left: 50%;
 	    z-index: 1;
 	    transition: all .2s linear;
-	    min-width: 333px;
-	    transform: translateX(-8.5em);
+		
+		width: 340px;
+
+	    transform: translate3d(-50%, 0, 0);
 
 	    opacity: 1;
 	}

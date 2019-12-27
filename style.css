@@ -896,11 +896,6 @@
     	font-size: 13px;
 
 	}
-
-	.social.footer {
-    	transform: translateX(-13em);
-	}
-
 	}
 
 /* MEDIA 510
@@ -941,12 +936,6 @@
 	.footer-btn {
     	font-size: 12px;
 	}
-
-
-	.social.footer {
-    	transform: translateX(-14em);
-	}
-
 	}
 
 /* MEDIA 430
@@ -1025,8 +1014,7 @@
 	}
 
 	.social.footer {
-		min-width: 293px;
-    	transform: translateX(-13em);
+		width: 290px;
     	padding: 10px 10px 10px 0px;
 	}
 	}

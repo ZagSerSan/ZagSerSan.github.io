@@ -1002,6 +1002,10 @@
 	    transform: translateX(-50%);
 	    color: #fff;
 
+	    font-family: 'Montserrat', sans-serif;
+	    font-weight: 400;
+	    font-size: 20px;
+
 	    opacity: 0;
 
 	    transition: all .2s linear;
@@ -1314,10 +1318,24 @@
 	    font-size: 17px;
 	}
 
+	.works__item--progress-img {
+       width: 40px;
+	}
+
+	.works__item.progress:hover .works__item--progress-img {
+	    top: 20%;
+	}
+
+	.works__item--progress-txt {
+		font-size: 18px;
+	}
+
     .potrolio-continue {
     	max-width: 170px;
     	font-size: 13px;
 	}
+
+	/*ftr*/
 
 	.footer-btn {
     	font-size: 11px;
@@ -1366,4 +1384,8 @@
 
 	.wpi--download-link {
 	    font-size: 15px;
+	}
+	
+	.works__item--progress-txt {
+		font-size: 16px;
 	}

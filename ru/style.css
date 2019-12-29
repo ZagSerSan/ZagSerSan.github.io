@@ -101,7 +101,7 @@
 	    overflow: hidden;
 	}
 
-	.enru-link.eng {
+	.enru-link.ru {
 		border: 1px #fff solid;
 	}
 
@@ -944,7 +944,7 @@
 		float: center;
 
 		width: 100%;
-		max-width: 240px;
+		max-width: 260px;
 
 		transition: background .2s linear;
 	}
@@ -1184,6 +1184,14 @@
 		display: flex;
 	}
 
+	.enru {
+    	justify-content: center;
+	}
+
+	.enru-link {
+    	margin: 5px 20px 10px;
+    }
+
 	.nav {
 		display: none;
 	}
@@ -1194,14 +1202,6 @@
 
 	.header-inner {
 	}
-
-	.enru {
-    	justify-content: center;
-	}
-
-	.enru-link {
-    	margin: 5px 20px 10px;
-    }
 
 	.logo {
 		display: block;

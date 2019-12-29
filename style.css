@@ -1378,6 +1378,10 @@
 	    padding-bottom: 0;
 	}
 
+	.potrolio-viewed {
+		font-size: 12px;
+	}
+
 	.work-adapt {
     	width: 30px;
 	}

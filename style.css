@@ -1083,6 +1083,8 @@
 
 	    animation: opacitys;
 		animation-duration: .5s;
+
+		margin: 0;
 	}
 
 	@keyframes opacitys {

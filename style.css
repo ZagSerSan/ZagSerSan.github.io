@@ -101,7 +101,7 @@
 	    overflow: hidden;
 	}
 
-	.enru-link.eng {
+	.enru-link.ru {
 		border: 1px #fff solid;
 	}
 
@@ -396,7 +396,7 @@
 	}
 
 	.biog {
-		width: 70%;
+		width: 100%;
 		padding: 25px 25px 0;
 		position: relative;
 	}
@@ -421,6 +421,16 @@
 		margin-top: 10px;
 	}
 
+	.txt-offset {
+		font-size: 6px;
+		color: transparent;
+		line-height: 1;
+	}
+
+	.float {
+		float: right;
+	}
+
 	.biog__line {
 		width: 2px;
 		height: 80%;
@@ -438,7 +448,10 @@
 
 	.social {
 		width: 30%;
-		padding: 25px 25px 25px 6px;
+		padding: 7px 10px 7px 6px;
+		margin: -43px 0px 0 10px;
+    	
+    	background-color: #f2f0f0;
 
 		display: flex;
 		flex-direction: column;
@@ -456,16 +469,16 @@
 		font-size: 15px;
 		color: #3f3f3f;
 
-		padding: 0 5px 0;
+		padding: 3px 10px 3px;
 
 		transition: .2s all linear;
 
 	}
 
 	.social__link__icon {
+		display: flex;
 		width: 60px;
 		padding-right: 10px;
-		text-align: center;
 	}
 
 
@@ -941,10 +954,8 @@
 
 		cursor: progress;
 
-		float: center;
-
 		width: 100%;
-		max-width: 240px;
+		max-width: 270px;
 
 		transition: background .2s linear;
 	}
@@ -1052,7 +1063,7 @@
 
 	.social.footer {
 		position: fixed;
-	    top: 100%;
+	    top: 120%;
 	    left: 50%;
 	    z-index: 1;
 	    transition: all .2s linear;
@@ -1124,10 +1135,23 @@
 	    padding: 15px 15px 0;
 	}
 
+	.biog__text {
+		display: flex;
+    	flex-direction: column-reverse;
+	}
+
 	.social.adapt {
 	    width: 100%;
-	    padding: 20px 15px 0;
+	    margin: 10px 0 0 0;
+	    padding: 5px 15px 5px;
 	    flex-direction: row;
+	}
+
+	.biog__text--hide {
+		height: 300px;
+   	 	overflow: auto;
+   	 	border: 2px #ccc solid;
+   	 	padding: 5px 10px 0px;
 	}
 
 	/*skillinter*/
@@ -1150,7 +1174,6 @@
 	/*biogsoc*/
 	.social.adapt {
 	    width: 100%;
-	    padding: 20px 15px 0;
 	    flex-direction: row;
 	    flex-wrap: wrap;
 	}
@@ -1160,6 +1183,8 @@
 	    justify-content: flex-start;
 	}
 	
+	/**/
+
 	.potrolio-works {
 	    padding: 0 5px;
 	}

@@ -4,7 +4,7 @@ $(function() {
     let header = $("#header");
     let intro = $("#intro");
     let introH = $(intro).innerHeight();
-    scrollPos = $(window).scrollTop();
+    let arroUp = $("#to__top-pos");
 
     $(window).on('scroll load resize', function() {
         scrollPos = $(this).scrollTop();
@@ -12,9 +12,11 @@ $(function() {
 
         if (scrollPos > introH) {
             header.addClass('fixed')
+            arroUp.addClass('show')
         }
         else {
             header.removeClass('fixed')
+            arroUp.removeClass('show')
         }
     });
 

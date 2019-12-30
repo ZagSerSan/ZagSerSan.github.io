@@ -277,6 +277,40 @@
 		background: linear-gradient(to bottom, #000, #5e5e5e);
 	}
 
+	.to__top-pos {
+		position: fixed;
+	    bottom: 7%;
+	    right: -20%;
+	    z-index: 1000;
+	    height: 50px;
+	    width: 50px;
+	    border-radius: 50%;
+	    padding: 0;
+	    margin: 0;
+	    background: #ccc;
+	    opacity: .4;
+
+	    transition: all .2s linear;
+	    cursor: pointer;
+	}
+
+	.to__top-pos.show {
+		bottom: 7%;
+	    right: 5%;
+	}
+
+	.to__top-pos:focus {
+		outline: none;
+	}
+
+	.to__top-pos--img {
+		width: 50%;
+	}
+
+	.to__top-pos:hover {
+		opacity: 1;
+	}
+
 /* Intro
 ============================================*/
 	.intro-inner {
@@ -304,11 +338,6 @@
 	.photo {
 		width: 100%;
 		height: auto;
-		position: relative;
-		top: 45%;
-
-		transform: translateY(-55%);
-
 	}
 
 	.author {
@@ -1279,9 +1308,9 @@
 	}
 	}
 
-/* MEDIA 430
+/* MEDIA 485
 ============================================*/
-	@media (max-width: 430px) {
+	@media (max-width: 485px) {
 
 	/*intro*/
 	.intro-inner {
@@ -1298,8 +1327,6 @@
 	    display: block;
 	    width: 100%;
 	    height: auto;
-	    top: -30%;
-	    transform: none;
 	}
 
 	.author {

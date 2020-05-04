@@ -739,6 +739,27 @@
 
 		padding: 20px 0;
 	}
+
+	.portfolio__suptitle {
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #333333;
+	    text-align: center;
+	    padding: 0px 10px 15px;
+
+	}
+
+	.biog__text {
+	    font-family: 'Montserrat', sans-serif;
+	    font-weight: 600;
+	    font-size: 15px;
+	    color: #3f3f3f;
+	    letter-spacing: -0.5px;
+	    word-spacing: 3px;
+	    line-height: 1.7;
+	    margin-top: 10px;
+	}
 	
 	.potrolio-works {
 		display: flex;

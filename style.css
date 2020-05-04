@@ -542,7 +542,6 @@
 		fill: #4976dc;
 	}
 
-
 /* Skills-Interest (skillinter)
 ============================================*/
 	.skillinter-inner {
@@ -607,7 +606,7 @@
 	}
 
 	.skill__level.html {
-		background: linear-gradient(to right, #363434 30%, #fff 0);
+		background: linear-gradient(to right, #363434 60%, #fff 0);
 	}
 
 	.skill__about {
@@ -631,15 +630,15 @@
 	}
 	
 	.skill__level.css {
-		background: linear-gradient(to right, #363434 25%, #fff 0);
+		background: linear-gradient(to right, #363434 55%, #fff 0);
 	}
 	
 	.skill__level.photoshop {
-		background: linear-gradient(to right, #363434 35%, #fff 0);
+		background: linear-gradient(to right, #363434 55%, #fff 0);
 	}
 
 	.skill__level.js {
-		background: linear-gradient(to right, #363434 3%, #fff 0);
+		background: linear-gradient(to right, #363434 10%, #fff 0);
 
 		animation-name: opacitySkill; 
 		animation-duration: 1s;
@@ -676,15 +675,15 @@
 	}
 
 	.skill__level.jquery {
-		background: linear-gradient(to right, #363434 1%, #fff 0);
+		background: linear-gradient(to right, #363434 5%, #fff 0);
 	}
 
 	.skill__level.eng {
-		background: linear-gradient(to right, #363434 20%, #fff 0);
+		background: linear-gradient(to right, #363434 45%, #fff 0);
 	}
 	
 	.skill__level.learnab {
-		background: linear-gradient(to right, #363434 75%, #fff 0);
+		background: linear-gradient(to right, #363434 80%, #fff 0);
 	}
 
 	.interest__content {

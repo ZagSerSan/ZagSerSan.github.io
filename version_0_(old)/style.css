@@ -87,6 +87,8 @@
 		color: #dedede;
 	}
 
+
+	/*
 	.enru {
 		display: flex;
 		justify-content: space-between;
@@ -101,7 +103,7 @@
 	    overflow: hidden;
 	}
 
-	.enru-link.eng {
+	.enru-link.ru {
 		border: 1px #fff solid;
 	}
 
@@ -129,6 +131,7 @@
 	.enru-img: {
     	opacity: 1;
 	}
+	*/
 
 	.burger-nav__link {
 		color: #fff;
@@ -317,7 +320,7 @@
 		padding: 55px 25px 20px;
 		display: flex;
 
-		background: #373434 url("img/intro/leftbg.png");
+		background-image: url("img/intro/leftbg.png");
 		background-position: 200px -60px;
 	}
 		
@@ -413,6 +416,18 @@
 		font-size: 23px;
 
 		padding-left: 40px;
+	}
+
+	.new-version_link {
+		color: red;
+		border: 1px #ccc solid;
+		padding: 5px;
+		font-size: 14px;
+		margin-left: 10px;
+	}
+
+	.new-version_link:hover {
+		text-decoration: underline;
 	}
 
 /* BiographySocial (biosoc)
@@ -748,6 +763,17 @@
 	    text-align: center;
 	    padding: 0px 10px 15px;
 
+	}
+
+	.biog__text {
+	    font-family: 'Montserrat', sans-serif;
+	    font-weight: 600;
+	    font-size: 15px;
+	    color: #3f3f3f;
+	    letter-spacing: -0.5px;
+	    word-spacing: 3px;
+	    line-height: 1.7;
+	    margin-top: 10px;
 	}
 	
 	.potrolio-works {
@@ -1268,6 +1294,7 @@
 	.header-inner {
 	}
 
+	/*
 	.enru {
     	justify-content: center;
 	}
@@ -1275,6 +1302,7 @@
 	.enru-link {
     	margin: 5px 20px 10px;
     }
+    */
 
 	.logo {
 		display: block;

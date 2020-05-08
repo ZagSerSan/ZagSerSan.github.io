@@ -20,8 +20,6 @@ $(function() {
             header.removeClass('fixed')
             arroUp.removeClass('show')
         }
-
-
     });
 
 
@@ -60,47 +58,33 @@ $(function() {
 
         $("html, body").animate({
             scrollTop: elementOffset 
-        }, 400);
-    
+        }, 600);
     });
 
 
-
-//  btn "предложить работу"
-	let btn = $("#footer-btn");
-	let antifon = $("#antifon");
-
-	btn.click(function(){
-		btn.toggleClass('active');
-	});
-
-	$(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-        let btn = $("#footer-btn"); // определяем элемент, к которому будем применять условия 
-        						//(можем указывать ID, класс либо любой другой идентификатор элемента)
-        if (!btn.is(e.target) // проверка условия если клик был не по нашему блоку
-            && btn.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            btn.removeClass("active"); // если условия выполняются - скрываем наш элемент
-        }
-    });
-
-	$(document).scroll(function (e){
-        if (!btn.is(e.target) && btn.has(e.target).length === 0) {
-            btn.removeClass("active");
-        }
-    });
-
-
-    $("socialfooterastop").click(function(event){
-	    event.preventDefault();
-	});
-
-    $("social__link").click(function(event){
+// accordion
+    $("[data-collspace]").on('click', function(event) {
         event.preventDefault();
+        $(this).toggleClass('active');
     });
 
-
-    let linkSocial = $("#linkSocial").click(function() {
-        btn.toggleClass('active');
+    $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+        let btnAccord1 = $("#news-accordion__item1"); // определяем элемент, к которому будем применять условия 
+        let btnAccord2 = $("#news-accordion__item2"); // определяем элемент, к которому будем применять условия 
+        let btnAccord3 = $("#news-accordion__item3"); // определяем элемент, к которому будем применять условия 
+                                //(можем указывать ID, класс либо любой другой идентификатор элемента)
+        if (!btnAccord1.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccord1.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccord1.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccord2.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccord2.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccord2.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccord3.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccord3.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccord3.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
     });
 
 

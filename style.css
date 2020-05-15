@@ -42,6 +42,7 @@
 ============================================*/
 	.container {
 		margin: 0 auto;
+		padding: 0px 2px;
 
 		width: 100%;
 		max-width: 1300px;
@@ -327,7 +328,7 @@
 /* Intro
 ============================================*/
 	.intro-inner {
-		padding: 55px 25px 20px;
+		padding: 75px 25px 20px;
 		display: flex;
 		justify-content: space-between;
 		
@@ -345,6 +346,7 @@
 
 	.avatar {
 		width: 225px;
+		min-width: 225px;
 		height: 225px;
 
 		overflow: hidden;
@@ -445,7 +447,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 
-		width: 50%;
+		width: 60%;
     	height: 68%;
 
 		margin: 0px 0px 0px auto;
@@ -511,7 +513,7 @@
 	.change-version {
 		display: flex;
 		justify-content: space-around;
-		width: 50%;
+		width: 60%;
 
 		margin: 10px 0px 0px auto;
 		padding: 5px;
@@ -1459,6 +1461,17 @@
 
 
 
+/* MEDIA 930
+============================================*/
+	@media (max-width: 930px) {
+	/*Intro*/
+	.social {
+	   width: 80%;
+	}
+
+	.change-version {
+	    width: 80%;
+	}
 
 /* MEDIA 810
 ============================================*/
@@ -1467,6 +1480,19 @@
 	/*Header*/
 	.intro-inner {
 	    background-position: 50px -40px;
+	}
+
+	/*Intro*/
+	.intro_rightpart {
+	    width: 37%;
+	}
+
+	.social {
+	   width: 100%;
+	}
+
+	.change-version {
+	    width: 100%;
 	}
 
 	/*biography*/
@@ -1480,12 +1506,7 @@
     	flex-direction: column-reverse;
 	}
 
-	.social.adapt {
-	    width: 100%;
-	    margin: 10px 0 0 0;
-	    padding: 5px 15px 5px;
-	    flex-direction: row;
-	}
+	
 
 	.biog__text--hide {
 		height: 300px;
@@ -1506,13 +1527,46 @@
 	}
 		}
 
+/* MEDIA 730
+============================================*/
+	@media (max-width: 730px) {
+	
+	/*Intro*/
+	.intro-inner {
+		flex-wrap: wrap;
+	}
+
+	.intro_leftpart {
+	    width: 100%;
+	    justify-content: space-around;
+	}
+
+	.intro_rightpart {
+	    width: 100%;
+	    margin-top: 30px;
+	}
+
+	.social {
+	    flex-direction: row;
+	    height: auto;
+	}
+
+	.social__link__icon {
+		width: auto;
+	}
+
+
+
+
+	}
+
 /* MEDIA 670
 ============================================*/
 	@media (max-width: 670px) {
 	/*Header*/
 
 	/*biography*/
-	.social.adapt {
+	.social {
 	    width: 100%;
 	    flex-direction: row;
 	    flex-wrap: wrap;
@@ -1546,13 +1600,15 @@
     	font-size: 13px;
 
 	}
+
 	}
 
-/* MEDIA 510
+
+/* MEDIA 600
 ============================================*/
-	@media (max-width: 510px) {
-	
-	/* header */
+	@media (max-width: 600px) {
+
+	/*Header*/
 	.header-inner {
 		display: flex;
 	}
@@ -1565,9 +1621,28 @@
 		display: flex;
 	}
 
-	.header-inner {
+	.logo {
+		display: block;
+		padding: 2px 10px 0;
 	}
 
+	/*Biography*/
+	.biography__content {
+		height: 450px;
+	    overflow: scroll;
+	    border: 2px #ccc solid;
+	    padding: 0px 10px;
+	}
+
+	}
+
+
+
+/* MEDIA 510
+============================================*/
+	@media (max-width: 510px) {
+	
+	
 	/*
 	.enru {
     	justify-content: center;
@@ -1577,11 +1652,6 @@
     	margin: 5px 20px 10px;
     }
     */
-
-	.logo {
-		display: block;
-		padding: 2px 10px 0;
-	}
 
 	/*intro*/
 	.intro-inner {
@@ -1624,30 +1694,35 @@
 	@media (max-width: 485px) {
 
 	/*intro*/
-	.intro-inner {
-		flex-wrap: wrap;
-    	justify-content: center;
-	}
+		.intro-inner {
+			flex-wrap: wrap;
+	    	justify-content: center;
+		}
 
-	.avatar {
-	    width: 230px;
-	    height: 230px;
-	}
+		.intro_leftpart {
+			align-items: center;
+	    	flex-direction: column;
+		}
 
-	.photo {
-	    display: block;
-	    width: 100%;
-	    height: auto;
-	}
+		.avatar {
+		    width: 230px;
+		    height: 230px;
+		}
 
-	.author {
-		display: none;
-	}
+		.photo {
+		    display: block;
+		    width: 100%;
+		    height: auto;
+		}
 
-
-	.author--adapt {
-		display: block;
-	}
+		.author {
+			padding-left: 0px;
+	    	padding-top: 20px;
+		}
+		
+		.speciality-first {
+			margin-top: 5px;
+		}
 
 
 	/**/
@@ -1698,6 +1773,12 @@
     .potrolio-continue {
     	max-width: 170px;
     	font-size: 13px;
+	}
+
+	/*News*/
+	.news-table_version {
+	    min-width: 100px;
+	    padding: 0px 10px;
 	}
 
 	/*ftr*/

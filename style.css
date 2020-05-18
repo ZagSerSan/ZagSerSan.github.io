@@ -589,11 +589,19 @@
 	    padding-left: 10px;
 	}
 
-	.txt-offset {
-		font-size: 6px;
-		color: transparent;
-		line-height: 1;
+
+	.bc_text a {
+		color: #908f8f;
+    	text-decoration: underline;
+
+    	transition: all 0.1s linear;
 	}
+
+	.bc_text a:hover {
+		color: #545454;
+    	text-decoration: none;
+	}
+
 
 	.biography__line {
 		width: 2px;

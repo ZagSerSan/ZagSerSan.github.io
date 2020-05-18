@@ -623,17 +623,111 @@
 	.skills-inner {
 		border-top: 2px #909090  solid;
 		padding: 25px 25px 15px;
+
+
 	}
 
-	.skill-left-row {
+	.skills-parts {
+		display: flex;
+
+		height: 100%;
+
+	}
+
+	.skill_left-part {
 		width: 50%;
 		height: 100%;
+
+		padding: 20px;
+
+		background: transparent;
+		border: 2px #ccc solid;
+	}
+
+	.skill_right-part {
+		width: 50%;
+		height: initial;
+
+		background: transparent;
+		border: 2px #ccc solid;
+
+		position: relative;
+		
+	}
+
+	.skill_right-part__title.active {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		z-index: 1;
+
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #fff;
+	    letter-spacing: -0.7px;
+	    word-spacing: 3px;
+	    line-height: 1.4;
+	    padding-left: 10px;
+
+	    text-align: center;
+
+	    opacity: 1;
+
+	    transition: opacity 1s linear;
+
+	    animation-name: srpt; 
+		animation-duration: .5s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+	}
+
+	@keyframes srpt {
+		0% {opacity: 0}
+		100% {opacity: 1}
+	}
+
+	.skill_right-part__title {
+		display: none;
 	}
 
 
+	.info {
+		display: none;
 
+		padding: 20px;
+		background: #444444ba;
+		height: 100%;
+		z-index: 2;
 
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #fff;
+	    letter-spacing: -0.7px;
+	    word-spacing: 3px;
+	    line-height: 1.4;
+	    padding-left: 10px;
 
+		transition: width .2s linear;
+
+		animation-name: info; 
+		animation-duration: .5s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+	}
+
+	@keyframes info {
+		0% {opacity: 0}
+		100% {opacity: 1}
+
+	}
+
+	.info.active {
+		display: block;
+	}
 
 	.skills__item {
 		width: 100%;
@@ -653,10 +747,7 @@
 	}
 
 
-
-
-
-	/*accordion*/
+	/*accordion
 	.skill-accordion {
 		width: 100%;
 		height: 100%;
@@ -755,10 +846,7 @@
 		transform: rotateZ(45deg);
 	}
 
-
-
-
-
+	*/
 
 	.skill__item {
 		width: 100%;
@@ -783,6 +871,10 @@
 
 	.skill__item:hover .skill__name {
 		color: #000;
+	}
+
+	.skill__item.active {
+
 	}
 
 	.skill__name {
@@ -817,7 +909,7 @@
 
 		position: absolute;
 		top: 25%;
-		right: 30px;
+		right: 2px;
 		z-index: 1;
 
 		font-family: 'Montserrat', sans-serif;
@@ -1611,7 +1703,6 @@
 
 	}
 
-
 /* MEDIA 600
 ============================================*/
 	@media (max-width: 600px) {
@@ -1846,5 +1937,5 @@
 		font-size: 16px;
 	}
 
-/*xxx
+/* xxx
 ============================================*/

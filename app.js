@@ -61,6 +61,111 @@ $(function() {
         }, 600);
     });
 
+//skils btn
+var info =      $('.info');
+var info_html = $('#infoJS_html');
+var info_css =  $('#infoJS_css');
+var info_js =   $('#infoJS_js');
+var info_jquery =$('#infoJS_jquery');
+var info_phshp =$('#infoJS_phshp');
+var info_eng =  $('#infoJS_eng');
+var info_learn =$('#infoJS_learn');
+
+var btn_html =  $('#btnJS_html');
+var btn_css =   $('#btnJS_css');
+var btn_js =    $('#btnJS_js');
+var btn_jquery = $('#btnJS_jquery');
+var btn_phshp = $('#btnJS_phshp');
+var btn_eng =   $('#btnJS_eng');
+var btn_learn =   $('#btnJS_rearn');
+
+var srpt = $('#srptJS');
+
+    // если клин на info то не появляться srpt
+    info.click(function() {
+        srpt.removeClass('active');
+    });
+
+    // если клик на skill-item, то info блок и srpt.removeClass
+    btn_html.click(function() {
+        info_html.toggleClass('active');
+        srpt.removeClass('active');
+    });
+
+    btn_css.click(function() {
+        info_css.toggleClass('active');
+        srpt.removeClass('active');
+    });
+
+    btn_js.click(function() {
+        info_js.toggleClass('active');
+        srpt.removeClass('active');
+    });
+
+    btn_jquery.click(function() {
+        info_jquery.toggleClass('active');
+        srpt.removeClass('active');
+    });
+
+    btn_phshp.click(function() {
+        info_phshp.toggleClass('active');
+        srpt.removeClass('active');
+    });
+
+    btn_eng.click(function() {
+        info_eng.toggleClass('active');
+        srpt.removeClass('active');
+    });
+
+    btn_learn.click(function() {
+        info_learn.toggleClass('active');
+        srpt.removeClass('active');
+    });
+
+
+
+    $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+       
+        if (!info_html.is(e.target) // проверка условия если клик был не по нашему блоку
+            && info_html.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            info_html.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            srpt.addClass('active');
+        }
+        if (!info_css.is(e.target) // проверка условия если клик был не по нашему блоку
+            && info_css.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            info_css.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            srpt.addClass('active');
+        }
+        if (!info_js.is(e.target) // проверка условия если клик был не по нашему блоку
+            && info_js.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            info_js.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            srpt.addClass('active');
+        }
+        if (!info_jquery.is(e.target) // проверка условия если клик был не по нашему блоку
+            && info_jquery.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            info_jquery.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            srpt.addClass('active');
+        }
+        if (!info_phshp.is(e.target) // проверка условия если клик был не по нашему блоку
+            && info_phshp.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            info_phshp.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            srpt.addClass('active');
+        }
+        if (!info_eng.is(e.target) // проверка условия если клик был не по нашему блоку
+            && info_eng.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            info_eng.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            srpt.addClass('active');
+        }
+        if (!info_learn.is(e.target) // проверка условия если клик был не по нашему блоку
+            && info_learn.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            info_learn.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            srpt.addClass('active');
+        }
+
+
+    });
+
+
 
 // accordion
     $("[data-collspace]").on('click', function(event) {

@@ -676,11 +676,6 @@
 		background-color: #cacaca;
 	}
 
-	.skill__item:active {
-		background-color: #383838;
-		transition: background-color 0s linear;
-	}
-
 	.skill__item:hover .skill__name {
 		color: #000;
 	}
@@ -713,7 +708,7 @@
 	}
 
 	.skill__level.html {
-		background: linear-gradient(to right, #374db7 60%, #fff 0);
+		background: linear-gradient(to right, #374db7 80%, #fff 0);
 	}
 
 	.skill__about {
@@ -737,15 +732,11 @@
 	}
 	
 	.skill__level.css {
-		background: linear-gradient(to right, #374db7 55%, #fff 0);
-	}
-	
-	.skill__level.photoshop {
-		background: linear-gradient(to right, #374db7 55%, #fff 0);
+		background: linear-gradient(to right, #374db7 70%, #fff 0);
 	}
 
 	.skill__level.js {
-		background: linear-gradient(to right, #374db7 10%, #fff 0);
+		background: linear-gradient(to right, #374db7 30%, #fff 0);
 
 		animation-name: opacitySkill; 
 		animation-duration: 1s;
@@ -782,7 +773,11 @@
 	}
 
 	.skill__level.jquery {
-		background: linear-gradient(to right, #374db7 5%, #fff 0);
+		background: linear-gradient(to right, #374db7 15%, #fff 0);
+	}
+
+	.skill__level.photoshop {
+		background: linear-gradient(to right, #374db7 80%, #fff 0);
 	}
 
 	.skill__level.eng {
@@ -790,11 +785,79 @@
 	}
 	
 	.skill__level.learnab {
-		background: linear-gradient(to right, #374db7 80%, #fff 0);
+		background: linear-gradient(to right, #374db7 95%, #fff 0);
+	}
+
+	/*---skill__item:hover---*/
+	.skill__item:hover .skill__level.html {
+		background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
+	}
+
+	.skill-accordion__item:hover .skill__level.html.accord {
+		background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
 	}
 
 
-	/*SKILL RIGTH PART*/
+	.skill__item:hover .skill__level.css {
+		background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);
+	}
+
+	.skill-accordion__item:hover .skill__level.css.accord {
+		background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);
+	}
+
+
+	.skill__item:hover .skill__level.js {
+		background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);
+	}
+
+	.skill-accordion__item:hover .skill__level.js.accord {
+		background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);
+	}
+
+
+	.skill__item:hover .skill__level.jquery {
+		background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
+	}
+
+	.skill-accordion__item:hover .skill__level.jquery.accord {
+		background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
+	}
+
+
+	.skill__item:hover .skill__level.photoshop {
+		background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
+	}
+
+	.skill-accordion__item:hover .skill__level.photoshop.accord {
+		background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
+	}
+
+
+	.skill__item:hover .skill__level.eng {
+		background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);
+	}
+
+	.skill-accordion__item:hover .skill__level.eng.accord {
+		background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);
+	}
+
+
+	.skill__item:hover .skill__level.learnab {
+		background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
+	}
+
+	.skill-accordion__item:hover .skill__level.learnab.accord {
+		background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
+	}
+
+
+	.skill__item:active {
+		background-color: #383838;
+		transition: background-color 0s linear;
+	}
+
+	/*-----SKILL RIGTH PART-----*/
 	.skill_right-part {
 		width: 50%;
 		height: initial;
@@ -897,7 +960,7 @@
 	    word-spacing: 3px;
 	    line-height: 1.4;
 
-	    padding-left: 10px;
+	    padding: 7px 0px 0px 10px;
 	}
 
 

@@ -89,87 +89,103 @@ var srpt = $('#srptJS');
         srpt.removeClass('active');
     });
 
-    // если клик на skill-item, то info блок и srpt.removeClass
+    // если клик на skill-item, то вкл info блок, и srpt.removeClass
     btn_html.click(function() {
+        btn_html.toggleClass('active');
         info_html.toggleClass('active');
         srpt.removeClass('active');
     });
 
     btn_css.click(function() {
+        btn_css.toggleClass('active');
         info_css.toggleClass('active');
         srpt.removeClass('active');
     });
 
     btn_js.click(function() {
+        btn_js.toggleClass('active');
         info_js.toggleClass('active');
         srpt.removeClass('active');
     });
 
     btn_jquery.click(function() {
+        btn_jquery.toggleClass('active');
         info_jquery.toggleClass('active');
         srpt.removeClass('active');
     });
 
     btn_phshp.click(function() {
+        btn_phshp.toggleClass('active');
         info_phshp.toggleClass('active');
         srpt.removeClass('active');
     });
 
     btn_eng.click(function() {
+        btn_eng.toggleClass('active');
         info_eng.toggleClass('active');
         srpt.removeClass('active');
     });
 
     btn_learn.click(function() {
+        btn_learn.toggleClass('active');
         info_learn.toggleClass('active');
         srpt.removeClass('active');
     });
 
+
     $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-       
+        
         if (!info_html.is(e.target) // проверка условия если клик был не по нашему блоку
             && info_html.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
             info_html.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            btn_html.removeClass("active"); // если условия выполняются - скрываем наш элемент
             srpt.addClass('active');
         }
         if (!info_css.is(e.target) // проверка условия если клик был не по нашему блоку
             && info_css.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            info_css.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            info_css.removeClass("active");
+            btn_css.removeClass("active");
             srpt.addClass('active');
         }
         if (!info_js.is(e.target) // проверка условия если клик был не по нашему блоку
             && info_js.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            info_js.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            info_js.removeClass("active");
+            btn_js.removeClass("active");
             srpt.addClass('active');
         }
         if (!info_jquery.is(e.target) // проверка условия если клик был не по нашему блоку
             && info_jquery.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            info_jquery.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            info_jquery.removeClass("active");
+            btn_jquery.removeClass("active");
             srpt.addClass('active');
         }
         if (!info_phshp.is(e.target) // проверка условия если клик был не по нашему блоку
             && info_phshp.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            info_phshp.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            info_phshp.removeClass("active");
+            btn_phshp.removeClass("active");
             srpt.addClass('active');
         }
         if (!info_eng.is(e.target) // проверка условия если клик был не по нашему блоку
             && info_eng.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            info_eng.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            info_eng.removeClass("active");
+            btn_eng.removeClass("active");
             srpt.addClass('active');
         }
         if (!info_learn.is(e.target) // проверка условия если клик был не по нашему блоку
             && info_learn.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            info_learn.removeClass("active"); // если условия выполняются - скрываем наш элемент
+            info_learn.removeClass("active");
+            btn_learn.removeClass("active");
             srpt.addClass('active');
         }
-
-
+        
     });
+
+
 
 // accordionSKILL
     $("[data-skill]").on('click', function(event) {
         event.preventDefault();
-        $(this).addClass('active');
+        $(this).toggleClass('active');
     });
 
     let btnAccorSkill1 = $("#skill-accordion__item1"); // определяем элемент, к которому будем применять условия 
@@ -251,9 +267,15 @@ var srpt = $('#srptJS');
         $(this).toggleClass('active');
     });
 
-    let btnAccord1 = $("#news-accordion__item1"); // определяем элемент, к которому будем применять условия 
-    let btnAccord2 = $("#news-accordion__item2"); // определяем элемент, к которому будем применять условия 
-    let btnAccord3 = $("#news-accordion__item3"); // определяем элемент, к которому будем применять условия 
+    let btnAccord1 = $("#news-accordion__item1"); // определяем элемент, к которому будем применять условия
+    let btnAccord2 = $("#news-accordion__item2"); // определяем элемент, к которому будем применять условия
+    let btnAccord3 = $("#news-accordion__item3"); // определяем элемент, к которому будем применять условия
+
+    // adapt
+    let btnAccordAdapt1 = $("#news-accordion__item--adapt1"); // определяем элемент, к которому будем применять условия
+    let btnAccordAdapt2 = $("#news-accordion__item--adapt2"); // определяем элемент, к которому будем применять условия
+    let btnAccordAdapt3 = $("#news-accordion__item--adapt3"); // определяем элемент, к которому будем применять условия
+
 
     $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
         
@@ -270,6 +292,21 @@ var srpt = $('#srptJS');
             && btnAccord3.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
             btnAccord3.removeClass("active"); // если условия выполняются - скрываем наш элемент
         }
+
+        //adapt
+        if (!btnAccordAdapt1.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccordAdapt1.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccordAdapt1.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccordAdapt2.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccordAdapt2.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccordAdapt2.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccordAdapt3.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccordAdapt3.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccordAdapt3.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
     });
+
 
 });

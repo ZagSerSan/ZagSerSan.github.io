@@ -564,7 +564,7 @@
 						</div>
 
 						<!-- ai__content -->
-						<div class="info accord" id="skill-ai_1">
+						<div class="info accord" id="skill-ai_1" onclick="event.stopPropagation()">
 							<h6 class="info-title accord">HTML</h6>
 							<p class="info-text accord">
 								Изучены основные теги и их применение.<br>
@@ -589,7 +589,7 @@
 						</div>
 
 						<!-- ai__content -->
-						<div class="info accord" id="skill-ai_2">
+						<div class="info accord" id="skill-ai_2" onclick="event.stopPropagation()">
 							<h6 class="info-title accord">CSS</h6>
 							<p class="info-text accord">
 								Изучены основные селекторы и параметры таблицей стилей и их применение. Присутствует валидность, ровность и порядок в коде. В какой-то степени присутствует анимация.
@@ -613,7 +613,7 @@
 						</div>
 
 						<!-- ai__content -->
-						<div class="info accord" id="skill-ai_3">
+						<div class="info accord" id="skill-ai_3" onclick="event.stopPropagation()">
 							<h6 class="info-title accord">JavaScript</h6>
 							<p class="info-text accord">
 								Изучены основные понятия: Объекты, их свойства и значения; Методы, события. Функци и массивы. Так же присутствует валидность, ровность и порядок в коде. В какой-то степени уже имеется возможность написать несложный сценари.
@@ -637,7 +637,7 @@
 						</div>
 
 						<!-- ai__content -->
-						<div class="info accord" id="skill-ai_4">
+						<div class="info accord" id="skill-ai_4" onclick="event.stopPropagation()">
 							<h6 class="info-title accord">jQuery</h6>
 							<p class="info-text accord">
 								Изучение примерно на уровне JS. Порядок в коде. Есть возможность написать несложный сценарий.
@@ -661,7 +661,7 @@
 						</div>
 
 						<!-- ai__content -->
-						<div class="info accord" id="skill-ai_5">
+						<div class="info accord" id="skill-ai_5" onclick="event.stopPropagation()">
 							<h6 class="info-title accord">Photoshop</h6>
 							<p class="info-text accord">
 								Есть база основных инструментов необходимых для веб-разработки.<br>
@@ -686,7 +686,7 @@
 						</div>
 
 						<!-- ai__content -->
-						<div class="info accord" id="skill-ai_6">
+						<div class="info accord" id="skill-ai_6" onclick="event.stopPropagation()">
 							<h6 class="info-title accord">Английский</h6>
 							<p class="info-text accord">
 								Есть небольшая база. 50/50 могу читать английсукю документацию и немного устного и письменного.
@@ -710,7 +710,7 @@
 						</div>
 
 						<!-- ai__content -->
-						<div class="info accord" id="skill-ai_6">
+						<div class="info accord" id="skill-ai_7" onclick="event.stopPropagation()">
 							<h6 class="info-title accord">Обучаемость</h6>
 							<p class="info-text accord">
 								Быстрая обучаемость, даже при отсутствии материалов.
@@ -902,8 +902,9 @@
 
 			<h3 class="news-title">Обновления и хроника</h3>
 
-			<!-- таблица новостей -->
-			<table class="news-table">
+		<!-- таблица новостей Desktop-->
+		
+			<table class="news-table_desktop">
 
 			<!-- описание таблицы (гид по таблице) -->
 				<tr>
@@ -936,7 +937,7 @@
 								</div>
 
 								<!-- ai__content -->
-								<div class="ai__content" id="news_ai_1">
+								<div class="ai__content" id="news_ai_1" onclick="event.stopPropagation()">
 									
 									<h4 class="news-table_about-title2">Описание:</h4>
 									<p class="news-table_about-content">По оригинальному макету, но немного изменённому на своё усмтрение, на основании начальных навыков после прохождения оффлайн курса вёрстки ActiveBox и MoGo - сделан сайт "Портфолио".</p>
@@ -955,6 +956,7 @@
 							</div><!-- /.news-accordion__item -->
 						</div><!-- /.news-accordion -->
 					</td>
+					
 				</tr><!-- version 2.0 -->
 
 			<!-- version 2.0 -->
@@ -975,7 +977,7 @@
 								</div>
 
 								<!-- ai__content -->
-								<div class="ai__content" id="news-ai_1">
+								<div class="ai__content" id="news-ai_1" onclick="event.stopPropagation()">
 									
 									<h4 class="news-table_about-title2">Описание:</h4>
 									<p class="news-table_about-content">Применены новые взгляды и понимания веб-разработки.</p>
@@ -1024,7 +1026,7 @@
 								</div>
 
 								<!-- ai__content -->
-								<div class="ai__content" id="news-ai_1">
+								<div class="ai__content" id="news-ai_1" onclick="event.stopPropagation()">
 									
 									<h4 class="news-table_about-title2">Описание:</h4>
 									<p class="news-table_about-content">Завершена возможнть фиксировать обновления.</p>
@@ -1047,9 +1049,170 @@
 						</div><!-- /.news-accordion -->
 					</td>
 				</tr><!-- version 2.1 -->
-				
-			</table>			
+
+			</table>
+
+		<!-- Таблица новостей MOBILE -->
+			<table class="news-table_mobile">
+
+			<!-- описание таблицы (гид по таблице) -->
+				<tr>
+					<td class="news-table_about">
+						<h4 class="news-table_title">№ версии и описание</h4>
+					</td>
+				</tr>
+
+			<!-- version 1.0 -->
+				<tr>
+					<td class="news-table_about">
+
+						<!-- news-accordion -->
+						<div class="news-accordion">
+							<div class="news-accordion__item" id="news-accordion__item--adapt1" data-collspace="#news_ai--adapt1">
+
+								<!-- ai__header -->
+								<div class="ai__header" id="ai_header">
+									<div class="ai_header__title">
+										<p class="news-table_version--adapt">v1.0:</p>
+										Сделан первоначальный сайт "Портфолио".
+									</div>
+									<div class="ai__header__arrow">arrow</div>
+								</div>
+
+								<!-- ai__content -->
+								<div class="ai__content" id="news_ai--adapt1" onclick="event.stopPropagation()">
+									
+									<h4 class="news-table_about-title2">Описание:</h4>
+									<p class="news-table_about-content">По оригинальному макету, но немного изменённому на своё усмтрение, на основании начальных навыков после прохождения оффлайн курса вёрстки ActiveBox и MoGo - сделан сайт "Портфолио".
+									<a class="news-table_version-link" href="version_0_(old)/index.html" title="Смотреть старую версия сайта">(см. сайт)
+									</a></p>
+
+									<h4 class="news-table_about-title2">Изменения:</h4>
+									<p class="news-table_about-content">
+										- Сделаны разделы: шапка-навигация, интро, биография, навыки, интересы, портфолио и футер - html, css, js.
+									</p>
+									
+									<h4 class="news-table_about-title2">План:</h4>
+									<p class="news-table_about-content">
+										- Обновление сайта.
+									</p>
+								</div><!-- /.ai__content -->
+
+							</div><!-- /.news-accordion__item -->
+						</div><!-- /.news-accordion -->
+					</td>
+					
+				</tr><!-- version 2.0 -->
+
+			<!-- version 2.0 -->
+				<tr>
+					<td class="news-table_about">
+
+						<!-- news-accordion -->
+						<div class="news-accordion">
+							<div class="news-accordion__item" id="news-accordion__item--adapt2" data-collspace="#news-ai--adapt2">
+								
+								<!-- ai__header -->
+								<div class="ai__header">
+									<div class="ai_header__title">
+										<p class="news-table_version--adapt">v2.0:</p>
+										Глобальный редизайн проекта.
+									</div>
+									<div class="ai__header__arrow">arrow</div>
+								</div>
+
+								<!-- ai__content -->
+								<div class="ai__content" id="news-ai--adapt2" onclick="event.stopPropagation()">
+									
+									<h4 class="news-table_about-title2">Описание:</h4>
+									<p class="news-table_about-content">Применены новые взгляды и понимания веб-разработки.</p>
+
+									<h4 class="news-table_about-title2">Изменения:</h4>
+									<p class="news-table_about-content">
+										- Общий фон, фон блоков, цвет и некоторые шрифты текста.<br>
+										- Аватарка теперь менее страшная.<br>
+										- Разделенно разделы: Навыки, Интересы.<br>
+										- Создан разел "Новости".
+										- Сделаны ссылки на старый сайт и на мониторинг обновлений нового сайта.<br>
+										- Перемещен блок "social" в раздел "intro" сайта.<br>
+										- Убран старый футер.<br>
+										- Прочие мелкие изменения.<br>
+										- Правка ошибок кода.
+									</p>
+									
+									<h4 class="news-table_about-title2">План:</h4>
+									<p class="news-table_about-content">
+										- Доделать раздел "Обновления".<br>
+										- Переделать раздел "Биография".<br>
+										- Сделать простой футер.
+									</p>
+								</div><!-- /.ai__content -->
+
+							</div><!-- /.news-accordion__item -->
+						</div><!-- /.news-accordion -->
+					</td>
+				</tr><!-- version 2.0 -->
+
+			<!-- version 2.1 -->
+				<tr>
+					<td class="news-table_about">
+
+						<!-- news-accordion -->
+						<div class="news-accordion">
+							<div class="news-accordion__item" id="news-accordion__item--adapt3" data-collspace="#news-ai--adapt3">
+								
+								<!-- ai__header -->
+								<div class="ai__header">
+									<div class="ai_header__title">
+										<p class="news-table_version--adapt">v2.1:</p>
+										Завершён раздел "Обновления".
+									</div>
+									<div class="ai__header__arrow">arrow</div>
+								</div>
+
+								<!-- ai__content -->
+								<div class="ai__content" id="news-ai--adapt3" onclick="event.stopPropagation()">
+									
+									<h4 class="news-table_about-title2">Описание:</h4>
+									<p class="news-table_about-content">Завершена возможнть фиксировать обновления.</p>
+
+									<h4 class="news-table_about-title2">Изменения:</h4>
+									<p class="news-table_about-content">
+										- Завершён раздел "Обновления".<br>
+										- Завершён раздел "Биография".<br>
+										- Добавлен раздел "Простой Футер".<br>
+										- Адаптация под смартфон.
+									</p>
+									
+									<h4 class="news-table_about-title2">План:</h4>
+									<p class="news-table_about-content">
+										- Модернизация раздела "Навыки".<br>
+									</p>
+								</div><!-- /.ai__content -->
+
+							</div><!-- /.news-accordion__item -->
+						</div><!-- /.news-accordion -->
+					</td>
+				</tr><!-- version 2.1 -->
+
+			</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			</div><!-- /.news-inner -->
+
 		</div><!-- /.container -->
 	</div><!-- ./news -->
 
@@ -1059,7 +1222,6 @@
 			<div class="footer-inner">
 
 				<p class="footer-text">Портфолио: Сергея Загорского. Frontend. Version site: 2.1</p>
-				
 			</div>
 		</div>
 	</footer>

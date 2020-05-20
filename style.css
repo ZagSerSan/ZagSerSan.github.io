@@ -632,490 +632,545 @@
 		height: 100%;
 	}
 
-	/*SKILL LEFT PART*/
-	.skill_left-part {
-		width: 50%;
-		height: 100%;
+	/*===SKILL LEFT PART====*/
 
-		padding: 20px;
+		/*--*/
+			.skill_left-part {
+				width: 50%;
+				height: 100%;
 
-		background: transparent;
-		border: 2px #ccc solid;
-	}
+				padding: 20px;
 
-	.skills__item {
-		width: 100%;
-		padding: 0px 25px;
+				background: transparent;
+				border: 2px #ccc solid;
+			}
 
-		position: relative;
+			.skill__title {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 600;
+				font-size: 20px;
+				color: #fff;
 
-	}
+				padding: 0px 0 20px;
+			}
 
-	.skill__title {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 600;
-		font-size: 20px;
-		color: #fff;
+			.skill__item {
+				width: 100%;
+				display: flex;
+				align-items: center;
 
-		padding: 0px 0 20px;
-	}
+				padding: 4px 0;
+				transition: .2s all linear;
+				position: relative;
 
-	.skill__item {
-		width: 100%;
-		display: flex;
-		align-items: center;
+				cursor: pointer;
+			}
 
-		padding: 4px 0;
-		transition: .2s all linear;
-		position: relative;
+			.skill__name {
+				width: 40%;
 
-		cursor: pointer;
-	}
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 500;
+				font-size: 20px;
+				color: #fff;
 
-	.skill__item:hover {
-		background-color: #cacaca;
-	}
+				padding: 0 0 0 10px;
+			}
 
-	.skill__item:hover .skill__name {
-		color: #000;
-	}
+			.skill__level {
+				width: 50%;
+				height: 12px;
 
-	.skill__item.active {
+				border: 2px #000 solid;
+				font-size: 0;
+				color: transparent;
+				margin: 0px;
 
-	}
+			}
 
-	.skill__name {
-		width: 40%;
+			.skill__about {
+				opacity: 0;
 
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
-		font-size: 20px;
-		color: #fff;
+				position: absolute;
+				top: 25%;
+				right: 3%;
+				z-index: 1;
 
-		padding: 0 0 0 10px;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 400;
+				font-size: 13px;
+				color: #333333;
 
-	}
-
-	.skill__level {
-		width: 50%;
-		height: 12px;
-
-		border: 2px #000 solid;
-		font-size: 0;
-		color: transparent;
-		margin: 0px;
-
-	}
-
-	.skill__level.html {
-		background: linear-gradient(to right, #374db7 80%, #fff 0);
-	}
-
-	.skill__about {
-		opacity: 0;
-
-		position: absolute;
-		top: 25%;
-		right: 3%;
-		z-index: 1;
-
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 400;
-		font-size: 13px;
-		color: #333333;
-
-		transition: opacity .2s linear;
-	}
-	
-	.skill__item:hover .skill__about {
-		opacity: 1;
-	}
-	
-	.skill__level.css {
-		background: linear-gradient(to right, #374db7 70%, #fff 0);
-	}
-
-	.skill__level.js {
-		background: linear-gradient(to right, #374db7 30%, #fff 0);
-
-		animation-name: opacitySkill; 
-		animation-duration: 1s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-	}
-
-	@keyframes opacitySkill {
-		0% {opacity: .6}
-		50% {opacity: 1}
-		100% {opacity: .6}
-	}
-
-	.skill__item__loading {
-		width: 25px;
-		height: 25px;
-
-		position: absolute;
-		top: 17%;
-		right: 0;
-		z-index: 1;
-		fill: #000;
-
-		animation-name: rotation; 
-		animation-duration: 2s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-
-	}
-
-	@keyframes rotation {
-		from {transform: rotateZ(0deg);}
-		to {transform: rotateZ(360deg);}
-	}
-
-	.skill__level.jquery {
-		background: linear-gradient(to right, #374db7 15%, #fff 0);
-	}
-
-	.skill__level.photoshop {
-		background: linear-gradient(to right, #374db7 80%, #fff 0);
-	}
-
-	.skill__level.eng {
-		background: linear-gradient(to right, #374db7 45%, #fff 0);
-	}
-	
-	.skill__level.learnab {
-		background: linear-gradient(to right, #374db7 95%, #fff 0);
-	}
-
-	/*---skill__item:hover---*/
-	.skill__item:hover .skill__level.html {
-		background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
-	}
-
-	.skill-accordion__item:hover .skill__level.html.accord {
-		background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
-	}
+				transition: opacity .2s linear;
+			}
 
 
-	.skill__item:hover .skill__level.css {
-		background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);
-	}
+			.skill__level.html {
+				background: linear-gradient(to right, #374db7 80%, #fff 0);
+			}
 
-	.skill-accordion__item:hover .skill__level.css.accord {
-		background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);
-	}
+			.skill__level.css {
+				background: linear-gradient(to right, #374db7 70%, #fff 0);
+			}
+
+			.skill__level.js {
+				background: linear-gradient(to right, #374db7 30%, #fff 0);
+
+				animation-name: opacitySkill; 
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+
+			@keyframes opacitySkill {
+				0% {opacity: .6}
+				50% {opacity: 1}
+				100% {opacity: .6}
+			}
+
+			.skill__item__loading {
+				width: 25px;
+				height: 25px;
+
+				position: absolute;
+				top: 17%;
+				right: 0;
+				z-index: 1;
+				fill: #000;
+
+				animation-name: rotation; 
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+
+			}
+
+			@keyframes rotation {
+				from {transform: rotateZ(0deg);}
+				to {transform: rotateZ(360deg);}
+			}
+
+			.skill__level.jquery {
+				background: linear-gradient(to right, #374db7 15%, #fff 0);
+			}
+
+			.skill__level.photoshop {
+				background: linear-gradient(to right, #374db7 80%, #fff 0);
+			}
+
+			.skill__level.eng {
+				background: linear-gradient(to right, #374db7 45%, #fff 0);
+			}
+			
+			.skill__level.learnab {
+				background: linear-gradient(to right, #374db7 95%, #fff 0);
+			}
+
+		/*------GLOBAL: skill__item:hover+active------*/
+
+			.skill__item:hover {
+				background-color: #cacaca;
+			}
+
+			.skill__item:hover .skill__name {
+				color: #000;
+			}	
+			
+			.skill__item:hover .skill__about {
+				opacity: 1;
+			}
+
+			.skill__item:active {
+				background-color: #383838;
+				transition: background-color 0s linear;
+			}
+
+		/*--------desktop hover-----------*/
+
+			.skill__item:hover .skill__level.html {
+				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
+			}
+
+			.skill__item:hover .skill__level.css {
+				background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);
+			}
+
+			.skill__item:hover .skill__level.js {
+				background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);
+			}
+
+			.skill__item:hover .skill__level.jquery {
+				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
+			}
+
+			.skill__item:hover .skill__level.photoshop {
+				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
+			}
+
+			.skill__item:hover .skill__level.eng {
+				background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);
+			}
+			
+			.skill__item:hover .skill__level.learnab {
+				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
+			}
+
+		/*--------mobile hover-----------*/
+			.skill-accordion__item:hover .skill__level.html.accord {
+				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
+			}
+
+			.skill-accordion__item:hover .skill__level.css.accord {
+				background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);
+			}
+
+			.skill-accordion__item:hover .skill__level.js.accord {
+				background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);
+			}
+
+			.skill-accordion__item:hover .skill__level.jquery.accord {
+				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
+			}
+
+			.skill-accordion__item:hover .skill__level.photoshop.accord {
+				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
+			}
+
+			.skill-accordion__item:hover .skill__level.eng.accord {
+				background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);
+			}
+
+			.skill-accordion__item:hover .skill__level.learnab.accord {
+				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
+			}
+
+		/*------skill__item ACTIVE-------*/
+			.skill__item.active {
+		    	background-color: #cacaca;}
+
+			.skill__item.active .skill__name {
+				color: #000;}
+
+			.skill__item.active .skill__about {
+				opacity: 1;}
 
 
-	.skill__item:hover .skill__level.js {
-		background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);
-	}
 
-	.skill-accordion__item:hover .skill__level.js.accord {
-		background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);
-	}
+			.skill-accordion__item.active {
+		    	background-color: #cacaca;}
+			
+			.skill-accordion__item.active .skill__name {
+				color: #000;}
 
-
-	.skill__item:hover .skill__level.jquery {
-		background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
-	}
-
-	.skill-accordion__item:hover .skill__level.jquery.accord {
-		background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
-	}
+			.skill-accordion__item.active .skill__about {
+				opacity: 1;}
 
 
-	.skill__item:hover .skill__level.photoshop {
-		background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
-	}
 
-	.skill-accordion__item:hover .skill__level.photoshop.accord {
-		background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
-	}
+			.skill__item.active .skill__level.html {
+				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);}
 
+			.skill__item.active .skill__level.css {
+				background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);}
 
-	.skill__item:hover .skill__level.eng {
-		background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);
-	}
+			.skill__item.active .skill__level.js {
+				background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);}
 
-	.skill-accordion__item:hover .skill__level.eng.accord {
-		background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);
-	}
+			.skill__item.active .skill__level.jquery {
+				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);}
 
+			.skill__item.active .skill__level.photoshop {
+				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);}
 
-	.skill__item:hover .skill__level.learnab {
-		background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
-	}
+			.skill__item.active .skill__level.eng {
+				background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);}
 
-	.skill-accordion__item:hover .skill__level.learnab.accord {
-		background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
-	}
+			.skill__item.active .skill__level.learnab {
+				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);}
 
 
-	.skill__item:active {
-		background-color: #383838;
-		transition: background-color 0s linear;
-	}
 
-	/*-----SKILL RIGTH PART-----*/
-	.skill_right-part {
-		width: 50%;
-		height: initial;
+			.skill-accordion__item.active .skill__level.html.accord {
+				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);}
 
-		background: transparent;
-		border: 2px #ccc solid;
+			.skill-accordion__item.active .skill__level.css.accord {
+				background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);}
 
-		position: relative;
+			.skill-accordion__item.active .skill__level.js.accord {
+				background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);}
+
+			.skill-accordion__item.active .skill__level.jquery.accord {
+				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);}
+
+			.skill-accordion__item.active .skill__level.photoshop.accord {
+				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);}
+
+			.skill-accordion__item.active .skill__level.eng.accord {
+				background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);}
+
+			.skill-accordion__item.active .skill__level.learnab.accord {
+				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);}
+
+	/*===SKILL RIGTH PART===*/
+
+		.skill_right-part {
+			width: 50%;
+			height: initial;
+
+			background: transparent;
+			border: 2px #ccc solid;
+
+			position: relative;
+			
+		}
+
+		.skill_right-part__title.active {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate3d(-50%, -50%, 0);
+			z-index: 1;
+
+			font-family: 'Montserrat', sans-serif;
+		    font-weight: 500;
+		    font-size: 15px;
+		    color: #fff;
+		    letter-spacing: -0.7px;
+		    word-spacing: 3px;
+		    line-height: 1.4;
+		    padding-left: 10px;
+
+		    text-align: center;
+
+		    opacity: 1;
+
+		    transition: opacity 1s linear;
+
+		    animation-name: srpt; 
+			animation-duration: .5s;
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+		}
+
+		@keyframes srpt {
+			0% {opacity: 0}
+			100% {opacity: 1}
+		}
+
+		.skill_right-part__title {
+			display: none;
+		}
+
+		.info {
+			display: none;
+
+			padding: 20px;
+			background: #444444ba;
+			height: 100%;
+			z-index: 2;
+
+			font-family: 'Montserrat', sans-serif;
+		    font-weight: 500;
+		    font-size: 15px;
+		    color: #fff;
+		    letter-spacing: -0.7px;
+		    word-spacing: 3px;
+		    line-height: 1.4;
+		    padding-left: 10px;
+
+			transition: width .2s linear;
+
+			animation-name: info; 
+			animation-duration: .5s;
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+		}
+
+		@keyframes info {
+			0% {opacity: 0}
+			100% {opacity: 1}
+
+		}
+
+		.info.active {
+			max-height: 277px;
+			display: block;
+		}
+
+		.info-title {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
+			font-size: 17px;
+			color: #fff;
+			padding-top: 8px;
+		}
+
+		.info-text {
+			font-family: 'Montserrat', sans-serif;
+		    font-weight: 500;
+		    font-size: 15px;
+		    color: #fff;
+		    letter-spacing: -0.7px;
+		    word-spacing: 3px;
+		    line-height: 1.4;
+
+		    padding: 7px 0px 0px 10px;
+		}
+
+	/*===SKILLS ACCORDION MOBILE===*/
+
+		.skills-accordion_mobile {
+			display: none;
+			border: 2px #fff solid;
+		}
 		
-	}
+		.skill-accordion__item {
+			margin-top: 0px;
+			border-top: 1px #fff solid;
+		}
 
-	.skill_right-part__title.active {
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate3d(-50%, -50%, 0);
-		z-index: 1;
+		.skill-accordion__item:first-child {
+			margin-top: 0px;
+		}
 
-		font-family: 'Montserrat', sans-serif;
-	    font-weight: 500;
-	    font-size: 15px;
-	    color: #fff;
-	    letter-spacing: -0.7px;
-	    word-spacing: 3px;
-	    line-height: 1.4;
-	    padding-left: 10px;
+		.skill__item--accord {
+			width: 100%;
+			display: flex;
+			align-items: center;
 
-	    text-align: center;
+			padding: 4px 0;
+			transition: .2s all linear;
+			position: relative;
 
-	    opacity: 1;
+			cursor: pointer;
+		}
 
-	    transition: opacity 1s linear;
+		.skill-ai__header {
+			display: flex;
+		    align-items: center;
+		    position: relative;
 
-	    animation-name: srpt; 
-		animation-duration: .5s;
-		animation-iteration-count: 1;
-		animation-timing-function: linear;
-	}
+		    padding: 6px;
+		    
+		    cursor: pointer;
 
-	@keyframes srpt {
-		0% {opacity: 0}
-		100% {opacity: 1}
-	}
+		    background-color: rgba(99, 99, 99, 0.24);
 
-	.skill_right-part__title {
-		display: none;
-	}
+		    transition: all .1s;
+		}
 
-	.info {
-		display: none;
-
-		padding: 20px;
-		background: #444444ba;
-		height: 100%;
-		z-index: 2;
-
-		font-family: 'Montserrat', sans-serif;
-	    font-weight: 500;
-	    font-size: 15px;
-	    color: #fff;
-	    letter-spacing: -0.7px;
-	    word-spacing: 3px;
-	    line-height: 1.4;
-	    padding-left: 10px;
-
-		transition: width .2s linear;
-
-		animation-name: info; 
-		animation-duration: .5s;
-		animation-iteration-count: 1;
-		animation-timing-function: linear;
-	}
-
-	@keyframes info {
-		0% {opacity: 0}
-		100% {opacity: 1}
-
-	}
-
-	.info.active {
-		max-height: 277px;
-		display: block;
-	}
-
-	.info-title {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
-		font-size: 17px;
-		color: #fff;
-		padding-top: 8px;
-	}
-
-	.info-text {
-		font-family: 'Montserrat', sans-serif;
-	    font-weight: 500;
-	    font-size: 15px;
-	    color: #fff;
-	    letter-spacing: -0.7px;
-	    word-spacing: 3px;
-	    line-height: 1.4;
-
-	    padding: 7px 0px 0px 10px;
-	}
-
-
-	/*SKILLS ACCORDION MOBILE*/
-
-	.skills-accordion_mobile {
-		display: none;
-		border: 2px #fff solid;
-	}
-	
-	.skill-accordion__item {
-		margin-top: 0px;
-		border-top: 1px #fff solid;
-	}
-
-	.skill-accordion__item:first-child {
-		margin-top: 0px;
-	}
-
-	.skill__item--accord {
-		width: 100%;
-		display: flex;
-		align-items: center;
-
-		padding: 4px 0;
-		transition: .2s all linear;
-		position: relative;
-
-		cursor: pointer;
-	}
-
-	.skill-ai__header {
-		display: flex;
-	    align-items: center;
-	    position: relative;
-
-	    padding: 6px;
-	    
-	    cursor: pointer;
-
-	    background-color: rgba(99, 99, 99, 0.24);
-
-	    transition: all .1s;
-	}
-
-	.skill-ai__header:hover {
-		background-color: #6b6b6b;
-	}
-	
-	.skill-ai__header:active {
-		background-color: #000;
-	}
-
-	.skill-accordion__item.active .skill-ai__header {
-		border-bottom: 1px #e5e5e5 solid;
-	}
-
-	.skill-ai_header__title {
-		width: 100%;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
-		font-size: 16px;
-		color: #fff;
-	}
-
-	.skill__level.accord {
-		width: 45%;
-	}
-
-	.skill-ai__header__arrow {
-		position: absolute;
-		right: 15px;
-		top: 13px;
-		z-index: 1;
-
-		font-size: 0;
-		color: transparent;
-
-		width: 10px;
-		height: 10px;
-
-		border-top: 3px #ccc solid;
-		border-left: 3px #ccc solid;
-
-		transform: rotateZ(-135deg);
-
-		cursor: pointer;
-
-		transition: all .2s;
-	}
-
-	.info.accord {
-		display: none;
-
-		padding: 20px;
-		background: #1f1f1fba;
-		height: initial;
-		z-index: 2;
-
-		font-family: 'Montserrat', sans-serif;
-	    font-weight: 500;
-	    font-size: 15px;
-	    color: #fff;
-	    letter-spacing: -0.7px;
-	    word-spacing: 3px;
-	    line-height: 1.4;
-	    padding-left: 10px;
+		.skill-ai__header:hover {
+			background-color: #6b6b6b;
+		}
 		
-		overflow: scroll;
+		.skill-ai__header:active {
+			background-color: #000;
+		}
 
-		transition: height .2s linear;
+		.skill-accordion__item.active .skill-ai__header {
+			border-bottom: 1px #e5e5e5 solid;
+		}
 
-		animation-name: infoAccord; 
-		animation-duration: .5s;
-		animation-iteration-count: 1;
-		animation-timing-function: linear;
-	}
+		.skill-ai_header__title {
+			width: 100%;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
+			font-size: 16px;
+			color: #fff;
+		}
 
-	.info-title.accord {
-		text-align: center;
-	}
+		.skill__level.accord {
+			width: 45%;
+		}
 
-	.info-text.accord {
-		padding: 7px 0px 0px 0px;
-    	text-align: center;
-	}
+		.skill-ai__header__arrow {
+			position: absolute;
+			right: 15px;
+			top: 13px;
+			z-index: 1;
 
-	@keyframes infoAccord {
-		0% {opacity: 0%}
-		100% {opacity: 100%}
+			font-size: 0;
+			color: transparent;
 
-	}
+			width: 10px;
+			height: 10px;
 
-	.skill__about.accord {
-	    right: 5%;
-		opacity: 1;
-    	color: #ffffff;
-	}
+			border-top: 3px #ccc solid;
+			border-left: 3px #ccc solid;
 
-	.skill__item__loading.accord {
-		right: 5%;
-	}
+			transform: rotateZ(-135deg);
 
-	.skill-accordion__item.active .info {
-		display: block;
-		
-    	padding: 5px 8px 15px;
-	}
+			cursor: pointer;
 
-	.skill-accordion__item.active .skill-ai__header__arrow {
-		top: 15px;
-		transform: rotateZ(45deg);
-		border-top: 3px #282626 solid;
-    	border-left: 3px #282626 solid;
-	}
+			transition: all .2s;
+		}
+
+		.info.accord {
+			display: none;
+
+			padding: 20px;
+			background: #1f1f1fba;
+			height: initial;
+			z-index: 2;
+
+			font-family: 'Montserrat', sans-serif;
+		    font-weight: 500;
+		    font-size: 15px;
+		    color: #fff;
+		    letter-spacing: -0.7px;
+		    word-spacing: 3px;
+		    line-height: 1.4;
+		    padding-left: 10px;
+			
+			overflow: scroll;
+
+			transition: height .2s linear;
+
+			animation-name: infoAccord; 
+			animation-duration: .5s;
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+
+		}
+
+		@keyframes infoAccord {
+			0% {opacity: 0%}
+			100% {opacity: 100%}
+
+		}
+
+		.info-title.accord {
+			text-align: center;
+		}
+
+		.info-text.accord {
+			padding: 7px 0px 0px 0px;
+	    	text-align: center;
+		}
+
+		.skill__about.accord {
+		    right: 5%;
+			opacity: 1;
+	    	color: #ffffff;
+		}
+
+		.skill__item__loading.accord {
+			right: 5%;
+		}
+
+		.skill-accordion__item.active .info {
+			display: block;
+			
+	    	padding: 5px 8px 15px;
+		}
+
+		.skill-accordion__item.active .skill-ai__header__arrow {
+			top: 15px;
+			transform: rotateZ(45deg);
+			border-top: 3px #282626 solid;
+	    	border-left: 3px #282626 solid;
+		}
 	
 /* Interest
 ============================================*/
@@ -1512,13 +1567,23 @@
 		border: 1px #909090 solid;
 	}
 
-	.news-table {
+	.news-table_desktop {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 400;
 		font-size: 15px;
 		color: #fff;
 
 		margin: 10px 20px 10px;		
+	}
+
+	.news-table_mobile {
+		display: none;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 15px;
+		color: #fff;
+
+		margin: 10px 20px 10px;	
 	}
 
 	.news-table_title {
@@ -1534,6 +1599,12 @@
 	    min-width: 130px;
 		padding: 0px 15px;
 
+	}
+
+	.news-table_version--adapt {
+		float: left;
+	    min-width: auto;
+	    padding: 0px 15px 0px 0px;
 	}
 
 	.news-table_version-link {
@@ -1582,15 +1653,7 @@
 		width: 100%;
 		height: 100%;
 	
-	}
-
-	.news-accordion__item {
-		margin-top: 5px;
-	}
-
-	.news-accordion__item:first-child {
-		margin-top: 0px;
-	}
+	}	
 
 	.ai__header {
 		display: flex;
@@ -1669,7 +1732,7 @@
 
 	.news-accordion__item.active .ai__content{
 		height: 260px;
-    	padding: 5px 8px;
+    	padding: 5px 8px 15px;
 	}
 
 	.news-accordion__item.active .ai__header__arrow {
@@ -1889,6 +1952,17 @@
 	    border: 2px #ccc solid;
 	    padding: 0px 10px;
 	}
+
+	/* NEWS */
+	.news-table_desktop {
+		display: none;
+	}
+
+	.news-table_mobile {
+		display: block;
+	}
+
+
 
 	}
 
@@ -2127,6 +2201,10 @@
 	.works__item--progress-txt {
 		font-size: 16px;
 	}
+	
+	}
 
 /* xxx
 ============================================*/
+
+

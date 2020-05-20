@@ -272,18 +272,4 @@ var srpt = $('#srptJS');
         }
     });
 
-     $(document).scroll(function (e){
-        if (!btnAccord1.is(e.target) && btnAccord1.has(e.target).length === 0) {
-            btnAccord1.removeClass("active");
-        }
-        if (!btnAccord2.is(e.target) && btnAccord2.has(e.target).length === 0) {
-            btnAccord2.removeClass("active");
-        }
-        if (!btnAccord3.is(e.target) && btnAccord3.has(e.target).length === 0) {
-            btnAccord3.removeClass("active");
-        }
-        
-    });
-
-
 });

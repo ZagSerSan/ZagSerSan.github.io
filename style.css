@@ -623,17 +623,16 @@
 	.skills-inner {
 		border-top: 2px #909090  solid;
 		padding: 25px 25px 15px;
-
-
 	}
 
-	.skills-parts {
+	/*SKILLS PARTS DESKTOP*/
+	.skills-parts_desktop {
 		display: flex;
 
 		height: 100%;
-
 	}
 
+	/*SKILL LEFT PART*/
 	.skill_left-part {
 		width: 50%;
 		height: 100%;
@@ -642,91 +641,6 @@
 
 		background: transparent;
 		border: 2px #ccc solid;
-	}
-
-	.skill_right-part {
-		width: 50%;
-		height: initial;
-
-		background: transparent;
-		border: 2px #ccc solid;
-
-		position: relative;
-		
-	}
-
-	.skill_right-part__title.active {
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate3d(-50%, -50%, 0);
-		z-index: 1;
-
-		font-family: 'Montserrat', sans-serif;
-	    font-weight: 500;
-	    font-size: 15px;
-	    color: #fff;
-	    letter-spacing: -0.7px;
-	    word-spacing: 3px;
-	    line-height: 1.4;
-	    padding-left: 10px;
-
-	    text-align: center;
-
-	    opacity: 1;
-
-	    transition: opacity 1s linear;
-
-	    animation-name: srpt; 
-		animation-duration: .5s;
-		animation-iteration-count: 1;
-		animation-timing-function: linear;
-	}
-
-	@keyframes srpt {
-		0% {opacity: 0}
-		100% {opacity: 1}
-	}
-
-	.skill_right-part__title {
-		display: none;
-	}
-
-
-	.info {
-		display: none;
-
-		padding: 20px;
-		background: #444444ba;
-		height: 100%;
-		z-index: 2;
-
-		font-family: 'Montserrat', sans-serif;
-	    font-weight: 500;
-	    font-size: 15px;
-	    color: #fff;
-	    letter-spacing: -0.7px;
-	    word-spacing: 3px;
-	    line-height: 1.4;
-	    padding-left: 10px;
-
-		transition: width .2s linear;
-
-		animation-name: info; 
-		animation-duration: .5s;
-		animation-iteration-count: 1;
-		animation-timing-function: linear;
-	}
-
-	@keyframes info {
-		0% {opacity: 0}
-		100% {opacity: 1}
-
-	}
-
-	.info.active {
-		display: block;
 	}
 
 	.skills__item {
@@ -745,108 +659,6 @@
 
 		padding: 0px 0 20px;
 	}
-
-
-	/*accordion
-	.skill-accordion {
-		width: 100%;
-		height: 100%;
-	}
-
-	.skill-accordion__item {
-		margin-top: 5px;
-	}
-
-	.skill-accordion__item:first-child {
-		margin-top: 0px;
-	}
-
-	.skill-ai__header {
-		display: flex;
-	    align-items: center;
-	    position: relative;
-	    
-	    cursor: pointer;
-
-	    background-color: rgba(99, 99, 99, 0.24);
-
-	    transition: all .1s;
-	}
-
-	.skill-ai__header:hover {
-		background-color: #313131;
-	}
-	
-	.skill-ai__header:active {
-		background-color: #000;
-	}
-
-	.skill-accordion__item.active .skill-ai__header {
-		border-bottom: 1px #e5e5e5 solid;
-	}
-
-	.skill-ai_header__title {
-		width: 100%;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
-		font-size: 16px;
-		color: #fff;
-		padding: 12px;
-	}
-
-	.skill-ai__header__arrow {
-		position: absolute;
-		right: 15px;
-		top: 20px;
-		z-index: 1;
-
-		font-size: 0;
-		color: transparent;
-
-		width: 10px;
-		height: 10px;
-
-		border-top: 3px #ccc solid;
-		border-left: 3px #ccc solid;
-
-		transform: rotateZ(-135deg);
-
-		cursor: pointer;
-
-		transition: all .2s;
-	}
-
-	.ai__content {
-		font-family: 'Roboto', sans-serif;
-		font-weight: 300;
-		font-size: 15px;
-		line-height: 1.4;
-		color: #999;
-
-		height: 0;
-		padding: 0;
-
-		overflow: hidden;
-		overflow: auto;
-
-		border-top: none;
-
-		transition: all .2s linear;
-
-		background-color: rgba(0, 0, 0, 0.36);
-	}
-
-	.skill-accordion__item.active .ai__content{
-		height: 260px;
-    	padding: 5px 8px;
-	}
-
-	.skill-accordion__item.active .skill-ai__header__arrow {
-		top: 20px;
-		transform: rotateZ(45deg);
-	}
-
-	*/
 
 	.skill__item {
 		width: 100%;
@@ -896,7 +708,7 @@
 		border: 2px #000 solid;
 		font-size: 0;
 		color: transparent;
-		margin: 0 30px;
+		margin: 0px;
 
 	}
 
@@ -909,7 +721,7 @@
 
 		position: absolute;
 		top: 25%;
-		right: 2px;
+		right: 3%;
 		z-index: 1;
 
 		font-family: 'Montserrat', sans-serif;
@@ -981,6 +793,267 @@
 		background: linear-gradient(to right, #374db7 80%, #fff 0);
 	}
 
+
+	/*SKILL RIGTH PART*/
+	.skill_right-part {
+		width: 50%;
+		height: initial;
+
+		background: transparent;
+		border: 2px #ccc solid;
+
+		position: relative;
+		
+	}
+
+	.skill_right-part__title.active {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		z-index: 1;
+
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #fff;
+	    letter-spacing: -0.7px;
+	    word-spacing: 3px;
+	    line-height: 1.4;
+	    padding-left: 10px;
+
+	    text-align: center;
+
+	    opacity: 1;
+
+	    transition: opacity 1s linear;
+
+	    animation-name: srpt; 
+		animation-duration: .5s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+	}
+
+	@keyframes srpt {
+		0% {opacity: 0}
+		100% {opacity: 1}
+	}
+
+	.skill_right-part__title {
+		display: none;
+	}
+
+	.info {
+		display: none;
+
+		padding: 20px;
+		background: #444444ba;
+		height: 100%;
+		z-index: 2;
+
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #fff;
+	    letter-spacing: -0.7px;
+	    word-spacing: 3px;
+	    line-height: 1.4;
+	    padding-left: 10px;
+
+		transition: width .2s linear;
+
+		animation-name: info; 
+		animation-duration: .5s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+	}
+
+	@keyframes info {
+		0% {opacity: 0}
+		100% {opacity: 1}
+
+	}
+
+	.info.active {
+		max-height: 277px;
+		display: block;
+	}
+
+	.info-title {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		font-size: 17px;
+		color: #fff;
+		padding-top: 8px;
+	}
+
+	.info-text {
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #fff;
+	    letter-spacing: -0.7px;
+	    word-spacing: 3px;
+	    line-height: 1.4;
+
+	    padding-left: 10px;
+	}
+
+
+	/*SKILLS ACCORDION MOBILE*/
+
+	.skills-accordion_mobile {
+		display: none;
+		border: 2px #fff solid;
+	}
+	
+	.skill-accordion__item {
+		margin-top: 0px;
+		border-top: 1px #fff solid;
+	}
+
+	.skill-accordion__item:first-child {
+		margin-top: 0px;
+	}
+
+	.skill__item--accord {
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		padding: 4px 0;
+		transition: .2s all linear;
+		position: relative;
+
+		cursor: pointer;
+	}
+
+	.skill-ai__header {
+		display: flex;
+	    align-items: center;
+	    position: relative;
+
+	    padding: 6px;
+	    
+	    cursor: pointer;
+
+	    background-color: rgba(99, 99, 99, 0.24);
+
+	    transition: all .1s;
+	}
+
+	.skill-ai__header:hover {
+		background-color: #6b6b6b;
+	}
+	
+	.skill-ai__header:active {
+		background-color: #000;
+	}
+
+	.skill-accordion__item.active .skill-ai__header {
+		border-bottom: 1px #e5e5e5 solid;
+	}
+
+	.skill-ai_header__title {
+		width: 100%;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		font-size: 16px;
+		color: #fff;
+	}
+
+	.skill__level.accord {
+		width: 45%;
+	}
+
+	.skill-ai__header__arrow {
+		position: absolute;
+		right: 15px;
+		top: 13px;
+		z-index: 1;
+
+		font-size: 0;
+		color: transparent;
+
+		width: 10px;
+		height: 10px;
+
+		border-top: 3px #ccc solid;
+		border-left: 3px #ccc solid;
+
+		transform: rotateZ(-135deg);
+
+		cursor: pointer;
+
+		transition: all .2s;
+	}
+
+	.info.accord {
+		display: none;
+
+		padding: 20px;
+		background: #1f1f1fba;
+		height: initial;
+		z-index: 2;
+
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #fff;
+	    letter-spacing: -0.7px;
+	    word-spacing: 3px;
+	    line-height: 1.4;
+	    padding-left: 10px;
+		
+		overflow: scroll;
+
+		transition: height .2s linear;
+
+		animation-name: infoAccord; 
+		animation-duration: .5s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+	}
+
+	.info-title.accord {
+		text-align: center;
+	}
+
+	.info-text.accord {
+		padding: 7px 0px 0px 0px;
+    	text-align: center;
+	}
+
+	@keyframes infoAccord {
+		0% {opacity: 0%}
+		100% {opacity: 100%}
+
+	}
+
+	.skill__about.accord {
+	    right: 5%;
+		opacity: 1;
+    	color: #ffffff;
+	}
+
+	.skill__item__loading.accord {
+		right: 5%;
+	}
+
+	.skill-accordion__item.active .info {
+		display: block;
+		
+    	padding: 5px 8px 15px;
+	}
+
+	.skill-accordion__item.active .skill-ai__header__arrow {
+		top: 15px;
+		transform: rotateZ(45deg);
+		border-top: 3px #282626 solid;
+    	border-left: 3px #282626 solid;
+	}
+	
 /* Interest
 ============================================*/
 	.interests-inner {
@@ -1573,6 +1646,15 @@
 	    width: 80%;
 	}
 
+	/* SKILLS */
+	.skill_left-part {
+	    width: 60%;
+	}
+
+	.skill_right-part {
+	    width: 40%;
+	}
+
 /* MEDIA 810
 ============================================*/
 	@media (max-width: 810px) {
@@ -1655,7 +1737,14 @@
 		width: auto;
 	}
 
+	/*SKILLS*/
+	.skills-parts_desktop {
+		display: none;
+	}
 
+	.skills-accordion_mobile {
+		display: block;
+	}
 
 
 	}
@@ -1768,13 +1857,13 @@
 	    right: 6px;
 	}
 
-	.skill__name {
-    	width: 100%;
-	}
-
 	.skill__level {
 	    width: auto;
 	    margin: 0 10px;
+	}
+
+	.skill-ai__header__arrow {
+		right: 10px;
 	}
 
 	.potrolio-continue {
@@ -1784,6 +1873,7 @@
 	.footer-btn {
     	font-size: 12px;
 	}
+
 	}
 
 /* MEDIA 485
@@ -1827,6 +1917,12 @@
 	.social__link.adapt {
     	width: 100%;
     }
+
+	/*SKILLS*/
+	.skill__level.accord {
+	    width: 40%;
+	}
+
 
 	/*potrolio*/
 	.potrolio-about__title {
@@ -1892,6 +1988,33 @@
 
 	.interest__item:hover {
 	    
+	}
+
+/* MEDIA 430
+============================================*/
+	@media (max-width: 430px) {
+
+	/*SKILLS*/
+	.skill__name {
+		width: auto;
+	}
+
+	.skill__level.accord {
+		display: none;
+	}
+
+	.skill__about.accord {
+	    right: 13%;
+	}
+
+	.skill-ai__header__arrow {
+	    right: 6%;
+	}
+
+	.skill__item__loading.accord {
+	    right: 13%;
+	}
+
 	}
 
 /* MEDIA 360

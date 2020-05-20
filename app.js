@@ -61,6 +61,9 @@ $(function() {
         }, 600);
     });
 
+
+//============SKILLSS==============
+
 //skils btn
 var info =      $('.info');
 var info_html = $('#infoJS_html');
@@ -122,8 +125,6 @@ var srpt = $('#srptJS');
         srpt.removeClass('active');
     });
 
-
-
     $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
        
         if (!info_html.is(e.target) // проверка условия если клик был не по нашему блоку
@@ -165,6 +166,56 @@ var srpt = $('#srptJS');
 
     });
 
+// accordionSKILL
+    $("[data-skill]").on('click', function(event) {
+        event.preventDefault();
+        $(this).addClass('active');
+    });
+
+    $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+        let btnAccorSkill1 = $("#skill-accordion__item1"); // определяем элемент, к которому будем применять условия 
+        let btnAccorSkill2 = $("#skill-accordion__item2"); // определяем элемент, к которому будем применять условия 
+        let btnAccorSkill3 = $("#skill-accordion__item3"); // определяем элемент, к которому будем применять условия 
+        let btnAccorSkill4 = $("#skill-accordion__item4"); // определяем элемент, к которому будем применять условия 
+        let btnAccorSkill5 = $("#skill-accordion__item5"); // определяем элемент, к которому будем применять условия 
+        let btnAccorSkill6 = $("#skill-accordion__item6"); // определяем элемент, к которому будем применять условия 
+        let btnAccorSkill7 = $("#skill-accordion__item7"); // определяем элемент, к которому будем применять условия 
+                                
+                                //(можем указывать ID, класс либо любой другой идентификатор элемента)
+        if (!btnAccorSkill1.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccorSkill1.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccorSkill1.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccorSkill2.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccorSkill2.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccorSkill2.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccorSkill3.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccorSkill3.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccorSkill3.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccorSkill4.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccorSkill4.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccorSkill4.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccorSkill5.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccorSkill5.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccorSkill5.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccorSkill6.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccorSkill6.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccorSkill6.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccorSkill7.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccorSkill7.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccorSkill7.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        
+    });
+
+
+
+
 
 
 // accordion
@@ -191,6 +242,9 @@ var srpt = $('#srptJS');
             btnAccord3.removeClass("active"); // если условия выполняются - скрываем наш элемент
         }
     });
+
+
+
 
 
 });

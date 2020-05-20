@@ -434,8 +434,9 @@
 			<div class="skills-inner">
 
 				<h2 class="skill__title">НАВЫКИ (в разработке...)</h2>
-
-				<div class="skills-parts">
+			
+			<!-- SKILLS PARTS DESKTOP -->
+				<div class="skills-parts_desktop">
 					
 				<!-- skill_left-part -->
 					<div class="skill_left-part">
@@ -488,25 +489,236 @@
 
 						<h6 class="skill_right-part__title active" id="srptJS">Выберите навык, чтобы просмотреть его описание.</h6>
 
-						<p class="info" id="infoJS_html">
-							HTML<br>
-							Изучены основные теги и их применение. Присутствует валидность, ровность и порядок в коде.</p>
-						<p class="info" id="infoJS_css">
-							CSS<br>
-							Изучены основные селекторы и параметры таблицей стилей и их применение. Присутствует валидность, ровность и порядок в коде. В какой-то степени присутствует анимация.</p>
-						<p class="info" id="infoJS_js">
-							JavaScript<br>
-							Изучены основные понятия: Объекты, их свойства и значения; Методы, события. Функци и массивы. Так же присутствует валидность, ровность и порядок в коде. В какой-то степени уже имеется возможность написать несложный сценари.</p>
-						<p class="info" id="infoJS_jquery">
-							jQuery<br>
-							Изучение примерно на уровне JS. Порядок в коде. Есть возможность написать несложный сценарий.</p>
-						<p class="info" id="infoJS_phshp">Описание навыка Photoshop</p>
-						<p class="info" id="infoJS_eng">Описание навыка english</p>
-						<p class="info" id="infoJS_learn">Описание навыка обучаемость</p>
+						<div class="info" id="infoJS_html">
+							<h6 class="info-title">HTML</h6>
+							<p class="info-text">
+								Изучены основные теги и их применение.<br>
+								Присутствует валидность, ровность и порядок в коде.
+							</p>
+						</div>
+
+						<div class="info" id="infoJS_css">
+							<h6 class="info-title">CSS</h6>
+							<p class="info-text">
+								Изучены основные селекторы и параметры таблицей стилей и их применение. Присутствует валидность, ровность и порядок в коде. В какой-то степени присутствует анимация.
+							</p>
+						</div>
+
+						<div class="info" id="infoJS_js">
+							<h6 class="info-title">JavaScript</h6>
+							<p class="info-text">
+								Изучены основные понятия: Объекты, их свойства и значения; Методы, события. Функци и массивы. Так же присутствует валидность, ровность и порядок в коде. В какой-то степени уже имеется возможность написать несложный сценари.
+							</p>
+						</div>
+
+						<div class="info" id="infoJS_jquery">
+							<h6 class="info-title">jQuery</h6>
+							<p class="info-text">
+								Изучение примерно на уровне JS. Порядок в коде. Есть возможность написать несложный сценарий.
+							</p>
+						</div>
+
+						<div class="info" id="infoJS_phshp">
+							<h6 class="info-title">Photoshop</h6>
+							<p class="info-text">
+								Описание навыка Photoshop
+							</p>
+						</div>
+
+						<div class="info" id="infoJS_eng">
+							<h6 class="info-title">Английский</h6>
+							<p class="info-text">
+								Описание навыка english
+							</p>
+						</div>
+
+						<div class="info" id="infoJS_learn">
+							<h6 class="info-title">Обучаемость</h6>
+							<p class="info-text">
+								Описание навыка обучаемость
+							</p>
+						</div>
 
 					</div><!-- /.skill -->
 
-				</div><!-- /.skills-parts -->
+				</div><!-- /.skills-parts_desktop -->
+
+			<!-- SKILLS ACCORDION MOBILE -->
+				
+				<div class="skills-accordion_mobile">
+
+					<!-- item -->
+					<div class="skill-accordion__item" id="skill-accordion__item1" data-skill="#skill-ai_1">
+
+						<!-- skill-ai__header -->
+						<div class="skill-ai__header">
+							<div class="skill-ai_header__title">
+								<div class="skill__item--accord" id="btnJS_html">
+									<h3 class="skill__name">HTML</h3>
+									<h3 class="skill__level accord html">line</h3>
+									<p class="skill__about accord">60%</p>
+								</div>
+							</div>
+							<div class="skill-ai__header__arrow">arrow</div>
+						</div>
+
+						<!-- ai__content -->
+						<div class="info accord" id="skill-ai_1">
+							<h6 class="info-title accord">HTML</h6>
+							<p class="info-text accord">
+								Изучены основные теги и их применение.<br>
+								Присутствует валидность, ровность и порядок в коде.
+							</p>
+						</div>
+					</div><!-- /.skill-accordion__item -->
+
+					<!-- item -->
+					<div class="skill-accordion__item" id="skill-accordion__item2" data-skill="#skill-ai_2">
+
+						<!-- skill-ai__header -->
+						<div class="skill-ai__header">
+							<div class="skill-ai_header__title">
+								<div class="skill__item--accord" id="btnJS_css">
+									<h3 class="skill__name">CSS</h3>
+									<h3 class="skill__level accord css">line</h3>
+									<p class="skill__about accord">55%</p>
+								</div>
+							</div>
+							<div class="skill-ai__header__arrow">arrow</div>
+						</div>
+
+						<!-- ai__content -->
+						<div class="info accord" id="skill-ai_2">
+							<h6 class="info-title accord">CSS</h6>
+							<p class="info-text accord">
+								Изучены основные селекторы и параметры таблицей стилей и их применение. Присутствует валидность, ровность и порядок в коде. В какой-то степени присутствует анимация.
+							</p>
+						</div>
+					</div><!-- /.skill-accordion__item -->
+
+					<!-- item -->
+					<div class="skill-accordion__item" id="skill-accordion__item3" data-skill="#skill-ai_3">
+
+						<!-- skill-ai__header -->
+						<div class="skill-ai__header">
+							<div class="skill-ai_header__title">
+								<div class="skill__item--accord" id="btnJS_js">
+									<h3 class="skill__name">Java Script</h3>
+									<h3 class="skill__level accord js">line</h3>
+									<img class="skill__item__loading accord" src="img/icon/loading2.png" alt="loading">
+								</div>
+							</div>
+							<div class="skill-ai__header__arrow">arrow</div>
+						</div>
+
+						<!-- ai__content -->
+						<div class="info accord" id="skill-ai_3">
+							<h6 class="info-title accord">JavaScript</h6>
+							<p class="info-text accord">
+								Изучены основные понятия: Объекты, их свойства и значения; Методы, события. Функци и массивы. Так же присутствует валидность, ровность и порядок в коде. В какой-то степени уже имеется возможность написать несложный сценари.
+							</p>
+						</div>
+					</div><!-- /.skill-accordion__item -->
+
+					<!-- item -->
+					<div class="skill-accordion__item" id="skill-accordion__item4" data-skill="#skill-ai_4">
+
+						<!-- skill-ai__header -->
+						<div class="skill-ai__header">
+							<div class="skill-ai_header__title">
+								<div class="skill__item--accord" id="btnJS_jquery">
+									<h3 class="skill__name">jQuery</h3>
+									<h3 class="skill__level accord jquery">line</h3>
+									<p class="skill__about accord">5%</p>
+								</div>
+							</div>
+							<div class="skill-ai__header__arrow">arrow</div>
+						</div>
+
+						<!-- ai__content -->
+						<div class="info accord" id="skill-ai_4">
+							<h6 class="info-title accord">jQuery</h6>
+							<p class="info-text accord">
+								Изучение примерно на уровне JS. Порядок в коде. Есть возможность написать несложный сценарий.
+							</p>
+						</div>
+					</div><!-- /.skill-accordion__item -->
+					
+					<!-- item -->
+					<div class="skill-accordion__item" id="skill-accordion__item5" data-skill="#skill-ai_5">
+
+						<!-- skill-ai__header -->
+						<div class="skill-ai__header">
+							<div class="skill-ai_header__title">
+								<div class="skill__item--accord" id="btnJS_phshp">
+									<h3 class="skill__name">Photoshop</h3>
+									<h3 class="skill__level accord photoshop">line</h3>
+									<p class="skill__about accord">55%</p>
+								</div>
+							</div>
+							<div class="skill-ai__header__arrow">arrow</div>
+						</div>
+
+						<!-- ai__content -->
+						<div class="info accord" id="skill-ai_5">
+							<h6 class="info-title accord">Photoshop</h6>
+							<p class="info-text accord">
+								Есть база основных инструментов необходимых для веб-разработки.<br>
+								Например такие как: экспорт и импорт изображений; вырезка, образка и ресайзинг; создание эффектов; и т.д.
+							</p>
+						</div>
+					</div><!-- /.skill-accordion__item -->
+					
+					<!-- item -->
+					<div class="skill-accordion__item" id="skill-accordion__item6" data-skill="#skill-ai_6">
+						
+						<!-- skill-ai__header -->
+						<div class="skill-ai__header">
+							<div class="skill-ai_header__title">
+								<div class="skill__item--accord" id="btnJS_eng">
+									<h3 class="skill__name">Английский</h3>
+									<h3 class="skill__level accord eng">line</h3>
+									<p class="skill__about accord">45%</p>
+								</div>
+							</div>
+							<div class="skill-ai__header__arrow">arrow</div>
+						</div>
+
+						<!-- ai__content -->
+						<div class="info accord" id="skill-ai_6">
+							<h6 class="info-title accord">Английский</h6>
+							<p class="info-text accord">
+								Есть небольшая база. 50/50 могу читать английсукю документацию и немного устного и письменного.
+							</p>
+						</div>
+					</div><!-- /.skill-accordion__item -->
+					
+					<!-- item -->
+					<div class="skill-accordion__item" id="skill-accordion__item7" data-skill="#skill-ai_7">
+
+						<!-- skill-ai__header -->
+						<div class="skill-ai__header">
+							<div class="skill-ai_header__title">
+								<div class="skill__item--accord" id="btnJS_rearn">
+									<h3 class="skill__name">Обучаемость</h3>
+									<h3 class="skill__level accord learnab">line</h3>
+									<p class="skill__about accord">80%</p>
+								</div>
+							</div>
+							<div class="skill-ai__header__arrow">arrow</div>
+						</div>
+
+						<!-- ai__content -->
+						<div class="info accord" id="skill-ai_6">
+							<h6 class="info-title accord">Обучаемость</h6>
+							<p class="info-text accord">
+								Быстрая обучаемость, даже при отсутствии материалов.
+							</p>
+						</div>
+					</div><!-- /.skill-accordion__item -->
+
+				</div><!-- /.skill-accordion -->
+
 			</div><!-- /.skills-inner -->
 		</div><!-- /.container -->
 	</div><!-- /.skills -->

@@ -1056,8 +1056,13 @@
 	
 /* Interest
 ============================================*/
-	.interests-inner {
+	.interests {
 		border-top: 2px #909090 solid;
+	}
+
+	.interests-inner {
+		
+		padding: 25px 25px 15px;
 	}
 
 	.interest__content {

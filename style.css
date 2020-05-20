@@ -856,14 +856,15 @@
 
 
 
-			.skill-accordion__item.active {
+			.skill-accordion__item.active .skill-ai__header{
 		    	background-color: #cacaca;}
-			
+
 			.skill-accordion__item.active .skill__name {
 				color: #000;}
 
 			.skill-accordion__item.active .skill__about {
-				opacity: 1;}
+				opacity: 1;
+				color: #000;}
 
 
 
@@ -1150,7 +1151,7 @@
 		}
 
 		.skill__about.accord {
-		    right: 5%;
+		    right: 7%;
 			opacity: 1;
 	    	color: #ffffff;
 		}

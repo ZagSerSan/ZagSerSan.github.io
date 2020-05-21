@@ -70,13 +70,9 @@
 		height: 40px;
 		background: linear-gradient(to bottom, #000 40%, transparent 120%);
 
-		opacity: .7;
+		opacity: 1;
 		transition: all .2s linear;
 		
-	}
-
-	.header-inner:hover {
-		opacity: .9;
 	}
 
 	.nav {
@@ -293,7 +289,7 @@
 
 	.to__top-pos {
 		position: fixed;
-	    bottom: 7%;
+	    bottom: 15%;
 	    right: -20%;
 	    z-index: 1000;
 	    height: 50px;
@@ -309,7 +305,7 @@
 	}
 
 	.to__top-pos.show {
-		bottom: 7%;
+		bottom: 15%;
 	    right: 5%;
 	}
 
@@ -323,6 +319,110 @@
 
 	.to__top-pos:hover {
 		opacity: 1;
+	}
+
+
+	.writeme {
+		position: fixed;
+		bottom: 5%;
+		right: 4%;
+		z-index: 1;
+
+		width: 60px;
+		height: 60px;
+
+		padding: 0px;
+		background-color: transparent;
+		border: none;
+		overflow: hidden;
+
+		transition: all .1s linear;
+
+		opacity: .8;
+
+		animation-name: writemeTransf;
+	    animation-duration: 20s;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: linear;
+	}
+
+	@keyframes writemeTransf {
+		0% {transform: scale3d(1, 1, 1);}
+		1% {transform: scale3d(1.2, 1.2, 1.2);}
+		2% {transform: scale3d(1, 1, 1);}
+		3% {transform: scale3d(1.2, 1.2, 1.2);}
+		4% {transform: scale3d(1, 1, 1);}
+		100% {transform: scale3d(1, 1, 1);}
+	}
+	
+	.writeme-images {
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 1;
+
+		width: inherit;
+		height: inherit;
+	}
+
+	.writeme-img--white {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+
+		display: block;
+		width: inherit;
+		height: inherit;
+
+		cursor: pointer;
+		opacity: 1;
+
+		transition: all .2s linear;
+	}
+
+	.writeme-img--color {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+
+		display: block;
+		width: inherit;
+		height: inherit;
+
+		cursor: pointer;
+		opacity: 1;
+
+		transition: all .1s linear;
+	}
+
+	.writeme:hover {
+		opacity: 1;
+
+	}
+
+	.writeme:active .writeme-images {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+
+	.writeme:focus {
+		outline: none;
+	}
+
+	.writeme-img--white:hover {
+		opacity: 0;
+
+	}
+
+	.writeme--img:active {
+		opacity: .6;
+
+	}
+
+
+	.forma {
+		
 	}
 
 /* Intro
@@ -1174,52 +1274,6 @@
 			border-top: 3px #282626 solid;
 	    	border-left: 3px #282626 solid;
 		}
-	
-/* Interest
-============================================*/
-	.interests {
-		border-top: 2px #909090 solid;
-	}
-
-	.interests-inner {
-		
-		padding: 25px 25px 15px;
-	}
-
-	.interest__content {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-
-		margin-top: -25px;
-	}
-
-	.interest__item {
-		width: 33.3333%;
-		height: 140px;
-
-		display: flex;
-		flex-direction: column-reverse;
-		align-items: center;
-		transition: .2s all linear;
-
-		margin-top: 10px;
-	}
-
-	.interest__name {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
-		font-size: 18px;
-		color: #fff;
-		text-align: center;
-	}
-		
-
-	.interest__item-svg {
-		width: auto;
-		height: 100%;
-		max-width: 50%;
-	}
 
 /* Portfolio
 ============================================*/
@@ -1688,7 +1742,7 @@
 		font-weight: 500;
 		font-size: 16px;
 		color: #fff;
-		padding: 12px;
+		padding: 12px 35px 12px 12px;
 	}
 
 	.ai__header__arrow {

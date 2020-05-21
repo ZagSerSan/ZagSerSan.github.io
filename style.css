@@ -538,6 +538,30 @@
 		text-decoration: underline;
 	}
 
+	.writeme-mail--adapt {
+	    display: none;
+	    align-items: center;
+	    justify-content: space-between;
+
+	    height: auto;
+
+	    font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #fff;
+
+	    padding: 3px 10px 3px;
+	    transition: .2s all linear;
+
+	    position: absolute;
+	    bottom: 30px;
+	    left: 40px;
+	    z-index: 1;
+
+	    border: 1px #ccc solid;
+	    background-color: #38323e;
+	}
+
 
 
 
@@ -1943,6 +1967,56 @@
 /* MEDIA 930
 ============================================*/
 	@media (max-width: 930px) {
+	/*Header*/
+
+	.writeme_content {
+	    right: 13%;
+	    width: 450px;
+	    height: 450px;
+	}
+
+	.writeme-form {
+	    height: 370px;
+	}
+	
+	.writeme_content-title {
+	    font-size: 15px;
+	    padding-top: 3px;
+	}
+
+	.writeme-form {
+   	 	padding: 14px;
+   	}
+
+   	.writeme-form_textarea {
+	    font-size: 15px;
+	    max-width: 500px;
+	    min-width: 350px;
+	    height: auto;
+	    min-height: 200px;
+   		max-height: 250px;
+	}
+
+   	.writeme-form_fio {
+	    font-size: 14px;
+	    padding: 5px 5px;
+	}
+
+   	.writeme-form_email {
+	    font-size: 14px;
+	    padding: 5px 5px;
+	}
+
+	.writeme-form_btn {
+	    padding: 5px 20px;
+	}
+
+	.writeme-mail {
+	    bottom: 15px;
+	    left: 29px;
+	}
+
+
 	/*Intro*/
 	.social {
 	   width: 80%;
@@ -2060,6 +2134,56 @@
 	@media (max-width: 670px) {
 	/*Header*/
 
+
+		
+
+	.writeme_content {
+	    right: 17%;
+	    width: 400px;
+	}
+
+	.writeme-form {
+   	 	padding: 14px;
+   	}	
+
+   	.writeme-form_textarea {
+	    font-size: 15px;
+	    max-width: 400px;
+	    min-width: 200px;
+	}
+
+   	.writeme-form_fio {
+	    font-size: 14px;
+	    padding: 5px 5px;
+	}
+
+   	.writeme-form_email {
+	    font-size: 14px;
+	    padding: 5px 5px;
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/*biography*/
 	.social {
 	    width: 100%;
@@ -2144,6 +2268,28 @@
 /* MEDIA 510
 ============================================*/
 	@media (max-width: 510px) {
+
+	/*Header*/
+	.writeme_content {
+	    right: 19%;
+	    width: 320px;
+	}
+
+	.writeme-form {
+	    padding: 10px 0px 0px;
+	    height: 300px;
+	}
+
+	.writeme-mail {
+		display: none;
+	}
+
+	.writeme-mail--adapt {
+		display: block;
+
+		bottom: 4.5%;
+    	left: 5%;
+	}
 	
 	
 	/*
@@ -2310,6 +2456,29 @@
 /* MEDIA 430
 ============================================*/
 	@media (max-width: 430px) {
+	/*header*/
+	.writeme-mail {
+		display: none;
+	}
+
+	.writeme-mail--adapt {
+		display: block;
+
+		bottom: 4.5%;
+    	left: 5%;
+
+    	font-size: 12px;
+	}
+
+	.writeme_content {
+	    right: 19%;
+	    width: 280px;
+	}
+
+	.writeme-form_btn {
+    	padding: 5px 7px;
+    	font-size: 14px;
+	}
 
 	/*SKILLS*/
 	.skill__name {
@@ -2337,6 +2506,25 @@
 /* MEDIA 360
 ============================================*/
 	@media (max-width: 360px) {
+	
+	/*header*/
+	.writeme_content {
+	    right: 50%;
+	    bottom: 27%;
+	    width: 290px;
+	    height: 370px;
+	    transform: translateX(50%);
+	}
+
+	.writeme-form {
+	    height: 260px;
+	}
+	
+	.writeme-form_textarea {
+	    min-height: 70px;
+	    max-height: 160px;
+	    height: 120px;
+	}
 
 	/*potrolio*/
 	.potrolio-about__info {

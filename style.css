@@ -509,7 +509,34 @@
 	    padding: 15px 30px;
 	}
 
-	
+	.writeme-mail {
+		height: auto;
+
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+
+	    font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #fff;
+
+	    padding: 3px 10px 3px;
+	    transition: .2s all linear;
+
+	    position: absolute;
+	    bottom: 30px;
+	    left: 40px;
+	    z-index: 1;
+
+	    border: 1px #ccc solid;
+	    background-color: #38323e;
+	}
+
+	.writeme-mail:hover {
+		background-color: #201827;
+		text-decoration: underline;
+	}
 
 
 

@@ -815,7 +815,7 @@
 				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
 			}
 
-		/*--------mobile hover-----------*/
+		/*--------mobile hover
 			.skill-accordion__item:hover .skill__level.html.accord {
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
 			}
@@ -844,6 +844,8 @@
 				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
 			}
 
+			-----------*/
+
 		/*------skill__item ACTIVE-------*/
 			.skill__item.active {
 		    	background-color: #cacaca;}
@@ -855,7 +857,7 @@
 				opacity: 1;}
 
 
-
+			
 			.skill-accordion__item.active .skill-ai__header{
 		    	background-color: #cacaca;}
 

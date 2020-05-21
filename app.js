@@ -64,25 +64,25 @@ $(function() {
 
 //============SKILLSS==============
 
-//skils btn
-var info =      $('.info');
-var info_html = $('#infoJS_html');
-var info_css =  $('#infoJS_css');
-var info_js =   $('#infoJS_js');
-var info_jquery =$('#infoJS_jquery');
-var info_phshp =$('#infoJS_phshp');
-var info_eng =  $('#infoJS_eng');
-var info_learn =$('#infoJS_learn');
+    //skils btn
+    var info =      $('.info');
+    var info_html = $('#infoJS_html');
+    var info_css =  $('#infoJS_css');
+    var info_js =   $('#infoJS_js');
+    var info_jquery =$('#infoJS_jquery');
+    var info_phshp =$('#infoJS_phshp');
+    var info_eng =  $('#infoJS_eng');
+    var info_learn =$('#infoJS_learn');
 
-var btn_html =  $('#btnJS_html');
-var btn_css =   $('#btnJS_css');
-var btn_js =    $('#btnJS_js');
-var btn_jquery = $('#btnJS_jquery');
-var btn_phshp = $('#btnJS_phshp');
-var btn_eng =   $('#btnJS_eng');
-var btn_learn =   $('#btnJS_rearn');
+    var btn_html =  $('#btnJS_html');
+    var btn_css =   $('#btnJS_css');
+    var btn_js =    $('#btnJS_js');
+    var btn_jquery = $('#btnJS_jquery');
+    var btn_phshp = $('#btnJS_phshp');
+    var btn_eng =   $('#btnJS_eng');
+    var btn_learn =   $('#btnJS_rearn');
 
-var srpt = $('#srptJS');
+    var srpt = $('#srptJS');
 
     // если клин на info то не появляться srpt
     info.click(function() {
@@ -181,7 +181,6 @@ var srpt = $('#srptJS');
     });
 
 
-
 // accordionSKILL
     $("[data-skill]").on('click', function(event) {
         event.preventDefault();
@@ -196,9 +195,7 @@ var srpt = $('#srptJS');
         let btnAccorSkill6 = $("#skill-accordion__item6"); // определяем элемент, к которому будем применять условия 
         let btnAccorSkill7 = $("#skill-accordion__item7"); // определяем элемент, к которому будем применять условия 
 
-    $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-        
-                                
+    $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу                                
                                 //(можем указывать ID, класс либо любой другой идентификатор элемента)
         if (!btnAccorSkill1.is(e.target) // проверка условия если клик был не по нашему блоку
             && btnAccorSkill1.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
@@ -231,6 +228,7 @@ var srpt = $('#srptJS');
 
     });
 
+     /* Скрыть навыки при скролле
      $(document).scroll(function (e){
         if (!btnAccorSkill1.is(e.target) && btnAccorSkill1.has(e.target).length === 0) {
             btnAccorSkill1.removeClass("active");
@@ -254,14 +252,10 @@ var srpt = $('#srptJS');
             btnAccorSkill7.removeClass("active");
         }
         
-    });
+    });*/
 
 
-
-
-
-
-// NEWS accordion
+//===========NEWS acord============
     $("[data-collspace]").on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');

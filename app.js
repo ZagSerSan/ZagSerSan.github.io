@@ -23,6 +23,43 @@ $(function() {
     });
 
 
+// writeme btm
+    
+    var writeme_btn =  $('#writeme_btnJS');
+    var writeme_conten = $('#writeme_contentJS');
+
+    var writeme_form_btn = $('#writeme-form_btnJS');
+
+     writeme_btn.click(function() {
+        writeme_btn.toggleClass('active');
+        writeme_conten.toggleClass('active');
+    });
+
+     /*
+        writeme_form_btn.click(function() {
+        writeme_btn.removeClass('active');
+        writeme_conten.removeClass('active');
+    });
+    */
+    
+    /*
+    $(document).mouseup(function (e){
+
+      
+        
+       
+        if (writeme_conten.has(e.target).length === 0) { 
+            writeme_conten.removeClass("active");
+            writeme_btn.removeClass('active');
+        }
+       
+    });
+     */
+
+
+
+
+
 
 // burger
     let burger = $("#burger-nav").click(function() {

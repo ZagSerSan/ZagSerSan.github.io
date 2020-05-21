@@ -351,14 +351,26 @@
 				
 
 
-				<button class="writeme" id="writeme">
+				<button class="writeme_btn" id="writeme_btnJS">
 					<div class="writeme-images">
 						<img class="writeme-img--white" src="img\icon\exclamation_white.svg" alt="svg">
 						<img class="writeme-img--color" src="img\icon\exclamation_color.svg" alt="svg">
 					</div>
 				</button>
 
-				<div class="forma">sss</div>
+				<div class="writeme_content" id="writeme_contentJS">
+					
+					<h5 class="writeme_content-title">Здравствуйте! Прошу Вас помочь мне в развитии! Напишите пожалуйста свои замечания и предложения по поводу сайта!</h5>
+
+					<form class="writeme-form" action="send.php" method="post">
+						<input class="writeme-form_fio" type="text" name="fio" placeholder="Укажите ФИО" required>
+						<input class="writeme-form_email" type="text" name="email" placeholder="Укажите e-mail" required>
+
+						<textarea class="writeme-form_textarea" placeholder="Ваши предложения" name="sss" id="sss" cols="30" rows="10" required></textarea>
+						<input class="writeme-form_btn" id="writeme-form_btnJS" type="submit" value="Отправить">
+					</form>
+
+				</div>
 				
 
 

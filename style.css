@@ -322,7 +322,7 @@
 	}
 
 
-	.writeme {
+	.writeme_btn {
 		position: fixed;
 		bottom: 5%;
 		right: 4%;
@@ -397,16 +397,21 @@
 		transition: all .1s linear;
 	}
 
-	.writeme:hover {
+	.writeme_btn.active .writeme-img--white {
+		opacity: 0;
+
+	}
+
+	.writeme_btn:hover {
 		opacity: 1;
 
 	}
 
-	.writeme:active .writeme-images {
+	.writeme_btn:active .writeme-images {
 		transform: scale3d(1.1, 1.1, 1.1);
 	}
 
-	.writeme:focus {
+	.writeme_btn:focus {
 		outline: none;
 	}
 
@@ -421,9 +426,95 @@
 	}
 
 
-	.forma {
-		
+	.writeme_content {
+		display: none;
+		position: fixed;
+	    bottom: 5%;
+	    right: 10%;
+	    z-index: 1000;
+
+	    width: 500px;
+	    height: 500px;
+
+        padding: 15px;
+    	border-radius: 30px;
+	    background-color: #404765;
 	}
+
+	.writeme_content.active {
+		display: block;
+	}
+
+	.writeme_content-title {
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 20px;
+	    color: #fff;
+	    padding-top: 8px;
+	    text-align: center;
+	}
+
+	.writeme-form {
+		display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+	    align-items: flex-end;
+		padding: 20px;
+
+		height: 390px;
+	}
+
+	.writeme-form_fio {
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 16px;
+	    color: #000;
+	    padding: 10px 10px;
+	    width: 100%;
+	    margin-bottom: 10px;
+	}
+
+	.writeme-form_email {
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 16px;
+	    color: #000;
+	    padding: 10px 10px;
+	    width: 100%;
+	    margin-bottom: 10px;
+	}
+
+	.writeme-form_textarea {
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 20px;
+	    color: #000;
+
+	    padding: 10px;
+
+	    width: 100%;
+	    max-width: 800px;
+	    min-width: 430px;
+	    height: auto;
+	    min-height: 150px;
+    	margin-bottom: 10px;
+	}
+
+	.writeme-form_btn {
+		font-family: 'Montserrat', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #000;
+
+	    padding: 15px 30px;
+	}
+
+	
+
+
+
+
+
 
 /* Intro
 ============================================*/

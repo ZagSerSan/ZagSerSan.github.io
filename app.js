@@ -22,7 +22,6 @@ $(function() {
         }
     });
 
-
 // writeme btm
     
     var writeme_btn =  $('#writeme_btnJS');

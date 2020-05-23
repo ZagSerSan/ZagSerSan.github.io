@@ -771,6 +771,20 @@
 		color: #c7c7c7;
 	}
 
+	.change-version_link.blinking {
+	  	animation-name: blinking; 
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+	}
+
+	@keyframes blinking {
+		0% {color: #c7c7c7;}
+		50% {color: #ff4747;}
+		100% {color: #c7c7c7;}
+	}
+
 	.change-version_link:hover {
 		text-decoration: underline;
 	}
@@ -997,7 +1011,7 @@
 				background: linear-gradient(to right, #374db7 15%, #fff 0);
 			}
 
-			.skill__level.photoshop {
+			.skill__level.tools {
 				background: linear-gradient(to right, #374db7 80%, #fff 0);
 			}
 
@@ -1046,7 +1060,7 @@
 				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
 			}
 
-			.skill__item:hover .skill__level.photoshop {
+			.skill__item:hover .skill__level.tools {
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
 			}
 
@@ -1075,7 +1089,7 @@
 				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
 			}
 
-			.skill-accordion__item:hover .skill__level.photoshop.accord {
+			.skill-accordion__item:hover .skill__level.tools.accord {
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
 			}
 
@@ -1125,7 +1139,7 @@
 			.skill__item.active .skill__level.jquery {
 				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);}
 
-			.skill__item.active .skill__level.photoshop {
+			.skill__item.active .skill__level.tools {
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);}
 
 			.skill__item.active .skill__level.eng {
@@ -1148,7 +1162,7 @@
 			.skill-accordion__item.active .skill__level.jquery.accord {
 				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);}
 
-			.skill-accordion__item.active .skill__level.photoshop.accord {
+			.skill-accordion__item.active .skill__level.tools.accord {
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);}
 
 			.skill-accordion__item.active .skill__level.eng.accord {
@@ -1224,6 +1238,8 @@
 		    word-spacing: 3px;
 		    line-height: 1.4;
 		    padding-left: 10px;
+
+		    overflow: auto;
 
 			transition: width .2s linear;
 

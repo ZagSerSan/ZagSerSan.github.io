@@ -1374,6 +1374,7 @@
 			padding: 20px;
 			background: #1f1f1fba;
 			height: initial;
+                        max-height: 300px;
 			z-index: 2;
 
 			font-family: 'Montserrat', sans-serif;

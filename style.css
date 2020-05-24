@@ -1409,6 +1409,7 @@
 		.info-text.accord {
 			padding: 7px 0px 0px 0px;
 	    	text-align: center;
+                        max-height: 300px;
 		}
 
 		.skill__about.accord {

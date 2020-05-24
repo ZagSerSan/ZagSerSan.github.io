@@ -1410,6 +1410,7 @@
 			padding: 7px 0px 0px 0px;
 	    	text-align: center;
                         max-height: 300px;
+                        overflow: auto;
 		}
 
 		.skill__about.accord {

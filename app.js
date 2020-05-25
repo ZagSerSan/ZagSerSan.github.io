@@ -29,10 +29,21 @@ $(function() {
 
     var writeme_form_btn = $('#writeme-form_btnJS');
 
-     writeme_btn.click(function() {
+    var writeme_content_warning =  $('#writeme_content-warning');
+    var writeme_content_warningBTN =  $('#writeme_content-warning_btn_X_JS');
+    var test =  $('#test_JS');
+
+
+    writeme_btn.click(function() {
         writeme_btn.toggleClass('active');
         writeme_conten.toggleClass('active');
     });
+
+    $(".writeme_content-warning .writeme_content-warning_btn_X").click(function() {
+        $(".writeme_content-warning").removeClass("active"); //добавляем класс текущей (нажатой)
+     })
+   
+
 
      /*
         writeme_form_btn.click(function() {
@@ -54,8 +65,6 @@ $(function() {
        
     });
      */
-
-
 
 
 

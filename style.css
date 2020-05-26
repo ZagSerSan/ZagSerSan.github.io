@@ -1079,20 +1079,22 @@
 				to {transform: rotateZ(360deg);}
 			}
 
-			.skill__level.jquery {
+			.skill__level.frameworks {
 				background: linear-gradient(to right, #374db7 15%, #fff 0);
+			}
+
+			
+
+			.skill__level.cms {
+				background: linear-gradient(to right, #374db7 20%, #fff 0);
 			}
 
 			.skill__level.tools {
 				background: linear-gradient(to right, #374db7 80%, #fff 0);
 			}
-
-			.skill__level.eng {
-				background: linear-gradient(to right, #374db7 45%, #fff 0);
-			}
 			
-			.skill__level.learnab {
-				background: linear-gradient(to right, #374db7 95%, #fff 0);
+			.skill__level.private {
+				background: linear-gradient(to right, #374db7 70%, #fff 0);
 			}
 
 		/*------GLOBAL: skill__item:hover+active------*/
@@ -1128,7 +1130,7 @@
 				background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);
 			}
 
-			.skill__item:hover .skill__level.jquery {
+			.skill__item:hover .skill__level.frameworks {
 				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
 			}
 
@@ -1136,12 +1138,12 @@
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
 			}
 
-			.skill__item:hover .skill__level.eng {
-				background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);
+			.skill__item:hover .skill__level.cms {
+				background: linear-gradient(90deg, green 20%, red 0%, #FFF 0%);
 			}
 			
-			.skill__item:hover .skill__level.learnab {
-				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
+			.skill__item:hover .skill__level.private {
+				background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);
 			}
 
 		/*--------mobile hover
@@ -1157,7 +1159,7 @@
 				background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);
 			}
 
-			.skill-accordion__item:hover .skill__level.jquery.accord {
+			.skill-accordion__item:hover .skill__level.frameworks.accord {
 				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);
 			}
 
@@ -1165,11 +1167,11 @@
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);
 			}
 
-			.skill-accordion__item:hover .skill__level.eng.accord {
+			.skill-accordion__item:hover .skill__level.cms.accord {
 				background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);
 			}
 
-			.skill-accordion__item:hover .skill__level.learnab.accord {
+			.skill-accordion__item:hover .skill__level.private.accord {
 				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);
 			}
 
@@ -1208,17 +1210,17 @@
 			.skill__item.active .skill__level.js {
 				background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);}
 
-			.skill__item.active .skill__level.jquery {
+			.skill__item.active .skill__level.frameworks {
 				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);}
 
 			.skill__item.active .skill__level.tools {
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);}
 
-			.skill__item.active .skill__level.eng {
-				background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);}
+			.skill__item.active .skill__level.cms {
+				background: linear-gradient(90deg, green 20%, red 0%, #FFF 0%);}
 
-			.skill__item.active .skill__level.learnab {
-				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);}
+			.skill__item.active .skill__level.private {
+				background: linear-gradient(90deg, green 50%, red 70%, #FFF 0%);}
 
 
 
@@ -1231,16 +1233,16 @@
 			.skill-accordion__item.active .skill__level.js.accord {
 				background: linear-gradient(90deg, green 30%, red 0%, #FFF 0%);}
 
-			.skill-accordion__item.active .skill__level.jquery.accord {
+			.skill-accordion__item.active .skill__level.frameworks.accord {
 				background: linear-gradient(90deg, green 15%, red 0%, #FFF 0%);}
 
 			.skill-accordion__item.active .skill__level.tools.accord {
 				background: linear-gradient(90deg, green 50%, red 80%, #FFF 0%);}
 
-			.skill-accordion__item.active .skill__level.eng.accord {
-				background: linear-gradient(90deg, green 45%, red 0%, #FFF 0%);}
+			.skill-accordion__item.active .skill__level.cms.accord {
+				background: linear-gradient(90deg, green 20%, red 0%, #FFF 0%);}
 
-			.skill-accordion__item.active .skill__level.learnab.accord {
+			.skill-accordion__item.active .skill__level.private.accord {
 				background: linear-gradient(90deg, green 50%, red 95%, #FFF 0%);}
 
 	/*===SKILL RIGTH PART===*/
@@ -1248,6 +1250,7 @@
 		.skill_right-part {
 			width: 50%;
 			height: initial;
+			max-height: 282px;
 
 			background: transparent;
 			border: 2px #ccc solid;
@@ -1349,7 +1352,7 @@
 		    word-spacing: 3px;
 		    line-height: 1.4;
 
-		    padding: 7px 0px 0px 10px;
+		    padding: 1px 0px 0px 10px;
 		}
 
 	/*===SKILLS ACCORDION MOBILE===*/
@@ -1828,6 +1831,33 @@
 	.works__item.progress:hover .works__item--progress-txt {
 		opacity: .8;
 	}
+
+	.works__item--progress-link {
+		position: absolute;
+	    bottom: 33%;
+	    left: 50%;
+	    z-index: 1;
+	    transform: translateX(-50%);
+	    color: #fff;
+	    text-decoration: underline;
+
+	    font-family: 'Montserrat', sans-serif;
+	    font-weight: 400;
+	    font-size: 20px;
+
+	    opacity: 0;
+
+	    transition: all .2s linear;
+	}
+
+	.works__item.progress:hover .works__item--progress-link {
+		opacity: .8;
+	}
+
+	.works__item--progress-link:hover {
+		text-decoration: none;
+	}
+	
 
 /* News
 ============================================*/

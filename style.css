@@ -2156,6 +2156,49 @@
 	    width: 40%;
 	}
 
+	/*potrolio*/
+	.potrolio-about__title {
+	    padding-bottom: 5px;
+	    font-size: 15px;
+	}
+
+	.pai__property {
+	    font-size: 15px;
+	}
+
+	.pai__value {
+		font-size: 15px;
+	}
+
+	.potrolio-about__link {
+	    font-size: 15px;
+	    padding-bottom: 0;
+	}
+
+	.work-adapt {
+	    width: 35px;
+	}
+
+	.wpi--download-link {
+	    font-size: 17px;
+	}
+
+	.works__item--progress-img {
+       width: 40px;
+	}
+
+	.works__item.progress:hover .works__item--progress-img {
+	    top: 20%;
+	}
+
+	.works__item--progress-txt {
+		font-size: 18px;
+	}
+
+    .works__item--progress-link {
+    	font-size: 15px;
+	}
+
 /* MEDIA 810
 ============================================*/
 	@media (max-width: 810px) {
@@ -2494,48 +2537,7 @@
 	}
 
 
-	/*potrolio*/
-	.potrolio-about__title {
-	    padding-bottom: 5px;
-	    font-size: 15px;
-	}
-
-	.pai__property {
-	    font-size: 15px;
-	}
-
-	.pai__value {
-		font-size: 15px;
-	}
-
-	.potrolio-about__link {
-	    font-size: 15px;
-	    padding-bottom: 0;
-	}
-
-	.work-adapt {
-	    width: 35px;
-	}
-
-	.wpi--download-link {
-	    font-size: 17px;
-	}
-
-	.works__item--progress-img {
-       width: 40px;
-	}
-
-	.works__item.progress:hover .works__item--progress-img {
-	    top: 20%;
-	}
-
-	.works__item--progress-txt {
-		font-size: 18px;
-	}
-
-    .works__item--progress-link {
-    	font-size: 15px;
-	}
+	
 
 	/*News*/
 	.news-table_version {
@@ -2607,6 +2609,47 @@
 	    right: 13%;
 	}
 
+	/*potrolio*/
+	.potrolio-about__title {
+	    font-size: 13px;
+	}
+
+	.pai__property {
+	    font-size: 13px;
+	}
+
+	.pai__value {
+		font-size: 13px;
+	}
+
+	.potrolio-about__link {
+	    font-size: 15px;
+	    padding-bottom: 0;
+	}
+
+	.work-adapt {
+	    width: 35px;
+	}
+
+	.wpi--download-link {
+	    font-size: 17px;
+	}
+
+	.works__item--progress-img {
+       width: 40px;
+	}
+
+	.works__item.progress:hover .works__item--progress-img {
+	    top: 20%;
+	}
+
+	.works__item--progress-txt {
+		font-size: 18px;
+	}
+
+    .works__item--progress-link {
+    	font-size: 15px;
+	}
 	}
 
 /* MEDIA 360

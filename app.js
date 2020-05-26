@@ -227,7 +227,7 @@ $(function() {
 
 
 // accordionSKILL
-    $("[data-skill]").on('click', function(event) {
+    $("[data-snkill]").on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');
     });
@@ -310,12 +310,14 @@ $(function() {
     let btnAccord2 = $("#news-accordion__item2"); // определяем элемент, к которому будем применять условия
     let btnAccord3 = $("#news-accordion__item3"); // определяем элемент, к которому будем применять условия
     let btnAccord4 = $("#news-accordion__item4"); // определяем элемент, к которому будем применять условия
+    let btnAccord5 = $("#news-accordion__item5"); // определяем элемент, к которому будем применять условия
 
     // adapt
     let btnAccordAdapt1 = $("#news-accordion__item--adapt1"); // определяем элемент, к которому будем применять условия
     let btnAccordAdapt2 = $("#news-accordion__item--adapt2"); // определяем элемент, к которому будем применять условия
     let btnAccordAdapt3 = $("#news-accordion__item--adapt3"); // определяем элемент, к которому будем применять условия
     let btnAccordAdapt4 = $("#news-accordion__item--adapt4"); // определяем элемент, к которому будем применять условия
+    let btnAccordAdapt5 = $("#news-accordion__item--adapt5"); // определяем элемент, к которому будем применять условия
 
 
     $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
@@ -337,6 +339,10 @@ $(function() {
             && btnAccord4.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
             btnAccord4.removeClass("active"); // если условия выполняются - скрываем наш элемент
         }
+        if (!btnAccord5.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccord5.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccord5.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
 
         //adapt
         if (!btnAccordAdapt1.is(e.target) // проверка условия если клик был не по нашему блоку
@@ -354,6 +360,10 @@ $(function() {
         if (!btnAccordAdapt4.is(e.target) // проверка условия если клик был не по нашему блоку
             && btnAccordAdapt4.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
             btnAccordAdapt4.removeClass("active"); // если условия выполняются - скрываем наш элемент
+        }
+        if (!btnAccordAdapt5.is(e.target) // проверка условия если клик был не по нашему блоку
+            && btnAccordAdapt5.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            btnAccordAdapt5.removeClass("active"); // если условия выполняются - скрываем наш элемент
         }
     });
 

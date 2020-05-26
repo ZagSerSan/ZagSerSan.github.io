@@ -1835,7 +1835,7 @@
 
 	.works__item--progress-link {
 		position: absolute;
-	    bottom: 33%;
+	    bottom: 20%;
 	    left: 50%;
 	    z-index: 1;
 	    transform: translateX(-50%);
@@ -1844,7 +1844,7 @@
 
 	    font-family: 'Montserrat', sans-serif;
 	    font-weight: 400;
-	    font-size: 20px;
+	    font-size: 18px;
 
 	    opacity: 0;
 
@@ -2282,27 +2282,6 @@
 	    font-size: 14px;
 	    padding: 5px 5px;
 	}
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	/*biography*/
@@ -2554,9 +2533,8 @@
 		font-size: 18px;
 	}
 
-    .potrolio-continue {
-    	max-width: 170px;
-    	font-size: 13px;
+    .works__item--progress-link {
+    	font-size: 15px;
 	}
 
 	/*News*/
@@ -2692,7 +2670,11 @@
 	.works__item--progress-txt {
 		font-size: 16px;
 	}
-	
+
+	.works__item--progress-link {
+    	font-size: 12px;
+	}
+
 	}
 
 /* xxx

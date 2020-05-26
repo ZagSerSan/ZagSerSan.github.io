@@ -266,7 +266,7 @@
 	    right: 0;
 	    z-index: 1000;
 	    width: 100%;
-	    background: linear-gradient(to bottom, #282626, #373434);
+	    background: linear-gradient(to bottom, #282626a6, #373434);
 
 	    overflow: hidden;
 
@@ -285,7 +285,7 @@
 	}
 
 	.header.fixed .burger-links {
-		background: linear-gradient(to bottom, #000, #5e5e5e);
+		background: linear-gradient(to bottom, #000000cf, #373434);
 	}
 
 	.to__top-pos {

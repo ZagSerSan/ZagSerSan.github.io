@@ -227,7 +227,7 @@ $(function() {
 
 
 // accordionSKILL
-    $("[data-snkill]").on('click', function(event) {
+    $("[data-skill]").on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');
     });

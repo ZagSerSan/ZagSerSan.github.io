@@ -1,0 +1,144 @@
+// main: ../style.less
+
+
+.works__inner {
+	padding: 4.5rem 0 10rem 0;
+	justify-content: center;
+}
+
+.works__nav {
+	display: flex;
+	justify-content: center;
+
+	padding-bottom: 3rem; 
+}
+
+.works__nav__link {
+	margin-right: 3rem;
+
+	font-family: Montserrat,sans-serif;
+    font-size: 1.2rem;
+    color: @grey;
+	font-weight: 400;
+	text-decoration: none;
+
+	position: relative;
+	
+	&:after {
+		content: "";
+
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+		z-index: 1;
+
+		width: 0;
+		height: 2px;
+		background-color: @grey;
+
+		transition: width .1s linear;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+
+}
+
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -1.5rem;
+	padding-bottom: 4rem;
+}
+
+.portfolio__col {
+	width: 33.33333%;
+	padding: 1.5rem;
+	
+}
+
+.portfolio__item {
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px #ccc;
+	overflow: hidden;
+	cursor: pointer;
+
+	transition: transform .1s linear, box-shadow .1s linear;
+	
+	&:hover {
+		transform: scale(1.01);
+		box-shadow: 7px 7px 15px #555;		
+	}
+}
+
+.portfolio__item__img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.portfolio__item__content {
+    padding: 18px 14px 12px;
+	
+	border-bottom: 1px #ccc solid;
+	border-right: 1px #ccc solid;
+	border-left: 1px #ccc solid;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.portfolio__item__content__cat {
+	font-family: Montserrat,sans-serif;
+    font-size: 1.2rem;
+	font-weight: 400;
+    color: @black;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+.portfolio__item__content__title {
+	font-family: Montserrat,sans-serif;
+    font-size: 1.6rem;
+	font-weight: 700;
+    color: @black;
+    text-transform: uppercase;
+    
+	display: flex;
+    justify-content: space-between;
+}
+
+.portfolio__item__content__title__date {
+	font-family: Montserrat,sans-serif;
+    font-size: 1.6rem;
+	font-weight: 700;
+    color: @black;
+    text-transform: uppercase;
+}
+
+.works__btn {
+	width: 100%;
+	text-align: center;
+}
+
+.works__load {
+	font-family: Montserrat,sans-serif;
+    font-size: 1.4rem;
+	font-weight: 700;
+    color: @black;
+    text-transform: uppercase;
+    text-decoration: none;
+
+	margin: 0 auto;
+    padding: 12px 20px;
+
+    border: 2px @black solid;
+    border-radius: 15px;
+
+	transition: background-color .1s linear, color .1s linear;
+
+    &:hover {
+    	background-color: @black;
+    	color: @white;
+    }
+}

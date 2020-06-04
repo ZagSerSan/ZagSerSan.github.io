@@ -3,6 +3,12 @@
 =============================*/
 @import "vars";
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 html {
     font-size:10px
 }
@@ -15,11 +21,11 @@ body {
     margin: 0;
 }
 
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }
+
 
 
 /* Blocks
@@ -28,4 +34,12 @@ body {
 @import "blocks/header";
 @import "blocks/user";
 @import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/works";
+
+
+
+
+
+
 @import "blocks/footer";

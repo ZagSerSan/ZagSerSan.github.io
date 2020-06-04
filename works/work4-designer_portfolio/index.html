@@ -5,51 +5,302 @@
 
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+	<script src="https://use.fontawesome.com/ce6ea4de17.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Designer Portfolio</title>
 </head>
 <body>
 
+<!-- Sprites -->
+	<svg style='display: none;'>
+		<symbol id="be">
+			<svg 
+			 xmlns="http://www.w3.org/2000/svg"
+			 xmlns:xlink="http://www.w3.org/1999/xlink"
+			 width="41px" height="41px">
+			<path fill-rule="evenodd"  fill="rgb(24, 105, 255)"
+			 d="M0.000,-0.000 L41.000,-0.000 L41.000,41.000 L0.000,41.000 L0.000,-0.000 Z"/>
+			<text font-family="FontAwesome" fill="rgb(255, 255, 255)" font-size="23px" x="7px" y="27.079px">&#61876;</text>
+			</svg>
+		</symbol>
+		<symbol id="dribbble">
+			<svg 
+			 xmlns="http://www.w3.org/2000/svg"
+			 xmlns:xlink="http://www.w3.org/1999/xlink"
+			 width="41px" height="41px">
+			<path fill-rule="evenodd"  fill="rgb(229, 26, 104)"
+			 d="M-0.000,-0.000 L41.000,-0.000 L41.000,41.000 L-0.000,41.000 L-0.000,-0.000 Z"/>
+			<text font-family="FontAwesome" fill="rgb(255, 255, 255)" font-size="25px" x="9px" y="28.825px">&#61821;</text>
+			</svg>
+		</symbol> 
+		<symbol id="in">
+			<svg 
+			 xmlns="http://www.w3.org/2000/svg"
+			 xmlns:xlink="http://www.w3.org/1999/xlink"
+			 width="41px" height="41px">
+			<path fill-rule="evenodd"  fill="rgb(0, 123, 182)"
+			 d="M-0.000,-0.000 L41.000,-0.000 L41.000,41.000 L-0.000,41.000 L-0.000,-0.000 Z"/>
+			<text font-family="FontAwesome" fill="rgb(255, 255, 255)" font-size="24px" x="10px" y="26.952px">&#61665;</text>
+			</svg>
+		</symbol> 
+		<symbol id="facebook">
+			<svg 
+			 xmlns="http://www.w3.org/2000/svg"
+			 xmlns:xlink="http://www.w3.org/1999/xlink"
+			 width="41px" height="41px">
+			<path fill-rule="evenodd"  fill="rgb(58, 88, 152)"
+			 d="M-0.000,-0.000 L41.000,-0.000 L41.000,41.000 L-0.000,41.000 L-0.000,-0.000 Z"/>
+			<text font-family="FontAwesome" fill="rgb(255, 255, 255)" font-size="23px" x="14px" y="29.079px">&#61594;</text>
+			</svg>
+		</symbol> 
+		<symbol id="instagram">
+			<svg 
+			 xmlns="http://www.w3.org/2000/svg"
+			 xmlns:xlink="http://www.w3.org/1999/xlink"
+			 width="41px" height="41px">
+			<path fill-rule="evenodd"  fill="rgb(19, 87, 138)"
+			 d="M-0.000,-0.000 L41.000,-0.000 L41.000,41.000 L-0.000,41.000 L-0.000,-0.000 Z"/>
+			<text font-family="FontAwesome" fill="rgb(255, 255, 255)" font-size="26px" x="9px" y="29.698px">&#61805;</text>
+			</svg>
+		</symbol> 
+		<symbol id="twitter">
+			<svg 
+			 xmlns="http://www.w3.org/2000/svg"
+			 xmlns:xlink="http://www.w3.org/1999/xlink"
+			 width="41px" height="41px">
+			<path fill-rule="evenodd"  fill="rgb(86, 172, 239)"
+			 d="M-0.000,-0.000 L41.000,-0.000 L41.000,41.000 L-0.000,41.000 L-0.000,-0.000 Z"/>
+			<text font-family="FontAwesome" fill="rgb(255, 255, 255)" font-size="25px" x="10px" y="27.825px">&#61593;</text>
+			</svg>
+		</symbol> 
+
+	</svg>
+
 <!-- Heared -->
   	<div class="header">
 		<div class="container">
-		<div class="header__inner">
+			<div class="header__inner">
 	  
-	  	<div class="user">
-			<div class="user__avatar">
-				<img src="http://placehold.it/57/333" alt="">
+		  	<div class="user">
+				<div class="user__avatar">
+					<img src="http://placehold.it/57/333" alt="">
+				</div>
+				<div class="user__content">
+					<div class="user__name">Lewis<br>Nathaniel</div>
+					<div class="user__prof">UI &amp; UX Designer</div>
+				</div>
 			</div>
-			<div class="user__content">
-				<div class="user__name">Lewis<br>Nathaniel</div>
-				<div class="user__prof">UI &amp; UX Designer</div>
-		</div>
-	</div>
-	  
-	<nav class="nav">
-		<a href="#" class="nav__link active">work</a>
-		<a href="#" class="nav__link">about me</a>
-		<a href="#" class="nav__link">blog</a>
-		<a href="#" class="nav__link">contact</a>
-		<a href="#" class="nav__btn">hire me</a>
-	</nav>
+		  
+			<nav class="nav">
+				<a href="#" class="nav__link active">work</a>
+				<a href="#" class="nav__link">about me</a>
+				<a href="#" class="nav__link">blog</a>
+				<a href="#" class="nav__link">contact</a>
+				<a href="#" class="nav__link--btn">hire me</a>
+			</nav>
 	
-	</div>
-	</div>
+			</div>
+		</div>
   </div>
 
+<!-- Intro -->
+	<section class="intro">
+		<div class="container">
+			<div class="intro__inner">
+				
+				<div class="intro__content">
+					<h2 class="intro__subtitle">Hello, I’m</h2>
+					<h1 class="intro__titlename">Lewis Nathaniel</h2>
+					<p class="intro__prof">UI & UX Designer</p>
 
+					<div class="intro__social">
+						<a class="intro__social__link" href="#"><svg><use xlink:href="#be"></use></svg></a>
+						<a class="intro__social__link" href="#"><svg><use xlink:href="#dribbble"></use></svg></a>
+						<a class="intro__social__link" href="#"><svg><use xlink:href="#in"></use></svg></a>
+						<a class="intro__social__link" href="#"><svg><use xlink:href="#facebook"></use></svg></a>
+						<a class="intro__social__link" href="#"><svg><use xlink:href="#instagram"></use></svg></a>
+						<a class="intro__social__link" href="#"><svg><use xlink:href="#twitter"></use></svg></a>
+					</div>
+					<div class="intro__btns">
+						<a class="intro__btn" href="#">hire me</a>
+						<a class="intro__btn" href="#">see my resume</a>
+					</div>
+				</div>
+	
+				<img src="images/designer_photo.png" alt="intro-img" class="intro__photo">
+			</div>
+		</div>
+	</section>
 
-
-
-
-
-
-
+<!-- Works -->
+	<div class="works">
+		<div class="container">
+			<div class="works__inner">
+				<div class="works__nav">
+					<a class="works__nav__link" href="#">All</a>
+					<a class="works__nav__link" href="#">App</a>
+					<a class="works__nav__link" href="#">Website</a>
+					<a class="works__nav__link" href="#">Interaction</a>
+				</div>
+				
+				<div class="portfolio">	
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__col">
+						<div class="portfolio__item">
+							<img src="http://placehold.it/370x300" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									category
+								</div>
+								<div class="portfolio__item__content__title">
+									project title
+									<div class="portfolio__item__content__title__date">
+										2018
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- /.portfolio__col -->
+				</div><!-- /.portfolio -->
+	
+				<div class="works__btn">
+					<a href="#" class="works__load">load more works</a>
+				</div>
+			</div>		
+		</div>
+	</div>
 
 
 
 <!-- Footer -->
-	<footer style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+	<footer class="footer">
 		<hr style="height: 5px; width: 100%; background-color: #000">
 		<h3>Отслеживание проэкта</h3>
 		<a class="footer__link" href="https://drive.google.com/open?id=1KJFX95ZSmge37CtY3HMUEv4fCZX0Noix">смотреть макет</a>

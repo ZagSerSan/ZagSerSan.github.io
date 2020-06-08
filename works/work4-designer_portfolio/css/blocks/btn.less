@@ -1,0 +1,66 @@
+// main: ../style.less
+
+.btn {
+	display: inline-block;
+	font-family: Montserrat,sans-serif;
+    font-size: 1.4rem;
+    color: @black;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	padding: 1.1em 2.2em;
+
+	border: 1px @black solid;
+	border-radius: 2.2em;
+	
+	transition: background .1s linear, box-shadow .1s linear, color .1s linear;
+
+	position: relative;
+	z-index: 2;
+
+	& + & {
+		margin-left: 1.5rem;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -1%;
+		z-index: -1;
+		width: 0%;
+		height: 100%;
+
+		border-radius: 30px;
+
+		transition: all .25s linear;
+	}
+
+	&:hover {
+		color: #fff;
+
+		&:before {
+			width: 102%;
+		background-color: #000;
+		}
+
+	}
+
+	&--header {
+		padding: 0.72em 2.15em;
+		margin-left: 3rem;
+		border: 2px @black solid;
+		font-weight: 700;
+	}
+
+	&--work {
+		font-size: 1.2rem;
+		padding: 0.72em 1.2em;
+		border: 2px @black solid;
+		font-weight: 700;
+	}
+	
+
+
+}

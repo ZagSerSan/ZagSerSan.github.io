@@ -1,9 +1,5 @@
 // main: ../style.less
 
-.nav {
-
-}
-
 .nav__link {
 	font-family: Montserrat,sans-serif;
     font-size: 1.4rem;
@@ -34,7 +30,7 @@
 
 		background-color: @black;
 
-		transition: width .1s linear;
+		transition: width .2s linear;
 	}
 
 	&:hover {
@@ -48,47 +44,6 @@
 			width: 100%;
 		}
 	}
-
-	&--btn {
-		font-family: Montserrat,sans-serif;
-	    font-size: 1.4rem;
-	    color: @black;
-		font-weight: 700;
-		text-transform: uppercase;
-		text-decoration: none;
-
-		padding: 10px 30px;
-		margin-left: 3rem;
-		border: 2px @black solid;
-		border-radius: 30px;
-		
-		transition: background .1s linear;
-
-		position: relative;
-		z-index: 2;
-
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
-			width: 0%;
-			height: 100%;
-			background-color: #fff;
-			border-radius: 30px;
-
-			transition: all .1s linear;
-		}
-
-		&:hover {;
-			&:before {
-				width: 100%;
-			background-color: #ccc;
-			}
-		}
-	}
-
 
 }
 

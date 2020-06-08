@@ -1,0 +1,12 @@
+.footer {
+  padding: 2rem 0;
+  background-color: fff;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__credits {
+  display: flex;
+  justify-content: space-between;
+}

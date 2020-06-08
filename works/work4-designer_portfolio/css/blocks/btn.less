@@ -11,7 +11,7 @@
 
 	padding: 1.1em 2.2em;
 
-	border: 1px @black solid;
+	border: 1px @grey solid;
 	border-radius: 2.2em;
 	
 	transition: background .1s linear, box-shadow .1s linear, color .1s linear;
@@ -39,7 +39,7 @@
 
 	&:hover {
 		color: #fff;
-
+		
 		&:before {
 			width: 102%;
 		background-color: #000;
@@ -61,6 +61,11 @@
 		font-weight: 700;
 	}
 	
-
+	&--news {
+		font-size: 1.2rem;
+		padding: 0.72em 1.2em;
+		border: 2px @black solid;
+		font-weight: 700;
+	}
 
 }

@@ -1,0 +1,219 @@
+$(function () {
+	
+
+	/* Filter
+	=====================================*/
+	let filter = $("[data-filter]");
+
+	filter.on("click", function (event) {
+		event.preventDefault();
+		
+		let cat = $(this).data('filter');
+
+		if (cat == 'all') {
+			$("[data-cat]").removeClass('hide');
+		} else {
+			$("[data-cat]").each(function () {
+
+			let workCat = $(this).data('cat');
+
+				if (cat != workCat) {
+					$(this).addClass('hide');
+				} else {
+					$(this).removeClass('hide');
+				}
+			});
+		}
+	});
+
+
+
+	/* Modal
+	=====================================*/
+
+	/* Открытие */
+
+	const modalCall = $("[data-modal]");
+	const modalClose = $("[data-close]");
+
+	modalCall.on('click', function (event) {
+		event.preventDefault();
+
+		let $this = $(this);
+		let modalId = $this.data('modal');
+
+		$(modalId).addClass('show');
+		$("body").addClass('no-scroll');
+
+		setTimeout(function () {
+			$(modalId).find(".modal__dialog").css({
+				transform: "scale(1)"
+			});
+		}, 10);
+
+		$('[data-slider="slick"]').slick('setPosition');
+
+	});
+
+	let modalJS = $('#modalJS');
+	let modal_resume = $('#modal_resume');
+	let modal_hire_me = $('#modal_hire_me');
+
+
+	modalJS.on('click', function (event) {
+		event.preventDefault();
+
+		modal_resume.removeClass('show');
+		modal_hire_me.addClass('show');
+
+	});
+
+	/* Закрытие */
+
+	modalClose.on('click', function (event) {
+		event.preventDefault();
+
+		let $this = $(this);
+		let modalParent = $this.parents('.modal');
+
+		modalParent.find(".modal__dialog").css({
+			transform: "scale(0)"
+		});
+		
+		setTimeout(function () {
+			modalParent.removeClass('show');
+			$("body").removeClass('no-scroll');
+		}, 400);
+
+	});
+
+	$('.modal').on('click', function (event) {
+		$this = $(this);
+		$this.find(".modal__dialog").css({
+			transform: "scale(0)"
+		});
+
+		setTimeout(function () {
+			$this.removeClass('show');
+			$("body").removeClass('no-scroll');
+		}, 400);
+		
+
+	});
+
+
+	$('.modal__dialog').on('click', function (event) {
+		event.stopPropagation();
+	});
+
+
+
+
+	/* Slider: https://kenwheeler.github.io/slick/
+	=====================================*/
+
+	$('[data-slider="slick"]').slick({
+	  infinite: true,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  fade: true,
+	  arrows: false,
+	  dots: true
+	});
+
+	$('.slickPrev').on('click', function (event) {
+		event.preventDefault();
+
+		let currentSlider = $(this).parents(".modal").find('[data-slider="slick"]');
+
+		currentSlider.slick('slickPrev');
+	})
+
+
+	$('.slickNext').on('click', function (event) {
+		event.preventDefault();
+
+		let currentSlider = $(this).parents(".modal").find('[data-slider="slick"]');
+
+		currentSlider.slick('slickNext');
+	});
+
+
+	/* Burger
+	=====================================*/
+
+		let burger = $('#nav-burger-JS');
+
+		burger.on('click', function () {
+			burger.toggleClass('active');
+		})
+
+
+
+
+	/* Header Fixed
+	=====================================*/
+		// fixed header and burger menu
+
+		let header = $("#header");
+		let intro = $("#intro");
+		let introH = intro.innerHeight();
+		let scrollPos = $(window).scrollTop();
+
+		$(window).on("scroll load resize", function() {
+			introH = intro.innerHeight();
+			scrollPos = $(this).scrollTop();
+			scrollPos += 100;
+
+			checkscroll(scrollPos, introH);
+
+		});
+
+		function checkscroll(scrollPos, introH) {
+			if (scrollPos>=introH) {
+				header.addClass("fixed");
+			}
+			else {
+				header.removeClass("fixed");
+			}
+
+		};
+
+		$(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+        let btn_nav = $("#nav-burger-JS"); // определяем элемент, к которому будем применять условия 
+        						//(можем указывать ID, класс либо любой другой идентификатор элемента)
+	        if (!btn_nav.is(e.target) // проверка условия если клик был не по нашему блоку
+	            && btn_nav.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+	            btn_nav.removeClass("active"); // если условия выполняются - скрываем наш элемент
+	        }
+	    });
+
+	    $('#nav-burger-JS').on('click', function (event) {
+			event.stopPropagation();
+		});
+
+		$(document).scroll(function (e){
+		let btn_nav = $("#nav-burger-JS"); // определяем элемент, к которому будем применять условия 
+	        if (!btn_nav.is(e.target) && btn_nav.has(e.target).length === 0) {
+	            btn_nav.removeClass("active");
+	        }
+	    });
+
+
+		//smooth scroll
+
+		$("[data-scroll]").on('click', function (event) {
+			event.preventDefault();
+
+			let elementId = $(this).data('scroll');
+			let elementOffset = $(elementId).offset().top;
+
+			console.log(elementOffset);
+
+			$("html, body").animate({
+				scrollTop: elementOffset - 100
+			}, 700);
+
+		});
+
+});

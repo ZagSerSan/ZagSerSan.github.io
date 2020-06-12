@@ -1,7 +1,7 @@
 // main: ../style.less
 
 .modal {
-	display: flex;
+	display: none;
 	width: 100%;
 	height: 100%;
 
@@ -10,28 +10,16 @@
 	left: 0;
 	z-index: 1000;
 
-	background-color: rgba(4, 4, 16, 0.87);
+	background-color: rgba(4, 4, 16, .87);
 
 	padding: 2rem 2rem;
 	overflow: auto;
+
+	&.show {
+		display: flex;
+		transition: transform .3s linear;
+	}
 }
-
-.modaltree {
-	display: flex;
-	width: 100%;
-	height: 100%;
-
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-
-	background-color: rgba(4, 4, 16, 0.87);
-
-	padding: 2rem 2rem;
-	overflow: auto;
-}
-
 
 .modal__dialog {
 	width: 100%;
@@ -39,6 +27,14 @@
 
 	margin: auto;
 	background-color: #fff;
+
+	transform: scale(0);
+	transition: transform .2s linear .2s;
+	//transition .2s задержка
+
+	&--sm {
+		max-width: 900px;
+	}
 }
 
 .modal-work {
@@ -202,6 +198,11 @@
 
 
 
+
+
+
+
+
 /* modal RESUME 
 ========================================*/
 .modal__content {
@@ -215,7 +216,6 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	color: @black;
-	text-align: center;
 
 	margin-bottom: 5.6rem;
 }
@@ -349,4 +349,125 @@
 .timeline__item__content {
 	margin-left: 1.9rem
 }
+
+
+
+
+
+
+
+/* modal CONTACT
+========================================*/
+
+.contact {
+	display: flex;
+	width: 100%;
+}
+
+.contact__left {
+	width: 47%;
+	padding: 2rem;
+}
+
+.contact__right {
+	width: 53%;
+
+	background: @grey url(http://placehold.it/480x700) center no-repeat;
+}
+
+.contact__left__title {
+	font-family: Montserrat,sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: @black;
+    text-transform: uppercase;
+
+}
+
+.contact__left__subtitle {
+	font-family: Montserrat,sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: @black;
+    text-transform: uppercase;
+
+}
+
+.contact__telmail {
+	margin: 3rem 0 4.5rem 0;
+	padding: 0;
+	list-style: none;
+}
+
+.contact__telmail__item {
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+
+	font-size: 1.4rem;
+	font-weight: 300;
+	color: @black;
+
+	a {
+		font-size: 1.4rem;
+		font-weight: 300;
+		color: @black;
+
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.contact__telmail__icon {
+	margin-right: 1rem;
+}
+
+
+/* form */
+
+.form__group {
+	margin-bottom: 2.7rem;
+}
+
+.form__label {
+	display: inline-block;
+	margin-bottom: .8rem;
+
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: @black;
+}
+
+.form__input,
+.form__textarea {
+	display: block;
+	width: 100%;
+
+	padding: 1.9rem 2.7rem;
+	border: 1px solid fade(#707070, 30%);
+	border-radius: 2.7rem;
+
+	font-family: inherit;
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: @black;
+
+	transition: border .1s linear;
+
+	&:focus {
+		outline: none;
+		border: 1px solid fade(#707070, 100%)
+	}
+}
+
+.form__textarea {
+	height: 200px;
+	resize: none;
+}
+
+
+
 

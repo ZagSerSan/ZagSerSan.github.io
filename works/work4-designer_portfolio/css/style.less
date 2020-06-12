@@ -10,7 +10,11 @@
 }
 
 html {
-    font-size:10px
+    font-size:10px;
+
+    @media (max-width: 780px) {
+      font-size: 9px;
+    }
 }
 
 body {
@@ -31,15 +35,17 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
+/* Vendor
+=============================*/
+@import "vendor/slick.less";
 
 /* Blocks
 =============================*/
 @import "blocks/container";
 @import "blocks/header";
 @import "blocks/user";
-@import "blocks/nav";
 @import "blocks/btn";
-@import "blocks/intro";
+@import "blocks/intro.less";
 @import "blocks/works";
 @import "blocks/about";
 @import "blocks/reviews";

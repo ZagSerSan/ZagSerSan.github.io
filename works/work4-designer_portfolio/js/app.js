@@ -55,16 +55,21 @@ $(function () {
 
 	});
 
-	let modalJS = $('#modalJS');
-	let modal_resume = $('#modal_resume');
-	let modal_hire_me = $('#modal_hire_me');
+	let modal_move = $("#modal_move_js");
+	let modalResume = $('#modal_resume');
+	let modalHireMe = $('#modal_hire_me');
 
-
-	modalJS.on('click', function (event) {
+	modal_move.on('click', function (event) {
 		event.preventDefault();
 
-		modal_resume.removeClass('show');
-		modal_hire_me.addClass('show');
+		$(modalResume).removeClass('show');
+		$(modalHireMe).addClass('show');
+
+		setTimeout(function () {
+			$(modalHireMe).find(".modal__dialog").css({
+				transform: "scale(1)"
+			});
+		}, 10);
 
 	});
 

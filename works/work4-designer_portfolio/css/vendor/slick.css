@@ -123,3 +123,9 @@
 .slick-dots button:focus {
   outline: none;
 }
+@media (max-width: 560px) {
+  .slick-dots button {
+    width: 8px;
+    height: 8px;
+  }
+}

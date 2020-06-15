@@ -367,12 +367,20 @@
 .contact__left {
 	width: 47%;
 	padding: 2rem;
+
+	@media (max-width: 660px) {
+		width: 100%;
+	}
 }
 
 .contact__right {
 	width: 53%;
 
 	background: @grey url(http://placehold.it/480x700) center no-repeat;
+
+	@media (max-width: 660px) {
+		display: none;
+	}
 }
 
 .contact__left__title {
@@ -381,6 +389,10 @@
     font-weight: 700;
     color: @black;
     text-transform: uppercase;
+	
+	@media (max-width: 410px) {
+		font-size: 3.5rem;
+	}
 
 }
 
@@ -391,6 +403,9 @@
     color: @black;
     text-transform: uppercase;
 
+    @media (max-width: 410px) {
+		font-size: 1.5rem;
+	}
 }
 
 .contact__telmail {

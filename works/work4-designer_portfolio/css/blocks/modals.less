@@ -50,7 +50,7 @@
 	z-index: 1;
 
 	width: 35px;
-	height: 39px;
+	height: 35px;
 
 	padding: 0;
 	background-color: transparent;
@@ -58,13 +58,26 @@
 	cursor: pointer;
 	transition: transform .1s linear;
 
+	svg {
+		width: 100%;
+		height: 100%;
+
+		transition: transform .1s linear
+	}
+
 	&:focus {
 		outline: none;
 	}
 
-	&:hover {
-		transform: translateY(-3px);
+	&:hover svg {
+		transform: rotateZ(90deg);
 	}
+
+	&:active svg {
+		transform: scale(.95);
+	}
+
+	
 }
 
 .modal-work__header {
@@ -438,6 +451,9 @@
 
 .contact__telmail__icon {
 	margin-right: 1rem;
+
+	width: 19px;
+	height: 19px;
 }
 
 

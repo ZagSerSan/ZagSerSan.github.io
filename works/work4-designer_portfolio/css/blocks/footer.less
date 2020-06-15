@@ -2,19 +2,34 @@
 
 .footer {
 	padding: 2rem 0;
-
 	background-color: @black;
+
+	@media (max-width: 810px) {
+		padding: 1rem 0;
+	}
+	@media (max-width: 550px) {
+		padding: 2.5rem 0 1rem 0;
+	}
 }
 
 .footer__inner {
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 810px) {
+		padding-bottom: 1rem;
+	}
+	@media (max-width: 550px) {
+		flex-direction: column;
+	    align-items: center;
+	}
 }
 
 .footer__credits {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 }
 
 .footer__copyright {
@@ -23,11 +38,34 @@
 	color: #ddddcc;
 	border-right: 1px fade(@grey, 35%) solid;
 	padding-right: 1.2rem;
+
+	@media (max-width: 810px) {
+		display: none;
+	}
+
+	&.adapt {
+		display: none;
+
+		@media (max-width: 810px) {
+			display: block;
+			padding: .5rem 0;
+    		margin: 0 -10px;
+			border-top: 1px solid #393939;
+			border-right: none;
+		}
+	}
 }
 
 .footer__social {
 	display: flex;
 	padding-left: 1.2rem;
+
+	@media (max-width: 810px) {
+		padding-left: 0;
+	}
+	@media (max-width: 550px) {
+		padding-bottom: 1.5rem;
+	}
 	
 }
 
@@ -65,6 +103,10 @@
 		text-decoration: underline;
 	}
 
+	&:first-child {
+		margin-left: 0;
+	}
+
 	&--btn {
 		text-decoration: none;
 		padding: .83rem 2rem;
@@ -72,12 +114,21 @@
 		border-radius: 2.2em;
 		transition: background .1s linear, color .1s linear;
 
+		@media (max-width: 340px) {
+			padding: .83rem 1.2rem;
+		}
+
 		&:hover {
 			text-decoration: none;
 			background-color: #bbbbcc;
 			border-color: #bbbbcc;
 			color: @black;
 		}
+	}
+
+	@media (max-width: 600px) {
+		margin-left: 1rem;
+
 	}
 }
 

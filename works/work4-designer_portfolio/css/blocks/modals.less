@@ -221,6 +221,10 @@
 .modal__content {
 	padding: 6rem 1rem;
 	width: 100%;
+
+	@media (max-width: 780px) {
+		padding-top: 4rem;
+	}
 }
 
 .modal__content__title {
@@ -231,12 +235,16 @@
 	color: @black;
 
 	margin-bottom: 5.6rem;
+	
+	@media (max-width: 780px) {
+		margin-bottom: 3rem;
+	}
 }
 
 .timeline {
 	display: flex;
 	margin: 6.3rem auto;
-	widows: 100%;
+	width: 100%;
 	max-width: 768px;
 
 	position: relative;
@@ -253,6 +261,28 @@
 
 		background-color: @black;
 	}
+
+	@media (max-width: 780px) {
+		margin-bottom: 4rem;
+	}
+
+	@media (max-width: 620px) {
+		display: none;
+	}
+}
+
+.timeline--adapt {
+	display: none;
+	margin: 4rem auto;
+	width: 100%;
+	max-width: 768px;
+
+	position: relative;
+
+	@media (max-width: 620px) {
+		display: block;
+	}
+	
 }
 
 .timeline__col {
@@ -261,16 +291,45 @@
 	&--left {
 		text-align: right;
 		padding-right: 4.7rem;
+
+		@media (max-width: 780px) {
+			padding-right: 2.7rem;
+		}
 	}
 
 	&--right {
 		padding-left: 4.7rem;
+		
+		@media (max-width: 780px) {
+			padding-left: 2.7rem;
+		}
+	}
+}
+
+.timeline__row {
+	display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 -10px;
+	/*
+	&--experience {
+
 	}
 
+	&--education {
+		
+	}*/
 }
 
 .timeline__item {
 	margin-bottom: 3.8rem;
+
+	&--adapt {
+		width: 50%;
+	    margin-bottom: 3rem;
+	    padding: 0 1.5rem;
+	    text-align: center;
+	}
 }
 
 .timeline__col__title {
@@ -280,6 +339,16 @@
     color: @black;
 
     margin-bottom: 3.8rem;
+}
+
+.timeline__row__title {
+	font-family: Montserrat,sans-serif;
+    font-size: 1.8rem;
+	font-weight: 700;
+    color: @black;
+    text-align: center;
+
+    margin-bottom: 2.5rem;
 }
 
 .timeline__item__date {
@@ -326,6 +395,10 @@
 
 .skills {
 	margin-bottom: 3.8rem;
+
+	&--adapt {
+		margin-bottom: 2.5rem;
+	}
 }
 
 .skill__item {
@@ -333,6 +406,18 @@
 	align-items: center;
 
 	margin-bottom: 0.5rem;
+
+	&--adapt {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		margin-bottom: 0.5rem;
+
+		&--awards {
+			width: 100%;
+		}
+	}
 }
 
 .skill__name {
@@ -357,6 +442,10 @@
 
 .timeline__item__changepos {
 	display: flex;
+
+	&--adapt {
+		margin-bottom: 2rem;
+	}
 }
 
 .timeline__item__content {
@@ -452,8 +541,8 @@
 .contact__telmail__icon {
 	margin-right: 1rem;
 
-	width: 19px;
-	height: 19px;
+	width: 14px;
+	height: 14px;
 }
 
 

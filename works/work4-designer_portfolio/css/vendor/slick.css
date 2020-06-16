@@ -108,6 +108,12 @@
 .slick-dots li.slick-active button {
   background-color: #fff;
 }
+@media (max-width: 710px) {
+  .slick-dots {
+    width: 40%;
+    margin: 0 30%;
+  }
+}
 .slick-dots button {
   width: 11px;
   height: 11px;

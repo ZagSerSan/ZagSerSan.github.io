@@ -67,6 +67,10 @@
 [dir="rtl"] .slick-slide {
   float: right;
 }
+.slick-slide:last-child img {
+  top: auto;
+  bottom: 0;
+}
 .slick-slide img {
   display: block;
 }

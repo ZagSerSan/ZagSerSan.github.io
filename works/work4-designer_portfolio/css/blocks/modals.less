@@ -105,6 +105,8 @@
 	width: 65%;
 
 	overflow: hidden;
+
+	background-color: #888;
 	
 	@media (max-width: 900px) {
 		width: 60%;
@@ -117,19 +119,21 @@
 
 .modal-work__photo {
 	position: absolute;
-	top: 50%;
+	top: 0;
 	left: 50%;
 	z-index: 1;
 
-	transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, 0, 0);
 
 	width: 100%;
 	height: auto;
 
+	/*
 	@media (max-width: 960px) {
 		width: auto;
 		height: 100%;
 	}
+	*/
 	@media (max-width: 710px) {
 		position: relative;
 		transform: translate3d(-50%, 0, 0);

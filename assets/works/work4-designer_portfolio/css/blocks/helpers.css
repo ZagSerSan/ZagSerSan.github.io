@@ -1,0 +1,29 @@
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.border {
+  border: 2px #000 solid;
+}
+.border--red {
+  border: 2px red solid;
+}
+.border--green {
+  border: 2px green solid;
+}
+.border--blue {
+  border: 2px blue solid;
+}
+.border--orange {
+  border: 2px orange solid;
+}
+.hide {
+  display: none;
+}

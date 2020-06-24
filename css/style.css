@@ -758,6 +758,32 @@ a {
   transform: scale(1.01);
   box-shadow: 7px 7px 15px #555;
 }
+.portfolio__item.notallowed {
+  cursor: not-allowed;
+}
+.portfolio__item-img_loader {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/portfolio/bg-codding.gif);
+  background-size: cover;
+  position: relative;
+}
+.portfolio__item__img-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+.portfolio__item-img_loader-gif {
+  display: block;
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate3d(-50%, -50%, 0);
+}
 .portfolio__item__img {
   width: 100%;
   height: auto;

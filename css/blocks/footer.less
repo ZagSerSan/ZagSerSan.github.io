@@ -8,7 +8,7 @@
 		padding: 1rem 0;
 	}
 	@media (max-width: 550px) {
-		padding: 2.5rem 0 1rem 0;
+		padding: 2rem 0 1rem 0;
 	}
 }
 
@@ -17,7 +17,7 @@
 	justify-content: space-between;
 
 	@media (max-width: 810px) {
-		padding-bottom: 1rem;
+		padding-bottom: 1.5rem;
 	}
 	@media (max-width: 550px) {
 		flex-direction: column;
@@ -48,7 +48,7 @@
 
 		@media (max-width: 810px) {
 			display: block;
-			padding: .5rem 0;
+			padding: 1rem 0 0;
     		margin: 0 -10px;
 			border-top: 1px solid #393939;
 			border-right: none;
@@ -114,8 +114,12 @@
 		border-radius: 2.2em;
 		transition: background .1s linear, color .1s linear;
 
-		@media (max-width: 340px) {
+		@media (max-width: 550px) {
 			padding: .83rem 1.2rem;
+		}
+
+		@media (max-width: 415px) {
+			display: none;
 		}
 
 		&:hover {

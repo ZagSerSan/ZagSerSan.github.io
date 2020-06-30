@@ -294,6 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-burger-logo .header-logo__img {
   margin: 0;
+  width: 80%;
 }
 
 .header-burger-content {

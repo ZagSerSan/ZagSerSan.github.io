@@ -63,36 +63,41 @@
 		</div>
 
 		<div class="header-burger" id="header-burger">
-			<div class="header-burger-icon" id="header-burger-icon">
+			<div class="header-burger-icon" id="header-burger-icon" data-openburger="#header-burger">
 				<span class="header-burger__item header-burger__item--1"></span>
 				<span class="header-burger__item header-burger__item--2"></span>
 				<span class="header-burger__item header-burger__item--3"></span>
 			</div>
 			
-			<div class="header-burger-logo" onclick="event.stopPropagation()">
+			<div class="header-burger-logo">
 				<a href="" class="header-logo">
 					<img class="header-logo__img" src="img/blocks/header/logo.png" alt="">
 				</a>
 			</div>
 			
-			<div class="header-burger-content">
-				<nav class="header-burger-menu">
-					<ul class="header-burger-menu-list" onclick="event.stopPropagation()">
-						<li><a href="" class="header-burger-menu_link">ABOUT</a></li>
-						<li><a href="" class="header-burger-menu_link">MENUS</a></li>
-						<li><a href="" class="header-burger-menu_link">SERVICES INFO</a></li>
-						<li><a href="" class="header-burger-menu_link">ABOUT</a></li>
-						<li><a href="" class="header-burger-menu_link">MENUS</a></li>
-						<li><a href="" class="header-burger-menu_link">SERVICES INFO</a></li>
+			<div class="header-burger-content" id="header-burger-content">
+				<nav class="header-burger-menu" id="header-burger-menu">
+					<ul class="header-burger-menu-list" id="header-burger-menu-list">
+						<li><a href="" class="header-burger-menu_link" data-closeburger="#header-burger">ABOUT</a></li>
+						<li><a href="" class="header-burger-menu_link" data-closeburger="#header-burger">MENUS</a></li>
+						<li><a href="" class="header-burger-menu_link" data-closeburger="#header-burger">SERVICES INFO</a></li>
+						<li><a href="" class="header-burger-menu_link" data-closeburger="#header-burger">ABOUT</a></li>
+						<li><a href="" class="header-burger-menu_link" data-closeburger="#header-burger">MENUS</a></li>
+						<li><a href="" class="header-burger-menu_link" data-closeburger="#header-burger">SERVICES INFO</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-
 	</div>
 </header>
-
-
+<!-- intro -->
+	<intro class="intro">
+		<div class="container">
+			<div class="intro-inner">
+				
+			</div>
+		</div>
+	</intro>
 
 <footer class="footer">
 	<div class="container">

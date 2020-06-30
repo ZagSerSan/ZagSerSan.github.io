@@ -1,0 +1,330 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@font-face {
+  font-family: "AkzidenzGroteskBold";
+  src: url("../fonts/AkzidenzGrotesk-BoldCond.eot");
+  src: local("☺"), url("../fonts/AkzidenzGrotesk-BoldCond.woff") format("woff"), url("../fonts/AkzidenzGrotesk-BoldCond.ttf") format("truetype"), url("../fonts/AkzidenzGrotesk-BoldCond.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeue-Regular.eot");
+  src: local("☺"), url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.ttf") format("truetype"), url("../fonts/BebasNeue-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  height: 100px;
+  font-family: "PT Sans";
+  font-size: 100%;
+  line-height: 1;
+  font-size: 15px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-mos-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+@media (max-width: 892px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 750px) {
+  .container {
+    max-width: none;
+  }
+}
+
+/* Nav Desktop
+====================================*/
+.header {
+  padding: 29px 0px 33px 0px;
+}
+@media (max-width: 892px) {
+  .header {
+    padding: 15px 0px 15px 0px;
+  }
+}
+
+.header-top {
+  display: -webit-box;
+  display: -mos-box;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 892px) {
+  .header-top {
+    display: none;
+  }
+}
+
+.header-top-lang {
+  display: -webit-box;
+  display: -mos-box;
+  display: flex;
+}
+
+.header-top-lang__item {
+  display: block;
+  font-family: Bebas;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 19px;
+  letter-spacing: 1px;
+  padding: 0 4px;
+  margin: 0px 5px 0px 0px;
+}
+.header-top-lang__item.active {
+  color: #fff;
+  background-color: #000;
+}
+
+.header-bottom-link {
+  font-family: AkzidenzGroteskBold;
+  font-size: 15px;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.header-bottom {
+  display: -webit-box;
+  display: -mos-box;
+  display: flex;
+  align-items: center;
+  margin: -13px 0px 0px 0px;
+}
+@media (max-width: 892px) {
+  .header-bottom {
+    display: none;
+  }
+}
+
+.header__bottom__column {
+  flex: 0 0 33.33333%;
+}
+
+.header-bottom-menu--right .header-bottom-menu-list {
+  margin: 0;
+  display: -webit-box;
+  display: -mos-box;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  margin: 0px 0px 0px 45px !important;
+}
+.header-bottom-menu--right .header-bottom-menu-list:last-child {
+  margin: 0;
+}
+@media (max-width: 892px) {
+  .header-bottom-menu--right .header-bottom-menu-list {
+    margin: 0px 0px 0px 20px !important;
+  }
+}
+
+.header-bottom-menu-list {
+  display: -webit-box;
+  display: -mos-box;
+  display: flex;
+}
+.header-bottom-menu-list li {
+  margin: 0px 45px 0px 0px;
+}
+.header-bottom-menu-list li:last-child {
+  margin: 0px 0px 0px 0px;
+}
+@media (max-width: 892px) {
+  .header-bottom-menu-list li {
+    margin: 0px 20px 0px 0px !important;
+  }
+}
+
+.header-bottom-menu_link {
+  font-family: AkzidenzGroteskBold;
+  font-size: 15px;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 1.5px;
+}
+
+.header-logo {
+  display: block;
+  text-align: center;
+}
+
+.header-logo__text {
+  display: block;
+  font-family: AkzidenzGroteskBold;
+  font-size: 10px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.header-logo__img {
+  display: block;
+  margin: 13px 0px 22px 0px;
+}
+
+/* Burger
+====================================*/
+.header-burger {
+  display: none;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+@media (max-width: 892px) {
+  .header-burger {
+    display: flex;
+  }
+}
+.header-burger.active .header-burger__item--1 {
+  transform: rotateZ(45deg);
+  top: 6px;
+}
+.header-burger.active .header-burger__item--2 {
+  opacity: 0;
+}
+.header-burger.active .header-burger__item--3 {
+  transform: rotateZ(-45deg);
+  top: -6px;
+}
+.header-burger.active .header-burger-content {
+  position: fixed;
+  top: 0%;
+  height: 100%;
+}
+
+.header-burger-icon {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  z-index: 1000;
+  width: 30px;
+  cursor: pointer;
+}
+.header-burger-icon .header-burger__item {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 3px;
+  margin-top: 3px;
+  opacity: 1;
+  background-color: #000;
+  transition: all 0.1s linear;
+}
+
+.header-burger-logo .header-logo__img {
+  margin: 0;
+}
+
+.header-burger-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  height: 0;
+  background-color: rgba(140, 140, 140, 0.6);
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.header-burger-menu {
+  height: 100%;
+}
+.header-burger-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+.header-burger-menu ul li {
+  margin-bottom: 4%;
+}
+
+.header-burger-menu_link {
+  font-family: AkzidenzGroteskBold;
+  font-size: 40px;
+  color: #000;
+  text-transform: uppercase;
+}

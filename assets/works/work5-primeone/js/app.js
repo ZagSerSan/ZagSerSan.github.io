@@ -1,0 +1,1 @@
+$((function(){let e=$("#header-burger");e.on("click",(function(t){t.preventDefault(),$(e).toggleClass("active")}))}));

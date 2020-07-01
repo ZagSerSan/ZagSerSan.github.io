@@ -268,9 +268,17 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0%;
   height: 100%;
+  overflow: auto;
 }
 .header-burger.active .header-burger-lang {
-  transform: translateX(-50%) rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.header-burger.active li {
+  transform: rotateX(0deg);
+}
+.header-burger.active .header-burger-menu_link {
+  transition: all 0.1s linear;
+  transform: rotateX(0deg);
 }
 
 .header-burger-icon {
@@ -305,23 +313,23 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right: 0;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 0;
+  overflow: auto;
   background-color: rgba(140, 140, 140, 0.6);
-  overflow: hidden;
   transition: all 0.2s linear;
 }
 
 .header-burger-lang {
-  display: -webit-box;
-  display: -mos-box;
   display: flex;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%) rotateX(90deg);
+  justify-content: center;
+  position: relative;
+  margin: 90px 0 50px;
+  transform: rotateX(90deg);
   transition: transform 0.1s linear;
-  transition-delay: 0.3s;
+  transition-delay: 0.2s;
 }
 
 .header-burger-lang__item {
@@ -342,7 +350,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-burger-menu {
-  height: 100%;
+  height: auto;
+  margin-bottom: 30px;
 }
 .header-burger-menu ul {
   display: flex;
@@ -353,6 +362,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-burger-menu ul li {
   margin-bottom: 4%;
+  transform: rotateX(90deg);
+  transition: transform 0.2s linear;
+  transition-delay: 0.3s;
 }
 
 .header-burger-menu_link {

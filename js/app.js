@@ -228,8 +228,6 @@ $(function () {
 			let elementId = $(this).data('scroll');
 			let elementOffset = $(elementId).offset().top;
 
-			console.log(elementOffset);
-
 			$("html, body").animate({
 				scrollTop: elementOffset - 100
 			}, 700);

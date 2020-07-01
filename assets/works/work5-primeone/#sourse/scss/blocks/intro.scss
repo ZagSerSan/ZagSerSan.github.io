@@ -1,0 +1,19 @@
+.intro {
+	@include flexbox();
+	
+	background-color: #000;
+}
+
+.intro-column {
+	flex: 0 0 50%;
+}
+
+.intro-content {
+	padding: 75px 0px 75px 60px;
+}
+.intro_title {}
+.intro_text {}
+.intro-btns {}
+.intro-btns__item {}
+.btn {}
+.btn--white {}

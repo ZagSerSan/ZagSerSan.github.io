@@ -212,38 +212,56 @@
 		<div class="container">
 			<div class="header__inner">
 	  
-		  	<div class="user">
-				<div class="user__avatar">
-					<img src="images/avatar-small.webp" alt="">
-				</div>
-				<div class="user__content">
-					<div class="user__name">Сергей<br>Загорский</div>
-					<div class="user__prof">Frontend</div>
-				</div>
-			</div>
-		  
-			<nav class="nav" id="nav">
-				<a href="#" class="nav__link" id="nav__link-about" data-scroll=".about">Обо мне</a>
-				<a href="#" class="nav__link" id="nav__link-work" data-scroll=".works">Работы</a>
-				<a href="#" class="nav__link" id="nav__link-work" data-scroll=".services">Услуги</a>
-				<a href="#" class="nav__link" data-scroll=".news">Блог</a>
-				<a href="#" class="nav__link" data-scroll=".reviews">Отзывы</a>
-				<a href="#" class="btn btn--header" data-modal="#modal_hire_me">Написать</a>
-			</nav>
-			
-			<nav class="nav-burger" id="nav-burger-JS">
-				<div class="nav-burger__icon">
-					<div class="nav-burger__icon__item"></div>
-				</div>
-				<div class="nav-burger__menu">
-					<a href="#" class="nav-burger__link" data-scroll=".about">Обо мне</a>
-					<a href="#" class="nav-burger__link" data-scroll=".works">Работы</a>
-					<a href="#" class="nav-burger__link" data-scroll=".services">Услуги</a>
-					<a href="#" class="nav-burger__link" data-scroll=".news">Блог</a>
-					<a href="#" class="nav-burger__link" data-scroll=".reviews">Отзывы</a>
-					<a href="#" class="btn btn--header btn--header--burger" data-modal="#modal_hire_me">Написать</a>
-				</div>
-			</nav>
+			  	<div class="user">
+					<div class="user__avatar">
+						<img src="images/avatar-small.webp" alt="">
+					</div>
+					<div class="user__content">
+						<div class="user__name">Сергей<br>Загорский</div>
+						<div class="user__prof">Frontend</div>
+					</div>
+				</div><!-- /.user -->
+			  
+				<nav class="nav" id="nav">
+					<a href="#" class="nav__link" id="nav__link-about" data-scroll=".about">Обо мне</a>
+					<a href="#" class="nav__link" id="nav__link-work" data-scroll=".works">Работы</a>
+					<a href="#" class="nav__link" id="nav__link-work" data-scroll=".services">Услуги</a>
+					<a href="#" class="nav__link" data-scroll=".news">Блог</a>
+					<a href="#" class="nav__link" data-scroll=".reviews">Отзывы</a>
+					<a href="#" class="btn btn--header" data-modal="#modal_hire_me">Написать</a>
+				</nav><!-- /.nav -->
+				
+				<div class="header-burger" id="header-burger">
+					<div class="header-burger-icon" id="header-burger-icon" data-openburger="#header-burger">
+						<span class="header-burger__item header-burger__item--1"></span>
+						<span class="header-burger__item header-burger__item--2"></span>
+						<span class="header-burger__item header-burger__item--3"></span>
+					</div>
+					
+					<div class="header-burger-logo">
+						<a href="" class="header-logo">
+							<img class="header-logo__img" src="img/blocks/header/logo.png" alt="">
+						</a>
+					</div>
+					
+					<div class="header-burger-content" id="header-burger-content">
+						<div class="header-burger-lang">
+							<a href="" class="header-burger-lang__item"><span>EN</span></a>
+							<a href="" class="header-burger-lang__item active">RU</a>
+							<a href="" class="header-burger-lang__item"><span>ESP</span></a>
+						</div>
+						<nav class="header-burger-menu" id="header-burger-menu">
+							<ul class="header-burger-menu-list" id="header-burger-menu-list">
+								<li><a href="" class="header-burger-menu_link" data-scroll=".about" data-closeburger="#header-burger">Обо мне</a></li>
+								<li><a href="" class="header-burger-menu_link" data-scroll=".works" data-closeburger="#header-burger">Работы</a></li>
+								<li><a href="" class="header-burger-menu_link" data-scroll=".services" data-closeburger="#header-burger">Услуги</a></li>
+								<li><a href="" class="header-burger-menu_link" data-scroll=".news" data-closeburger="#header-burger">Блог</a></li>
+								<li><a href="" class="header-burger-menu_link" data-scroll=".reviews" data-closeburger="#header-burger">Отзывы</a></li>
+								<li><a href="" class="header-burger-menu_link btn btn--header btn--header--burger" data-modal="#modal_hire_me" data-closeburger="#header-burger">Написать</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div><!-- /.header-burger -->
 	
 			</div><!-- /.header__inner -->
 		</div><!-- /.container -->

@@ -147,14 +147,29 @@ $(function () {
 	/* Burger
 	=====================================*/
 
-		let burger = $('#nav-burger-JS');
+	let header_burger = $("#header-burger");
+	let header_burger_icon = $("#header-burger-icon");
 
-		burger.on('click', function () {
-			burger.toggleClass('active');
-		})
+	header_burger_icon.on('click', function (event) {
+		event.preventDefault();
+
+		header_burger.toggleClass('active');
+		$('body').toggleClass('no-scroll');
+	});
+
+	let data_closeburger = $("[data-closeburger]");
+
+	data_closeburger.on('click', function (event) {
+		event.preventDefault();
+
+		let $this = $(this);
+		let burger = $this.data('closeburger');
+
+		$(burger).removeClass('active');
+		$('body').removeClass('no-scroll');
 
 
-
+	});
 
 	/* Header Fixed
 	=====================================*/

@@ -98,6 +98,11 @@
 		color: #000;
 		text-transform: uppercase;
 		line-height: 1.5px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+		
 	}
 	.header-logo {
 		display: block;
@@ -149,9 +154,9 @@
 	
 			.header-burger-content {
 				position: fixed;
-		    top: 0%;
-		    height: 100%;
-		    overflow: auto;
+			    top: 0%;
+			    height: 100%;
+			    overflow: auto;
 			}
 
 			.header-burger-lang {
@@ -208,19 +213,19 @@
 
 	.header-burger-content {
 		position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
+	    top: 0;
+	    right: 0;
+	    z-index: 100;
 
-    display: flex;
-    flex-direction: column;
+	    display: flex;
+	    flex-direction: column;
 
-    width: 100%;
-    height: 0;
+	    width: 100%;
+	    height: 0;
 		overflow: auto;
     
-		background-color: rgba(140, 140, 140, .6);
-    transition: all .2s linear;
+		background-color: rgba(0, 0, 0, .9);
+    	transition: all .2s linear;
 
 
 	}
@@ -244,7 +249,7 @@
     font-family: Bebas;
     font-weight: 400;
     font-size: 25px;
-    color: #000;
+    color: #fff;
     text-transform: uppercase;
     line-height: normal;
     letter-spacing: 1px;
@@ -253,8 +258,8 @@
     margin: 0px 5px 0px 0px;
 
 		&.active {
-			color: #fff;
-			background-color: #000;
+			color: #000;
+			background-color: #fff;
 		}
 	}
 
@@ -281,7 +286,7 @@
 	.header-burger-menu_link {
 		font-family: AkzidenzGroteskBold;
     font-size: 40px;
-    color: #000;
+    color: #fff;
     text-transform: uppercase;
 		
 	}

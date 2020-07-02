@@ -6,14 +6,49 @@
 
 .intro-column {
 	flex: 0 0 50%;
+	overflow: hidden;
+}
+
+.bgimg {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .intro-content {
 	padding: 75px 0px 75px 60px;
+	max-width: 380px;
 }
-.intro_title {}
-.intro_text {}
-.intro-btns {}
-.intro-btns__item {}
-.btn {}
-.btn--white {}
+.intro_title {
+	font-family: AkzidenzGroteskBold;
+	font-weight: 400;
+	font-size: 50px;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 50px;
+	letter-spacing: 5px;
+	margin-bottom: 30px;
+}
+.intro_text {
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 15px;
+	color: #fff;
+	line-height: 25px;
+	margin-bottom: 30px;
+
+}
+.intro-btns {
+	@include flexbox();
+	align-items: center;
+}
+.intro-btns__link {
+	font-family: Bebas;
+	font-size: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: underline;
+	letter-spacing: 1.5px;
+
+	margin-left: 15px;
+}

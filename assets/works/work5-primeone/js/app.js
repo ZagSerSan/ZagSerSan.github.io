@@ -25,4 +25,18 @@ $(function () {
 	});
 
 
+//=====================Script==========================
+
+	// получить атрибут 'src';
+	let img_src = document.getElementById('intro-img').src;
+
+	//скрыть img в html
+	$('.intro-column img').css({
+	  'display':'none'
+	});
+
+	//img_src засунуть в bg
+	$('.bgimg').css('background-image' ,'url('+img_src+')');
+
+
 });

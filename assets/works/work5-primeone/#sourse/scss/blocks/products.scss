@@ -1,0 +1,17 @@
+.products {
+	margin: 0px 0px 75px 0px;
+}
+.products-inner {
+	@include flexbox();
+
+	
+}
+.products__column {
+	flex: 0 0 25%;
+}
+.products-item {}
+.products-item__img {}
+.products-item__title {}
+.products-item__text {}
+.products-item__btn {}
+.products-item__link {}

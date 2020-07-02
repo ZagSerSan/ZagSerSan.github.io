@@ -1,5 +1,5 @@
 //=============МИКСИНЫ==============
-@mixin flexbox(){display:-webit-box;display:-mos-box;display:-ms-flexbox;display:-webkit-flex;display:flex;};
+@mixin flexbox(){display:-webit-box;display:-mos-box;display:-ms-flexbox;display:-webkit-flex;display:flex;font-size:0;};
 
 
 
@@ -65,7 +65,7 @@ h1,h2,h3,h4,h5,h6,{font-size:inherit; font-weight: 400;}
 
 
 //=============ОСНОВНАЯ СЕТКА=========
-.container {max-width:$mw;width:100%;margin:0 auto;padding: 0px 10px;
+.container {max-width:$mw;width:100%;margin:0 auto;padding: 0px 10px; overflow: hidden;
 	@media (max-width:$md1){max-width:750px;};
 	@media (max-width:$md2){max-width:none;};
 };
@@ -73,8 +73,12 @@ h1,h2,h3,h4,h5,h6,{font-size:inherit; font-weight: 400;}
 
 //=============Импорт_блоков=========
 
+@import "blocks/btn.scss";
+
 @import "blocks/header.scss";
 @import "blocks/intro.scss";
-@import "blocks/btn.scss";
+@import "blocks/products.scss";
+
+@import "blocks/footer.scss";
 
 

@@ -30,8 +30,17 @@
 		}
 		
 	}
+}
 
-	
-	
+.link {
+	font-family: Bebas;
+	font-size: 15px;
+	color: #000;
+	text-transform: uppercase;
+	text-decoration: underline;
+	letter-spacing: 1.5px;
 
+	&--white {
+		color: #fff;
+	}
 }

@@ -28,6 +28,7 @@ $(function () {
 //=====================Script bgimgjs==========================
 
   //============intro//============
+
 	let intro_isrc = document.getElementById('intro-bgimgjs').src;
 	
 	$('.intro-bgimgjs img').css({'display':'none'});
@@ -40,12 +41,14 @@ $(function () {
   //============products//============
 	let products_isrc1 = document.getElementById('products-bgimgjs-1').src;
 	let products_isrc2 = document.getElementById('products-bgimgjs-2').src;
-	$('.products-bgimgjs-1 img').css({'opacity':'0',
-							'width':'100%',
-							'height':'auto'});
-	$('.products-bgimgjs-2 img').css({'opacity':'0',
-							'width':'100%',
-							'height':'auto'});
+	let products_isrc3 = document.getElementById('products-bgimgjs-3').src;
+	let products_isrc4 = document.getElementById('products-bgimgjs-4').src;
+	
+	// products-1
+	$('.products-bgimgjs-1 img').css({'display':'none'});
+	$('.products-bgimgjs-2 img').css({'display':'none'});
+	$('.products-bgimgjs-3 img').css({'display':'none'});
+	$('.products-bgimgjs-4 img').css({'display':'none'});
 
 	$('.products-bgimgjs-1').css({'background-image':'url('+products_isrc1+')',
 							'background-position':'center',
@@ -55,6 +58,12 @@ $(function () {
 							'background-position':'center',
 							'background-repeat':'no-repeat',
 							'background-size':'cover'});
-
-
+	$('.products-bgimgjs-3').css({'background-image':'url('+products_isrc3+')',
+							'background-position':'center',
+							'background-repeat':'no-repeat',
+							'background-size':'cover'});
+	$('.products-bgimgjs-4').css({'background-image':'url('+products_isrc4+')',
+							'background-position':'center',
+							'background-repeat':'no-repeat',
+							'background-size':'cover'});
 });

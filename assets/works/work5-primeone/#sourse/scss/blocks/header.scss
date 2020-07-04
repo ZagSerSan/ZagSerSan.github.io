@@ -1,7 +1,7 @@
 /* Nav Desktop
 ====================================*/
 	.header {
-		padding: 29px 0px 33px 0px;
+		padding: 29px 0px 31px 0px;
 
 		@media (max-width:$md1){
 			padding: 15px 0px 15px 0px;
@@ -26,13 +26,13 @@
 
 		font-family: Bebas;
 		font-weight: 400;
-		font-size: 15px;
+		font-size: 12px;
 		color: #000;
 		text-transform: uppercase;
 		line-height: 19px;
 		letter-spacing: 1px;
-		padding: 0 4px;
-		margin: 0px 5px 0px 0px;
+		padding: 0 3px;
+		margin: 0px 10px 0px 4.5px;
 
 		&.active {
 			color: #fff;
@@ -46,11 +46,12 @@
 		color: #000;
 		text-transform: uppercase;
 		text-decoration: underline;
+		margin: 0.4px 8px 0px 0px;
 	}
 	.header-bottom {
 		@include flexbox();
 		align-items: center;
-		margin: -13px 0px 0px 0px;
+		margin: -13px 12px 0px 9px;
 
 		@media (max-width:$md2){
 			display: none;
@@ -63,41 +64,51 @@
 	.header-bottom-menu {
 		&--right {
 			.header-bottom-menu-list {
-				margin: 0;
 				@include flexbox();
 				justify-content: flex-end;
 				text-align: right;
-				margin: 0px 0px 0px 45px !important;
+				margin: 2px 0px 0px 0 !important;
 
-				&:last-child {
-					margin: 0;
+				li {
+					margin: 0px 0px 0px 55px;
+					&:last-child {
+						margin: 0px -5px 0px 55px;
+						letter-spacing: 1.1px;
+					}
+					&:first-child {margin: 0 -8px 0 0;}
 				}
-
 				@media (max-width:$md1){
 					margin: 0px 0px 0px 20px !important;
 				}
-				
 			}
 		}
 	}
 	.header-bottom-menu-list {
 		@include flexbox();
 		
-		li {margin: 0px 45px 0px 0px;;
-			&:last-child {margin: 0px 0px 0px 0px;}
+		li {margin: 2px 48px 0px -3px;;
+			
+			&:last-child {
+				
+				margin: 2px 0px 0px -2px;
+				
+				a{
+					letter-spacing: 1.3px;
+				}
+			}
 			@media (max-width:$md1){
 				margin: 0px 20px 0px 0px !important;
 			}
 		}
-
-		
 	}
+
 	.header-bottom-menu_link {
 		font-family: AkzidenzGroteskBold;
-		font-size: 15px;
+		font-size: 15.3px;
 		color: #000;
 		text-transform: uppercase;
 		line-height: 1.5px;
+		letter-spacing: 1.15px;
 
 		&:hover {
 			text-decoration: underline;
@@ -107,6 +118,13 @@
 	.header-logo {
 		display: block;
 		text-align: center;
+
+		a {
+			&:first-child {
+				margin-left: 5px;
+    			letter-spacing: 5px;
+			}
+		}
 	}
 	.header-logo__text {
 		display: block;
@@ -115,10 +133,12 @@
 		color: #000;
 		text-transform: uppercase;
 		letter-spacing: 8px;
+
+		margin-left: 6px;
 	}
 	.header-logo__img {
 		display: block;
-		margin: 13px 0px 22px 0px;
+		margin: 10px 0px 22px 0px;
 	}
 
 
@@ -142,6 +162,7 @@
 				&--1 {
 					transform: rotateZ(45deg);
 					top: 6px;
+					background-color: #fff;
 				}
 				&--2 {
 					opacity: 0;
@@ -149,6 +170,7 @@
 				&--3 {
 					transform: rotateZ(-45deg);
 					top: -6px;
+					background-color: #fff;
 				}
 			}
 	

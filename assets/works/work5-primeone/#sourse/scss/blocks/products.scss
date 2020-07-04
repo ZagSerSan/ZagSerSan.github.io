@@ -1,17 +1,86 @@
 .products {
 	margin: 0px 0px 75px 0px;
+
+	@media (max-width:$md2) {
+		margin: 0;
+	}
 }
 .products-inner {
 	@include flexbox();
+	flex-wrap: wrap;
 
 	
 }
 .products__column {
 	flex: 0 0 25%;
+
+	@media (max-width:$md2) {
+		flex: 0 0 50%;
+		padding: 0px 0px 70px 0px;
+	}
+	@media (max-width:$md4) {
+		flex: 0 0 100%;
+	}
+	
 }
-.products-item {}
-.products-item__img {}
-.products-item__title {}
-.products-item__text {}
-.products-item__btn {}
-.products-item__link {}
+.products-item {
+	@include flexbox();
+	flex-direction: column;
+	height: 100%;
+}
+.products-item__img {
+	display: block;
+	padding: 0px 0px 102.3% 0px;
+	margin: 0px 0px 23px 0px;
+}
+.products-item__title {
+	flex: 1 1 auto;
+	font-family: AkzidenzGroteskBold;
+	font-weight: 400;
+	font-size: 25px;
+	color: #000;
+	text-transform: uppercase;
+	line-height: 25px;
+	letter-spacing: 2.5px;
+
+	max-width: 185px;
+	min-height: 50px;
+	max-height: 50px;
+	overflow: hidden;
+
+	margin: 0px 0px 26px 4px;
+
+	a {
+		color: inherit;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@media (max-width:$md4) {
+		max-width: none;
+		min-height: auto;
+
+	}
+}
+.products-item__text {
+	flex: 1 1 auto;
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 15px;
+	color: #000;
+	line-height: 25px;
+
+	max-width: 185px;
+	margin: 0px 0px 28px 6px;
+
+	@media (max-width:$md4) {
+		max-width: none;
+	}
+}
+.products-item__btn {
+	margin: 0px 0px 27px 5px;
+}
+.products-item__link {
+	margin-left: 6px;
+}

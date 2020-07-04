@@ -35,11 +35,11 @@ $font-family: "PT Sans";
 
 //=============ПЕРЕМЕННЫЕ=========
 $minwidth: 320px;
-$mw: 880px;
+$mw: 900px;
 $md1:$mw+12;
 $md2:750px;
 $md3:767,98px;
-$md4:479.98px;
+$md4:420.98px;
 
 
 
@@ -65,7 +65,7 @@ h1,h2,h3,h4,h5,h6,{font-size:inherit; font-weight: 400;}
 
 
 //=============ОСНОВНАЯ СЕТКА=========
-.container {max-width:$mw;width:100%;margin:0 auto;padding: 0px 10px; overflow: hidden;
+.container {max-width:$mw;width:100%;margin:0 auto;padding: 0 10px;overflow: hidden;
 	@media (max-width:$md1){max-width:750px;};
 	@media (max-width:$md2){max-width:none;};
 };
@@ -74,6 +74,7 @@ h1,h2,h3,h4,h5,h6,{font-size:inherit; font-weight: 400;}
 //=============Импорт_блоков=========
 
 @import "blocks/btn.scss";
+@import "blocks/helpers.scss";
 
 @import "blocks/header.scss";
 @import "blocks/intro.scss";

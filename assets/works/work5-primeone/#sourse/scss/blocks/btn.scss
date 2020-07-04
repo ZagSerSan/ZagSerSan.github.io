@@ -1,16 +1,17 @@
 .btn {
 	height: 50px;
+	max-width: fit-content;
 
 	font-family: Bebas;
-	font-size: 15px;
+	font-size: 21px;
 	color: #000;
 	text-transform: uppercase;
-	line-height: 50px;
-	letter-spacing: 1.5px;
+	line-height: 54px;
+	letter-spacing: 1px;
 
 	color: #fff;
 
-	padding: 0px 33px;
+	padding: 0px 31px;
 	background-color: #000;
 	transition: all .1s linear;
 
@@ -34,11 +35,11 @@
 
 .link {
 	font-family: Bebas;
-	font-size: 15px;
+	font-size: 19px;
 	color: #000;
 	text-transform: uppercase;
 	text-decoration: underline;
-	letter-spacing: 1.5px;
+	letter-spacing: 1.8px;
 
 	&--white {
 		color: #fff;

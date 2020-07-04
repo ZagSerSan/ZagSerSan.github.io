@@ -88,13 +88,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  max-width: 880px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  padding: 0px 10px;
+  padding: 0 10px;
   overflow: hidden;
 }
-@media (max-width: 892px) {
+@media (max-width: 912px) {
   .container {
     max-width: 750px;
   }
@@ -107,14 +107,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
   height: 50px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   font-family: Bebas;
-  font-size: 15px;
+  font-size: 21px;
   color: #000;
   text-transform: uppercase;
-  line-height: 50px;
-  letter-spacing: 1.5px;
+  line-height: 54px;
+  letter-spacing: 1px;
   color: #fff;
-  padding: 0px 33px;
+  padding: 0px 31px;
   background-color: #000;
   transition: all 0.1s linear;
 }
@@ -133,22 +136,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .link {
   font-family: Bebas;
-  font-size: 15px;
+  font-size: 19px;
   color: #000;
   text-transform: uppercase;
   text-decoration: underline;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
 }
 .link--white {
   color: #fff;
 }
 
+.dispnone {
+  display: none;
+}
+
 /* Nav Desktop
 ====================================*/
 .header {
-  padding: 29px 0px 33px 0px;
+  padding: 29px 0px 31px 0px;
 }
-@media (max-width: 892px) {
+@media (max-width: 912px) {
   .header {
     padding: 15px 0px 15px 0px;
   }
@@ -178,13 +185,13 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   font-family: Bebas;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 12px;
   color: #000;
   text-transform: uppercase;
   line-height: 19px;
   letter-spacing: 1px;
-  padding: 0 4px;
-  margin: 0px 5px 0px 0px;
+  padding: 0 3px;
+  margin: 0px 10px 0px 4.5px;
 }
 .header-top-lang__item.active {
   color: #fff;
@@ -197,6 +204,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   text-transform: uppercase;
   text-decoration: underline;
+  margin: 0.4px 8px 0px 0px;
 }
 
 .header-bottom {
@@ -205,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   font-size: 0;
   align-items: center;
-  margin: -13px 0px 0px 0px;
+  margin: -13px 12px 0px 9px;
 }
 @media (max-width: 750px) {
   .header-bottom {
@@ -218,19 +226,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-bottom-menu--right .header-bottom-menu-list {
-  margin: 0;
   display: -webit-box;
   display: -mos-box;
   display: flex;
   font-size: 0;
   justify-content: flex-end;
   text-align: right;
-  margin: 0px 0px 0px 45px !important;
+  margin: 2px 0px 0px 0 !important;
 }
-.header-bottom-menu--right .header-bottom-menu-list:last-child {
-  margin: 0;
+.header-bottom-menu--right .header-bottom-menu-list li {
+  margin: 0px 0px 0px 55px;
 }
-@media (max-width: 892px) {
+.header-bottom-menu--right .header-bottom-menu-list li:last-child {
+  margin: 0px -5px 0px 55px;
+  letter-spacing: 1.1px;
+}
+.header-bottom-menu--right .header-bottom-menu-list li:first-child {
+  margin: 0 -8px 0 0;
+}
+@media (max-width: 912px) {
   .header-bottom-menu--right .header-bottom-menu-list {
     margin: 0px 0px 0px 20px !important;
   }
@@ -243,12 +257,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0;
 }
 .header-bottom-menu-list li {
-  margin: 0px 45px 0px 0px;
+  margin: 2px 48px 0px -3px;
 }
 .header-bottom-menu-list li:last-child {
-  margin: 0px 0px 0px 0px;
+  margin: 2px 0px 0px -2px;
 }
-@media (max-width: 892px) {
+.header-bottom-menu-list li:last-child a {
+  letter-spacing: 1.3px;
+}
+@media (max-width: 912px) {
   .header-bottom-menu-list li {
     margin: 0px 20px 0px 0px !important;
   }
@@ -256,10 +273,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-bottom-menu_link {
   font-family: AkzidenzGroteskBold;
-  font-size: 15px;
+  font-size: 15.3px;
   color: #000;
   text-transform: uppercase;
   line-height: 1.5px;
+  letter-spacing: 1.15px;
 }
 .header-bottom-menu_link:hover {
   text-decoration: underline;
@@ -269,6 +287,10 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   text-align: center;
 }
+.header-logo a:first-child {
+  margin-left: 5px;
+  letter-spacing: 5px;
+}
 
 .header-logo__text {
   display: block;
@@ -277,11 +299,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   text-transform: uppercase;
   letter-spacing: 8px;
+  margin-left: 6px;
 }
 
 .header-logo__img {
   display: block;
-  margin: 13px 0px 22px 0px;
+  margin: 10px 0px 22px 0px;
 }
 
 /* Burger
@@ -304,6 +327,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-burger.active .header-burger__item--1 {
   transform: rotateZ(45deg);
   top: 6px;
+  background-color: #fff;
 }
 .header-burger.active .header-burger__item--2 {
   opacity: 0;
@@ -311,6 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-burger.active .header-burger__item--3 {
   transform: rotateZ(-45deg);
   top: -6px;
+  background-color: #fff;
 }
 .header-burger.active .header-burger-content {
   position: fixed;
@@ -430,26 +455,63 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #000;
   margin: 0px 0px 75px 0px;
 }
+@media (max-width: 750px) {
+  .intro {
+    background-image: url("../img/intro/intro.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 
 .intro-column {
   flex: 0 0 50%;
   overflow: hidden;
 }
+@media (max-width: 750px) {
+  .intro-column.intro-bgimgjs {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .intro-column {
+    flex: 0 0 100%;
+  }
+}
 
 .intro-content {
-  padding: 75px 0px 75px 60px;
+  padding: 76px 0px 76px 60px;
   max-width: 380px;
+}
+@media (max-width: 912px) {
+  .intro-content {
+    padding: 30px 0px 76px 40px;
+  }
+}
+@media (max-width: 750px) {
+  .intro-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: none;
+    padding-right: 40px;
+  }
 }
 
 .intro_title {
   font-family: AkzidenzGroteskBold;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 49px;
   color: #fff;
   text-transform: uppercase;
   line-height: 50px;
   letter-spacing: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 23.5px;
+}
+@media (max-width: 912px) {
+  .intro_title {
+    font-size: 30px;
+    line-height: normal;
+  }
 }
 
 .intro_text {
@@ -458,7 +520,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   color: #fff;
   line-height: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 49px;
 }
 
 .intro-btns {
@@ -469,12 +531,31 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+@media (max-width: 912px) {
+  .intro-btns__item {
+    font-size: 15px;
+    padding: 0px 20px;
+    height: 40px;
+    line-height: normal;
+  }
+}
+
 .intro-btns__link {
-  margin-left: 15px;
+  margin: 3px 0 0 18px;
+}
+@media (max-width: 912px) {
+  .intro-btns__link {
+    font-size: 15px;
+  }
 }
 
 .products {
   margin: 0px 0px 75px 0px;
+}
+@media (max-width: 750px) {
+  .products {
+    margin: 0;
+  }
 }
 
 .products-inner {
@@ -482,10 +563,89 @@ h1, h2, h3, h4, h5, h6 {
   display: -mos-box;
   display: flex;
   font-size: 0;
+  flex-wrap: wrap;
 }
 
 .products__column {
   flex: 0 0 25%;
+}
+@media (max-width: 750px) {
+  .products__column {
+    flex: 0 0 50%;
+    padding: 0px 0px 70px 0px;
+  }
+}
+@media (max-width: 420.98px) {
+  .products__column {
+    flex: 0 0 100%;
+  }
+}
+
+.products-item {
+  display: -webit-box;
+  display: -mos-box;
+  display: flex;
+  font-size: 0;
+  flex-direction: column;
+  height: 100%;
+}
+
+.products-item__img {
+  display: block;
+  padding: 0px 0px 102.3% 0px;
+  margin: 0px 0px 23px 0px;
+}
+
+.products-item__title {
+  flex: 1 1 auto;
+  font-family: AkzidenzGroteskBold;
+  font-weight: 400;
+  font-size: 25px;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 25px;
+  letter-spacing: 2.5px;
+  max-width: 185px;
+  min-height: 50px;
+  max-height: 50px;
+  overflow: hidden;
+  margin: 0px 0px 26px 4px;
+}
+.products-item__title a {
+  color: inherit;
+}
+.products-item__title a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 420.98px) {
+  .products-item__title {
+    max-width: none;
+    min-height: auto;
+  }
+}
+
+.products-item__text {
+  flex: 1 1 auto;
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  line-height: 25px;
+  max-width: 185px;
+  margin: 0px 0px 28px 6px;
+}
+@media (max-width: 420.98px) {
+  .products-item__text {
+    max-width: none;
+  }
+}
+
+.products-item__btn {
+  margin: 0px 0px 27px 5px;
+}
+
+.products-item__link {
+  margin-left: 6px;
 }
 
 footer {

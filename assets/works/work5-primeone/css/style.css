@@ -153,12 +153,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Nav Desktop
 ====================================*/
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
   padding: 29px 0px 31px 0px;
 }
 @media (max-width: 912px) {
   .header {
     padding: 15px 0px 15px 0px;
   }
+}
+.header.fixed {
+  position: fixed;
 }
 
 .header-top {
@@ -307,6 +316,61 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0px 22px 0px;
 }
 
+.header-scroll {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+}
+.header-scroll.show {
+  display: block;
+}
+@media (max-width: 750px) {
+  .header-scroll.show {
+    display: none;
+  }
+}
+
+.header-scroll-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px #000 solid;
+}
+
+.header-scroll-menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+.header-scroll-menu ul li {
+  margin-right: 30px;
+}
+.header-scroll-menu ul li:last-child {
+  margin-right: 0;
+}
+@media (max-width: 912px) {
+  .header-scroll-menu ul li {
+    margin-right: 20px;
+  }
+}
+
+.header-scroll-logo {
+  width: 15%;
+}
+.header-scroll-logo .header-logo {
+  margin: 10px 0px;
+}
+.header-scroll-logo .header-logo img {
+  width: 100%;
+}
+
+.header-scroll-lang {
+  display: flex;
+}
+
 /* Burger
 ====================================*/
 .header-burger {
@@ -453,7 +517,12 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   font-size: 0;
   background-color: #000;
-  margin: 0px 0px 75px 0px;
+  margin: 173px 0px 75px 0px;
+}
+@media (max-width: 912px) {
+  .intro {
+    margin: 145px 0px 75px 0px;
+  }
 }
 @media (max-width: 750px) {
   .intro {
@@ -461,6 +530,7 @@ h1, h2, h3, h4, h5, h6 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 74px 0px 75px 0px;
   }
 }
 

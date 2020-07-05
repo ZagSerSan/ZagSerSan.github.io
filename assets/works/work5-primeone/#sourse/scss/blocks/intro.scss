@@ -1,13 +1,19 @@
 .intro {
 	@include flexbox();
 	background-color: #000;
-	margin: 0px 0px 75px 0px;
+	margin: 173px 0px 75px 0px;
+
+	@media (max-width: $md1) {
+		margin: 145px 0px 75px 0px;
+	}
 
 	@media (max-width: $md2) {
 		background-image: url("../img/intro/intro.png");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
+
+		margin: 74px 0px 75px 0px;
 	}
 }
 .intro-column {

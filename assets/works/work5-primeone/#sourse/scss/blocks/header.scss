@@ -1,11 +1,23 @@
 /* Nav Desktop
 ====================================*/
 	.header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+
+		width: 100%;
+		background-color: #fff;
+
 		padding: 29px 0px 31px 0px;
 
 		@media (max-width:$md1){
 			padding: 15px 0px 15px 0px;
 
+		}
+
+		&.fixed {
+			position: fixed;
 		}
 
 	}
@@ -141,6 +153,64 @@
 		margin: 10px 0px 22px 0px;
 	}
 
+	.header-scroll {
+		display: none;
+		
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		
+		width: 100%;
+		background-color: #fff;
+
+		&.show {
+			display: block;
+
+			@media (max-width: $md2) {
+				display: none;
+			}
+		}
+	}
+
+	.header-scroll-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px #000 solid;
+	}
+	.header-scroll-menu {
+
+		ul {
+			display: flex;
+			justify-content: space-around;
+
+			li {
+				margin-right: 30px;
+
+				&:last-child {margin-right: 0;}
+				
+
+				@media (max-width: $md1) {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+
+	.header-scroll-logo {
+		width: 15%;
+		.header-logo {
+			margin: 10px 0px;
+
+			img {width: 100%;}
+		}
+	}
+
+	.header-scroll-lang {
+		display: flex;
+	}
+	
 
 /* Burger
 ====================================*/
@@ -253,31 +323,31 @@
 	}
 
 	.header-burger-lang {
-    display: flex;
-    justify-content: center;
-   
-    position: relative;
-    margin: 10vh 0 50px;
+	    display: flex;
+	    justify-content: center;
+	   
+	    position: relative;
+	    margin: 10vh 0 50px;
 
 		transform: rotateX(90deg);
-    transition: transform 0.1s linear;
-    transition-delay: 0.2s;
+	    transition: transform 0.1s linear;
+	    transition-delay: 0.2s;
 
 	}
 
 	.header-burger-lang__item {
 		display: block;
 
-    font-family: Bebas;
-    font-weight: 400;
-    font-size: 25px;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: normal;
-    letter-spacing: 1px;
-    padding: 0 4px;
+	    font-family: Bebas;
+	    font-weight: 400;
+	    font-size: 25px;
+	    color: #fff;
+	    text-transform: uppercase;
+	    line-height: normal;
+	    letter-spacing: 1px;
+	    padding: 0 4px;
 
-    margin: 0px 5px 0px 0px;
+	    margin: 0px 5px 0px 0px;
 
 		&.active {
 			color: #000;

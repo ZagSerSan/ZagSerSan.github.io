@@ -2,6 +2,44 @@ $(function () {
 
 //=====================burger==========================
 
+	let header = $(".header");
+	let header_scroll = $(".header-scroll");
+	let intro = $(".intro");
+	let introH = intro.innerHeight();
+	let scrollPos = $(window).scrollTop();
+
+	$(window).on("scroll load resize", function() {
+		introH = intro.innerHeight();
+		scrollPos = $(this).scrollTop();
+		scrollPos += 100;
+
+		window_width = $(this).innerWidth();
+
+		checkscroll_desktop(scrollPos, introH);
+		checkscroll_mobile(scrollPos, introH);
+
+	});
+
+	function checkscroll_desktop(scrollPos, introH) {
+		if (scrollPos>=introH && window_width>750) {
+			header_scroll.addClass("show");
+		}
+		else {
+			header_scroll.removeClass("show");
+		}
+	};
+
+	function checkscroll_mobile (scrollPos, introH) {
+		if (scrollPos>=introH && window_width<751) {
+			header.addClass("fixed");
+		}
+		else {
+			header.removeClass("fixed");
+		}
+	};
+
+//=====================burger==========================
+
 	let header_burger = $("#header-burger");
 	let header_burger_icon = $("#header-burger-icon");
 

@@ -39,7 +39,7 @@
 	}
 
 	@media (max-width: $md2) {
-		background-color: rgba(0, 0, 0, .8);
+		background-color: rgba(0, 0, 0, .7);
 		width: 100%;
 		max-width: none;
 		padding-right: 40px;
@@ -53,7 +53,7 @@
 	text-transform: uppercase;
 	line-height: 50px;
 	letter-spacing: 5px;
-	margin-bottom: 23.5px;
+	margin-bottom: 24.5px;
 
 	@media (max-width: $md1) {
 		font-size: 30px;
@@ -66,7 +66,7 @@
 	font-size: 15px;
 	color: #fff;
 	line-height: 25px;
-	margin-bottom: 49px;
+	margin-bottom: 50px;
 }
 .intro-btns {
 	@include flexbox();

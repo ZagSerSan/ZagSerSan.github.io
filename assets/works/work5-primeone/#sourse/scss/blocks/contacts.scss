@@ -1,0 +1,157 @@
+.contacts-top {
+	margin: 73.5px 0 0 0;
+}
+.contacts-top-inner {
+	padding: 0 5px;
+
+	@media (max-width: 480px) {
+		padding: 0;
+	}
+}
+.contacts-top-body {
+	@include flexbox();
+	flex-wrap: wrap;
+}
+.contacts-row__title {
+	font-family: AkzidenzGroteskBold;
+
+	font-size: 48px;
+	color: #000;
+	text-transform: uppercase;
+	line-height: 1;
+	letter-spacing: 5.8px;
+
+	margin-bottom: 23px;
+
+	@media (max-width: 480px) {
+		padding: 0 0 0 4px;
+	}
+}
+.contacts-column {
+	flex: 0 0 55%;
+	&--right {flex: 0 0 45%;}
+
+	@media (max-width: 480px) {
+		flex: 0 0 100%;
+		&--right {flex: 0 0 100%;}
+	}
+}
+.contacts-location {
+	@include flexbox();
+	align-items: center;
+
+	margin-bottom: 23px;
+}
+.contacts-location__icon {
+	img {
+		height: 28px;
+		width: auto;
+		margin: 0px 0px 0px -5px;
+
+		@media (max-width: 480px) {
+			margin: 0px 0px 0px 2px;
+		}
+	}
+}
+.contacts-location__text {
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 16px;
+	color: #000;
+	letter-spacing: -0.45px;
+
+	margin-left: 6px;
+	cursor: pointer;
+
+	span {
+		text-transform: lowercase;
+	    font-size: 10px;
+	    vertical-align: top;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+	
+}
+.contacts-tell {
+	@include flexbox();
+	align-items: center;
+
+	margin-bottom: 24px;
+}
+.contacts-tell__icon {
+	padding: 2px 0 0 2px;
+	img {
+		height: 22px;
+	    width: auto;
+	    margin: 0px 0px 0px -5px;
+	    transform: rotateZ(16deg);
+
+	    @media (max-width: 480px) {
+		    margin: 0px 0px 0px 4px;
+		}
+	}
+}
+.contacts-tell__text {
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 16px;
+	color: #000;
+	letter-spacing: -0.45px;
+
+	margin-left: 5px;
+
+	&:hover {text-decoration: underline;}
+}
+.contacts-mail {
+	@include flexbox();
+	align-items: center;
+
+	margin-bottom: 26px;
+}
+.contacts-mail__icon {
+	padding: 0px 0 0 5px;
+	img {
+		height: 25px;
+	    width: auto;
+	}
+}
+.contacts-mail__text {font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 16px;
+	color: #000;
+	letter-spacing: -0.495px;
+
+	margin-left: 9px;
+
+	&:hover {text-decoration: underline;}
+
+	a {color: #000;}
+}
+.contacts-social {
+	@media (max-width: 480px) {
+		margin-bottom: 24px;
+	}
+}
+.contacts-social__icon {
+	padding: 0px 0 0 5px;
+	img {
+		height: 25px;
+	    width: auto;
+	    margin-right: 30px;
+		transition: transform .1s linear;
+		cursor: pointer;
+
+		&:last-child {margin: 0;}
+		
+
+	    &:hover {
+	    	transform: translateY(-4px);
+	    }
+	}
+	@media (max-width: 480px) {
+    	text-align: center;
+    }
+}
+.contacts-bottom {}

@@ -104,4 +104,20 @@ $(function () {
 							'background-position':'center',
 							'background-repeat':'no-repeat',
 							'background-size':'cover'});
+
+  //============products//============
+  let why_isrc = document.getElementById('why-bgimgjs').src;
+	
+	$('.why-bgimgjs img').css({'display':'none'});
+	
+	$('.why-bgimgjs').css({'background-image':'url('+why_isrc+')',
+							'background-position':'center',
+							'background-repeat':'no-repeat',
+							'background-size':'cover'});
+	
+
+
+
+
+
 });

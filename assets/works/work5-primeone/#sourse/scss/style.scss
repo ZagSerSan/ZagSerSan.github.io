@@ -38,7 +38,7 @@ $minwidth: 320px;
 $mw: 900px;
 $md1:$mw+12;
 $md2:750px;
-$md3:767,98px;
+$md3:600,98px;
 $md4:420.98px;
 
 
@@ -79,6 +79,8 @@ h1,h2,h3,h4,h5,h6,{font-size:inherit; font-weight: 400;}
 @import "blocks/header.scss";
 @import "blocks/intro.scss";
 @import "blocks/products.scss";
+@import "blocks/why.scss";
+@import "blocks/contacts.scss";
 
 @import "blocks/footer.scss";
 

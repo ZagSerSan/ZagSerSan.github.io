@@ -66,7 +66,6 @@ $(function () {
 //=====================Script bgimgjs==========================
 
   //============intro//============
-
 	let intro_isrc = document.getElementById('intro-bgimgjs').src;
 	
 	$('.intro-bgimgjs img').css({'display':'none'});
@@ -115,9 +114,5 @@ $(function () {
 							'background-repeat':'no-repeat',
 							'background-size':'cover'});
 	
-
-
-
-
 
 });

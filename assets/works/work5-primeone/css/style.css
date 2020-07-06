@@ -873,13 +873,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .contacts-top {
   margin: 73.5px 0 0 0;
-}
-
-.contacts-top-inner {
   padding: 0 5px;
 }
 @media (max-width: 480px) {
-  .contacts-top-inner {
+  .contacts-top {
     padding: 0;
   }
 }
@@ -892,7 +889,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-.contacts-row__title {
+.contacts__title {
   font-family: AkzidenzGroteskBold;
   font-size: 48px;
   color: #000;
@@ -902,16 +899,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 23px;
 }
 @media (max-width: 480px) {
-  .contacts-row__title {
+  .contacts__title {
     padding: 0 0 0 4px;
   }
 }
 
 .contacts-column {
-  flex: 0 0 55%;
+  flex: 0 0 50%;
 }
-.contacts-column--right {
-  flex: 0 0 45%;
+@media (max-width: 750px) {
+  .contacts-column {
+    flex: 0 0 55%;
+  }
+  .contacts-column--right {
+    flex: 0 0 45%;
+  }
 }
 @media (max-width: 480px) {
   .contacts-column {

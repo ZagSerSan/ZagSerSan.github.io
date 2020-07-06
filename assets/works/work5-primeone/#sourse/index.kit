@@ -172,54 +172,77 @@
 
 		<div class="contacts-top">
 			<div class="container">
-				<div class="contacts-top-inner">
+				
+				<h2 class="contacts__title">SAY HELLO</h2>
+				
+				<div class="contacts-top-body">
+					<div class="contacts-column">
+						<div class="contacts-location">
+							<div class="contacts-location__icon">
+								<img src="img/contacts/gps.svg" alt="">
+							</div>
+							<a href="" class="contacts-location__text">
+								45-33 #B 39<span>th</span> St, Sunnyside, NY 11104
+							</a>
+						</div>
+						<div class="contacts-tell">
+							<div class="contacts-tell__icon">
+								<img src="img/contacts/phone2.svg" alt="">
+							</div>
+							<a href="tel:7187777777" class="contacts-tell__text">(718) 777-7777</a>
+						</div>
+					</div><!-- /.contacts-column -->
 					
-					<h2 class="contacts-row__title">SAY HELLO</h2>
-					
-					<div class="contacts-top-body">
-
-						<div class="contacts-column">
-							<div class="contacts-location">
-								<div class="contacts-location__icon">
-									<img src="img/contacts/gps.svg" alt="">
-								</div>
-								<a href="" class="contacts-location__text">
-									45-33 #B 39<span>th</span> St, Sunnyside, NY 11104
-								</a>
+					<div class="contacts-column contacts-column--right">
+						<div class="contacts-mail">
+							<div class="contacts-mail__icon">
+								<img src="img/contacts/mail.svg" alt="">
 							</div>
-							<div class="contacts-tell">
-								<div class="contacts-tell__icon">
-									<img src="img/contacts/phone2.svg" alt="">
-								</div>
-								<a href="" class="contacts-tell__text">(718) 777-7777</a>
+							<p class="contacts-mail__text">
+								<a href="mailto:contact@primeone.com">contact@primeone.com</a>
+							</p>
+						</div>
+						<div class="contacts-social">
+							<div class="contacts-social__icon">
+								<img src="../img/contacts/facebook.svg" alt="">
+								<img src="../img/contacts/twitter.svg" alt="">
+								<img src="../img/contacts/instagram.svg" alt="">
+								<img src="../img/contacts/google-plus.svg" alt="">
 							</div>
-						</div><!-- /.contacts-column -->
-						
-						<div class="contacts-column contacts-column--right">
-							<div class="contacts-mail">
-								<div class="contacts-mail__icon">
-									<img src="../img/contacts/mail.svg" alt="">
-								</div>
-								<p class="contacts-mail__text">
-									<a href="">contact@primeone.com</a>
-								</p>
-							</div>
-							<div class="contacts-social">
-								<div class="contacts-social__icon">
-									<img src="../img/contacts/facebook.svg" alt="">
-									<img src="../img/contacts/twitter.svg" alt="">
-									<img src="../img/contacts/instagram.svg" alt="">
-									<img src="../img/contacts/google-plus.svg" alt="">
-								</div>
-							</div>
-						</div><!-- /.contacts-column -->
-					</div>
-						
-				</div><!-- /.contacts-top-inner -->
+						</div>
+					</div><!-- /.contacts-column -->
+				</div><!-- /.contacts-top-body -->
 			</div><!-- /.container -->
 		</div><!-- /.contacts-top -->
 			
-		<div class="contacts-bottom"></div><!-- /.contacts-bottom -->
+		<div class="contacts-bottom">
+
+			<div class="contacts-bottom__column">
+				<div class="contacts-bottom__map" id="map"></div>
+			</div>
+
+			<div class="contacts-bottom__column">
+				<div class="contacts-bottom-form">
+					<div class="contacts-bottom-form__title">Get in touch</div>
+					<div class="contacts-bottom-form-body">
+						<div class="contacts-bottom-form-line">
+							<input type="text" autocomplete="off" name="form[]" data-value="" class="input" />
+						</div>
+						<div class="contacts-bottom-form-line">
+							<input type="text" autocomplete="off" name="form[]" data-value="" class="input" />
+						</div>
+						<div class="contacts-bottom-form-line">
+							<textarea autocomplete="off" name="form[]" data-value="" class="input"></textarea>
+						</div>
+						<div class="contacts-bottom-form-button">
+							<button type="submit" class="contacts-bottom-form__btn btn btn--white">Send message</button>
+						</div>
+						
+					</div><!-- /.contacts-bottom-form-body -->
+				</div><!-- /.contacts-bottom-form -->
+			</div><!-- /.contacts-bottom__column -->
+
+		</div><!-- /.contacts-bottom -->
 	
 	</div><!-- /.contacts -->
 

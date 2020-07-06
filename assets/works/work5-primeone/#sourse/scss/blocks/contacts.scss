@@ -1,7 +1,5 @@
 .contacts-top {
 	margin: 73.5px 0 0 0;
-}
-.contacts-top-inner {
 	padding: 0 5px;
 
 	@media (max-width: 480px) {
@@ -12,7 +10,7 @@
 	@include flexbox();
 	flex-wrap: wrap;
 }
-.contacts-row__title {
+.contacts__title {
 	font-family: AkzidenzGroteskBold;
 
 	font-size: 48px;
@@ -28,9 +26,12 @@
 	}
 }
 .contacts-column {
-	flex: 0 0 55%;
-	&--right {flex: 0 0 45%;}
+	flex: 0 0 50%;
 
+	@media (max-width: $md2) {
+		flex: 0 0 55%;
+		&--right {flex: 0 0 45%;}
+	}
 	@media (max-width: 480px) {
 		flex: 0 0 100%;
 		&--right {flex: 0 0 100%;}
@@ -68,11 +69,9 @@
 	    font-size: 10px;
 	    vertical-align: top;
 	}
-
 	&:hover {
 		text-decoration: underline;
 	}
-	
 }
 .contacts-tell {
 	@include flexbox();
@@ -155,3 +154,14 @@
     }
 }
 .contacts-bottom {}
+.contacts-bottom__column {}
+.contacts-bottom__map {}
+.contacts-bottom-form {}
+.contacts-bottom-form__title {}
+.contacts-bottom-form-body {}
+.contacts-bottom-form-line {}
+.input {}
+.contacts-bottom-form-button {}
+.contacts-bottom-form__btn {}
+.btn {}
+.btn--white {}

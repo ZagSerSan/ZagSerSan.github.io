@@ -1,9 +1,10 @@
 .contacts-top {
-	margin: 73.5px 0 0 0;
-	padding: 0 5px;
-
+	padding: 73.5px 5px 0px;
+	@media (max-width: $md2) {
+		padding: 30px 0 5px 0px;
+	}
 	@media (max-width: 480px) {
-		padding: 0;
+		padding: 30px 0 0px 0px;
 	}
 }
 .contacts-top-body {
@@ -12,7 +13,6 @@
 }
 .contacts__title {
 	font-family: AkzidenzGroteskBold;
-
 	font-size: 48px;
 	color: #000;
 	text-transform: uppercase;
@@ -84,7 +84,7 @@
 	img {
 		height: 22px;
 	    width: auto;
-	    margin: 0px 0px 0px -5px;
+	    margin: 0px 0px 0px -3px;
 	    transform: rotateZ(16deg);
 
 	    @media (max-width: 480px) {
@@ -153,13 +153,53 @@
     	text-align: center;
     }
 }
-.contacts-bottom {}
-.contacts-bottom__column {}
-.contacts-bottom__map {}
-.contacts-bottom-form {}
-.contacts-bottom-form__title {}
-.contacts-bottom-form-body {}
-.contacts-bottom-form-line {}
+.contacts-bottom {
+	@include flexbox();
+	background-color: #000;
+
+	@media (max-width: $md2) {
+		display: block;
+	}
+}
+.contacts-bottom__column {
+	flex: 0 0 50%;
+
+	@media (max-width: $md2) {
+		flex: 1 1 100%;
+	}
+}
+.contacts-bottom__map {
+	width: 100%;
+	height: 100%;
+	@media (max-width: $md2) {
+		height: 300px;
+	}
+}
+.contacts-bottom-form {
+	padding: 52px 60px;
+	@media (max-width: $md2) {
+		padding: 30px;
+	}
+}
+.contacts-bottom-form__title {
+	font-family: AkzidenzGroteskBold;
+	font-weight: 400;
+	font-size: 25px;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 25px;
+	letter-spacing: 2.5px;
+	margin-bottom: 30px;
+}
+.contacts-bottom-form-body {
+	max-width: 375px;
+	@media (max-width: $md2) {
+		max-width: none;
+	}
+}
+.contacts-bottom-form-line {
+	margin: 0px 0px 25px 0px;
+}
 .input {}
 .contacts-bottom-form-button {}
 .contacts-bottom-form__btn {}

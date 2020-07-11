@@ -1,4 +1,34 @@
-footer {
-	height: 600px;
-	background:green;
+.footer-body {
+	@include flexbox();
+	justify-content: space-between;
+	align-items: center;
+	height: 125px;
+
+	@media (max-width: $md2) {
+		flex-direction: column-reverse;
+		padding: 20px 0px 20px 0px;
+		height: auto;
+	}
+}
+.footer-body__column {}
+.footer__text {
+	font-size: 15px;
+	color: #4d4d4d;
+	line-height: 25px;
+	a{
+		color: inherit;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	@media (max-width: $md2) {
+		text-align: center;
+	}
+}
+.footer__logo {
+	display: block;
+	@media (max-width: $md2) {
+		margin: 0px 0px 10px 0px;
+	}
 }

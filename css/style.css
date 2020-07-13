@@ -2006,7 +2006,7 @@ body.no-scroll {
 }
 .contact__right {
   width: 53%;
-  background: #6a696b url(http://placehold.it/480x700) center no-repeat;
+  background-color: #fff;
 }
 @media (max-width: 660px) {
   .contact__right {

@@ -234,4 +234,20 @@ $(function () {
 
 		});
 
+	/* ibg
+	=====================================*/
+
+	// получить атрибут 'src';
+	let bgimgjs_isrc = document.getElementById('bgimgjs').src;
+	
+	//скрыть img в html
+	$('.bgimgjs img').css({'display':'none'});
+
+	//img_src засунуть в bg
+	$('.bgimgjs').css({'background-image':'url('+bgimgjs_isrc+')',
+							'background-position':'top center',
+							'background-repeat':'no-repeat',
+							'background-size':'contain'});
+
+
 });

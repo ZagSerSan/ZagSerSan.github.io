@@ -323,7 +323,8 @@
 
 			<!-- Portfolio -->
 				<div class="portfolio">
-
+					
+					<!--
 					<div class="portfolio__col" data-cat="landidg">
 						<div class="portfolio__item notallowed">
 							<div class="portfolio__item-img_loader">
@@ -342,7 +343,24 @@
 								</div>
 							</div>
 						</div>
-					</div><!-- /.portfolio__col 0 -->
+					</div> /.portfolio__col 0 -->
+
+					<div class="portfolio__col" data-cat="landidg" data-modal="#modal_work_5">
+						<div class="portfolio__item">
+							<img src="images/portfolio/work_5-primeone/preview.webp" alt="" class="portfolio__item__img">
+							<div class="portfolio__item__content">
+								<div class="portfolio__item__content__cat">
+									категория: landidg
+								</div>
+								<div class="portfolio__item__content__title">
+									PrimeOne
+									<div class="portfolio__item__content__title__date">
+										2020
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- /.portfolio__col 3-->
 
 					<div class="portfolio__col" data-cat="landidg" data-modal="#modal_work_4">
 						<div class="portfolio__item">
@@ -658,6 +676,80 @@
 
 <!-- Modals -->
 	
+	<!-- Modal "work 5: Prime One" -->
+	<div class="modal" id="modal_work_5">
+		<div class="modal__dialog">
+			<div class="modal-work">
+
+				<button class="modal-work_btn-close" data-close>
+					<svg><use xlink:href="#modal-close"></use></svg>
+				</button>
+
+				<div class="modal-work__preview">
+					<div data-slider="slick">
+						<div>
+							<img class="modal-work__photo" src="images/portfolio/work_5-primeone/slide1.webp" alt="work-preview">
+						</div>
+						<div>
+							<img class="modal-work__photo" src="images/portfolio/work_5-primeone/slide2.webp" alt="work-preview">
+						</div>
+						<div>
+							<img class="modal-work__photo" src="images/portfolio/work_5-primeone/slide3.webp" alt="work-preview">
+						</div>
+					</div><!-- /.slick -->
+				</div><!-- /.modal-work__preview -->
+				
+				<div class="modal-work__content">
+					<div class="modal-work__header">
+						<h3 class="modal-work__name">Designer Portfolio</h3>
+						<h4 class="modal-work__cat-date">
+							category: website <span class="modal-work__cat-date__divider">|</span> 2020
+						</h4>
+					</div>
+
+					<div class="modal-work__client-and-see_work">
+						<div class="modal-work__client">
+							<div class="modal-work__client__title">Клиент</div>
+							<div class="modal-work__client__name">Я</div>
+						</div>
+
+						<div class="modal-work__see-work">
+							<a target="_blank" href="assets/works/work4-designer_portfolio/index.html">Открыть сайт</a>
+							<a target="_blank" href="https://drive.google.com/drive/folders/1KJFX95ZSmge37CtY3HMUEv4fCZX0Noix?usp=sharing">Посмотреть макет</a>
+						</div>
+					</div>
+
+					<div class="modal-work__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque libero impedit tenetur. Aut distinctio, maiores placeat similique quidem quaerat nisi maxime vero praesentium voluptate quam aspernatur! Sunt a, libero mollitia!</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque libero impedit tenetur. Aut distinctio, maiores placeat similique quidem quaerat nisi maxime vero praesentium voluptate quam aspernatur! Sunt a, libero mollitia!</p>
+					</div><!-- /.modal-work__text -->
+
+					<div class="modal-work__footer">
+						<button class="modal-work__btn slickPrev" type="button" href="#">
+							<img class="modal-work__btn-img--prev" src="images/svg/arrow-prev.svg" alt="previous">
+							Previous
+						</button>
+						<button class="modal-work__btn slickNext" type="button" href="#">
+							Next
+							<img class="modal-work__btn-img--next" src="images/svg/arrow-next.svg" alt="next">
+						</button>
+
+						<!-- btn adapt -->
+						<button class="modal-work__btn adapt slickPrev" type="button" href="#">
+							<img class="modal-work__btn-img__adapt--prev" src="images/svg/arrow-adapt-prev.svg" alt="previous">
+						</button>
+						<button class="modal-work__btn adapt slickNext" type="button" href="#">
+							<img class="modal-work__btn-img__adapt--next" src="images/svg/arrow-adapt-next.svg" alt="next">
+						</button>
+					</div>
+
+				</div><!-- /.modal-work__content -->
+
+			</div><!-- /.modal-work -->
+
+		</div><!-- /.modal__dialog -->
+	</div><!-- /.modal -->
+		
 	<!-- Modal "work 4: Designer Portfolio" -->
 	<div class="modal" id="modal_work_4">
 		<div class="modal__dialog">

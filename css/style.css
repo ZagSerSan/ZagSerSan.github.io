@@ -1737,9 +1737,15 @@ body.no-scroll {
     top: -60px;
   }
 }
+@media (max-width: 420px) {
+  .modal-work__footer {
+    padding: 2rem 2rem 2.2rem;
+    top: -59px;
+  }
+}
 @media (max-width: 350px) {
   .modal-work__footer {
-    padding: 2rem 0.5rem 1.8rem;
+    padding: 2rem 0.5rem 2rem;
     top: -58px;
   }
 }

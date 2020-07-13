@@ -1203,7 +1203,7 @@ body.no-scroll {
   background-color: #f7f7f7;
   margin-top: 17rem;
   padding-top: 4rem;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 }
 .news__header {
   text-align: center;
@@ -2018,7 +2018,6 @@ body.no-scroll {
   font-size: 4.5rem;
   font-weight: 700;
   color: #2b2a2c;
-  text-transform: uppercase;
 }
 @media (max-width: 410px) {
   .contact__left__title {

@@ -1237,6 +1237,9 @@ body.no-scroll {
   position: relative;
   margin-bottom: 2rem;
 }
+.articles__header:hover .article__date {
+  opacity: 0;
+}
 .news_articles_col {
   width: 33.33333%;
   padding: 1rem;
@@ -1269,6 +1272,7 @@ body.no-scroll {
   font-weight: 400;
   color: #fff;
   line-height: 1.4;
+  transition: opacity 0.2s linear;
 }
 .article__photo {
   display: block;

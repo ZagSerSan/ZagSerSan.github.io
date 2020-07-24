@@ -41,6 +41,12 @@
 .articles__header {
 	position: relative;
 	margin-bottom: 2rem;
+	&:hover {
+		.article__date {
+			opacity: 0;
+		}
+	}
+	
 }
 
 .news_articles_col {
@@ -79,6 +85,8 @@
 	font-weight: 400;
 	color: @white;
 	line-height: 1.4;
+
+	transition: opacity .2s linear;
 }
 
 .article__photo {

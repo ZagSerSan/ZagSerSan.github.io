@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap");
+body {
+  margin: 0;
+  color: #6c7279;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header__row {
+  font-weight: 400;
+}
+
+.header__row .boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 700px;
+  height: 700px;
+  background: #742b2b;
+  padding: 20px;
+}
+
+.header__row .boxes .box__item {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  padding: 30px;
+  margin: 0 10px;
+}
+
+.intro__inner {
+  width: 100%;
+  height: 400px;
+  background: #000;
+}
+
+.intro__inner .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 700px;
+  height: 400px;
+  background-color: #091927;
+  margin: 0 auto;
+}
+
+.intro__inner .content__item {
+  width: 100px;
+  height: 100px;
+  background-color: #cc0;
+  margin: 0 auto;
+}

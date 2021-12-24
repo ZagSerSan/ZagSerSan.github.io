@@ -44,20 +44,3 @@ a:hover {
   width: 100%;
   margin: 0 auto;
 }
-
-.table {
-  display: table;
-  border: 2px solid #000;
-}
-
-.table__row {
-  border: 2px solid #b62b2b;
-}
-
-.table__cell {
-  border: 2px solid #28994a;
-  display: table-cell;
-  width: 100px;
-  height: 30px;
-  background-color: #ccc;
-}

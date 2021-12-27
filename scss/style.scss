@@ -112,35 +112,36 @@ a {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 38px;
+
+      padding: 45px 0;
    }
    &__colum {
-   }
-   &__icon {
    }
    &__logo {
    }
 }
 .header-menu {
    display: flex;
+
    font-size: 13px;
+   font-weight: 700;
+
+   opacity: 0.75;
 
    &__link {
       color: #fff;
-      text-transform: uppercase;
-      text-decoration: none;
-      opacity: 0.75;
-      font-weight: 700;
-      transition: opacity 0.1s linear;
 
-      margin-left: 59px;
+      margin-left: 58px;
+
+      text-decoration: none;
+      text-transform: uppercase;
 
       &:first-child {
          margin-left: 0;
       }
       &:hover {
-         opacity: 1;
          text-decoration: none;
+         opacity: 1;
       }
    }
 }

@@ -83,3 +83,24 @@ a:hover {
   text-decoration: none;
   opacity: 1;
 }
+
+.test__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 600px;
+  border: 2px solid red;
+}
+
+.test__colum {
+  width: 25%;
+  border: 1px solid #ccc;
+  max-height: 150px;
+}

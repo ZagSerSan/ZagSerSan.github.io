@@ -4,6 +4,7 @@ body {
   color: #6c7279;
   font-size: 14px;
   font-family: "Raleway", sans-serif;
+  background-color: #000000;
 }
 
 *,
@@ -43,4 +44,44 @@ a:hover {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 38px;
+}
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+}
+
+.header-menu__link {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 700;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  margin-left: 59px;
+}
+
+.header-menu__link:first-child {
+  margin-left: 0;
+}
+
+.header-menu__link:hover {
+  opacity: 1;
+  text-decoration: none;
 }

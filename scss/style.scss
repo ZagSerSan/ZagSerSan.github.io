@@ -31,6 +31,7 @@ body {
    // &.lock {
    // 	overflow: hidden;
    // }
+   background-color: #000000;
 }
 *,
 *:before,
@@ -104,8 +105,14 @@ a {
 // @import "home.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+
 .header {
    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 38px;
    }
    &__colum {
    }
@@ -115,11 +122,28 @@ a {
    }
 }
 .header-menu {
+   display: flex;
+   font-size: 13px;
+
    &__link {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      opacity: 0.75;
+      font-weight: 700;
+      transition: opacity 0.1s linear;
+
+      margin-left: 59px;
+
+      &:first-child {
+         margin-left: 0;
+      }
+      &:hover {
+         opacity: 1;
+         text-decoration: none;
+      }
    }
 }
-
-//<ОСНОВНОЙ БЛОК>====================================================================================================
 
 //====================================================================================================
 

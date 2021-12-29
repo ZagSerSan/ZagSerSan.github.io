@@ -1,60 +1,28 @@
 //<МИКСИНЫ>===============================================================================================
-//@import "mixins.scss";
+   //@import "mixins.scss";
 
 //<ШРИФТЫ>===============================================================================================
-//Raleway: bold, semibold, regular
-//cardo: italic
-//Open Sans: bold
+   //Raleway: bold, semibold, regular
+   //cardo: italic
+   //Open Sans: bold
 //<Подключаем шрифты>=======================================================================================
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap");
+   @import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap");
 //<Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontfamily: "Raleway";
+   $fontfamily: "Raleway";
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
-$minwidth: 320px;
-$mw: 1170;
-// $md1: $mw + 12;
-// $md2: 991.98;
-// $md3: 767.98;
-// $md4: 479.98;
+   $minwidth: 320px;
+   $mw: 1170;
+   // $md1: $mw + 12;
+   // $md2: 991.98;
+   // $md3: 767.98;
+   // $md4: 479.98;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
-// @import "null.scss";
-body {
-   margin: 0;
-   color: #6c7279;
-   font-size: 14px;
-   font-family: "Raleway", sans-serif;
-   -webkit-font-smoothing: antialiased;
-
-   background-color: #ffffff;
-}
-*,
-*:before,
-*:after {
-   box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-   margin: 0px auto;
-   width: auto;
-}
-a {
-   text-decoration: none;
-   color: inherit;
-   &:hover {
-      text-decoration: underline;
-   }
-}
+   @import "null.scss";
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
 //<ОБОЛОЧКА>===========================================================================================================
@@ -112,91 +80,16 @@ a {
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 
-// HEADER----------------------------------------
-.header {
-   background: #2f324b url("../img/bg_intro.jpg") no-repeat center / cover;
+// -HEADER----------------------------------------
 
-   &__row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 38px 0px;
 
-      border-bottom: 1px #515369 solid;
-   }
-   &__logo {}
-}
-.header-nav {
-   font-size: 11px;
-   font-weight: 400;
-   &__link {
-      opacity: 0.75;
-      text-transform: uppercase;
-      text-decoration: none;
-      margin-left: 56px;
-      letter-spacing: 1.6px;
-      transition: opacity .1s linear;
-      color: #fff;
 
-      &:first-child {
-         margin-left: 0;
-      }
-      &:hover {
-         opacity: 1;
-         text-decoration: none;
-      }
-   }
-}
-// Intro------------------------
+//====================================================================================================
 
-.intro {
-   height: 100vh;
-   max-height: 750px;
+//</ОСНОВНОЙ БЛОК>====================================================================================================
 
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   
-   &__title {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 65px;
-      font-weight: 700;
-      line-height: 1.1;
-      color: #fff;
-      text-transform: uppercase;
-
-      margin-bottom: 42px;
-   }
-   &__subtitle {
-      max-width: 950px;
-      font-size: 22px;
-      margin-bottom: 77px;
-      color: #fff;
-      text-align: center;
-
-   }
-   &__button {
-      font-size: 13px;
-      font-weight: 600;
-      padding: 20px 45px;
-      color: #fff;
-      text-transform: uppercase;
-
-      background-color: #d73232;
-      border: none;
-      border-radius: 3px;
-
-      transition: background-color .1s linear;
-
-      cursor: pointer;
-
-      &:hover {
-         background-color: #961919;
-      }
-   }
-}
-
+//</ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
+// -Test---------------------------------
 .test {
    padding: 40px 0;
    border-top: 1px #ccc solid;
@@ -223,7 +116,3 @@ a {
    border: 1px solid rgb(0, 0, 0);
    background-color: #ccc;
 }
-
-//====================================================================================================
-
-//</ОСНОВНОЙ БЛОК>====================================================================================================

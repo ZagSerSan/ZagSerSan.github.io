@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap");
 body {
-  margin: 0;
+  background-color: #ffffff;
   color: #6c7279;
   font-size: 14px;
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #ffffff;
+  margin: 0;
 }
 
 *,
@@ -15,13 +15,7 @@ body {
           box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0px auto;
   width: auto;
 }
@@ -52,103 +46,6 @@ a:hover {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
-}
-
-.header {
-  background: #2f324b url("../img/bg_intro.jpg") no-repeat center/cover;
-}
-
-.header__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 38px 0px;
-  border-bottom: 1px #515369 solid;
-}
-
-.header-nav {
-  font-size: 11px;
-  font-weight: 400;
-}
-
-.header-nav__link {
-  opacity: 0.75;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-left: 56px;
-  letter-spacing: 1.6px;
-  -webkit-transition: opacity .1s linear;
-  transition: opacity .1s linear;
-  color: #fff;
-}
-
-.header-nav__link:first-child {
-  margin-left: 0;
-}
-
-.header-nav__link:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.intro {
-  height: 100vh;
-  max-height: 750px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.intro__title {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 65px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 42px;
-}
-
-.intro__subtitle {
-  max-width: 950px;
-  font-size: 22px;
-  margin-bottom: 77px;
-  color: #fff;
-  text-align: center;
-}
-
-.intro__button {
-  font-size: 13px;
-  font-weight: 600;
-  padding: 20px 45px;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #d73232;
-  border: none;
-  border-radius: 3px;
-  -webkit-transition: background-color .1s linear;
-  transition: background-color .1s linear;
-  cursor: pointer;
-}
-
-.intro__button:hover {
-  background-color: #961919;
 }
 
 .test {

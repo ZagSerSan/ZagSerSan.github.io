@@ -1,0 +1,27 @@
+body {
+   background-color: #ffffff;
+
+   color: #6c7279;
+   font-size: 14px;
+   font-family: "Raleway", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   
+   margin: 0;
+}
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+   margin: 0px auto;
+   width: auto;
+}
+a {
+   text-decoration: none;
+   color: inherit;
+   &:hover {
+      text-decoration: underline;
+   }
+}

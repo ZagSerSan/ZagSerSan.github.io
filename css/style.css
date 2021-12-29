@@ -4,6 +4,7 @@ body {
   color: #6c7279;
   font-size: 14px;
   font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
   background-color: #ffffff;
 }
 
@@ -21,7 +22,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0px;
+  margin: 0px auto;
   width: auto;
 }
 
@@ -38,6 +39,13 @@ a:hover {
   width: 100%;
   min-height: 100%;
   overflow: hidden;
+}
+
+.empty-space {
+  height: 700px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
 }
 
 .container {
@@ -60,12 +68,12 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 38px 20px;
+  padding: 38px 0px;
   border-bottom: 1px #515369 solid;
 }
 
 .header-nav {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 400;
 }
 
@@ -73,7 +81,8 @@ a:hover {
   opacity: 0.75;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 58px;
+  margin-left: 56px;
+  letter-spacing: 1.6px;
   -webkit-transition: opacity .1s linear;
   transition: opacity .1s linear;
   color: #fff;
@@ -89,7 +98,7 @@ a:hover {
 }
 
 .intro {
-  height: 85vh;
+  height: 100vh;
   max-height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,6 +119,7 @@ a:hover {
   font-family: 'Open Sans', sans-serif;
   font-size: 65px;
   font-weight: 700;
+  line-height: 1.1;
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 42px;
@@ -139,4 +149,46 @@ a:hover {
 
 .intro__button:hover {
   background-color: #961919;
+}
+
+.test {
+  padding: 40px 0;
+  border-top: 1px #ccc solid;
+}
+
+.test__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  border: 2px solid red;
+  height: 500px;
+}
+
+.test__string {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 100px;
+  margin: 20px 10px;
+  border: 1px solid black;
+  background-color: #ccc;
 }

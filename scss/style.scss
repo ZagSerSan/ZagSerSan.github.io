@@ -3,7 +3,7 @@
 
 //* <ШРИФТЫ>===============================================================================================
 //<Подключаем шрифты>=======================================================================================
-
+   @import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap');
 //<Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
@@ -11,7 +11,7 @@
       font-family: "Raleway", sans-serif;
       font-size: 14px;
       -webkit-font-smoothing: antialiased;
-      color: black;
+      color: #6c7279;
    }
 //* <ПЕРЕМЕННЫЕ>===========================================================================================================
    $minwidth: 320px;
@@ -36,12 +36,13 @@
    // &.loaded {
    // }
 }
-// .empty-space {
-//    height: 700px;
-//    width: 100%;
-//    background-color: #fff;
-//    text-align: center;
-// }
+.empty-space {
+   height: 700px;
+   width: 100%;
+   background-color: #fff;
+   text-align: center;
+   border-top: #ccc 1px solid;
+}
 
 //* <ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
@@ -62,8 +63,99 @@
 
 //* <ОСНОВНОЙ БЛОК>====================================================================================================
 //todo -Header
+.header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   width: 100%;
+}
+.header-inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 
+   padding: 38px 0;
+   border-bottom: 1px #505268 solid;
+   &__avatar {
+      display: block;
+   }
+}
+.header-inner-nav {
+   &__link {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #fff;
+      text-transform: uppercase;
+
+      margin-left: 58px;
+      opacity: .75;
+      transition: opacity .1s linear;
+
+      &:hover {
+         text-decoration: none;
+         opacity: 1;
+      }
+      &:first-child {
+         margin-left: 0;
+      }
+   }
+}
 //todo -Intro
+.intro {
+   background: #313550 url('../img/intro/intro-bg.jpg') no-repeat center / cover;
+}
+.intro-inner {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   height: 100vh;
+   padding-top: 100px;
+
+		&__title {
+         font-family: 'Open Sans', sans-serif;
+         font-size: 65px;
+         font-weight: 700;
+         color: #fff;
+         line-height: 1.1;
+         text-align: center;
+         text-transform: uppercase;
+
+         margin-bottom: 42px;
+      }
+		&__subtitle {
+         font-family: 'Raleway', sans-serif;
+         font-size: 22px;
+         font-weight: 400;
+         color: #fff;
+         line-height: 1.5;
+         text-align: center;
+
+         max-width: 950px;
+         margin-bottom: 77px;
+      }
+		&__link {
+         font-family: 'Raleway', sans-serif;
+         font-size: 13px;
+         font-weight: 600;
+         color: #fff;
+         text-align: center;
+         text-transform: uppercase;
+
+         background-color: #e84545;
+         padding: 20px 50px;
+         border-radius: 3px;
+         transition: background-color .1s linear;
+
+         &:hover {
+            text-decoration: none;
+            background-color: #bf2e2e;
+         }
+      }
+}
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
 // -Test---------------------------------
@@ -79,7 +171,6 @@
 //    align-content: space-between;
 
 //    border: 2px solid red;
-
 //    height: 500px;
 // }
 // .test__string  {

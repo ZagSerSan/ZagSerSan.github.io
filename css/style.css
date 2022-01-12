@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap");
 body {
   font-family: "Raleway", sans-serif;
@@ -33,33 +32,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/*
-	Стиль иконки бургера
-	.icon-menu{
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width:30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
-		}
-		&.active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
-			}
-		}
-	}
-*/
 .wrapper {
   width: 100%;
   min-height: 100%;
   overflow: hidden;
+}
+
+.empty-space {
+  height: 700px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  color: #000;
 }
 
 .container {
@@ -77,7 +61,6 @@ a:hover {
 }
 
 .header-row {
-  background-color: #31354f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,4 +96,66 @@ a:hover {
 .header-nav__link:hover {
   text-decoration: none;
   opacity: 1;
+}
+
+.intro {
+  background: #30334d url("../img/intro/intro_bg.jpg") no-repeat center/cover;
+}
+
+.intro-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 100px;
+  height: 100vh;
+}
+
+.intro-inner__title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  color: #fff;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+
+.intro-inner__subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 900px;
+  margin-bottom: 77px;
+}
+
+.intro-inner__link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 19px 45px;
+  border-radius: 3px;
+  background-color: #e84545;
+  -webkit-transition: background-color .1s linear;
+  transition: background-color .1s linear;
+}
+
+.intro-inner__link:hover {
+  text-decoration: none;
+  background-color: #b83636;
 }

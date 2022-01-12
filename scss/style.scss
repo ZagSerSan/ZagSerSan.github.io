@@ -25,8 +25,8 @@
    @import "null.scss";
 
 //* <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-   @import "header.scss";
-// @import "footer.scss";
+   // @import "header.scss";
+   // @import "footer.scss";
 
 //* <ОБОЛОЧКА>===========================================================================================================
 .wrapper {
@@ -36,12 +36,13 @@
    // &.loaded {
    // }
 }
-// .empty-space {
-//    height: 700px;
-//    width: 100%;
-//    background-color: #fff;
-//    text-align: center;
-// }
+.empty-space {
+   height: 700px;
+   width: 100%;
+   background-color: #fff;
+   text-align: center;
+   color: #000;
+}
 
 //* <ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
@@ -72,8 +73,6 @@
    width: 100%;
 }
 .header-row {
-   background-color: #31354f;
-
 	display: flex;
 	justify-content: space-between;
    align-items: center;
@@ -105,6 +104,61 @@
       }
    }
 }
+
+// Intro
+.intro  {
+   background: #30334d url('../img/intro/intro_bg.jpg') no-repeat center / cover;
+}
+.intro-inner {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   padding-top: 100px;
+
+   height: 100vh;
+		&__title {
+         font-family: 'Open Sans', sans-serif;
+         font-weight: 700;
+         font-size: 65px;
+         color: #fff;
+         line-height: 1.1;
+         text-align: center;
+         text-transform: uppercase;
+
+         margin-bottom: 42px;
+      }
+		&__subtitle {
+         font-family: 'Raleway', sans-serif;
+         font-size: 22px;
+         font-weight: 400;
+         color: #fff;
+         line-height: 1.5;
+         text-align: center;
+
+         max-width: 900px;
+         margin-bottom: 77px;
+      }
+		&__link {
+         font-family: 'Raleway', sans-serif;
+         font-size: 13px;
+         font-weight: 600;
+         color: #fff;
+         text-transform: uppercase;
+
+         padding: 19px 45px;
+         border-radius: 3px;
+         background-color: #e84545;
+         transition: background-color .1s linear;
+
+         &:hover {
+            text-decoration: none;
+            background-color: #b83636;
+         }
+      }
+}
+
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
 // -Test---------------------------------

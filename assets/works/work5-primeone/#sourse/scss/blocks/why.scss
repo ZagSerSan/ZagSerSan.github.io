@@ -1,0 +1,126 @@
+.why {}
+.why-top {
+	@include flexbox();
+
+	background-color: #000;
+	
+}
+.why-top-column {
+	flex: 0 0 50%;
+
+	@media (max-width: $md2) {
+		flex: 0 0 100%;
+		&:first-child {
+			background-image: url(../img/why/bg.png);
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
+		&:last-child {display: none;}
+	}
+}
+
+.why-top__text {
+	font-family: AkzidenzGroteskBold;
+	font-weight: 400;
+	font-size: 50px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 4.8px;
+
+	text-align: right;
+
+	padding: 52px 58px 48px 0px;
+
+	@media (max-width: $md1) {
+		padding: 30px 20px 30px 0px;
+		font-size: 42px;
+	}
+
+	@media (max-width: $md2) {
+		padding: 30px 0;
+		text-align: center;
+		background-color: rgba(0, 0, 0, .7);
+	}
+}
+.why-body {
+	background-color: #ebebeb;
+	padding-bottom: 50px;
+}
+.why-body-inner {
+	@include flexbox();
+	flex-wrap: wrap;
+}
+.why-body-column {
+	flex: 0 0 50%;
+
+	@media (max-width: $md2) {
+		flex: 1 1 100%;
+	}
+}
+.why-body-item {
+	@include flexbox();
+	padding: 54px 0px 0px 0px;
+
+	@media (max-width: $md2) {
+		padding: 30px 0px 0px 0px;
+	}
+	@media (max-width: $md4) {
+		padding: 22px 0px 0px 0px;
+	}
+}
+.why-body-item__icon {
+	flex: 0 0 100px;
+	width: 100px;
+	height: 100px;
+	padding-left: 4px;
+
+	img {width: 100%;}
+
+	@media (max-width: $md2) {
+		flex: 0 0 80px;
+		width: 80px;
+		height: 80px;
+	}
+
+	@media (max-width: $md4) {
+		padding-left: 0px;
+	}
+}
+.why-body-item-body {
+	flex: 1 1 100%;
+	@include flexbox();
+	flex-direction: column;
+
+	padding: 0px 0px 0px 16px;
+
+	@media (max-width: $md4) {
+		padding: 0px 0px 0px 10px;
+	}
+}
+.why-body-item__title {
+	flex: 1 1 auto;
+
+	font-family: AkzidenzGroteskBold;
+	font-size: 25px;
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+
+	min-height: 50px;
+
+	@media (max-width: $md2) {
+		flex: 0;
+    	min-height: auto;
+    	margin-bottom: 10px;
+    	font-size: 20px;
+	}
+}
+.why-body-item__text {
+	font-family: "PT Sans";
+	font-size: 15px;
+	color: #000;
+	line-height: 25px;
+
+	padding: 0px 15px 0px 0px;
+}

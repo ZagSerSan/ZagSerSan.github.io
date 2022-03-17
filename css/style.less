@@ -1,0 +1,87 @@
+@mixin flexbox(){display:-webit-box;display:-mos-box;display:-ms-flexbox;display:-webkit-flex;display:flex;};
+@minwidth: 320px;
+@mw: 1170px;
+@md1:@mw+12;
+@md2:720px;
+@md3:767,98px;
+@md4:479.98px;
+
+
+
+
+
+//=============ОБНУЛЕНИЕ/ПАРАМЕТРЫ=========
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display: block;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor: pointer; background:none;}
+button::-mos-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li {list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit; font-weight: 400;}
+
+
+
+//=============ОСНОВНАЯ СЕТКА=========
+.container {max-width:@mw;width:100%;margin:0 auto;padding: 0px 10px;
+  @media (max-width:@md1){max-width:720px;};
+  @media (max-width:@md2){max-width:none;};
+};
+/* Global
+=============================*/
+@import "vars";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+    font-size:10px;
+
+    @media (max-width: 820px) {
+      font-size: 9px;
+    }
+}
+
+body {
+    font-family: Montserrat,sans-serif;
+    font-size: 1.5rem;
+    color: @black;
+
+    margin: 0;
+
+    &.no-scroll {
+    	overflow: hidden;
+    }
+}
+
+/* Vendor
+=============================*/
+@import "vendor/slick.less";
+
+/* Blocks
+=============================*/
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/btn";
+@import "blocks/intro.less";
+@import "blocks/works";
+@import "blocks/about";
+@import "blocks/services";
+@import "blocks/reviews";
+@import "blocks/news";
+@import "blocks/footer";
+@import "blocks/modals";
+
+
+/* Helpers
+=============================*/
+@import "blocks/helpers.less";
+
+

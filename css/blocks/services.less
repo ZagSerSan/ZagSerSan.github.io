@@ -1,0 +1,89 @@
+//main: ../style.less
+
+.services__inner {
+	padding: 5rem 0 9rem;
+}
+
+.services__header {
+	text-align: center;
+
+	margin-bottom: 1rem;
+}
+
+.services__header__title {
+	font-size: 3.5rem;
+	font-weight: 700;
+	color: @black;
+	text-transform: uppercase;
+
+	margin-bottom: .3rem;
+}
+
+.services__header__text {
+	font-size: 1.8rem;
+	font-weight: 300;
+	color: @grey-light;
+}
+
+.services_items {
+	background-color: #fff;
+
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.services__item {
+
+	width: 33.33333%;
+	height: auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 3rem 2rem;
+	border-radius: 20px;
+
+	transition: all .2s linear;
+
+	img {
+		transition: all .2s linear;
+	}
+
+	&:hover {
+		background-color: #e8e8e8;
+
+		img {
+			transform: scale(1.1);
+		}
+	}
+
+	@media (max-width: 900px) {
+		width: 50%;
+	}
+	@media (max-width: 551px) {
+		width: 100%;
+	}
+
+}
+
+.services__item__title {
+	font-size: 1.8rem;
+    font-weight: 700;
+    color: #2b2a2c;
+    margin-top: 2.7rem;
+    text-align: center;
+
+}
+
+.services__item__subtitle {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #6c7279;
+	text-align: center;
+	
+	margin-top: 25px;
+}

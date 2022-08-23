@@ -104,7 +104,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1200pxpx;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -333,6 +333,7 @@ a:hover {
   right: 0;
   z-index: 2;
   transform: translateY(-50%);
+  height: 120%;
 }
 .reviews__content {
   width: 50%;
@@ -466,4 +467,48 @@ a:hover {
 }
 .copyright__text span {
   color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .header-nav__link {
+    margin-left: 40px;
+  }
+  .intro-inner__title {
+    font-size: 55px;
+    max-width: 750px;
+  }
+  .intro-inner__subtitle {
+    font-size: 20px;
+    max-width: 840px;
+  }
+  .works-item {
+    width: 33%;
+  }
+  .team-item {
+    width: 33%;
+    text-align: center;
+  }
+  .team-item__avatar {
+    margin: 0px auto;
+  }
+  .social {
+    justify-content: center;
+  }
+  .reviews__photo {
+    height: 350px;
+  }
+  .reviews__content {
+    padding-left: 45px;
+  }
+  .reviews__text {
+    font-size: 32px;
+  }
+  .reviews__author {
+    font-size: 11px;
+  }
+}
+@media (max-width: 991.98px) {
+  .header-nav {
+    display: none;
+  }
 }

@@ -16,7 +16,7 @@
    }
 //* <ПЕРЕМЕННЫЕ>===========================================================================================================
    $minwidth: 320px;
-   $mw: 1200;
+   $mw: 1200px;
    // $md1: $mw + 12;
    // $md2: 991.98;
    // $md3: 767.98;
@@ -245,6 +245,7 @@
          right: 0;
          z-index: 2;
          transform: translateY(-50%);
+         height: 120%;
       }
    }
    &__content {
@@ -356,14 +357,56 @@
 
 // $minwidth: 320px;
 // $mw: 1200;
-$md1: ($mw + 12)px;
+$md1: $mw;
 $md2: 991.98px;
 $md3: 767.98px;
 $md4: 479.98px;
 
 @media (max-width: $md1) {
+   //todo Header
+   .header-nav__link {
+      margin-left: 40px;
+   }
+   //todo Intro
+   .intro-inner__title {
+      font-size: 55px;
+      max-width: 750px;
+   }
+   .intro-inner__subtitle {
+      font-size: 20px;
+      max-width: 840px;
+   }
+   //todo Works
+   .works-item {
+      width: 33%;
+   }
+   //todo team
+   .team-item {
+      width: 33%;
+      text-align: center;
+   }
+   .team-item__avatar {
+      margin: 0px auto;
+   }
+   .social {
+      justify-content: center;
+   }
+   //todo reviews
+   .reviews__photo {
+      height: 350px;
+   }
+   .reviews__content {
+      padding-left: 45px;
+   }
+   .reviews__text {
+      font-size: 32px;
+   }
+   .reviews__author {
+      font-size: 11px;
+   }
 }
 @media (max-width: $md2) {
+   .header-nav{display: none;}
 }
 @media (max-width: $md3) {
 }

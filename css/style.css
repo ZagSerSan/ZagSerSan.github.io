@@ -74,47 +74,36 @@ a:hover {
 }
 
 .header-burger {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  padding-top: 100px;
-  height: 750px;
-  width: 50%;
-  background-color: #2b324f;
-  border: 2px #ccc solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  display: none;
 }
-.header-burger__icon {
+.header-burger__item {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  font-size: 0;
+  color: transparent;
   position: relative;
 }
-.header-burger__icon span {
+.header-burger__item:before {
+  content: "";
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
-  z-index: 1;
-  width: 50px;
-  height: 4px;
-  background-color: #ccc;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
 }
-.header-burger__link {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 30px;
-  color: #fff;
-  text-transform: uppercase;
-  opacity: 0.75;
-  transition: opacity 0.2s linear;
-}
-.header-burger__link:first-child {
-  margin-left: 0;
-}
-.header-burger__link:hover {
-  text-decoration: none;
-  opacity: 1;
+.header-burger__item:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
 }
 
 .wrapper {
@@ -530,5 +519,8 @@ a:hover {
 @media (max-width: 991.98px) {
   .header-nav {
     display: none;
+  }
+  .header-burger {
+    display: block;
   }
 }

@@ -75,8 +75,9 @@ a:hover {
 
 .header-burger {
   display: none;
+  position: relative;
 }
-.header-burger__item {
+.header-burger__icon {
   display: block;
   width: 40px;
   height: 3px;
@@ -85,25 +86,29 @@ a:hover {
   color: transparent;
   position: relative;
 }
-.header-burger__item:before {
+.header-burger__icon:before {
   content: "";
   position: absolute;
   top: 10px;
   left: 0;
   display: block;
-  width: 40px;
-  height: 3px;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
 }
-.header-burger__item:after {
+.header-burger__icon:after {
   content: "";
   position: absolute;
   top: -10px;
   left: 0;
   display: block;
   width: 40px;
-  height: 3px;
+  height: 100%;
   background-color: #fff;
+}
+.header-burger .header-burger-menu {
+  display: none;
+  flex-direction: column;
 }
 
 .wrapper {

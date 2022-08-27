@@ -73,6 +73,43 @@ a:hover {
   opacity: 1;
 }
 
+.burger {
+  display: none;
+  background: none;
+  padding: 13px 2px;
+  border: 0px;
+  font-size: 0;
+  cursor: pointer;
+}
+.burger__icon {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: relative;
+}
+.burger__icon:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.burger__icon:after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
 /*
 .header-burger  {
 	display: none;
@@ -529,7 +566,7 @@ a:hover {
   .header-nav {
     display: none;
   }
-  .header-burger {
+  .burger {
     display: block;
   }
 }

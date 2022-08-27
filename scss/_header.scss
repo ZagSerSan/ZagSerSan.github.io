@@ -45,18 +45,19 @@
 	cursor: pointer;
 	&__icon {
 		display: block;
-		width: 40px;
+		width: 37px;
 		height: 3px;
 		background-color: #fff;
 		border-radius: 2px;
 
 		position: relative;
-		&:before {
+		
+		&:before, &:after {
 			content: "";
 			position: absolute;
 			top: 9px;
 			left: 0;
-			width: 40px;
+			width: 37px;
 			height: 3px;
 			background-color: #fff;
 			border-radius: 2px;
@@ -66,7 +67,7 @@
 			position: absolute;
 			top: -9px;
 			left: 0;
-			width: 40px;
+			width: 37px;
 			height: 3px;
 			background-color: #fff;
 			border-radius: 2px

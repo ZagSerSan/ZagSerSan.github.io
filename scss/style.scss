@@ -273,6 +273,7 @@
    }
    &__title {
       @include fontFWSC('Raleway',300,28px,#2d3033);
+      text-align: center;
    }
    &__subtitle {
       @include fontFWSC('Raleway',700,13px,#2d3033);
@@ -431,7 +432,20 @@ $md4: 479.98px;
       margin-top: 25px;
   }
 // Fetures-------------------------------
-   .features-item{padding: 0 15px;}
+   .features{padding: 40px 0;}
+   .features-item{
+      width: 100%;
+      padding: 0 15px;
+      &__text{max-width: 600px;}
+   }
+// Works-------------------------------
+   .works-item{
+      width: 100%;
+      img{min-width: 100%;}
+   }
+// Teams-------------------------------
+   .team{padding: 45px 0;}
+   .team-item{width: 100%;padding: 0 30px;}
 // Reviews-------------------------------
    .reviews__content{
       width: 100%;
@@ -450,6 +464,8 @@ $md4: 479.98px;
       }
    }
    .reviews__author {text-align: right;}
+// -Download-------------------------------
+   .download{padding: 60px 0;}
 // Footer-------------------------------
    .footer{padding: 10px 0 30px;}
    .footer-item {
@@ -457,10 +473,23 @@ $md4: 479.98px;
       margin-top: 30px;
    }
    .footer-item__title{margin-bottom: 15px;}
+// Footer-------------------------------
+   .copyright{padding: 15px 0;}
 }
 
 //todo Point 4 (479 px)===================================
 @media (max-width: $md4) {
+// Intro-------------------------------
+   .intro-inner__title {
+      font-size: 35px;
+      max-width: 390px;
+   }
+   .intro-inner__subtitle {
+      font-size: 16px;
+      max-width: 410px;
+  }
+// Intro-------------------------------
+
 }
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================

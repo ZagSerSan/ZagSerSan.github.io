@@ -429,6 +429,7 @@ a:hover {
   font-weight: 300;
   font-size: 28px;
   color: #2d3033;
+  text-align: center;
 }
 .download__subtitle {
   font-family: "Raleway", sans-serif;
@@ -597,8 +598,28 @@ a:hover {
     max-width: 610px;
     margin-top: 25px;
   }
+  .features {
+    padding: 40px 0;
+  }
   .features-item {
+    width: 100%;
     padding: 0 15px;
+  }
+  .features-item__text {
+    max-width: 600px;
+  }
+  .works-item {
+    width: 100%;
+  }
+  .works-item img {
+    min-width: 100%;
+  }
+  .team {
+    padding: 45px 0;
+  }
+  .team-item {
+    width: 100%;
+    padding: 0 30px;
   }
   .reviews__content {
     width: 100%;
@@ -621,6 +642,9 @@ a:hover {
   .reviews__author {
     text-align: right;
   }
+  .download {
+    padding: 60px 0;
+  }
   .footer {
     padding: 10px 0 30px;
   }
@@ -630,5 +654,18 @@ a:hover {
   }
   .footer-item__title {
     margin-bottom: 15px;
+  }
+  .copyright {
+    padding: 15px 0;
+  }
+}
+@media (max-width: 479.98px) {
+  .intro-inner__title {
+    font-size: 35px;
+    max-width: 390px;
+  }
+  .intro-inner__subtitle {
+    font-size: 16px;
+    max-width: 410px;
   }
 }

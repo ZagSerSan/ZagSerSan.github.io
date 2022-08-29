@@ -668,4 +668,10 @@ a:hover {
     font-size: 16px;
     max-width: 410px;
   }
+  .reviews__text {
+    font-size: 28px;
+  }
+}
+.download__title {
+  font-size: 26px;
 }

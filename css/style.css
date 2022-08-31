@@ -38,6 +38,14 @@ a:hover {
   z-index: 100;
   width: 100%;
 }
+.header.fixed {
+  position: fixed;
+  background-color: #262b49;
+}
+.header.fixed .header-inner {
+  height: 65px;
+  border-bottom: 0;
+}
 
 .header-inner {
   display: flex;

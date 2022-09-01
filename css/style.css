@@ -118,48 +118,6 @@ a:hover {
   border-radius: 2px;
 }
 
-/*
-.header-burger  {
-	display: none;
-	position: relative;
-	background: none;
-	padding: 13px 2px;
-	border: 0px;
-	cursor: pointer;
-
-	&__icon {
-		display: block;
-		width: 40px;
-		height: 3px;
-		background-color: #fff;
-
-		font-size: 0;
-		color: transparent;
-
-		position: relative;
-		&:before {
-			content: "";
-			position: absolute;
-			top: 10px;
-			left: 0;
-			display: block;
-			width: 100%;
-			height: 100%;
-			background-color: #fff;
-		}
-		&:after {
-			content: "";
-			position: absolute;
-			top: -10px;
-			left: 0;
-			display: block;
-			width: 40px;
-			height: 100%;
-			background-color: #fff;
-		}
-	}
-}
-*/
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -590,6 +548,21 @@ a:hover {
 @media (max-width: 767.98px) {
   .header-nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #262b49;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+  }
+  .header-nav__link {
+    padding: 10px 7px;
+    margin: 0;
+  }
+  .header-nav.active {
+    display: flex;
   }
   .burger {
     display: block;

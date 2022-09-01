@@ -87,47 +87,4 @@
 
 
 
-/*
-.header-burger  {
-	display: none;
-	position: relative;
-	background: none;
-	padding: 13px 2px;
-	border: 0px;
-	cursor: pointer;
-
-	&__icon {
-		display: block;
-		width: 40px;
-		height: 3px;
-		background-color: #fff;
-
-		font-size: 0;
-		color: transparent;
-
-		position: relative;
-		&:before {
-			content: "";
-			position: absolute;
-			top: 10px;
-			left: 0;
-			display: block;
-			width: 100%;
-			height: 100%;
-			background-color: #fff;
-		}
-		&:after {
-			content: "";
-			position: absolute;
-			top: -10px;
-			left: 0;
-			display: block;
-			width: 40px;
-			height: 100%;
-			background-color: #fff;
-		}
-	}
-}
-*/
-
 //====================================================================================================

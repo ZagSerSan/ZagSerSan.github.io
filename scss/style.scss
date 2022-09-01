@@ -355,6 +355,7 @@ $md4: 479.98px;
    .header-nav__link {
       margin-left: 40px;
    }
+  
    //todo Intro
    .intro-inner__title {
       font-size: 55px;
@@ -408,9 +409,28 @@ $md4: 479.98px;
 
 //todo Point 3 (767 px)===================================
 @media (max-width: $md3) {
-// Header-------------------------------
-   .header-nav{display: none;}
+//* Header-------------------------------
+   .header-nav{
+      display: none;
+
+      position: absolute;
+      top: 100%;
+      right: 0;
+
+      flex-direction: column;
+      width: 100%;
+		background-color: #262b49;
+      text-align: right;
+      border-bottom: 1px solid #ccc;
+      &__link {
+         padding: 10px 7px;
+         margin: 0;
+      }
+
+      &.active{display: flex;}
+   }
    .burger {display: block;}
+
 // intro-------------------------------
    .intro-inner{height: 650px;}
    .intro-inner__title {

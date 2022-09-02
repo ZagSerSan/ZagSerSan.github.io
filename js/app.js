@@ -1,10 +1,14 @@
-$(function() {
+
    
+
+
+   /*
+   $(function() {
 // fixed header
    let header = $("#header");
    let intro = $("#intro");
    let introHeight = intro.innerHeight()-50;
-   let scrollPos = $(window).scrollTop();
+   let scrollPos = $().scrollTop();
    let nav = $('#nav')
    let navToggle = $('#navToggle');
 
@@ -40,5 +44,6 @@ $(function() {
       even.preventDefault();
       nav.toggleClass('active')
    });
-
 });
+   */
+

@@ -1,5 +1,33 @@
+$(function() {
 
+   // fixed header
+   let header = $('#header');
+   let intro = $('#intro');
+   let introHeight = intro.innerHeight()-50;
+   let scrollPosition = $(window).scrollTop();
+
+   checkScroll (scrollPosition, introHeight);
    
+   $(window).on('scroll resize', function(even) {
+      even.preventDefault();
+      introHeight = intro.innerHeight()-50;
+      scrollPosition = $(window).scrollTop();
+      checkScroll (scrollPosition, introHeight);
+   });
+
+   function checkScroll (scrollPosition, introHeight) {
+      if (scrollPosition > introHeight) {
+         header.addClass('fixed');
+      } else {
+         header.removeClass('fixed');
+      }
+   }
+
+
+
+
+});
+
 
 
    /*

@@ -1,0 +1,29 @@
+.header {
+   background-color: #30334d;
+}
+.header-inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   height: 100px;
+   width: 100%;
+   border-bottom: 1px solid #505369;
+
+	&__logo {display: block;}
+}
+.header-inner-nav {
+   display: flex;
+	&__link {
+      @include fontFWSC('Raleway',600,13px,#fff);
+      text-transform: uppercase;
+      margin-left: 59px;
+      opacity: .75;
+      transition: opacity .15s linear;
+      :first-child{margin-left: 0;}
+      &:hover {
+         text-decoration: none;
+         opacity: 1;
+      }
+   }
+}

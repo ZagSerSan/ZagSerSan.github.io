@@ -14,8 +14,7 @@ body {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -27,9 +26,45 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 a:hover {
   text-decoration: underline;
+}
+
+.header {
+  background-color: #30334d;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #505369;
+}
+.header-inner__logo {
+  display: block;
+}
+
+.header-inner-nav {
+  display: flex;
+}
+.header-inner-nav__link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 59px;
+  opacity: 0.75;
+  transition: opacity 0.15s linear;
+}
+.header-inner-nav__link :first-child {
+  margin-left: 0;
+}
+.header-inner-nav__link:hover {
+  text-decoration: none;
+  opacity: 1;
 }
 
 .wrapper {
@@ -39,7 +74,8 @@ a:hover {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  padding: 0px 15px;
 }

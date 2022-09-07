@@ -177,3 +177,52 @@ a:hover {
   margin-top: 24px;
   padding: 0 10px;
 }
+
+.works {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works-item {
+  width: 25%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #e84545;
+  border-right: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+}
+.works-item__photo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity 0.4s linear;
+}
+.works-item__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.works-item__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 13px;
+}
+.works-item:hover .works-item__photo {
+  opacity: 0.1;
+}

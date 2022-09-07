@@ -128,7 +128,48 @@
       }
 }
 //todo -Works
-
+.works {
+   width: 100%;
+   max-width: 1900px;
+   margin: 0px auto;
+   display: flex;
+   flex-wrap: wrap;
+}
+.works-item {
+   width: 25%;
+   height: 350px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+   background-color: #e84545;
+   border-right: 1px #fff solid;
+   border-bottom: 1px #fff solid;
+   &__photo {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 1;
+      transition: opacity .4s linear;
+   }
+   &__title {
+      @include fontFWSC('Raleway',700,14px,#fff);
+      text-transform: uppercase;
+   }
+   &__text {
+      @include fontFWSC('Raleway',400,14px,#fff);
+      margin-top: 13px;
+   }
+   &:hover &__photo {
+      opacity: .1;
+   }
+}
+//todo -Team
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================

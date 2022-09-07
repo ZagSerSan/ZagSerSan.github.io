@@ -36,12 +36,13 @@
    // &.loaded {
    // }
 }
-// .empty-space {
-//    height: 700px;
-//    width: 100%;
-//    background-color: #fff;
-//    text-align: center;
-// }
+.empty-space {
+   height: 700px;
+   width: 100%;
+   background-color: #fff;
+   text-align: center;
+   border: 2px #ccc solid;
+}
 
 //* <ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
@@ -100,6 +101,33 @@
       }
    }
 }
+//todo -Features
+.features {
+   padding: 50px 0 120px;
+   .conteiner {
+      display: flex;
+      flex-wrap: wrap;
+   }
+}
+.features-item {
+   width: 33.3333%;
+   text-align: center;
+
+   margin-top: 70px;
+		&__icon {display: inline-block;}
+		&__title {
+         @include fontFWSC('Raleway',700,14px,#2d3033);
+         margin-top: 33px;
+         text-transform: uppercase;
+      }
+		&__text {
+         @include fontFWSCL('Raleway',400,14px,#6c7279,1.5);
+         max-width: 340px;
+         margin-top: 24px;
+         padding: 0 10px;
+      }
+}
+//todo -Works
 
 
 

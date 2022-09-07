@@ -78,6 +78,14 @@ a:hover {
   overflow: hidden;
 }
 
+.empty-space {
+  height: 700px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border: 2px #ccc solid;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -133,4 +141,39 @@ a:hover {
 .intro-inner__link:hover {
   background-color: #c13535;
   text-decoration: none;
+}
+
+.features {
+  padding: 50px 0 120px;
+}
+.features .conteiner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features-item {
+  width: 33.3333%;
+  text-align: center;
+  margin-top: 70px;
+}
+.features-item__icon {
+  display: inline-block;
+}
+.features-item__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2d3033;
+  margin-top: 33px;
+  text-transform: uppercase;
+}
+.features-item__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6c7279;
+  line-height: 1.5;
+  max-width: 340px;
+  margin-top: 24px;
+  padding: 0 10px;
 }

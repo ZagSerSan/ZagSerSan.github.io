@@ -63,6 +63,45 @@
 
 //* <ОСНОВНОЙ БЛОК>====================================================================================================
 //todo -Intro
+.intro {
+   padding-top: 100px;
+   background: url('../img/intro/intro-bg.jpg') #2b2e48 center no-repeat ;
+   background-size: cover;
+}
+.intro-inner {
+   height: 750px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   &__title {
+      @include fontFWSCL('Open Sans',700,65px,#fff,1.1);
+      text-transform: uppercase;
+      max-width: 950px;
+   }
+   &__subtitle {
+      @include fontFWSCL('Raleway',400,22px,#fff,1.5);
+      max-width: 970px;
+      margin-top: 40px;
+   }
+   &__link {
+      display: inline-block;
+      @include fontFWSC('Raleway',600,13px,#fff);
+      text-transform: uppercase;
+      border-radius: 2px;
+      background-color: #e84545;
+      padding: 18px 54px;
+      margin-top: 80px;
+      transition: background-color .15s linear;
+      &:hover {
+         background-color: #c13535;
+         text-decoration: none;
+      }
+   }
+}
+
+
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
 // -Test---------------------------------

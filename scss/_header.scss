@@ -1,5 +1,10 @@
 .header {
-   background-color: #30334d;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   width: 100%;
+   margin: 0px auto;
 }
 .header-inner {
    display: flex;

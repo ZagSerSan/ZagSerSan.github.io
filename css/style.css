@@ -31,7 +31,12 @@ a:hover {
 }
 
 .header {
-  background-color: #30334d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0px auto;
 }
 
 .header-inner {
@@ -78,4 +83,54 @@ a:hover {
   width: 100%;
   margin: 0 auto;
   padding: 0px 15px;
+}
+
+.intro {
+  padding-top: 100px;
+  background: url("../img/intro/intro-bg.jpg") #2b2e48 center no-repeat;
+  background-size: cover;
+}
+
+.intro-inner {
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.intro-inner__title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  color: #fff;
+  line-height: 1.1;
+  text-transform: uppercase;
+  max-width: 950px;
+}
+.intro-inner__subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #fff;
+  line-height: 1.5;
+  max-width: 970px;
+  margin-top: 40px;
+}
+.intro-inner__link {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background-color: #e84545;
+  padding: 18px 54px;
+  margin-top: 80px;
+  transition: background-color 0.15s linear;
+}
+.intro-inner__link:hover {
+  background-color: #c13535;
+  text-decoration: none;
 }

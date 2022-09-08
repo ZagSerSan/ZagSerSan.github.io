@@ -201,7 +201,47 @@
       margin-top: 28px;
    }
 }
+.social {
+   display: flex;
+   margin-top: 30px;
+   &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      width: 38px;
+      height: 38px;
+
+      border: 1px #c6cacc solid;
+      margin-right: 4px;
+      transition: background-color .1s linear;
+      svg {
+         fill: #c6cacc;
+         height: 20px;
+         width: 20px;
+
+         transition: fill .1s linear;
+         background-color: transparent;
+      }
+      &:hover {
+         background-color: #c6cacc;
+         svg.facebook {
+            fill: #1976D2;
+         }
+         svg.twitter {
+            fill: #76A9EA;
+         }
+         svg.linkedin {
+            fill: #0077B7;
+            background-color: #fff;
+            border-radius: 2px;
+         }
+         
+      }
+   }
+}
+
+// style="fill:#0077B7;" 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
 // -Test---------------------------------

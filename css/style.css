@@ -260,7 +260,7 @@ a:hover {
   font-size: 13px;
   color: #e84545;
   text-transform: uppercase;
-  margin-top: 14px;
+  margin-top: 8px;
 }
 .team-item__about {
   font-family: "Raleway", sans-serif;
@@ -374,4 +374,44 @@ a:hover {
 }
 .reviews-content-slider__point.active {
   opacity: 1;
+}
+
+.download .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+.download__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  color: #2d3033;
+}
+.download__subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #2d3033;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 17px;
+}
+.download__link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 40px;
+  padding: 18px 82px;
+  background-color: #e84545;
+  border-radius: 2px;
+  transition: background-color 0.15s linear;
+  cursor: pointer;
+  border: 0;
+}
+.download__link:hover {
+  background-color: #c13535;
+  text-decoration: none;
 }

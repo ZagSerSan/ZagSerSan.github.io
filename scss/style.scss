@@ -300,7 +300,37 @@
    }
 }
 //todo -download
-
+.download {
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 0;
+   }
+   &__title {
+      @include fontFWSC('Raleway',300,28px,#2d3033);
+   }
+   &__subtitle {
+      @include fontFWSCL('Raleway',700,13px,#2d3033,1);
+      text-transform: uppercase;
+      margin-top: 17px;
+   }
+   &__link {
+      @include fontFWSC('Raleway',600,13px,#fff);
+      text-transform: uppercase;
+      margin-top: 40px;
+      padding: 18px 82px;
+      background-color: #e84545;
+      border-radius: 2px;
+      transition: background-color .15s linear;
+      cursor: pointer;
+      border: 0;
+      &:hover {
+         background-color: #c13535;
+         text-decoration: none;
+      }
+   }
+}
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
 // -Test---------------------------------

@@ -331,6 +331,64 @@
       }
    }
 }
+//todo -footer
+.footer {
+   background-color: #3a3e64;
+   &__inner {
+      padding: 70px 0 90px;
+      display: flex;
+      text-align: center;
+   }
+}
+.footer-address {
+   width: 33.333%;
+   &__title {
+      @include fontFWSC('Raleway',700,14px,#fff);
+      text-transform: uppercase;
+   }
+   &__text {
+      @include fontFWSCL('Raleway',400,14px,#fff,1.6);
+      opacity: .5;
+      margin-top: 15px;
+      display: inline-block;
+      max-width: 170px;
+   }
+}
+.footer-social {
+   width: 33.333%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   &__title {
+      @include fontFWSC('Raleway',700,14px,#fff);
+      text-transform: uppercase;
+   }
+   .social {
+      margin-top: 20px;
+      &__item {
+         border: 3px solid #fff;
+         svg{fill: #fff;}
+         &:hover {
+            background-color: #fff;
+         }
+      }
+   }
+}
+.footer-abuot {
+   width: 33.333%;
+   &__title {
+      @include fontFWSC('Raleway',700,14px,#fff);
+      text-transform: uppercase;
+   }
+   &__text {
+      @include fontFWSCL('Raleway',400,14px,#fff,1.6);
+      opacity: .5;
+      margin-top: 15px;
+      display: inline-block;
+      max-width: 370px;
+   }
+}
+
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
 // -Test---------------------------------

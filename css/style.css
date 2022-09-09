@@ -78,14 +78,6 @@ a:hover {
   overflow: hidden;
 }
 
-.empty-space {
-  height: 700px;
-  width: 100%;
-  background-color: #fff;
-  text-align: center;
-  border: 2px #ccc solid;
-}
-
 .container {
   max-width: 1200px;
   width: 100%;
@@ -493,4 +485,24 @@ a:hover {
   margin-top: 15px;
   display: inline-block;
   max-width: 370px;
+}
+
+.copyright {
+  background-color: #313454;
+  padding: 30px 0;
+}
+.copyright__whole-text {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.6;
+  max-width: 330px;
+}
+.copyright__whole-text span {
+  color: #fff;
+}
+.copyright__whole-text span.heart {
+  color: #e84545;
 }

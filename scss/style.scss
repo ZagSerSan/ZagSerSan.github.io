@@ -36,14 +36,13 @@
    // &.loaded {
    // }
 }
-.empty-space {
-   height: 700px;
-   width: 100%;
-   background-color: #fff;
-   text-align: center;
-   border: 2px #ccc solid;
-}
-
+// .empty-space {
+//    height: 700px;
+//    width: 100%;
+//    background-color: #fff;
+//    text-align: center;
+//    border: 2px #ccc solid;
+// }
 //* <ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
    max-width: $mw + px;
@@ -388,6 +387,23 @@
       max-width: 370px;
    }
 }
+//todo -copyright
+.copyright {
+   background-color: #313454;
+   padding: 30px 0;
+   &__whole-text {
+      text-align: center;
+      @include fontFWSCL('Raleway',400,14px,#808080,1.6);
+      max-width: 330px;
+      span {
+         color: #fff;
+         &.heart {
+            color: #e84545;
+         }
+      }
+   }
+}
+
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================

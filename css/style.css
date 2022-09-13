@@ -371,6 +371,7 @@ a:hover {
   position: relative;
 }
 .reviews-photo img {
+  display: block;
   position: absolute;
   top: 50%;
   right: 0;
@@ -469,6 +470,7 @@ a:hover {
 .footer__inner {
   padding: 70px 0 90px;
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -618,11 +620,62 @@ a:hover {
     padding: 15px 0;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 768.98px) {
   .header-nav {
     display: none;
   }
   .header-burger {
     display: block;
+  }
+  .intro-inner {
+    width: 100%;
+    height: 650px;
+  }
+  .intro-inner__title {
+    max-width: 590px;
+  }
+  .team-item {
+    width: 50%;
+  }
+  .reviews .container {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .reviews-photo {
+    width: 100%;
+    height: auto;
+  }
+  .reviews-photo img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .reviews-content {
+    width: 100%;
+    padding: 30px 50px;
+  }
+  .reviews-content-slider {
+    margin-top: 30px;
+  }
+  .footer__inner {
+    padding-bottom: 10px;
+  }
+  .footer-address {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+  .footer-address__text {
+    max-width: none;
+  }
+  .footer-social {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+  .footer-abuot {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+  .footer-abuot__text {
+    max-width: 90%;
   }
 }

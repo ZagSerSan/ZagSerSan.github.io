@@ -506,3 +506,60 @@ a:hover {
 .copyright__whole-text span.heart {
   color: #e84545;
 }
+
+@media (max-width: 1212px) {
+  .works-item {
+    width: 33.3333%;
+  }
+  .reviews-photo img {
+    height: 100%;
+  }
+  .reviews-content {
+    padding-right: 20px;
+  }
+  .footer__inner {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .header-inner-nav__link {
+    margin-left: 30px;
+  }
+  .intro-inner__title {
+    font-size: 55px;
+    max-width: 740px;
+  }
+  .intro-inner__subtitle {
+    max-width: 820px;
+  }
+  .features {
+    padding: 0px 0 80px;
+  }
+  .features-item {
+    width: 50%;
+  }
+  .works-item {
+    width: 50%;
+  }
+  .team-item {
+    width: 33.3333%;
+  }
+  .reviews-photo {
+    height: 400px;
+  }
+  .reviews-content {
+    padding-left: 40px;
+  }
+  .reviews-content__text {
+    font-size: 34px;
+  }
+  .reviews-content__author {
+    font-size: 11px;
+  }
+  .download .container {
+    padding: 60px 0;
+  }
+  .copyright {
+    padding: 15px 0;
+  }
+}

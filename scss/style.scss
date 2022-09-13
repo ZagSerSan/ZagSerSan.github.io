@@ -411,7 +411,48 @@
    // $md3: 767.98;
    // $md4: 479.98;
 
+//? Point 1 ----------------------------------
+   @media (max-width: $md1+px) {
+   // works
+      .works-item{width: 33.3333%;}
+   // reviews
+      .reviews-photo img {height: 100%;}
+      .reviews-content{padding-right: 20px;}
+   // footer
+      .footer__inner{padding: 50px 0;}}
+
+//? Point 2 ----------------------------------
+   @media (max-width: $md2+px) {
+   //m-Header
+      .header-inner-nav__link{margin-left: 30px;}
+   //m-intro
+      .intro-inner__title {
+         font-size: 55px;
+         max-width: 740px;
+      }
+      .intro-inner__subtitle{max-width: 820px;}
+   //m-features
+      .features{padding: 0px 0 80px;}
+      .features-item{width: 50%;}
+   // work
+      .works-item {width: 50%;}
+   // team
+      .team-item{width: 33.3333%;}
+   // reviews
+      .reviews-photo{height: 400px;}
+      .reviews-content{
+         padding-left: 40px;
+         &__text{font-size: 34px;}
+         &__author{font-size: 11px;}
+      }
+   // download
+      .download .container{padding: 60px 0;}
+   // download
+      .copyright{padding: 15px 0;}}
+
+//? Point 3 ----------------------------------
    
+
 //* </АДАПТИВ>====================================================================================================
 
 //* <ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================

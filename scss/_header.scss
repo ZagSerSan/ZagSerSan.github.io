@@ -28,6 +28,25 @@
       :first-child{margin-left: 0;}
       &:hover {text-decoration: none;opacity: 1;}
    }
+   //! nav burger
+   &.active {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 60%;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #313453;
+      border: 1px solid #ccc;
+      border-top: 0;
+      & a {
+         margin-left: 0;
+         font-size: 30px;
+         margin: 0px auto;
+      }
+   }
 }
 //====================================================================================================
 

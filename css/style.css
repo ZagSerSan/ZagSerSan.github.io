@@ -70,6 +70,24 @@ a:hover {
   text-decoration: none;
   opacity: 1;
 }
+.header-nav.active {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 60%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #313453;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+.header-nav.active a {
+  margin-left: 0;
+  font-size: 30px;
+  margin: 0px auto;
+}
 
 .header-burger {
   display: none;

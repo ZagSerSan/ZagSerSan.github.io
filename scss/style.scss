@@ -423,8 +423,8 @@
 
 //? Point 2 ----------------------------------
    @media (max-width: $md2+px) {
-   //m-Header
-      .header-inner-nav__link{margin-left: 30px;}
+   //m-header
+      .header-nav__link{margin-left: 30px;}
    //m-intro
       .intro-inner__title {
          font-size: 55px;
@@ -451,8 +451,11 @@
       .copyright{padding: 15px 0;}}
 
 //? Point 3 ----------------------------------
-   
-
+   @media (max-width: $md3+px) {
+   //m-header
+      .header-nav{display: none;}
+      .header-burger{display: block;}
+}
 //* </АДАПТИВ>====================================================================================================
 
 //* <ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================

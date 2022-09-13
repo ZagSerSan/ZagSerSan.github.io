@@ -38,8 +38,7 @@ a:hover {
   width: 100%;
   margin: 0px auto;
 }
-
-.header-inner {
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,14 +46,14 @@ a:hover {
   width: 100%;
   border-bottom: 1px solid #505369;
 }
-.header-inner__logo {
+.header__logo {
   display: block;
 }
 
-.header-inner-nav {
+.header-nav {
   display: flex;
 }
-.header-inner-nav__link {
+.header-nav__link {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 13px;
@@ -64,10 +63,10 @@ a:hover {
   opacity: 0.75;
   transition: opacity 0.15s linear;
 }
-.header-inner-nav__link :first-child {
+.header-nav__link :first-child {
   margin-left: 0;
 }
-.header-inner-nav__link:hover {
+.header-nav__link:hover {
   text-decoration: none;
   opacity: 1;
 }

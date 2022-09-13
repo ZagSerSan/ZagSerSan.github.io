@@ -5,19 +5,18 @@
    z-index: 1000;
    width: 100%;
    margin: 0px auto;
-}
-.header-inner {
+      &__inner {
    display: flex;
    justify-content: space-between;
    align-items: center;
 
    height: 100px;
    width: 100%;
-   border-bottom: 1px solid #505369;
+   border-bottom: 1px solid #505369;}
 
 	&__logo {display: block;}
 }
-.header-inner-nav {
+.header-nav {
    display: flex;
 	&__link {
       @include fontFWSC('Raleway',600,13px,#fff);

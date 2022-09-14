@@ -1,7 +1,5 @@
 $(function() {
 
-//todo получить доступ с бургеру
-
 let burger = $('#burger');
 let nav = $('#header-nav');
 let header = $("#header");

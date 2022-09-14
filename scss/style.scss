@@ -498,7 +498,31 @@
       &__text{max-width: 90%;}
    }
 }
-//* </АДАПТИВ>====================================================================================================
+
+//? Point 4 ----------------------------------
+   @media (max-width: $md4+px) {
+   // intro
+      .intro-inner__title{font-size: 40px;max-width: 400px;}
+      .intro-inner__subtitle{font-size: 20px;}
+   // features
+      .features-item{width: 100%;}
+   // works
+      .works-item {width: 100%;}
+   // team
+      .team-item{
+         width: 100%;
+         text-align: center;
+         img{width: 80%; margin: 0px auto;}
+         .social{justify-content: center;}
+      }
+   // reviews
+      .reviews-content__text{font-size: 31px;}
+   // download
+      .download__title{padding: 0 20px;text-align: center;}
+      .download__subtitle{margin-top: 30px;}
+}
+
+
 
 //* <ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
 // -Test---------------------------------

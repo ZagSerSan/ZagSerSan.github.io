@@ -679,3 +679,39 @@ a:hover {
     max-width: 90%;
   }
 }
+@media (max-width: 479.98px) {
+  .intro-inner__title {
+    font-size: 40px;
+    max-width: 400px;
+  }
+  .intro-inner__subtitle {
+    font-size: 20px;
+  }
+  .features-item {
+    width: 100%;
+  }
+  .works-item {
+    width: 100%;
+  }
+  .team-item {
+    width: 100%;
+    text-align: center;
+  }
+  .team-item img {
+    width: 80%;
+    margin: 0px auto;
+  }
+  .team-item .social {
+    justify-content: center;
+  }
+  .reviews-content__text {
+    font-size: 31px;
+  }
+  .download__title {
+    padding: 0 20px;
+    text-align: center;
+  }
+  .download__subtitle {
+    margin-top: 30px;
+  }
+}

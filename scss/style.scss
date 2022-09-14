@@ -547,4 +547,8 @@
 
    border: 1px solid rgb(0, 0, 0);
    background-color: #ccc;
+
+   &.align {
+      align-items: flex-end;
+   }
 }

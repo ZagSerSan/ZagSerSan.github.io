@@ -1,6 +1,6 @@
-$(function() {
+/*$(function() {
 
-let burger = $('#burger');
+   let burger = $('#burger');
 let nav = $('#header-nav');
 let header = $("#header");
 let introH = $('#intro').innerHeight()-50;;
@@ -32,13 +32,22 @@ burger.on('click', function(even) {
 
 // smooth scroll by navigation links
 
-
-
 });
+*/
 
+var div1 = document.getElementById('div1');
+var data_align = div1.getAttribute('data-align');
+var test_string = document.getElementById('test__string');
 
-var article = document.getElementById('header-nav__link');
-var test = article.getAttribute('data-scroll');
+function alignEl(data_align, test_string) {
 
-console.log(test); // #features
+   if (data_align === 'end') {
+      test_string.classList.add("align");
+      console.log('true');
+   } else {
+      test_string.classList.remove("align");
+      console.log('false');
+   }
+}
 
+alignEl(data_align, test_string);

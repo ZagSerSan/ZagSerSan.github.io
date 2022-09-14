@@ -746,3 +746,6 @@ a:hover {
   border: 1px solid rgb(0, 0, 0);
   background-color: #ccc;
 }
+.test__string.align {
+  align-items: flex-end;
+}

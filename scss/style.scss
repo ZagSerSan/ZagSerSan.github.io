@@ -523,32 +523,32 @@
 
 //* <ДОПОЛНИТЕЛЬНЫЙ БЛОК>====================================================================================================
 // -Test---------------------------------
-.test {
-   padding: 40px 0;
-   border-top: 1px #ccc solid;
-}
-.test__row {
-   display: flex;
-   justify-content: flex-start;
-   flex-direction: row;
-   flex-wrap: wrap;
-   align-content: space-between;
+// .test {
+//    padding: 40px 0;
+//    border-top: 1px #ccc solid;
+// }
+// .test__row {
+//    display: flex;
+//    justify-content: flex-start;
+//    flex-direction: row;
+//    flex-wrap: wrap;
+//    align-content: space-between;
 
-   border: 2px solid red;
-   height: 500px;
-}
-.test__string  {
-   display: inline-flex;
-   align-items: center;
-   flex-direction: column;
-   width: 300px;
-   height: 100px;
-   margin: 20px 10px;
+//    border: 2px solid red;
+//    height: 500px;
+// }
+// .test__string  {
+//    display: inline-flex;
+//    align-items: center;
+//    flex-direction: column;
+//    width: 300px;
+//    height: 100px;
+//    margin: 20px 10px;
 
-   border: 1px solid rgb(0, 0, 0);
-   background-color: #ccc;
+//    border: 1px solid rgb(0, 0, 0);
+//    background-color: #ccc;
 
-   &.align {
-      align-items: flex-end;
-   }
-}
+//    &.align {
+//       align-items: flex-end;
+//    }
+// }

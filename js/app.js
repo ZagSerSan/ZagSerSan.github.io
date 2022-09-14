@@ -1,4 +1,4 @@
-/*$(function() {
+$(function() {
 
    let burger = $('#burger');
 let nav = $('#header-nav');
@@ -31,23 +31,7 @@ burger.on('click', function(even) {
 });
 
 // smooth scroll by navigation links
+   
+
 
 });
-*/
-
-var div1 = document.getElementById('div1');
-var data_align = div1.getAttribute('data-align');
-var test_string = document.getElementById('test__string');
-
-function alignEl(data_align, test_string) {
-
-   if (data_align === 'end') {
-      test_string.classList.add("align");
-      console.log('true');
-   } else {
-      test_string.classList.remove("align");
-      console.log('false');
-   }
-}
-
-alignEl(data_align, test_string);

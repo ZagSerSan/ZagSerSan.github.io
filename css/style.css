@@ -658,7 +658,8 @@ a:hover {
   }
   .reviews-content {
     width: 100%;
-    padding: 30px 50px;
+    padding: 30px 20px;
+    text-align: center;
   }
   .reviews-content-slider {
     margin-top: 30px;

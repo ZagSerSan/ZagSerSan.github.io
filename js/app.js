@@ -33,10 +33,3 @@ burger.on('click', function(even) {
 // smooth scroll by navigation links
 
 });
-
-   var header_link = document.getElementById('navJS');
-   var dataAttribute = header_link.dataset.scroll;
-
-   console.log(dataAttribute);
-
-   

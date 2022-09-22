@@ -502,7 +502,7 @@
       }
       .reviews-content {
          width: 100%;
-         padding: 30px 20px;
+         padding: 30px 20px 60px;
          text-align: center;
       }
       .reviews-content-slider{margin-top: 30px;}
@@ -520,6 +520,7 @@
       &__text{max-width: 90%;}
    }
 }
+   .slick-dots{width: 100%;}
 //? Point 4 ----------------------------------
    @media (max-width: $md4+px) {
    // intro

@@ -674,7 +674,7 @@ a:hover {
   }
   .reviews-content {
     width: 100%;
-    padding: 30px 20px;
+    padding: 30px 20px 60px;
     text-align: center;
   }
   .reviews-content-slider {
@@ -702,6 +702,10 @@ a:hover {
     max-width: 90%;
   }
 }
+.slick-dots {
+  width: 100%;
+}
+
 @media (max-width: 479.98px) {
   .intro-inner__title {
     font-size: 40px;

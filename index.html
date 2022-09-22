@@ -4,8 +4,12 @@
    <title>ActiveBox</title>
    <meta charset="UTF-8">
    <meta name="format-detection" content="telephone=no">
+   <!-- css: 1-scss, 2-slider -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <!-- js -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <!-- adaptation -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -203,20 +207,66 @@
 <!--todo -reviews -->
    <div class="reviews" id="reviews">
       <div class="container">
-         <div class="reviews-photo">
-            <img src="img/reviews/review-1.jpg" alt="review photo">
-         </div>
-         <div class="reviews-content">
-            <h4 class="reviews-content__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h4>
-            <span class="reviews-content__author">Susan Sims, Interaction Designer at XYZ</span>
-            <div class="reviews-content-slider">
-               <div class="reviews-content-slider__point">O</div>
-               <div class="reviews-content-slider__point active">O</div>
-               <div class="reviews-content-slider__point">O</div>
-               <div class="reviews-content-slider__point">O</div>
-               <div class="reviews-content-slider__point">O</div>
+
+         <div class="reviews__slider" id="reviewsSlider">
+
+            <div>
+               <div class="reviews__item">
+                  <div class="reviews-photo">
+                     <img src="img/reviews/review-1.jpg" alt="review photo">
+                  </div>
+                  <div class="reviews-content">
+                     <h4 class="reviews-content__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h4>
+                     <span class="reviews-content__author">Susan Sims, Interaction Designer at XYZ</span>
+                     <!-- <div class="reviews-content-slider">
+                        <div class="reviews-content-slider__point">O</div>
+                        <div class="reviews-content-slider__point active">O</div>
+                        <div class="reviews-content-slider__point">O</div>
+                        <div class="reviews-content-slider__point">O</div>
+                        <div class="reviews-content-slider__point">O</div>
+                     </div> -->
+                  </div>
+               </div><!-- /.reviews__item -->
             </div>
-         </div>
+
+            <div>
+               <div class="reviews__item">
+                  <div class="reviews-photo">
+                     <img src="img/reviews/review-2.jpg" alt="review photo">
+                  </div>
+                  <div class="reviews-content">
+                     <h4 class="reviews-content__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet...”</h4>
+                     <span class="reviews-content__author">Sims Susan, Interaction Designer at XYZ</span>
+                  </div>
+               </div><!-- /.reviews__item -->
+            </div>
+
+            <div>
+               <div class="reviews__item">
+                  <div class="reviews-photo">
+                     <img src="img/reviews/review-3.jpg" alt="review photo">
+                  </div>
+                  <div class="reviews-content">
+                     <h4 class="reviews-content__text">“Integer posuere erat a ante venenatis dapibus posuere velit ...”</h4>
+                     <span class="reviews-content__author">Sims Susan, Interaction Designer at XYZ</span>
+                  </div>
+               </div><!-- /.reviews__item -->
+            </div>
+
+            <div>
+               <div class="reviews__item">
+                  <div class="reviews-photo">
+                     <img src="img/reviews/review-4.jpg" alt="review photo">
+                  </div>
+                  <div class="reviews-content">
+                     <h4 class="reviews-content__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet...”</h4>
+                     <span class="reviews-content__author">Sims Susan, Interaction Designer at XYZ</span>
+                  </div>
+               </div><!-- /.reviews__item -->
+            </div>
+
+         </div><!-- /#reviewsSlider -->
+
       </div>
    </div>
 <!--todo -download -->
@@ -260,6 +310,11 @@
       </div>
    </article>
 </div>
+
+<!-- slick slider -->
+   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- js -->
    <script src="js/app.js"></script>
+
 </body>
 </html>

@@ -367,8 +367,12 @@ a:hover {
   background-color: #53354a;
   overflow: hidden;
 }
-.reviews .container {
+.reviews__item {
   display: flex;
+}
+.reviews__slider {
+  height: 500px;
+  overflow: hidden;
 }
 
 .reviews-photo {
@@ -407,26 +411,35 @@ a:hover {
   margin-top: 35px;
 }
 
-.reviews-content-slider {
+.slick-dots {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 50%;
   display: flex;
-  margin: 65px auto 0;
+  justify-content: center;
 }
-.reviews-content-slider__point {
+.slick-dots button {
+  padding: 0;
+  margin: 0 0 20px;
+  margin-right: 8px;
+  border: 0;
+  font-size: 0;
+  background-color: #fff;
+  border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: #fff;
-  opacity: 0.2;
-  border-radius: 50%;
-  font-size: 0;
-  color: transparent;
-  margin-right: 8px;
-  cursor: pointer;
-  transition: opacity 0.1s linear;
-}
-.reviews-content-slider__point:hover {
   opacity: 0.4;
+  cursor: pointer;
 }
-.reviews-content-slider__point.active {
+.slick-dots button:focus {
+  outline: 0;
+}
+.slick-dots li.slick-active button {
   opacity: 1;
 }
 
@@ -574,6 +587,10 @@ a:hover {
   .works-item {
     width: 33.3333%;
   }
+  .reviews__slider, .reviews .container {
+    padding: 0;
+    height: auto;
+  }
   .reviews-photo img {
     height: 100%;
   }
@@ -643,9 +660,8 @@ a:hover {
   .team-item {
     width: 50%;
   }
-  .reviews .container {
+  .reviews__item {
     flex-wrap: wrap;
-    padding: 0;
   }
   .reviews-photo {
     width: 100%;

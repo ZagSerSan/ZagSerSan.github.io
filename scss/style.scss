@@ -245,8 +245,12 @@
    margin: 0px auto;
    background-color: #53354a;
    overflow: hidden;
-   .container {
+   &__item {
       display: flex;
+   }
+   &__slider {
+      height: 500px;
+      overflow: hidden;
    }
 }
 .reviews-photo {
@@ -276,28 +280,40 @@
       margin-top: 35px;
    }
 }
-.reviews-content-slider {
+.slick-dots {
+   position: absolute;
+   bottom: 0px;
+   right: 0;
+   z-index: 2;
+
+   margin: 0;
+   padding: 0;
+   list-style: none;
+
+   width: 50%;
    display: flex;
-   margin: 65px auto 0;
-   &__point {
+   justify-content: center;
+   button {
+      padding: 0;
+      margin: 0 0 20px;
+      margin-right: 8px;
+      border: 0;
+      font-size: 0;
+
+      background-color: #fff;
+      border-radius: 50%;
+
       width: 12px;
       height: 12px;
-      background-color: #fff;
-      opacity: .2;
-      border-radius: 50%;
-      font-size: 0;
-      color: transparent;
-      margin-right: 8px;
+      opacity: .4;
       cursor: pointer;
-      transition: opacity .1s linear;
-      &:hover {
-         opacity: .4;
-      }
-      &.active {
-         opacity: 1;
-      }
+      &:focus{outline: 0;}
+   }
+   li.slick-active{
+      button {opacity: 1;}
    }
 }
+
 //todo -download
 .download {
    .container {
@@ -418,6 +434,12 @@
    // works
       .works-item{width: 33.3333%;}
    // reviews
+      .reviews {
+         &__slider, .container {
+            padding: 0;
+            height: auto;
+         }
+      }
       .reviews-photo img {height: 100%;}
       .reviews-content{padding-right: 20px;}
    // footer
@@ -466,9 +488,8 @@
    // team
       .team-item {width: 50%;}
    // reviews
-      .reviews .container{
-         flex-wrap: wrap;
-         padding: 0;
+      .reviews {
+         &__item {flex-wrap: wrap;}
       }
       .reviews-photo{
          width: 100%;

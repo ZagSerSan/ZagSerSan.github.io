@@ -31,5 +31,37 @@ burger.on('click', function(even) {
 });
 
 // smooth scroll by navigation links
+$('[data-scroll]').on("click", function(even) {
+   even.preventDefault();
+   let elementId = $(this).data('scroll'); // get id elements in variable
+   let elementOffset = $(elementId).offset().top;
+   $('html, body').animate({
+      scrollTop: elementOffset - 90
+   }, 800);
+});
+
+// slider: https://kenwheeler.github.io/slick/
+let slider = $("#reviewsSlider");
+
+slider.slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   fade: true,
+   arrows: false,
+   dots: true
+ });
+
+
+
+
+
+
+
+
+
+
+
+
 
 });

@@ -32,58 +32,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/*
-.burger {
-	display: none;
-	background: none;
-	padding: 13px 2px;
-	border: 0px;
-	font-size: 0;
-	cursor: pointer;
-	&__icon {
-		display: block;
-		width: 37px;
-		height: 3px;
-		background-color: #fff;
-		border-radius: 2px;
-
-		position: relative;
-
-		&:before, &:after {
-			content: "";
-			position: absolute;
-			top: 9px;
-			left: 0;
-			width: 37px;
-			height: 3px;
-			background-color: #fff;
-			border-radius: 2px;
-		}
-		&:after {
-			content: "";
-			position: absolute;
-			top: -9px;
-			left: 0;
-			width: 37px;
-			height: 3px;
-			background-color: #fff;
-			border-radius: 2px
-		}
-	}
-}
-*/
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-}
-
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .header {
   background-color: #e78183;
 }
@@ -149,4 +97,56 @@ a:hover {
 }
 .header-nav__link.active:before {
   width: 100%;
+}
+
+/*
+.burger {
+	display: none;
+	background: none;
+	padding: 13px 2px;
+	border: 0px;
+	font-size: 0;
+	cursor: pointer;
+	&__icon {
+		display: block;
+		width: 37px;
+		height: 3px;
+		background-color: #fff;
+		border-radius: 2px;
+
+		position: relative;
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			top: 9px;
+			left: 0;
+			width: 37px;
+			height: 3px;
+			background-color: #fff;
+			border-radius: 2px;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: -9px;
+			left: 0;
+			width: 37px;
+			height: 3px;
+			background-color: #fff;
+			border-radius: 2px
+		}
+	}
+}
+*/
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }

@@ -2,7 +2,7 @@
    @import "_mixins";
 //* <ШРИФТЫ>===============================================================================================
 //<Подключаем шрифты>=======================================================================================
-   @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;1,300&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;700&family=Roboto:ital,wght@0,400;1,300&display=swap');   
 //<Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
@@ -15,7 +15,7 @@
    }
 //* <ПЕРЕМЕННЫЕ>===========================================================================================================
    $minwidth: 320px;
-   $mw: 1200px;
+   $mw: 1200;
    // $md1: $mw + 12;
    // $md2: 991.98;
    // $md3: 767.98;
@@ -48,6 +48,62 @@
 }
 //* <ОСНОВНОЙ БЛОК>====================================================================================================
 //todo -header -------------------
+.header {
+   background-color: #e78183;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // width: 100%;
+      height: 80px;
+   }
+   &__logo {@include fontFWSC('Montserrat',700,30px,#fff);}
+}
+.header-nav {
+   display: flex;
+   &__link {
+      @include fontFWSC('Montserrat',500,14px,#fff);
+      text-transform: uppercase;
+      margin-left: 54px;
+      transition: all .12s linear;
+      position: relative; 
+      &:before {
+         content: "";
+         position: absolute;
+         bottom: -12px;
+         left: 0;
+         width: 0%;
+         height: 3px;
+         background-color: #fce38a;
+         transition: width .2s linear;
+      }     
+      &:hover {
+         color: #fce38a;
+         text-decoration: none;
+         &:before {
+            width: 100%;
+         }   
+      }
+      svg {
+         width: 18px;
+         height: 18px;
+         fill: #fff;
+         transition: fill .1s linear;
+         &.search{
+            width: 16px;
+            height: 16px;
+            margin-top: 1px;
+         }
+         &:hover {fill: #fce38a;}
+      }
+      &.active {
+         color: #fce38a;
+         &:before {
+            width: 100%;
+         }
+      }
+   }
+}
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

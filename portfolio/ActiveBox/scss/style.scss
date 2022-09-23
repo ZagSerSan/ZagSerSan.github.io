@@ -1,0 +1,521 @@
+//* <МИКСИНЫ>===============================================================================================
+   @import "mixins";
+//* <ШРИФТЫ>===============================================================================================
+//<Подключаем шрифты>=======================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap');
+//<Шрифт по умолчанию>==========================================================================================
+   body {
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+      color: black;
+   }
+//* <ПЕРЕМЕННЫЕ>===========================================================================================================
+   $minwidth: 320px;
+   $mw: 1200;
+   $md1: $mw + 12;
+   $md2: 991.98;
+   $md3: 768.98;
+   $md4: 479.98;
+
+//* <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+   @import "null";
+//* <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+   @import "header";
+//* <ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+}
+//* <ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+   max-width: $mw + px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0px 15px;
+   // @media (max-width: $md1+px) {
+   // 	max-width: 970px;
+   // }
+   // @media (max-width: $md2+px) {
+   // 	max-width: 750px;
+   // }
+   // @media (max-width: $md3+px) {
+   // 	max-width: none;
+   // 	padding: 0 10px;
+   // }
+}
+//* <ОСНОВНОЙ БЛОК>====================================================================================================
+//todo -Intro
+.intro {
+   padding-top: 100px;
+   background: url('../img/intro/intro-bg.jpg') #2b2e48 center no-repeat ;
+   background-size: cover;
+}
+.intro-inner {
+   width: 100%;
+   height: 750px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   &__title {
+      @include fontFWSCL('Open Sans',700,65px,#fff,1.1);
+      text-transform: uppercase;
+      max-width: 950px;
+   }
+   &__subtitle {
+      @include fontFWSCL('Raleway',400,22px,#fff,1.5);
+      max-width: 970px;
+      margin-top: 40px;
+   }
+   &__link {
+      display: inline-block;
+      @include fontFWSC('Raleway',600,13px,#fff);
+      text-transform: uppercase;
+      border-radius: 2px;
+      background-color: #e84545;
+      padding: 18px 54px;
+      margin-top: 80px;
+      transition: background-color .15s linear;
+      &:hover {
+         background-color: #c13535;
+         text-decoration: none;
+      }
+   }
+}
+//todo -Features
+.features {
+   padding: 50px 0 120px;
+   .container {
+      display: flex;
+      flex-wrap: wrap;
+   }
+}
+.features-item {
+   width: 33.3333%;
+   text-align: center;
+
+   margin-top: 70px;
+		&__icon {display: inline-block;}
+		&__title {
+         @include fontFWSC('Raleway',700,14px,#2d3033);
+         margin-top: 33px;
+         text-transform: uppercase;
+      }
+		&__text {
+         @include fontFWSCL('Raleway',400,14px,#6c7279,1.5);
+         max-width: 340px;
+         margin-top: 24px;
+         padding: 0 10px;
+      }
+}
+//todo -Works
+.works {
+   width: 100%;
+   max-width: 1900px;
+   margin: 0px auto;
+   display: flex;
+   flex-wrap: wrap;
+}
+.works-item {
+   width: 25%;
+   height: 350px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+   background-color: #e84545;
+   border-right: 1px #fff solid;
+   border-bottom: 1px #fff solid;
+   &__photo {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 1;
+      transition: opacity .4s linear;
+   }
+   &__title {
+      @include fontFWSC('Raleway',700,14px,#fff);
+      text-transform: uppercase;
+   }
+   &__text {
+      @include fontFWSC('Raleway',400,14px,#fff);
+      margin-top: 13px;
+   }
+   &:hover &__photo {
+      opacity: .1;
+   }
+}
+//todo -Team
+.team-main {
+   padding: 50px 0 100px;
+}
+.team {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0px -15px;
+}
+.team-item {
+   width: 25%;
+   margin-top: 50px;
+   padding: 0px 15px;
+   &__avatar {
+      display: block;
+      width: 100%;
+   }
+   &__name {
+      @include fontFWSC('Raleway',400,22px,#2d3033);
+      margin-top: 30px;
+   }
+   &__prof {
+      @include fontFWSC('Raleway',400,13px,#e84545);
+      text-transform: uppercase;
+      margin-top: 8px;
+   }
+   &__about {
+      @include fontFWSCL('Raleway',400,14px,#6c7279,1.5);
+      margin-top: 28px;
+   }
+}
+.social {
+   display: flex;
+   margin-top: 30px;
+   &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 38px;
+      height: 38px;
+
+      border: 1px #c6cacc solid;
+      margin-right: 4px;
+      transition: background-color .1s linear;
+      svg {
+         fill: #c6cacc;
+         height: 20px;
+         width: 20px;
+
+         transition: fill .1s linear;
+         background-color: transparent;
+      }
+      &:hover {
+         background-color: #c6cacc;
+         svg.facebook {
+            fill: #1976D2;
+         }
+         svg.twitter {
+            fill: #76A9EA;
+         }
+         svg.linkedin {
+            fill: #0077B7;
+            background-color: #fff;
+            border-radius: 2px;
+         }
+         
+      }
+   }
+}
+//todo -reviews
+.reviews {
+   width: 100%;
+   max-width: 1900px;
+   margin: 0px auto;
+   background-color: #53354a;
+   overflow: hidden;
+   &__item {
+      display: flex;
+   }
+   &__slider {
+      height: 500px;
+      overflow: hidden;
+   }
+}
+.reviews-photo {
+   width: 50%;
+   height: 500px;
+   position: relative;
+   img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+   }
+}
+.reviews-content {
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-left: 80px;
+   &__text {
+      @include fontFWSCL('Cardo',300,36px,#fff,1.16);
+   }
+   &__author {
+      @include fontFWSC('Raleway',700,13px,#fff);
+      text-transform: uppercase;
+      margin-top: 35px;
+   }
+}
+.slick-dots {
+   position: absolute;
+   bottom: 0px;
+   right: 0;
+   z-index: 2;
+
+   margin: 0;
+   padding: 0;
+   list-style: none;
+
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   button {
+      padding: 0;
+      margin: 0 0 20px;
+      margin-right: 8px;
+      border: 0;
+      font-size: 0;
+
+      background-color: #fff;
+      border-radius: 50%;
+
+      width: 12px;
+      height: 12px;
+      opacity: .4;
+      cursor: pointer;
+      &:focus{outline: 0;}
+   }
+   li.slick-active{
+      button {opacity: 1;}
+   }
+}
+//todo -download
+.download {
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 0;
+   }
+   &__title {
+      @include fontFWSC('Raleway',300,28px,#2d3033);
+   }
+   &__subtitle {
+      @include fontFWSCL('Raleway',700,13px,#2d3033,1);
+      text-transform: uppercase;
+      margin-top: 17px;
+   }
+   &__link {
+      @include fontFWSC('Raleway',600,13px,#fff);
+      text-transform: uppercase;
+      margin-top: 40px;
+      padding: 18px 82px;
+      background-color: #e84545;
+      border-radius: 2px;
+      transition: background-color .15s linear;
+      cursor: pointer;
+      border: 0;
+      &:hover {
+         background-color: #c13535;
+         text-decoration: none;
+      }
+   }
+}
+//todo -footer
+.footer {
+   background-color: #3a3e64;
+   &__inner {
+      padding: 70px 0 90px;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+   }
+}
+.footer-address {
+   width: 33.333%;
+   &__title {
+      @include fontFWSC('Raleway',700,14px,#fff);
+      text-transform: uppercase;
+   }
+   &__text {
+      @include fontFWSCL('Raleway',400,14px,#fff,1.6);
+      opacity: .5;
+      margin-top: 15px;
+      display: inline-block;
+      max-width: 170px;
+   }
+}
+.footer-social {
+   width: 33.333%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   &__title {
+      @include fontFWSC('Raleway',700,14px,#fff);
+      text-transform: uppercase;
+   }
+   .social {
+      margin-top: 20px;
+      &__item {
+         border: 3px solid #fff;
+         svg{fill: #fff;}
+         &:hover {
+            background-color: #fff;
+         }
+      }
+   }
+}
+.footer-abuot {
+   width: 33.333%;
+   &__title {
+      @include fontFWSC('Raleway',700,14px,#fff);
+      text-transform: uppercase;
+   }
+   &__text {
+      @include fontFWSCL('Raleway',400,14px,#fff,1.6);
+      opacity: .5;
+      margin-top: 15px;
+      display: inline-block;
+      max-width: 370px;
+   }
+}
+//todo -copyright
+.copyright {
+   background-color: #313454;
+   padding: 30px 0;
+   &__whole-text {
+      text-align: center;
+      @include fontFWSCL('Raleway',400,14px,#808080,1.6);
+      max-width: 330px;
+      span {
+         color: #fff;
+         &.heart {
+            color: #e84545;
+         }
+      }
+   }
+}
+//* <АДАПТИВ>====================================================================================================
+//? Point 1 ----------------------------------
+   @media (max-width: $md1+px) {
+   // works
+      .works-item{width: 33.3333%;}
+   // reviews
+      .reviews {
+         &__slider, .container {
+            padding: 0;
+            height: auto;
+         }
+      }
+      .reviews-photo img {height: 100%;}
+      .reviews-content{padding-right: 20px;}
+   // footer
+      .footer__inner{padding: 50px 0;}
+}
+//? Point 2 ----------------------------------
+   @media (max-width: $md2+px) {
+   //m-header
+      .header-nav__link{margin-left: 30px;}
+   //m-intro
+      .intro-inner__title {
+         font-size: 55px;
+         max-width: 740px;
+      }
+      .intro-inner__subtitle{max-width: 820px;}
+   //m-features
+      .features{padding: 0px 0 80px;}
+      .features-item{width: 50%;}
+   // work
+      .works-item {width: 50%;}
+   // team
+      .team-item{width: 33.3333%;}
+   // reviews
+      .reviews-photo{height: 400px;}
+      .reviews-content{
+         padding-left: 40px;
+         &__text{font-size: 34px;}
+         &__author{font-size: 11px;}
+      }
+   // download
+      .download .container{padding: 60px 0;}
+   // download
+      .copyright{padding: 15px 0;}
+}
+//? Point 3 ----------------------------------
+   @media (max-width: $md3+px) {
+   //m-header
+      .header-nav{display: none;}
+      .header-burger{display: block;}
+   // m3-intro
+      .intro-inner {
+         width: 100%;
+         height: 650px;
+         &__title {max-width: 590px;}
+      }
+   // team
+      .team-item {width: 50%;}
+   // reviews
+      .reviews {
+         &__item {flex-wrap: wrap;}
+      }
+      .reviews-photo{
+         width: 100%;
+         height: auto;
+         img{
+            position: relative;
+            width: 100%;
+            height: auto;
+         }
+      }
+      .reviews-content {
+         width: 100%;
+         padding: 30px 20px 60px;
+         text-align: center;
+      }
+      .reviews-content-slider{margin-top: 30px;}
+   // footer
+   .footer__inner{padding-bottom: 10px;}
+   .footer-address{
+      margin-bottom: 35px;
+      width: 100%;
+      &__text{max-width: none;}
+   }
+   .footer-social{margin-bottom: 35px;width: 100%;}
+   .footer-abuot{
+      margin-bottom: 35px;
+      width: 100%;
+      &__text{max-width: 90%;}
+   }
+}
+   .slick-dots{width: 100%;}
+//? Point 4 ----------------------------------
+   @media (max-width: $md4+px) {
+   // intro
+      .intro-inner__title{font-size: 40px;max-width: 400px;}
+      .intro-inner__subtitle{font-size: 20px;}
+   // features
+      .features-item{width: 100%;}
+   // works
+      .works-item {width: 100%;}
+   // team
+      .team-item{
+         width: 100%;
+         text-align: center;
+         img{width: 80%; margin: 0px auto;}
+         .social{justify-content: center;}
+      }
+   // reviews
+      .reviews-content__text{font-size: 31px;}
+   // download
+      .download__title{padding: 0 20px;text-align: center;}
+      .download__subtitle{margin-top: 30px;}
+}

@@ -1,0 +1,92 @@
+//====================================================================================================
+.header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   width: 100%;
+   margin: 0px auto;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      width: 100%;
+      border-bottom: 1px solid #505369;
+   }
+	&__logo {display: block;}
+   &.fixed {
+      position: fixed;
+      background-color: #313453;
+      .header__inner{height: 70px;}
+   }
+}
+.header-nav {
+   display: flex;
+	&__link {
+      @include fontFWSC('Raleway',600,13px,#fff);
+      text-transform: uppercase;
+      margin-left: 59px;
+      opacity: .75;
+      transition: opacity .15s linear;
+      :first-child{margin-left: 0;}
+      &:hover {text-decoration: none;opacity: 1;}
+   }
+   //! nav burger -------------------
+   &.active {
+      position: absolute;
+      top: 99%;
+      right: 0;
+      width: 100%;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #313453;
+      border-top: 0;
+      & a {
+         margin-left: 0;
+         font-size: 30px;
+         margin: 0px auto;
+      }
+   }
+}
+//====================================================================================================
+.header-burger {
+   display: none;
+   width: 50px;
+   height: 40px;
+   border: 0;
+   background: none;
+   cursor: pointer;
+   &__icon {
+      width: 38px;
+      height: 3px;
+		border-radius: 2px;
+      background-color: #fff;
+      font-size: 0;
+      color: transparent;
+      position: relative;
+      &:after {
+         content: "";
+         position: absolute;
+         top: 10px;
+         left: 0;
+         width: 38px;
+         height: 3px;
+         background-color: #fff;
+   		border-radius: 2px;
+      }
+      &:before {
+         content: "";
+         position: absolute;
+         top: -10px;
+         left: 0;
+         width: 38px;
+         height: 3px;
+         background-color: #fff;
+   		border-radius: 2px;
+      }
+   }
+}
+//====================================================================================================

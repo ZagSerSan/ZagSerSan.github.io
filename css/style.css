@@ -290,58 +290,105 @@ a:hover {
   margin: 40px auto 0;
 }
 
-.about-cards {
+.cards {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
-  position: relative;
 }
-.about-cards__name {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-.about-cards__item {
+
+.cards-item {
   width: 30%;
   height: 250px;
   background-color: #95e1d3;
   position: relative;
+  cursor: pointer;
 }
-.about-cards__item[data-index="1"]:after {
-  background: url("../img/about/item-1.png");
-}
-.about-cards__item[data-index="2"]:after {
-  background: url("../img/about/item-2.png");
-}
-.about-cards__item[data-index="3"]:after {
-  background: url("../img/about/item-3.png");
-}
-.about-cards__item:after {
-  content: "";
+.cards-item__inner {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  transition: all 0.2s linear;
-}
-.about-cards__item:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  height: 250px;
   background: linear-gradient(#fce38a 20%, #f38181 80%);
-  transition: all 0.2s linear;
+  overflow: hidden;
 }
-.about-cards__item:hover:after {
+.cards-item__inner img {
+  height: 100%;
+}
+.cards-item:hover .cards-item__inner {
   top: -10px;
   left: -10px;
-  opacity: 0.1;
 }
-.about-cards__item:hover:before {
-  top: -10px;
-  left: -10px;
+/*
+.about-cards {
+   display: flex;
+   justify-content: space-between;
+
+   margin-top: 100px;
+   position: relative;
+   &__name {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+   }
+   &__item {
+      width: 30%;
+      height: 250px;
+
+      background-color: #95e1d3;
+      position: relative;
+
+      &[data-index="1"]  {
+         &:after {
+            background: url('../img/about/item-1.png');
+         }
+      }
+      &[data-index="2"]  {
+         &:after {
+            background: url('../img/about/item-2.png');
+         }
+      }
+      &[data-index="3"]  {
+         &:after {
+            background: url('../img/about/item-3.png');
+         }
+      }
+
+      &:after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+
+         width: 100%;
+         height: 100%;
+         transition: all .2s linear;
+
+      }
+      &:before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(#fce38a 20%, #f38181 80%);
+         // background: linear-gradient(90deg,#f38181 25%,#fff 25%,);
+         transition: all .2s linear;
+      }
+      &:hover {
+         &:after {
+            top: -10px;
+            left: -10px;
+            opacity: .1;
+         }
+         &:before {
+            top: -10px;
+            left: -10px;
+         }
+      }
+   }
 }
+
+*/

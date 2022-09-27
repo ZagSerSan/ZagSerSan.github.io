@@ -48,6 +48,89 @@
 }
 //* <ОСНОВНОЙ БЛОК>====================================================================================================
 //todo -intro -------------------
+.intro {
+   background: url(../img/intro/intro-bg.jpg) center no-repeat;
+   background-size: cover;
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      height: 100vh;
+      padding-top: 80px;
+   }
+   &__suptitle {
+      @include fontFWSC('Kaushan Script',400,72px,#fff);
+   }
+   &__title {
+      @include fontFWSC('Montserrat',700,150px,#fff);
+      margin-top: 40px;
+      text-transform: uppercase;
+      text-align: center;
+      max-width: 930px;
+      &:after {
+         content: "";
+         display: block;
+         width: 60px;
+         height: 3px;
+         background-color: #fff;
+         margin: 60px auto 0;
+      }
+   }
+   &__link {
+      display: inline-block;
+
+      @include fontFWSC('Montserrat',700,14px,#fff);
+      text-transform: uppercase;
+      padding: 12px 30px;
+      border: 3px #fff solid;
+      margin-top: 50px;
+      transition:  all .12s linear;
+      &:hover {
+         text-decoration: none;
+         background-color: #fff;
+         color: #e99384;
+      }
+   }
+   .slider {
+      display: flex;
+      justify-content: space-between;
+		&__item {
+         width: 23%;
+      }
+		&__title {
+         display: inline-block;
+         @include fontFWSC('Montserrat',400,18px,#fff);
+         text-transform: uppercase;
+         padding: 25px 0;
+         width: 100%;
+         position: relative;
+         span{font-weight: 700;font-size: 24px;}
+         &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: block;
+            background: #fff;
+            opacity: .5;
+            height: 3px;
+         }
+         &.active {
+            &:before {
+               content: "";
+               opacity: 1;
+               background: linear-gradient(90deg,#f38181 25%,#fff 25%,);
+            }
+         }
+      }
+   }
+
+
+}
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

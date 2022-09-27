@@ -1,6 +1,11 @@
 //====================================================================================================
 .header {
-   background-color: #e78183;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   width: 100%;
+   // background-color: #e78183;
    &__inner {
       display: flex;
       justify-content: space-between;

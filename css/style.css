@@ -361,6 +361,40 @@ a:hover {
   margin-top: 10px;
 }
 
+.quantity {
+  background-color: #95e1d3;
+}
+.quantity__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.quantity__item {
+  width: 20%;
+  height: 270px;
+  border-right: 1px #fff solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quantity__item:first-child {
+  border-left: 1px #fff solid;
+}
+.quantity__number {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.quantity__subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 30px;
+}
+
 /*
 .about-cards {
    display: flex;

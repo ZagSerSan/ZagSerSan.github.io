@@ -140,7 +140,6 @@
       margin-top: 45px;
    }
 }
-
 .headertitle-template {
    text-align: center;
    &__suptitle {
@@ -160,7 +159,6 @@
       }
    }
 }
-
 .cards {
    display: flex;
    justify-content: space-between;
@@ -221,6 +219,32 @@
       @include fontFWSC('Montserrat',700,18px,#fff);
       text-transform: uppercase;
       margin-top: 10px;
+   }
+}
+//todo -quantity -------------------
+.quantity {
+   background-color: #95e1d3;
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__item {
+      width: 20%;
+      height: 270px;
+      border-right: 1px #fff solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &:first-child{border-left: 1px #fff solid;}
+   }
+   &__number {
+      @include fontFWSC('Montserrat',700,72px,#fff);
+      text-transform: uppercase;
+   }
+   &__subtitle {
+      @include fontFWSC('Montserrat',400,14px,#fff);
+      margin-top: 30px;
    }
 }
 

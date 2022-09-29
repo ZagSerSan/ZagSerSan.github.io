@@ -152,6 +152,14 @@ a:hover {
   overflow: hidden;
 }
 
+.empty-space {
+  height: 700px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -293,31 +301,66 @@ a:hover {
 .cards {
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .cards-item {
-  width: 30%;
-  height: 250px;
+  width: 32%;
   background-color: #95e1d3;
   position: relative;
   cursor: pointer;
 }
 .cards-item__inner {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 250px;
-  background: linear-gradient(#fce38a 20%, #f38181 80%);
+  background: linear-gradient(-360deg, #fce38a 20%, #f38181 80%);
   overflow: hidden;
+  transition: all 0.12s linear;
 }
 .cards-item__inner img {
-  height: 100%;
+  width: 100%;
+  display: block;
+  transition: opacity 0.12s linear;
 }
 .cards-item:hover .cards-item__inner {
   top: -10px;
   left: -10px;
 }
+.cards-item:hover img {
+  opacity: 0.1;
+}
+.cards-item:hover .cards-item__container {
+  opacity: 1;
+}
+.cards-item__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.12s linear;
+}
+.cards-item__container svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+.cards-item__name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
 /*
 .about-cards {
    display: flex;

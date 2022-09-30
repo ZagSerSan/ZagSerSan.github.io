@@ -284,23 +284,19 @@
 //todo -design -------------------
 .design {
    .headertitle-template {padding-bottom: 45px;}
-   &__inner{}
-   // height: 850px;
    background: url('../img/design/bg.jpg') center no-repeat;
    background-size: cover;
 }
-   .devices {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      img{display: block;}
-		&__ipad {}
-		&__iphone {
-         position: absolute;
-         bottom: -88px;
-         right: 17%;
-         // transform: translateX(-50%);
-      }
+.devices {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   img{display: block;}
+   &__iphone {
+      position: absolute;
+      bottom: -88px;
+      right: 17%;
+   }
 }
 
 

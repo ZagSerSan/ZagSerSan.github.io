@@ -433,3 +433,24 @@ a:hover {
   margin-top: 20px;
   max-width: 280px;
 }
+
+.design {
+  background: url("../img/design/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+.design .headertitle-template {
+  padding-bottom: 45px;
+}
+.devices {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.devices img {
+  display: block;
+}
+.devices__iphone {
+  position: absolute;
+  bottom: -88px;
+  right: 17%;
+}

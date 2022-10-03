@@ -2,7 +2,7 @@
    @import "_mixins";
 //* <ШРИФТЫ>===============================================================================================
 //<Подключаем шрифты>=======================================================================================
-   @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;700&family=Roboto:ital,wght@0,400;1,300&display=swap');   
+   @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;600;700&family=Roboto:ital,wght@0,400;1,300&display=swap');   
 //<Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
@@ -298,7 +298,78 @@
       right: 17%;
    }
 }
-//todo -service -------------------
+//todo -whatwedo -------------------
+.whatwedo {
+   &__inner {}
+}
+.whatwedo-content {
+   display: flex;
+   flex-wrap: wrap;
+   &__photo {
+      width: 50%;
+      padding-right: 13px;
+      img{display: flex;width: 100%;}
+   }
+}
+.accordion {
+   width: 50%;
+   padding-left: 17px;
+}
+.accordion-item {
+   margin-bottom: 10px;
+   &:last-child {
+      margin-bottom: 0;
+   }
+   &__header {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border: 1px #e5e5e5 solid;
+      cursor: pointer;
+      transition: background-color .12s linear;
+      position: relative;
+      &:hover {
+         background-color: #f9f9f9;
+      }
+      &:after {
+         content: "";
+         position: absolute;
+         top: auto;
+         right: 20px;
+         // transform: translateY(-50%);
+         transform: rotate(45deg);
+
+         width: 15px;
+         height: 15px;
+         background-color: transparent;
+         border-bottom: 3px #ccc solid;
+         border-right: 3px #ccc solid;
+
+      }
+   }
+   &__icon {}
+   &__title {
+      @include fontFWSC('Montserrat',600,14px,#333);
+      text-transform: uppercase;
+      margin-left: 14px;
+   }
+   &__content {
+      display: none;
+
+      padding: 20px;
+      border: 1px #e5e5e5 solid;
+      border-top: none;
+      max-height: 180px;
+      overflow: scroll;
+      p {
+         @include fontFWSCL('Roboto',300,15px,#999,1.6);
+         font-style: italic;
+      }
+   }
+   &.active {
+      .accordion-item__content{display: block;}
+   }
+}
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

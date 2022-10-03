@@ -360,7 +360,7 @@
       border: 1px #e5e5e5 solid;
       border-top: none;
       max-height: 180px;
-      overflow: scroll;
+      overflow: auto;
       p {
          @include fontFWSCL('Roboto',300,15px,#999,1.6);
          font-style: italic;

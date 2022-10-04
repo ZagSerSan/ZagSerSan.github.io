@@ -614,14 +614,21 @@ a:hover {
   background-color: #f38181;
 }
 
-.team-item .cards .cards-item__photo {
+.cards .team__item {
+  width: 32%;
+}
+.cards .cards-item {
+  width: 100%;
+}
+.cards .cards-item__photo {
+  display: block;
   height: 470px;
 }
-.team-item .cards .cards-item__container.social {
+.cards .cards-item__container.social {
   display: flex;
   flex-direction: row;
 }
-.team-item .cards .cards-item__container.social .cards-item__icon {
+.cards .cards-item__container.social .cards-item__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -630,15 +637,15 @@ a:hover {
   background-color: #fce38a;
   transition: background-color 0.12s linear;
 }
-.team-item .cards .cards-item__container.social .cards-item__icon svg {
+.cards .cards-item__container.social .cards-item__icon svg {
   height: 26px;
   fill: #f38181;
   transition: fill 0.12s linear;
 }
-.team-item .cards .cards-item__container.social .cards-item__icon:hover {
+.cards .cards-item__container.social .cards-item__icon:hover {
   background-color: #f38181;
 }
-.team-item .cards .cards-item__container.social .cards-item__icon:hover svg {
+.cards .cards-item__container.social .cards-item__icon:hover svg {
   height: 26px;
   fill: #fff;
 }

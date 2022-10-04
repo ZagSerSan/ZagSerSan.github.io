@@ -442,6 +442,43 @@
    }
 }
 //todo -team -------------------
+.team-item {
+   .cards {
+      .cards-item {
+         &__photo {
+            height: 470px;
+         }
+         &__container.social {
+            display: flex;
+            flex-direction: row;
+            .cards-item__icon {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 56px;
+               height: 56px;
+               background-color: #fce38a;
+               transition: background-color .12s linear;
+               svg {
+                  height: 26px;
+                  fill: #f38181;
+                  transition: fill .12s linear;
+               }
+               &:hover {
+                  background-color: #f38181;
+                  svg {
+                     height: 26px;
+                     fill: #fff;
+                     
+                  }
+               }
+            }
+            
+         }
+      }
+   }
+   
+}
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

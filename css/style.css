@@ -504,6 +504,9 @@ a:hover {
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
 }
+.accordion-item__icon {
+  display: block;
+}
 .accordion-item__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;

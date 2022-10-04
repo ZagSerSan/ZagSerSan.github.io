@@ -299,9 +299,6 @@
    }
 }
 //todo -whatwedo -------------------
-.whatwedo {
-   &__inner {}
-}
 .whatwedo-content {
    display: flex;
    flex-wrap: wrap;
@@ -347,7 +344,7 @@
 
       }
    }
-   &__icon {}
+   &__icon {display: block;}
    &__title {
       @include fontFWSC('Montserrat',600,14px,#333);
       text-transform: uppercase;
@@ -370,6 +367,7 @@
       .accordion-item__content{display: block;}
    }
 }
+//todo -quote -------------------
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

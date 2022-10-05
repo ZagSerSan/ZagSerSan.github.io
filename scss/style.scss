@@ -442,46 +442,59 @@
    }
 }
 //todo -team -------------------
-.cards {
-   .team__item {
-      width: 32%;
-   }
-   .cards-item {
-      width: 100%;
-      &__photo {
-         display: block;
-         height: 470px;
+.team__inner {
+   padding-bottom: 100px;
+   .cards {
+      .team__item {
+         width: 32%;
+         text-align: center;
       }
-      &__container.social {
-         display: flex;
-         flex-direction: row;
-         .cards-item__icon {
+      .team__name {
+         @include fontFWSC('Montserrat',600,14px,#333);
+         text-transform: uppercase;
+         margin-top: 30px;
+      }
+      .team__prof {
+         @include fontFWSC('Roboto',300,15px,#999);
+         font-style: italic;
+         margin-top: 15px;
+      }
+      .cards-item {
+         width: 100%;
+         &__photo {
+            display: block;
+            height: 470px;
+         }
+         &__container.social {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 56px;
-            height: 56px;
-            background-color: #fce38a;
-            transition: background-color .12s linear;
-            svg {
-               height: 26px;
-               fill: #f38181;
-               transition: fill .12s linear;
-
-            }
-            &:hover {
-               background-color: #f38181;
+            flex-direction: row;
+            .cards-item__icon {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 56px;
+               height: 56px;
+               background-color: #fce38a;
+               transition: background-color .12s linear;
                svg {
                   height: 26px;
-                  fill: #fff;
-                  
+                  fill: #f38181;
+                  transition: fill .12s linear;
+
+               }
+               &:hover {
+                  background-color: #f38181;
+                  svg {
+                     height: 26px;
+                     fill: #fff;
+                     
+                  }
                }
             }
          }
       }
    }
 }
-   
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

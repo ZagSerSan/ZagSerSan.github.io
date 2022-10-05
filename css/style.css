@@ -669,3 +669,22 @@ a:hover {
   height: 26px;
   fill: #fff;
 }
+
+.logos {
+  background-color: #f8f8f8;
+}
+.logos__inner {
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.logos__item {
+  width: 16.6%;
+  padding: 30px 0;
+}
+.logos__img {
+  display: block;
+  margin: 0px auto;
+}

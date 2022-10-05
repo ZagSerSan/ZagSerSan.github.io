@@ -494,6 +494,25 @@
    }
 }
 //todo -team -------------------
+.logos {
+   background-color: #f8f8f8;
+   &__inner {
+      padding: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__item{
+      width: 16.6%;
+      padding: 30px 0;
+   }
+   &__img {
+      display: block;
+      margin: 0px auto;
+   }
+}
+//todo -work -------------------
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

@@ -750,3 +750,77 @@ a:hover {
   font-style: italic;
   margin-top: 20px;
 }
+
+.review {
+  background-color: #fff;
+}
+.review__inner {
+  padding: 70px 100px;
+  position: relative;
+}
+.review__inner:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  transform: rotate(135deg);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-color: transparent;
+  border-bottom: 3px #ccc solid;
+  border-right: 3px #ccc solid;
+}
+.review__inner:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  transform: rotate(-45deg);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-color: transparent;
+  border-bottom: 3px #ccc solid;
+  border-right: 3px #ccc solid;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+}
+.review-item__icon {
+  padding: 40px;
+}
+.review-item__content {
+  padding-left: 60px;
+}
+.review-item__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #999999;
+  line-height: 1.5;
+  font-style: italic;
+}
+.review-item__author {
+  font-family: "Kaushan Script", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #333333;
+  margin-top: 25px;
+  padding-left: 70px;
+  position: relative;
+}
+.review-item__author:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+}

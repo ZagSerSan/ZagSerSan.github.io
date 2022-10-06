@@ -757,6 +757,33 @@
    }
 }
 //todo -map
+.map {
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: url('../img/map/bg.jpg') #ccc center no-repeat;
+   background-size: cover;
+   &__svg {
+      fill: #f38181;
+      height: 30px;
+      max-width: 30px;
+      margin-bottom: 18px;
+   }
+   &__title {
+      @include fontFWSC('Montserrat',700,24px,#f38181);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+   }
+   &__line {
+      background-color: #f38181;
+      height: 3px;
+      width: 60px;
+      font-size: 0;
+      color: transparent;
+   }
+}
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

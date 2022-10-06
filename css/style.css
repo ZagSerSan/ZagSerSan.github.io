@@ -824,3 +824,56 @@ a:hover {
   height: 3px;
   background-color: #f38181;
 }
+
+.clientsay {
+  background: url("../img/clientsay/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+.clientsay__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clientsay-item {
+  width: 50%;
+  display: flex;
+  padding: 0 40px;
+  margin-bottom: 70px;
+}
+.clientsay-item__photo img {
+  display: block;
+}
+.clientsay-item__content {
+  padding-left: 30px;
+}
+.clientsay-item__name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+}
+.clientsay-item__prof {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #333;
+  font-style: italic;
+  margin-top: 17px;
+}
+.clientsay-item__line {
+  height: 3px;
+  width: 60px;
+  background-color: #f38181;
+  margin-top: 20px;
+  font-size: 0;
+  color: transparent;
+}
+.clientsay-item__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #999;
+  line-height: 1.6;
+  margin-top: 25px;
+}

@@ -639,6 +639,48 @@
    }
 }
 //todo -Clientsay -------------------
+.clientsay {
+   background: url('../img/clientsay/bg.jpg') center no-repeat;
+   background-size: cover;
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+   }
+}
+.clientsay-item {
+   width: 50%;
+   display: flex;
+   padding: 0 40px;
+   margin-bottom: 70px;
+   &__photo {
+      img{display: block;}
+   }
+   &__content {
+      padding-left: 30px;
+   }
+   &__name {
+      @include fontFWSC('Montserrat',700,14px,#333);
+      text-transform: uppercase;
+   }
+   &__prof {
+      @include fontFWSC('Roboto',300,15px,#333);
+      font-style: italic;
+      margin-top: 17px;
+   }
+   &__line {
+      height: 3px;
+      width: 60px;
+      background-color: #f38181;
+      margin-top: 20px;
+      font-size: 0;
+      color: transparent
+   }
+   &__text {
+      @include fontFWSCL('Roboto',400,15px,#999,1.6);
+      margin-top: 25px;
+   }
+}
+//todo -blog -------------------
 
 
 //* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================

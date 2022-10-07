@@ -34,13 +34,13 @@
    // &.loaded {
    // }
 }
-.empty-space {
-   height: 700px;
-   width: 100%;
-   background-color: #fff;
-   text-align: center;
-   border-top: 1px solid #ccc;
-}
+// .empty-space {
+//    height: 700px;
+//    width: 100%;
+//    background-color: #fff;
+//    text-align: center;
+//    border-top: 1px solid #ccc;
+// }
 //* <ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
    max-width: $mw + px;
@@ -58,7 +58,8 @@
       align-items: center;
       justify-content: center;
 
-      height: 100vh;
+      height: 92vh;
+      min-height: 815px;
       padding-top: 80px;
    }
    &__suptitle {
@@ -233,12 +234,12 @@
    &__item {
       width: 20%;
       height: 270px;
-      border-right: 1px #fff solid;
+      border-right: 1px #b5eae0 solid;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      &:first-child{border-left: 1px #fff solid;}
+      &:first-child{border-left: 1px #b5eae0 solid;}
    }
    &__number {
       @include fontFWSC('Montserrat',700,72px,#fff);
@@ -570,7 +571,7 @@
 .review {
    background-color: #fff;
    &__inner {
-      padding: 70px 100px;
+      padding: 70px 40px;
       position: relative;
       &:before {
          content: "";
@@ -613,7 +614,7 @@
       padding: 40px;
    }
    &__content {
-      padding-left: 60px;
+      padding-left: 30px;
    }
    &__text {
       @include fontFWSCL('Roboto',300,24px,#999999,1.5);
@@ -682,6 +683,7 @@
 }
 //todo -blog -------------------
 .blog {
+   .headertitle-template{padding-bottom: 45px;}
    &__inner {
       display: flex;
       flex-wrap: wrap;
@@ -690,6 +692,7 @@
 }
 .blog-item {
    width: 33.3333%;
+   padding: 0 15px;
    &__photo {
       position: relative;
       img{
@@ -785,31 +788,7 @@
    }
 }
 
+//todo ======= MEDIA =========
+// ...
 
-//* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================
-// -Test---------------------------------
-// .test {
-//    padding: 40px 0;
-//    border-top: 1px #ccc solid;
-// }
-// .test__row {
-//    display: flex;
-//    justify-content: flex-start;
-//    flex-direction: row;
-//    flex-wrap: wrap;
-//    align-content: space-between;
-
-//    border: 2px solid red;
-//    height: 500px;
-// }
-// .test__string  {
-//    display: inline-flex;
-//    align-items: center;
-//    flex-direction: column;
-//    width: 300px;
-//    height: 100px;
-//    margin: 20px 10px;
-
-//    border: 1px solid rgb(0, 0, 0);
-//    background-color: #ccc;
-// }
+//* </END>====================================================================================================

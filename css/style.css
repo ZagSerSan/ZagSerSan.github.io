@@ -325,14 +325,6 @@ a:hover {
   overflow: hidden;
 }
 
-.empty-space {
-  height: 700px;
-  width: 100%;
-  background-color: #fff;
-  text-align: center;
-  border-top: 1px solid #ccc;
-}
-
 .container {
   max-width: 1200px;
   width: 100%;
@@ -348,7 +340,8 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 92vh;
+  min-height: 815px;
   padding-top: 80px;
 }
 .intro__suptitle {
@@ -544,14 +537,14 @@ a:hover {
 .quantity__item {
   width: 20%;
   height: 270px;
-  border-right: 1px #fff solid;
+  border-right: 1px #b5eae0 solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .quantity__item:first-child {
-  border-left: 1px #fff solid;
+  border-left: 1px #b5eae0 solid;
 }
 .quantity__number {
   font-family: "Montserrat", sans-serif;
@@ -928,7 +921,7 @@ a:hover {
   background-color: #fff;
 }
 .review__inner {
-  padding: 70px 100px;
+  padding: 70px 40px;
   position: relative;
 }
 .review__inner:before {
@@ -968,7 +961,7 @@ a:hover {
   padding: 40px;
 }
 .review-item__content {
-  padding-left: 60px;
+  padding-left: 30px;
 }
 .review-item__text {
   font-family: "Roboto", sans-serif;
@@ -1051,6 +1044,9 @@ a:hover {
   margin-top: 25px;
 }
 
+.blog .headertitle-template {
+  padding-bottom: 45px;
+}
 .blog__inner {
   display: flex;
   flex-wrap: wrap;
@@ -1059,6 +1055,7 @@ a:hover {
 
 .blog-item {
   width: 33.3333%;
+  padding: 0 15px;
 }
 .blog-item__photo {
   position: relative;

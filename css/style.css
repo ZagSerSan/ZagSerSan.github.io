@@ -146,6 +146,118 @@ a:hover {
 	}
 }
 */
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 70px 0;
+}
+
+.footer-mogo {
+  width: 44%;
+  padding-right: 35px;
+}
+.footer-mogo__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+  color: #ccc;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.footer-mogo__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+.footer-mogo__followers {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 18px;
+}
+.footer-mogo__followers span {
+  font-weight: 700;
+  font-size: 18px;
+}
+.footer-mogo__social {
+  padding: 18px 0 38px;
+  border-top: 1px #e5e5e5 solid;
+  display: flex;
+}
+.footer-mogo__social span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #999;
+  font-style: italic;
+}
+.footer-mogo__icons {
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
+}
+.footer-mogo__icons svg {
+  fill: #95e1d3;
+  margin-right: 18px;
+  height: 18px;
+  max-width: 20px;
+  cursor: pointer;
+  transition: fill 0.1s linear;
+}
+.footer-mogo__icons svg:hover {
+  fill: #f38181;
+}
+.footer-mogo__subscribe form {
+  display: flex;
+  align-items: center;
+}
+.footer-mogo__subscribe form textarea {
+  min-width: 230px;
+  min-height: 45px;
+  width: 230px;
+  height: 45px;
+  max-width: 340px;
+  max-height: 45px;
+  background-color: #fff;
+  border: 1px #e7e7e7 solid;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #ccc;
+  font-style: italic;
+  padding: 12px 0 12px 12px;
+  overflow: hidden;
+}
+.footer-mogo__subscribe form textarea:focus {
+  outline: none;
+}
+.footer-mogo__subscribe form button {
+  height: 45px;
+  width: 150px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #95e1d3;
+  border: none;
+  transition: background-color 0.12s linear;
+  cursor: pointer;
+}
+.footer-mogo__subscribe form button:hover {
+  background-color: #f38181;
+}
+
+.footer-blogs {
+  width: 33%;
+}
+.footer-inst {
+  width: 23%;
+}
 .wrapper {
   width: 100%;
   min-height: 100%;

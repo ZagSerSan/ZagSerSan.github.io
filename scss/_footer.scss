@@ -1,16 +1,92 @@
 .footer {
-   &__inner {}
-   &__column {}
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 70px 0;
+   }
 }
 .footer-mogo {
-   &__title {}
-   &__text {}
-   &__followers {}
-   &__social {}
-   &__icons {}
-   &__subscribe {}
+   width: 44%;
+   padding-right: 35px;
+   &__title {
+      @include fontFWSC('Montserrat',700,46px,#ccc);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+   }
+   &__text {
+      @include fontFWSCL('Roboto',400,15px,#999,1.6);
+      margin-bottom: 50px;
+   }
+   &__followers {
+      @include fontFWSC('Montserrat',400,14px,#333);
+      margin-bottom: 18px;
+      span{font-weight: 700;font-size: 18px;}
+   }
+   &__social {
+      padding: 18px 0 38px;
+      border-top: 1px #e5e5e5 solid;
+      display: flex;
+      span {
+         @include fontFWSC('Roboto',300,15px,#999);
+         font-style: italic;
+      }
+   }
+   &__icons {
+      display: flex;
+      align-items: center;
+      padding-left: 22px;
+      svg {
+         fill: #95e1d3;
+         margin-right: 18px;
+         height: 18px;
+         max-width: 20px;
+         cursor: pointer;
+         transition: fill .1s linear;
+         &:hover {
+            fill: #f38181;
+         }
+      }
+   }
+   &__subscribe {
+      form {
+         display: flex;
+         align-items: center;
+         textarea {
+            min-width: 230px;
+            min-height: 45px;
+            width: 230px;
+            height: 45px;
+            max-width: 340px;
+            max-height: 45px;
+
+            background-color: #fff;
+            border: 1px #e7e7e7 solid;
+            @include fontFWSC('Roboto',300,15px,#ccc);
+            font-style: italic;
+            padding: 12px 0 12px 12px;
+            overflow: hidden;
+            &:focus{outline: none;}
+         }
+         button {
+            height: 45px;
+            width: 150px;
+
+            @include fontFWSC('Montserrat',700,14px,#fff);
+            text-transform: uppercase;
+            background-color: #95e1d3;
+            border: none;
+
+            transition: background-color .12s linear;
+            cursor: pointer;
+            &:hover {
+               background-color: #f38181;
+            }
+         }
+      }
+   }
 }
 .footer-blogs {
+   width: 33%;
    &__header {}
    &__row {}
    &__img {}
@@ -19,6 +95,7 @@
    &__subtitle {}
 }
 .footer-inst {
+   width: 23%;
    &__title {}
    &__photos {}
    &__link {}

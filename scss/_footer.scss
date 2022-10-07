@@ -87,16 +87,51 @@
 }
 .footer-blogs {
    width: 33%;
-   &__header {}
-   &__row {}
-   &__img {}
-   &__content {}
-   &__title {}
-   &__subtitle {}
+   padding-right: 40px;
+   &__header {
+      @include fontFWSC('Montserrat',700,14px,#333);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+   }
+   &__row {
+      display: flex;
+      margin-bottom: 30px;
+   }
+   &__content {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+   &__title {
+      @include fontFWSC('Montserrat',700,12px,#333);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+   }
+   &__subtitle {
+      @include fontFWSC('Roboto',300,13px,#999);
+      font-style: italic;
+   }
 }
 .footer-inst {
    width: 23%;
-   &__title {}
-   &__photos {}
-   &__link {}
+   &__title {
+      @include fontFWSC('Montserrat',700,14px,#333);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+   }
+   &__photos {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      img{
+         width: 33.3333%;
+         border-right: 2px #fff solid;
+         border-bottom: 2px #fff solid;
+      }
+   }
+   &__link {
+      @include fontFWSC('Roboto',300,13px,#999);
+      font-style: italic;
+   }
 }

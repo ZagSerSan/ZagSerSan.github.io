@@ -467,6 +467,7 @@ a:hover {
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -633,9 +634,10 @@ a:hover {
 .whatwedo-content__photo {
   width: 50%;
   padding-right: 13px;
+  overflow: hidden;
 }
 .whatwedo-content__photo img {
-  display: flex;
+  display: block;
   width: 100%;
 }
 
@@ -808,7 +810,7 @@ a:hover {
 }
 .team__inner .cards .cards-item__photo {
   display: block;
-  height: 470px;
+  height: auto;
 }
 .team__inner .cards .cards-item__container.social {
   display: flex;
@@ -921,7 +923,7 @@ a:hover {
   background-color: #fff;
 }
 .review__inner {
-  padding: 70px 40px;
+  padding: 70px 100px;
   position: relative;
 }
 .review__inner:before {
@@ -956,9 +958,6 @@ a:hover {
 .review-item {
   display: flex;
   align-items: center;
-}
-.review-item__icon {
-  padding: 40px;
 }
 .review-item__content {
   padding-left: 30px;
@@ -1168,4 +1167,91 @@ a:hover {
   width: 60px;
   font-size: 0;
   color: transparent;
+}
+
+@media (max-width: 1212px) {
+  .container {
+    padding: 0 15px;
+  }
+  .intro__suptitle {
+    font-size: 52px;
+  }
+  .intro__title {
+    font-size: 120px;
+    max-width: 700px;
+  }
+  .whatwedo-content__photo img {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .header-nav__link {
+    margin-left: 40px;
+  }
+  .intro__inner {
+    min-height: 700px;
+  }
+  .intro__suptitle {
+    font-size: 45px;
+  }
+  .intro__title {
+    font-size: 100px;
+    max-width: 600px;
+  }
+  .intro .slider__title {
+    padding: 15px 0;
+  }
+  .headertitle-template__suptitle {
+    font-size: 20px;
+  }
+  .headertitle-template__title {
+    font-size: 26px;
+  }
+  .headertitle-template__text {
+    font-size: 14px;
+  }
+  .quantity__item {
+    height: 210px;
+  }
+  .quantity__number {
+    font-size: 65px;
+  }
+  .devices__ipad {
+    height: 500px;
+  }
+  .devices__iphone {
+    height: 90%;
+  }
+  .accordion-item__content p {
+    font-size: 14px;
+  }
+  .quote__inner {
+    padding: 40px 70px;
+  }
+  .quote-item__content {
+    padding-left: 40px;
+  }
+  .work-cards__column {
+    width: 50%;
+  }
+  .review__inner {
+    padding: 40px 70px;
+  }
+  .clientsay-item {
+    padding: 0 20px 0 0;
+  }
+  .footer-mogo {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .footer-blogs {
+    width: 60%;
+  }
+  .footer-inst {
+    width: 40%;
+  }
+  .footer-inst__photos img {
+    width: 25%;
+  }
 }

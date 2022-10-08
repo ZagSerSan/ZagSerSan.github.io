@@ -16,10 +16,10 @@
 //* <ПЕРЕМЕННЫЕ>===========================================================================================================
    $minwidth: 320px;
    $mw: 1200;
-   // $md1: $mw + 12;
-   // $md2: 991.98;
-   // $md3: 767.98;
-   // $md4: 479.98;
+   $md1: $mw + 12;
+   $md2: 991.98;
+   $md3: 767.98;
+   $md4: 479.98;
    $block_padd-bottom: 100px;
 //* <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
    @import "null";
@@ -46,6 +46,7 @@
    max-width: $mw + px;
    width: 100%;
    margin: 0 auto;
+
 }
 //* <ОСНОВНОЙ БЛОК>====================================================================================================
 //todo -intro -------------------
@@ -164,8 +165,8 @@
 }
 .cards {
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
-   // margin-top: 100px;
 }
 .cards-item {
    width: 32%;
@@ -252,7 +253,6 @@
 }
 //todo -service -------------------
 .service {
-   &__inner {}
    &__items {
       display: flex;
       flex-wrap: wrap;
@@ -307,7 +307,8 @@
    &__photo {
       width: 50%;
       padding-right: 13px;
-      img{display: flex;width: 100%;}
+      overflow: hidden;
+      img{display: block;width: 100%;}
    }
 }
 .accordion {
@@ -464,7 +465,8 @@
          width: 100%;
          &__photo {
             display: block;
-            height: 470px;
+            // height: 470px;
+            height: auto;
          }
          &__container.social {
             display: flex;
@@ -571,7 +573,7 @@
 .review {
    background-color: #fff;
    &__inner {
-      padding: 70px 40px;
+      padding: 70px 100px;
       position: relative;
       &:before {
          content: "";
@@ -610,9 +612,6 @@
 .review-item {
    display: flex;
    align-items: center;
-   &__icon {
-      padding: 40px;
-   }
    &__content {
       padding-left: 30px;
    }
@@ -790,9 +789,56 @@
 
 //* <АДАПТИВ>====================================================================================================
 //? Point 1 ----------------------------------
-   @media (max-width: $md1+px) {}
+   @media (max-width: $md1+px) {
+   // container
+      .container{padding: 0 15px;}
+   // intro
+      .intro__suptitle{font-size: 52px;}
+      .intro__title {font-size: 120px;max-width: 700px;}
+   // whatwedo
+      .whatwedo-content__photo {
+         img{width: auto;height: 100%;}
+      }
+   }
 //? Point 2 ----------------------------------
-   @media (max-width: $md2+px) {}
+   @media (max-width: $md2+px) {
+   // header
+      .header-nav__link{margin-left: 40px;}
+   // intro
+      .intro__inner{min-height: 700px;}
+      .intro__suptitle{font-size: 45px;}
+      .intro__title {font-size: 100px;max-width: 600px;}
+      .intro .slider__title {padding: 15px 0;}
+   // .headertitle-template
+      .headertitle-template__suptitle{font-size: 20px;}
+      .headertitle-template__title{font-size: 26px;}
+      .headertitle-template__text{font-size: 14px;}
+   // quantity
+      .quantity__item{height: 210px;}
+      .quantity__number{font-size: 65px;}
+   // device
+      .devices__ipad{height: 500px;}
+      .devices__iphone{height: 90%;}
+   // whatwedo
+      .accordion-item__content p{font-size: 14px;}
+   // quote
+      .quote__inner {padding: 40px 70px;}
+      .quote-item__content {padding-left: 40px;}
+   // work
+      .work-cards__column {
+         width: 50%;
+      }
+   // review
+      .review__inner{padding: 40px 70px;}
+   // clientsay
+      .clientsay-item{padding: 0 20px 0 0;}
+   // footer
+      .footer-mogo{width: 100%;padding-bottom: 40px;}
+      .footer-blogs{width: 60%;}
+      .footer-inst{
+         width: 40%;
+         &__photos img{width: 25%;}}
+   }
 //? Point 3 ----------------------------------
    @media (max-width: $md3+px) {}
 //? Point 4 ----------------------------------

@@ -816,6 +816,11 @@
    // quantity
       .quantity__item{height: 210px;}
       .quantity__number{font-size: 65px;}
+   // service
+      .service-item{width: 50%;justify-content: center;
+         &[data-padding="top"]{padding-top: 0;}
+         &[data-border="bottom"]{border-bottom: none;}
+      }
    // device
       .devices__ipad{height: 500px;}
       .devices__iphone{height: 90%;}
@@ -840,7 +845,61 @@
          &__photos img{width: 25%;}}
    }
 //? Point 3 ----------------------------------
-   @media (max-width: $md3+px) {}
+   @media (max-width: $md3+px) {
+   $block_padd-bottom: 50px;
+   // header
+      .header-nav{display: none;}
+      .burger{display: block;}
+   // headertitle-template
+      .headertitle-template {padding: 50px 0;}
+   // about
+      .about__inner{padding-bottom: 50px;}
+      .cards-item {
+         width: 49%;
+         margin-bottom: 20px;
+     }
+   // quantity
+      .quantity__inner{justify-content: center;}
+      .quantity__item{
+         width: 33.3333%;
+         border: 1px #b5eae0 solid;
+         height: 170px;
+      }
+     .quantity__number {font-size: 55px;}
+   // device
+      .whatwedo__inner{padding-top: 50px;}
+   }
+   // whatwedo
+      .whatwedo-content__photo{
+         width: 100%;
+         padding-right: 0;
+         margin-bottom: 30px;
+         img{width: 100%;height: auto;}
+      }
+      .accordion{width: 100%;padding-left: 0;}
+   // quote
+      .quote-item__icon{padding: 20px;}
+      .quote-item__text{font-size: 20px;}
+   // team
+      .team__inner .cards .team__item{width: 49%;}
+   // logos
+      .logos__item{width: 33.333%;}
+   // review
+      .review-item{
+         img{height: 140px;}
+         &__text{font-size: 20px;}
+      }
+   // clientsay
+      .clientsay-item{
+         width: 100%;
+         padding: 0px 0px 0px 20px;
+      }
+   // blog
+      .blog__inner{padding-bottom: 50px;}
+      .blog-item {
+         width: 50%;
+         padding: 0 15px 50px;
+      }
 //? Point 4 ----------------------------------
    @media (max-width: $md4+px) {}
 

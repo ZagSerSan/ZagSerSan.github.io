@@ -135,3 +135,13 @@
       font-style: italic;
    }
 }
+
+.copyright {
+   &__inner {
+      text-align: center;
+      padding: 23px 0;
+      border-top: 1px #e5e5e5 solid;
+      @include fontFWSC('Montserrat',600,14px,#333);
+      span{color: #f38181;}
+   }
+}

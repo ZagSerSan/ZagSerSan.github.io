@@ -319,6 +319,19 @@ a:hover {
   font-style: italic;
 }
 
+.copyright__inner {
+  text-align: center;
+  padding: 23px 0;
+  border-top: 1px #e5e5e5 solid;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+.copyright__inner span {
+  color: #f38181;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;

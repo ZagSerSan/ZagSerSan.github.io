@@ -866,10 +866,8 @@
          height: 170px;
       }
      .quantity__number {font-size: 55px;}
-   // device
-      .whatwedo__inner{padding-top: 50px;}
-   }
    // whatwedo
+      .whatwedo__inner{padding-top: 50px;}
       .whatwedo-content__photo{
          width: 100%;
          padding-right: 0;
@@ -900,7 +898,120 @@
          width: 50%;
          padding: 0 15px 50px;
       }
+   }
 //? Point 4 ----------------------------------
-   @media (max-width: $md4+px) {}
+   @media (max-width: $md4+px) {
+   // intro
+      .intro__title {
+         font-size: 65px;
+         max-width: 400px;
+      }
+      .intro .slider {display: none;}
+   // about
+      .cards-item{width: 100%;}
+   // quantity
+      .quantity__item{width: 50%;}
+   // 
+      .service-item{
+         width: 100%;
+         padding-left: 20px;
+         &__text{max-width: none;}
+      }
+   // device
+      .devices__ipad {
+         height: 400px;
+      }
+     .devices__iphone {
+         height: 80%;
+         right: 5%;
+     }
+   // .whatwedo
+     .whatwedo__inner {padding-bottom: 50px;}
+   // quote
+      .quote__inner {
+         padding: 40px 30px;
+         &:after {right: 10px;}
+         &:before {left: 10px;}
+      }
+      .quote-item {
+         flex-direction: column;
+         &__content {
+            padding-left: 0;
+            padding-top: 30px;
+            text-align: center;
+         }
+         &__author{
+            padding-left: 0;
+            margin-top: 40px;
+            &:before {
+               top: -50%;
+               left: 50%;
+               transform: translateX(-50%);
+            }
+         }
+      }
+   // team
+      .team__inner{padding-bottom: 0;}
+      .team__inner .cards .team__item {
+         width: 100%;
+         margin-bottom: 100px;
+      }
+   // logos
+      .logos__item {
+         width: 50%;
+      }
+   // work
+      .work-cards__column{width: 100%;}
+   // reviews
+      .review__inner {
+         padding: 40px 30px;
+         &:after {right: 10px;}
+         &:before {left: 10px;}
+      }
+      .review-item {
+         flex-direction: column;
+         &__content {
+            padding-left: 0;
+            padding-top: 30px;
+            text-align: center;
+         }
+         &__author{
+            padding-left: 0;
+            margin-top: 40px;
+            &:before {
+               top: -50%;
+               left: 50%;
+               transform: translateX(-50%);
+            }
+         }
+      }
+   // clientsay
+      .clientsay-item {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         padding-left: 0;
+         &__line{
+            // display: none;
+            margin: 20px auto 0px;
+         }
+         &__name {
+            margin-top: 17px;
+         }
+         &__content {
+            padding-left: 0px;
+         }
+      }
+   // blog
+      .blog__inner{padding-bottom: 0;}
+      .blog-item {width: 100%;}
+   // footer
+      .footer-blogs {
+         width: 100%;
+         padding-right: 0;
+      }
+      .footer-inst{width: 100%;}
+   }
+   
 
 //* </END>====================================================================================================

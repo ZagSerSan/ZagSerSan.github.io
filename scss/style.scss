@@ -20,6 +20,7 @@
    $md2: 991.98;
    $md3: 767.98;
    $md4: 479.98;
+   // $md5: 379.98;
    $block_padd-bottom: 100px;
 //* <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
    @import "null";
@@ -34,19 +35,12 @@
    // &.loaded {
    // }
 }
-// .empty-space {
-//    height: 700px;
-//    width: 100%;
-//    background-color: #fff;
-//    text-align: center;
-//    border-top: 1px solid #ccc;
-// }
+
 //* <ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
    max-width: $mw + px;
    width: 100%;
    margin: 0 auto;
-
 }
 //* <ОСНОВНОЙ БЛОК>====================================================================================================
 //todo -intro -------------------
@@ -786,7 +780,6 @@
       color: transparent;
    }
 }
-
 //* <АДАПТИВ>====================================================================================================
 //? Point 1 ----------------------------------
    @media (max-width: $md1+px) {
@@ -846,7 +839,6 @@
    }
 //? Point 3 ----------------------------------
    @media (max-width: $md3+px) {
-   $block_padd-bottom: 50px;
    // header
       .header-nav{display: none;}
       .burger{display: block;}
@@ -902,15 +894,32 @@
 //? Point 4 ----------------------------------
    @media (max-width: $md4+px) {
    // intro
+      .intro__suptitle {
+         font-size: 30px;
+      }
       .intro__title {
-         font-size: 65px;
+         font-size: 45px;
          max-width: 400px;
       }
+      .intro__link {
+         font-weight: 600;
+         font-size: 12px;
+         padding: 10px 20px;
+         border: 2px #fff solid;
+     }
       .intro .slider {display: none;}
+   // .headertitle-template
+      .headertitle-template {
+         &__title{
+            font-size: 23px;
+            &:after{margin-top: 30px;}
+         }
+         &__text {margin-top: 35px;}
+      }
    // about
       .cards-item{width: 100%;}
    // quantity
-      .quantity__item{width: 50%;}
+      .quantity__item{width: 50%;height: 150px;}
    // 
       .service-item{
          width: 100%;
@@ -921,7 +930,7 @@
       .devices__ipad {
          height: 400px;
       }
-     .devices__iphone {
+      .devices__iphone {
          height: 80%;
          right: 5%;
      }
@@ -954,7 +963,7 @@
       .team__inner{padding-bottom: 0;}
       .team__inner .cards .team__item {
          width: 100%;
-         margin-bottom: 100px;
+         margin-bottom: 60px;
       }
    // logos
       .logos__item {
@@ -1012,6 +1021,4 @@
       }
       .footer-inst{width: 100%;}
    }
-   
-
 //* </END>====================================================================================================

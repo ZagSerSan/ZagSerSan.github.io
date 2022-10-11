@@ -1372,18 +1372,37 @@ a:hover {
   }
 }
 @media (max-width: 479.98px) {
+  .intro__suptitle {
+    font-size: 30px;
+  }
   .intro__title {
-    font-size: 65px;
+    font-size: 45px;
     max-width: 400px;
+  }
+  .intro__link {
+    font-weight: 600;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 2px #fff solid;
   }
   .intro .slider {
     display: none;
+  }
+  .headertitle-template__title {
+    font-size: 23px;
+  }
+  .headertitle-template__title:after {
+    margin-top: 30px;
+  }
+  .headertitle-template__text {
+    margin-top: 35px;
   }
   .cards-item {
     width: 100%;
   }
   .quantity__item {
     width: 50%;
+    height: 150px;
   }
   .service-item {
     width: 100%;
@@ -1433,7 +1452,7 @@ a:hover {
   }
   .team__inner .cards .team__item {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
   .logos__item {
     width: 50%;

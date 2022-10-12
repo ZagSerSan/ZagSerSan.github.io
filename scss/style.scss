@@ -1028,15 +1028,26 @@
       }
    // blog
       .blog__inner{padding-bottom: 0;}
-      .blog-item {width: 100%;}
+      .blog-item {
+         width: 100%;
+         &__statistics {margin-top: 10px;padding-top: 10px;}
+      }
    // footer
-      .footer-mogo__icons svg {margin-right: 10px;}
+      .footer-mogo__subscribe {
+         form {
+            button {width: 30%;}
+            textarea {width: 70%;max-width: 70%;}
+         }
+      }
+            .footer-mogo__icons svg {margin-right: 10px;}
       .footer-blogs {
          width: 100%;
          padding-right: 0;
+         &__header {margin-bottom: 20px;}
       }
-      .footer-inst{width: 100%;}
+      .footer-inst{
+         width: 100%;
+         &__title {margin-bottom: 20px;}
+      }
    }
-
-   //todo correct media 4 for width 340px
 //* </END>====================================================================================================

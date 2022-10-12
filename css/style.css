@@ -1533,6 +1533,17 @@ a:hover {
   .blog-item {
     width: 100%;
   }
+  .blog-item__statistics {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .footer-mogo__subscribe form button {
+    width: 30%;
+  }
+  .footer-mogo__subscribe form textarea {
+    width: 70%;
+    max-width: 70%;
+  }
   .footer-mogo__icons svg {
     margin-right: 10px;
   }
@@ -1540,7 +1551,13 @@ a:hover {
     width: 100%;
     padding-right: 0;
   }
+  .footer-blogs__header {
+    margin-bottom: 20px;
+  }
   .footer-inst {
     width: 100%;
+  }
+  .footer-inst__title {
+    margin-bottom: 20px;
   }
 }

@@ -930,6 +930,8 @@
       .cards-item{width: 100%;}
    // quantity
       .quantity__item{width: 50%;height: 150px;}
+      .quantity__number{font-size: 45px;}
+      .quantity__subtitle{margin-top: 10px;}
    // 
       .service-item{
          width: 100%;
@@ -938,14 +940,20 @@
       }
    // device
       .devices__ipad {
-         height: 400px;
+         height: 300px;
       }
       .devices__iphone {
+         bottom: -60px;
          height: 80%;
          right: 5%;
      }
    // .whatwedo
-     .whatwedo__inner {padding-bottom: 50px;}
+      .whatwedo__inner {padding-bottom: 50px;padding-top: 10px;}
+      .accordion-item {
+         &__title{font-size: 13px;}
+         &__header {padding: 10px;}
+         &__icon {height: 25px;}
+      }
    // quote
       .quote__inner {
          padding: 40px 0px;
@@ -974,9 +982,12 @@
          &__icon{height: 90px;}
       }
    // team
+      .cards {
+         justify-content: center;
+      }
       .team__inner{padding-bottom: 0;}
       .team__inner .cards .team__item {
-         width: 100%;
+         width: 80%;
          margin-bottom: 60px;
       }
    // logos

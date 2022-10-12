@@ -1417,6 +1417,12 @@ a:hover {
     width: 50%;
     height: 150px;
   }
+  .quantity__number {
+    font-size: 45px;
+  }
+  .quantity__subtitle {
+    margin-top: 10px;
+  }
   .service-item {
     width: 100%;
     padding-left: 20px;
@@ -1425,14 +1431,25 @@ a:hover {
     max-width: none;
   }
   .devices__ipad {
-    height: 400px;
+    height: 300px;
   }
   .devices__iphone {
+    bottom: -60px;
     height: 80%;
     right: 5%;
   }
   .whatwedo__inner {
     padding-bottom: 50px;
+    padding-top: 10px;
+  }
+  .accordion-item__title {
+    font-size: 13px;
+  }
+  .accordion-item__header {
+    padding: 10px;
+  }
+  .accordion-item__icon {
+    height: 25px;
   }
   .quote__inner {
     padding: 40px 0px;
@@ -1468,11 +1485,14 @@ a:hover {
   .quote-item__icon {
     height: 90px;
   }
+  .cards {
+    justify-content: center;
+  }
   .team__inner {
     padding-bottom: 0;
   }
   .team__inner .cards .team__item {
-    width: 100%;
+    width: 80%;
     margin-bottom: 60px;
   }
   .logos__item {

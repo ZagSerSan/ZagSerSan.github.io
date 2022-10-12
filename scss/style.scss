@@ -842,6 +842,8 @@
    // header
       .header-nav{display: none;}
       .burger{display: block;}
+   // intro
+      .intro__inner{min-height: 1px;}
    // headertitle-template
       .headertitle-template {padding: 50px 0;}
    // about
@@ -857,7 +859,7 @@
          border: 1px #b5eae0 solid;
          height: 170px;
       }
-     .quantity__number {font-size: 55px;}
+      .quantity__number {font-size: 55px;}
    // whatwedo
       .whatwedo__inner{padding-top: 50px;}
       .whatwedo-content__photo{
@@ -890,6 +892,14 @@
          width: 50%;
          padding: 0 15px 50px;
       }
+   // footer
+      .footer__inner {
+         padding: 40px 0;
+      }
+      .footer-mogo {
+         padding-right: 0;
+         &__title{font-size: 36px;margin-bottom: 30px;}
+      }
    }
 //? Point 4 ----------------------------------
    @media (max-width: $md4+px) {
@@ -898,8 +908,8 @@
          font-size: 30px;
       }
       .intro__title {
-         font-size: 45px;
-         max-width: 400px;
+         font-size: 55px;
+         max-width: 350px;
       }
       .intro__link {
          font-weight: 600;
@@ -938,9 +948,9 @@
      .whatwedo__inner {padding-bottom: 50px;}
    // quote
       .quote__inner {
-         padding: 40px 30px;
-         &:after {right: 10px;}
-         &:before {left: 10px;}
+         padding: 40px 0px;
+         &:after {right: 10px;top: 90px;}
+         &:before {left: 10px;top: 90px;}
       }
       .quote-item {
          flex-direction: column;
@@ -948,6 +958,9 @@
             padding-left: 0;
             padding-top: 30px;
             text-align: center;
+         }
+         &__text {
+            font-size: 18px;
          }
          &__author{
             padding-left: 0;
@@ -958,6 +971,7 @@
                transform: translateX(-50%);
             }
          }
+         &__icon{height: 90px;}
       }
    // team
       .team__inner{padding-bottom: 0;}
@@ -973,9 +987,9 @@
       .work-cards__column{width: 100%;}
    // reviews
       .review__inner {
-         padding: 40px 30px;
-         &:after {right: 10px;}
-         &:before {left: 10px;}
+         padding: 40px 0px;
+         &:after {right: 10px;top: 90px;}
+         &:before {left: 10px;top: 90px;}
       }
       .review-item {
          flex-direction: column;
@@ -984,6 +998,7 @@
             padding-top: 30px;
             text-align: center;
          }
+         &__text{font-size: 18px;}
          &__author{
             padding-left: 0;
             margin-top: 40px;
@@ -1015,6 +1030,7 @@
       .blog__inner{padding-bottom: 0;}
       .blog-item {width: 100%;}
    // footer
+      .footer-mogo__icons svg {margin-right: 10px;}
       .footer-blogs {
          width: 100%;
          padding-right: 0;

@@ -750,6 +750,7 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 25px;
+  z-index: 4;
   transform: translateY(-50%);
   transform: rotate(135deg);
   width: 20px;
@@ -769,6 +770,7 @@ a:hover {
   position: absolute;
   top: 50%;
   right: 25px;
+  z-index: 4;
   transform: translateY(-50%);
   transform: rotate(-45deg);
   width: 20px;
@@ -971,33 +973,48 @@ a:hover {
   padding: 70px 100px;
   position: relative;
 }
-.review__inner:before {
-  content: "";
+.review__inner .slick-prev {
   position: absolute;
   top: 50%;
   left: 25px;
+  z-index: 4;
   transform: translateY(-50%);
   transform: rotate(135deg);
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
+  font-size: 0;
+  color: transparent;
   background-color: transparent;
+  border: none;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
 }
-.review__inner:after {
-  content: "";
+.review__inner .slick-prev:focus {
+  outline: none;
+}
+.review__inner .slick-next {
   position: absolute;
   top: 50%;
   right: 25px;
+  z-index: 4;
   transform: translateY(-50%);
   transform: rotate(-45deg);
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
+  font-size: 0;
+  color: transparent;
   background-color: transparent;
+  border: none;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
+}
+.review__inner .slick-next:focus {
+  outline: none;
+}
+.review__inner__slider {
+  padding: 0 100px;
 }
 
 .review-item {
@@ -1375,6 +1392,12 @@ a:hover {
   .logos__item {
     width: 33.333%;
   }
+  .review__inner {
+    padding: 40px 0;
+  }
+  .review__slider {
+    padding: 0 70px;
+  }
   .review-item img {
     height: 140px;
   }
@@ -1526,13 +1549,16 @@ a:hover {
   .review__inner {
     padding: 40px 0px;
   }
-  .review__inner:after {
-    right: 10px;
-    top: 90px;
-  }
-  .review__inner:before {
+  .review__inner .slick-prev {
     left: 10px;
-    top: 90px;
+    top: 40px;
+  }
+  .review__inner .slick-next {
+    right: 10px;
+    top: 40px;
+  }
+  .review__slider {
+    padding: 0;
   }
   .review-item {
     flex-direction: column;

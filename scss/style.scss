@@ -374,6 +374,7 @@
          position: absolute;
          top: 50%;
          left: 25px;
+         z-index: 4;
          transform: translateY(-50%);
          transform: rotate(135deg);
 
@@ -393,6 +394,7 @@
          position: absolute;
          top: 50%;
          right: 25px;
+         z-index: 4;
          transform: translateY(-50%);
          transform: rotate(-45deg);
 
@@ -578,37 +580,48 @@
    &__inner {
       padding: 70px 100px;
       position: relative;
-      &:before {
-         content: "";
+      .slick-prev {
          position: absolute;
          top: 50%;
          left: 25px;
+         z-index: 4;
          transform: translateY(-50%);
          transform: rotate(135deg);
 
-         width: 15px;
-         height: 15px;
+         width: 20px;
+         height: 20px;
          cursor: pointer;
 
+         font-size: 0;
+         color: transparent;
          background-color: transparent;
+         border: none;
          border-bottom: 3px #ccc solid;
          border-right: 3px #ccc solid;
+         &:focus{outline: none;}
       }
-      &:after {
-         content: "";
+      .slick-next {
          position: absolute;
          top: 50%;
          right: 25px;
+         z-index: 4;
          transform: translateY(-50%);
          transform: rotate(-45deg);
 
-         width: 15px;
-         height: 15px;
+         width: 20px;
+         height: 20px;
          cursor: pointer;
 
+         font-size: 0;
+         color: transparent;
          background-color: transparent;
+         border: none;
          border-bottom: 3px #ccc solid;
          border-right: 3px #ccc solid;
+         &:focus{outline: none;}
+      }
+      &__slider{
+         padding: 0 100px;
       }
    }
 }
@@ -888,6 +901,8 @@
    // logos
       .logos__item{width: 33.333%;}
    // review
+      .review__inner {padding: 40px 0;}
+      .review__slider{padding: 0 70px;}
       .review-item{
          img{height: 140px;}
          &__text{font-size: 20px;}
@@ -1011,9 +1026,10 @@
    // reviews
       .review__inner {
          padding: 40px 0px;
-         &:after {right: 10px;top: 90px;}
-         &:before {left: 10px;top: 90px;}
+         & .slick-prev {left: 10px;top: 40px;}
+         & .slick-next {right: 10px;top: 40px;}
       }
+      .review__slider {padding: 0;}
       .review-item {
          flex-direction: column;
          &__content {

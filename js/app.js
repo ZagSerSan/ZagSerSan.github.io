@@ -12,14 +12,23 @@ $(function () {
    });
    
 // slider
-let slider = $('#quoteSlider');
+let sliderQuote = $('#sliderQuote');
+let sliderReview = $('#sliderReview');
 
-   slider.slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      fade: true
-    });
+sliderQuote.slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: true,
+   fade: true
+});
+
+sliderReview.slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: true,
+   fade: true
+});
        
 });

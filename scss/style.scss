@@ -897,7 +897,10 @@
       .quote-item__icon{padding: 20px;}
       .quote-item__text{font-size: 20px;}
    // team
-      .team__inner .cards .team__item{width: 49%;}
+      .team__inner {
+         padding-bottom: 4px;
+         .cards .team__item{width: 49%;margin-bottom: 60px;}
+      }
    // logos
       .logos__item{width: 33.333%;}
    // review
@@ -1015,7 +1018,6 @@
       .team__inner{padding-bottom: 0;}
       .team__inner .cards .team__item {
          width: 80%;
-         margin-bottom: 60px;
       }
    // logos
       .logos__item {

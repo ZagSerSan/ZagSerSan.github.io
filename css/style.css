@@ -1386,8 +1386,12 @@ a:hover {
   .quote-item__text {
     font-size: 20px;
   }
+  .team__inner {
+    padding-bottom: 4px;
+  }
   .team__inner .cards .team__item {
     width: 49%;
+    margin-bottom: 60px;
   }
   .logos__item {
     width: 33.333%;
@@ -1538,7 +1542,6 @@ a:hover {
   }
   .team__inner .cards .team__item {
     width: 80%;
-    margin-bottom: 60px;
   }
   .logos__item {
     width: 50%;

@@ -2,11 +2,15 @@
 <html lang="ru">
 
 <head>
-   <title>Главная</title>
+   <title>MoGo</title>
    <meta charset="UTF-8">
    <!-- <meta name="format-detection" content="telephone=no"> -->
+   <!-- css links -->
    <link rel="stylesheet" href="css/style.css">
+   <!-- slider links -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <!-- adapm -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -400,14 +404,30 @@
       <div class="container">
          <div class="quote__inner">
 
-            <div class="quote-item">
-               <img src="img/quote/quoet-icon1.png" alt="quote icon" class="quote-item__icon">
-               <div class="quote-item__content">
-                  <div class="quote-item__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
-                  <div class="quote-item__author">Jon Doe</div>
-               </div>
-            </div>
+            <div class="quote__slider" id="quoteSlider">
 
+               <div>
+                  <div class="quote-item">
+                     <img src="img/quote/quoet-icon1.png" alt="quote icon" class="quote-item__icon">
+                     <div class="quote-item__content">
+                        <div class="quote-item__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+                        <div class="quote-item__author">Jon Doe</div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="quote-item">
+                     <img src="img/quote/quoet-icon1.png" alt="quote icon" class="quote-item__icon">
+                     <div class="quote-item__content">
+                        <div class="quote-item__text">“Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</div>
+                        <div class="quote-item__author">Mike Doe</div>
+                     </div>
+                  </div>
+               </div>
+               
+               
+            </div><!-- /quote__slider -->
+            
          </div><!-- /.quote__inner -->
       </div><!-- /.container -->
    </div><!-- /.quote -->
@@ -829,6 +849,7 @@
 </div><!-- /.wrapper -->
 
    <script src="js/app.js"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>

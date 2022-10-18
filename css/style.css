@@ -743,36 +743,49 @@ a:hover {
   background-color: #f8f8f8;
 }
 .quote__inner {
-  padding: 70px 100px;
+  padding: 70px 0px;
   position: relative;
 }
-.quote__inner:before {
-  content: "";
+.quote__inner .slick-prev {
   position: absolute;
   top: 50%;
   left: 25px;
   transform: translateY(-50%);
   transform: rotate(135deg);
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
+  font-size: 0;
+  color: transparent;
   background-color: transparent;
+  border: none;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
 }
-.quote__inner:after {
-  content: "";
+.quote__inner .slick-prev:focus {
+  outline: none;
+}
+.quote__inner .slick-next {
   position: absolute;
   top: 50%;
   right: 25px;
   transform: translateY(-50%);
   transform: rotate(-45deg);
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
+  font-size: 0;
+  color: transparent;
   background-color: transparent;
+  border: none;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
+}
+.quote__inner .slick-next:focus {
+  outline: none;
+}
+.quote__slider {
+  padding: 0 100px;
 }
 
 .quote-item {
@@ -1344,6 +1357,12 @@ a:hover {
     width: 100%;
     padding-left: 0;
   }
+  .quote__inner {
+    padding: 40px 0;
+  }
+  .quote__slider {
+    padding: 0 70px;
+  }
   .quote-item__icon {
     padding: 20px;
   }
@@ -1454,13 +1473,16 @@ a:hover {
   .quote__inner {
     padding: 40px 0px;
   }
-  .quote__inner:after {
-    right: 10px;
-    top: 90px;
-  }
-  .quote__inner:before {
+  .quote__inner .slick-prev {
     left: 10px;
-    top: 90px;
+    top: 40px;
+  }
+  .quote__inner .slick-next {
+    right: 10px;
+    top: 40px;
+  }
+  .quote__slider {
+    padding: 0;
   }
   .quote-item {
     flex-direction: column;

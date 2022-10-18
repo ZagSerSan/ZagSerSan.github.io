@@ -51,6 +51,10 @@ a:hover {
   font-size: 30px;
   color: #fff;
 }
+.header.fixed {
+  position: fixed;
+  background-color: #e78383;
+}
 
 .header-nav {
   display: flex;
@@ -104,28 +108,6 @@ a:hover {
 }
 .header-nav__link.active svg {
   fill: #fce38a;
-}
-.header-nav.active {
-  position: absolute;
-  top: 100%;
-  right: 0px;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  padding-top: 20px;
-  background: linear-gradient(276deg, #fce38a 0%, #f38181 50%);
-  border: 1px solid #b14e4e;
-}
-.header-nav.active a {
-  font-size: 40px;
-  margin-left: 0;
-  margin-bottom: 30px;
-}
-.header-nav.active svg {
-  width: 40px;
-  height: 40px;
 }
 
 .burger {

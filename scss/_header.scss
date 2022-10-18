@@ -14,6 +14,10 @@
       height: 80px;
    }
    &__logo {@include fontFWSC('Montserrat',700,30px,#fff);}
+   &.fixed{
+      position: fixed;
+      background-color: #e78383;
+   }
 }
 .header-nav {
    display: flex;
@@ -60,29 +64,6 @@
          svg{fill: #fce38a;}
       }
    }
-   &.active{
-      position: absolute;
-      top: 100%;
-      right: 0px;
-      z-index: 5;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-      // height: 400px;
-      width: 50%;
-      padding-top: 20px;
-      
-      background: linear-gradient(276deg, #fce38a 0%, #f38181 50%);
-      border: 1px solid #b14e4e;
-      a{
-         font-size: 40px;
-         margin-left: 0;
-         margin-bottom: 30px;
-      }
-      svg{width: 40px;height: 40px;}
-   }
 }
 //====================================================================================================
 
@@ -123,6 +104,29 @@
 			border-radius: 2px
 		}
 	}
+   // &.active{
+      //    position: absolute;
+      //    top: 100%;
+      //    right: 0px;
+      //    z-index: 5;
+   
+      //    display: flex;
+      //    flex-direction: column;
+      //    align-items: center;
+         
+      //    // height: 400px;
+      //    width: 50%;
+      //    padding-top: 20px;
+         
+      //    background: linear-gradient(276deg, #fce38a 0%, #f38181 50%);
+      //    border: 1px solid #b14e4e;
+      //    a{
+      //       font-size: 40px;
+      //       margin-left: 0;
+      //       margin-bottom: 30px;
+      //    }
+      //    svg{width: 40px;height: 40px;}
+      // }
 }
 
 //=================================================================================================

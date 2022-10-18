@@ -762,9 +762,13 @@ a:hover {
   border: none;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
+  transition: border-color 0.1s linear;
 }
 .quote__inner .slick-prev:focus {
   outline: none;
+}
+.quote__inner .slick-prev:hover {
+  border-color: #7c7c7c;
 }
 .quote__inner .slick-next {
   position: absolute;
@@ -782,9 +786,13 @@ a:hover {
   border: none;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
+  transition: border-color 0.1s linear;
 }
 .quote__inner .slick-next:focus {
   outline: none;
+}
+.quote__inner .slick-next:hover {
+  border-color: #7c7c7c;
 }
 .quote__slider {
   padding: 0 100px;
@@ -970,7 +978,7 @@ a:hover {
   background-color: #fff;
 }
 .review__inner {
-  padding: 70px 100px;
+  padding: 70px 0;
   position: relative;
 }
 .review__inner .slick-prev {
@@ -989,9 +997,13 @@ a:hover {
   border: none;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
+  transition: border-color 0.1s linear;
 }
 .review__inner .slick-prev:focus {
   outline: none;
+}
+.review__inner .slick-prev:hover {
+  border-color: #7c7c7c;
 }
 .review__inner .slick-next {
   position: absolute;
@@ -1009,11 +1021,15 @@ a:hover {
   border: none;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
+  transition: border-color 0.1s linear;
 }
 .review__inner .slick-next:focus {
   outline: none;
 }
-.review__inner__slider {
+.review__inner .slick-next:hover {
+  border-color: #7c7c7c;
+}
+.review__slider {
   padding: 0 100px;
 }
 

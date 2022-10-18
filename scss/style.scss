@@ -388,7 +388,11 @@
          border: none;
          border-bottom: 3px #ccc solid;
          border-right: 3px #ccc solid;
+         transition: border-color .1s linear;
          &:focus{outline: none;}
+         &:hover {
+            border-color: #7c7c7c;
+         }
       }
       .slick-next {
          position: absolute;
@@ -408,7 +412,11 @@
          border: none;
          border-bottom: 3px #ccc solid;
          border-right: 3px #ccc solid;
+         transition: border-color .1s linear;
          &:focus{outline: none;}
+         &:hover {
+            border-color: #7c7c7c;
+         }
       }
    }
    &__slider{
@@ -578,7 +586,7 @@
 .review {
    background-color: #fff;
    &__inner {
-      padding: 70px 100px;
+      padding: 70px 0;
       position: relative;
       .slick-prev {
          position: absolute;
@@ -598,7 +606,11 @@
          border: none;
          border-bottom: 3px #ccc solid;
          border-right: 3px #ccc solid;
+         transition: border-color .1s linear;
          &:focus{outline: none;}
+         &:hover {
+            border-color: #7c7c7c;
+         }
       }
       .slick-next {
          position: absolute;
@@ -618,11 +630,15 @@
          border: none;
          border-bottom: 3px #ccc solid;
          border-right: 3px #ccc solid;
+         transition: border-color .1s linear;
          &:focus{outline: none;}
+         &:hover {
+            border-color: #7c7c7c;
+         }
       }
-      &__slider{
-         padding: 0 100px;
-      }
+   }
+   &__slider{
+      padding: 0 100px;
    }
 }
 .review-item {

@@ -2,12 +2,12 @@ $(function () {
 
 var linkJs = $("a[data-link]");
 
-
 // fixed header
 let header = $('#headerJS');
 let intro = $('#introJS');
 let introHeight;
 let scrollPos;
+
 
 $(window).on('scroll load', function (scrollPos, introHeight) {
    introHeight = intro.innerHeight()-80;
@@ -30,6 +30,7 @@ $(window).on('scroll load', function (scrollPos, introHeight) {
    // });
 
 // smooth scroll
+
 $('[data-scroll]').on('click', function (even) {
    even.preventDefault();
    let elementId = $(this).data('scroll'); // get id elements in variable

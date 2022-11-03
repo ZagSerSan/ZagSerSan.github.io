@@ -16,4 +16,18 @@ window.addEventListener('scroll', function (scrollPos,introH,navLink) {
    console.log(scrollPos);
 });
 
+function activeLink(elSelector,activeClass) {
+   const links = document.querySelectorAll(elSelector)
+   
+   links.forEach((thisLink) => {
+      thisLink.addEventListener('click', (e) => {
+         e.preventDefault();
+         links.forEach((allLinks) => {
+            allLinks.classList.remove(activeClass);
+         });
+         thisLink.classList.add(activeClass);
+      });
+   })
+}
 
+activeLink('#navLinkJs','active');

@@ -1,9 +1,9 @@
 var header = document.getElementById('headerJS');
-var introH;
+var introH = document.getElementById('introJS').scrollHeight - 60;
 var scrollPos;
 
 window.addEventListener('scroll', function (scrollPos,introH,navLink) {
-   introH = document.getElementById('introJS').scrollHeight - 70;
+   introH = document.getElementById('introJS').scrollHeight - 60;
    scrollPos = window.pageYOffset;
 
    if (scrollPos > introH) {
@@ -26,6 +26,10 @@ function activeLink(elSelector,activeClass) {
             allLinks.classList.remove(activeClass);
          });
          thisLink.classList.add(activeClass);
+      //    window.scrollBy({
+      //       top: introH,
+      //       behavior: 'smooth'
+      //   });
       });
    })
 }

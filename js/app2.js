@@ -17,18 +17,3 @@ window.addEventListener('scroll', function (scrollPos,introH,navLink) {
 });
 
 
-function activeLink(elSelector) {
-   const navLinks = document.querySelectorAll(elSelector);
-
-   navLinks.forEach((thisLink) => {
-      thisLink.addEventListener('click', (e) => {
-         navLinks.forEach((allLinks) => {
-            allLinks.classList.remove('active');
-         });
-         e.preventDefault();
-         thisLink.classList.add('active');
-      });
-   });
-}
-
-activeLink('#navLinkJs');

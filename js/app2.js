@@ -1,5 +1,5 @@
 var header = document.getElementById('headerJS');
-var introH = document.getElementById('introJS').scrollHeight - 60;
+var introH;
 var scrollPos;
 
 window.addEventListener('scroll', function (scrollPos,introH,navLink) {
@@ -26,12 +26,21 @@ function activeLink(elSelector,activeClass) {
             allLinks.classList.remove(activeClass);
          });
          thisLink.classList.add(activeClass);
-      //    window.scrollBy({
-      //       top: introH,
-      //       behavior: 'smooth'
-      //   });
+         scrollPos = window.pageYOffset;
+         introH = document.getElementById('introJS').scrollHeight - 60;
+         if (scrollPos<introH) {
+            window.scrollBy({
+               top: introH,
+               behavior: 'smooth'
+           });   
+         } else {
+            window.scrollBy({
+               top: -introH,
+               behavior: 'smooth'
+           });  
+         }
       });
-   })
+   });
 }
 
 activeLink('#navLinkJs','active');

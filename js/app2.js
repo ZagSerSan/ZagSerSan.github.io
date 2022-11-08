@@ -26,21 +26,15 @@ function activeLink(elSelector,activeClass) {
             allLinks.classList.remove(activeClass);
          });
          thisLink.classList.add(activeClass);
-         scrollPos = window.pageYOffset;
-         introH = document.getElementById('introJS').scrollHeight - 60;
-         if (scrollPos<introH) {
-            window.scrollBy({
-               top: introH,
-               behavior: 'smooth'
-           });   
-         } else {
-            window.scrollBy({
-               top: -introH,
-               behavior: 'smooth'
-           });  
-         }
+
+         coordY = document.querySelector(thisLink.getAttribute('href')).getBoundingClientRect().top + window.scrollY;
+         window.scrollTo({
+            top: coordY,
+            behavior: 'smooth'
+         });   
       });
    });
 }
 
 activeLink('#navLinkJs','active');
+

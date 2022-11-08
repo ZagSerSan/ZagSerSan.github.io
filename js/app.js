@@ -71,9 +71,17 @@ var header = document.getElementById('headerJS');
 var introH;
 var scrollPos;
 
-// window.addEventListener('load', fixedHeader(scrollPos,introH,navLink));
+window.addEventListener('load', (scrollPos,introH) => {
+   introH = document.getElementById('introJS').scrollHeight - 60;
+   scrollPos = window.pageYOffset;
+   if (scrollPos > introH) {
+      header.classList.add('fixed');
+   } else {
+      header.classList.remove('fixed');
+   }
+});
 
-window.addEventListener('scroll', function fixedHeader(scrollPos,introH,navLink) {
+window.addEventListener('scroll', function (scrollPos,introH) {
    introH = document.getElementById('introJS').scrollHeight - 60;
    scrollPos = window.pageYOffset;
 
@@ -82,10 +90,29 @@ window.addEventListener('scroll', function fixedHeader(scrollPos,introH,navLink)
    } else {
       header.classList.remove('fixed');
    }
-
-   console.log(introH);
-   console.log(scrollPos);
 });
+
+window.addEventListener('scroll', function (scrollPos,introH) {
+   scrollPos = window.pageYOffset;
+   introH = document.getElementById('introJS').scrollHeight - 60;
+
+   // links
+   var aboutH = document.getElementById('about').scrollHeight;
+   var quantityH = document.getElementById('quantity').scrollHeight + aboutH;
+   var serviceH = document.getElementById('service').scrollHeight + quantityH;
+   
+   console.log();
+
+   if ((introH < scrollPos) && !(scrollPos > introH+aboutH)) {
+      document.querySelector('a[href="#about"]').classList.add('active');
+   } else if ((quantityH < scrollPos) && !(scrollPos > serviceH)) {
+      document.querySelector('a[href="#about"]').classList.remove('active');
+      document.querySelector('a[href="#service"]').classList.add('active');
+   } else {
+      // document.querySelector('a[href="#service"]').classList.remove('active');
+   }
+});
+
 
 function activeLink(elSelector,activeClass) {
    const links = document.querySelectorAll(elSelector)

@@ -27,6 +27,7 @@ function activeLink(elSelector,activeClass) {
          });
          thisLink.classList.add(activeClass);
 
+         // координата якоря
          coordY = document.querySelector(thisLink.getAttribute('href')).getBoundingClientRect().top + window.scrollY;
          window.scrollTo({
             top: coordY,

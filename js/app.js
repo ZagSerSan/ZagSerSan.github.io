@@ -67,11 +67,21 @@ sliderReview.slick({
 
 //? =========================== Java Script =================================
 
+//?---------------- burger ----------------
+
+var burger = document.getElementById('burgerJS');
+var nav = document.getElementById('navJS');
+
+burger.addEventListener('click', (e) => {
+   e.preventDefault();
+   nav.classList.toggle('active');
+});
+
+//?---------------- fixed header ----------------
 var header = document.getElementById('headerJS');
 var introH;
 var scrollPos;
 
-//?---------------- fixed header ----------------
 window.addEventListener('load', (scrollPos,introH) => {
    introH = document.getElementById('introJS').scrollHeight - 60;
    scrollPos = window.pageYOffset;
@@ -94,6 +104,7 @@ window.addEventListener('scroll', function (scrollPos,introH) {
 
 //?---------------- smooth scroll ----------------
 window.addEventListener('scroll', function (scrollPos,introH) {
+   nav.classList.remove('active');
    scrollPos = window.pageYOffset;
    introH = document.getElementById('introJS').scrollHeight - 100;
 
@@ -160,8 +171,6 @@ function activeLink(elSelector,activeClass) {
    });
 }
 activeLink('#navLinkJs','active');
-
-//?---------------- burger ----------------
 
 
 

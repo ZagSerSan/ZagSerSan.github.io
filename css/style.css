@@ -59,6 +59,37 @@ a:hover {
 .header-nav {
   display: flex;
 }
+.header-nav.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 60%;
+  height: 100vh;
+  padding-top: 80px;
+  background: linear-gradient(0deg, #eed78b, #e98283);
+  box-shadow: 0px 0px 60px 370px rgba(0, 0, 0, 0.8);
+  animation-duration: 1s;
+  animation-name: smoothWidth;
+}
+@keyframes smoothWidth {
+  from {
+    width: 0%;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  to {
+    width: 60%;
+    box-shadow: 0px 0px 60px 370px rgba(0, 0, 0, 0.8);
+  }
+}
+.header-nav.active .header-nav__link {
+  font-size: 35px;
+  margin-top: 40px;
+  margin-left: 0;
+}
 .header-nav__link {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -101,6 +132,7 @@ a:hover {
   fill: #fce38a;
 }
 .header-nav__link.active {
+  display: block;
   color: #fce38a;
 }
 .header-nav__link.active:before {
@@ -117,6 +149,7 @@ a:hover {
   border: 0px;
   font-size: 0;
   cursor: pointer;
+  z-index: 5;
 }
 .burger__icon {
   display: block;
@@ -1429,6 +1462,25 @@ a:hover {
   }
 }
 @media (max-width: 479.98px) {
+  .header-nav.active {
+    width: 80%;
+    box-shadow: 0px 0px 60px 370px rgba(0, 0, 0, 0.8);
+    animation-duration: 1s;
+    animation-name: smoothWidth4;
+  }
+  @keyframes smoothWidth4 {
+    from {
+      width: 0%;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+    to {
+      width: 80%;
+      box-shadow: 0px 0px 60px 370px rgba(0, 0, 0, 0.8);
+    }
+  }
+  .header-nav.active .header-nav__link {
+    font-size: 35px;
+  }
   .intro__suptitle {
     font-size: 30px;
   }

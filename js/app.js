@@ -71,6 +71,7 @@ var header = document.getElementById('headerJS');
 var introH;
 var scrollPos;
 
+//*---------------- fixed header ----------------
 window.addEventListener('load', (scrollPos,introH) => {
    introH = document.getElementById('introJS').scrollHeight - 60;
    scrollPos = window.pageYOffset;
@@ -80,7 +81,6 @@ window.addEventListener('load', (scrollPos,introH) => {
       header.classList.remove('fixed');
    }
 });
-
 window.addEventListener('scroll', function (scrollPos,introH) {
    introH = document.getElementById('introJS').scrollHeight - 70;
    scrollPos = window.pageYOffset;
@@ -92,6 +92,7 @@ window.addEventListener('scroll', function (scrollPos,introH) {
    }
 });
 
+//*---------------- smooth scroll ----------------
 window.addEventListener('scroll', function (scrollPos,introH) {
    scrollPos = window.pageYOffset;
    introH = document.getElementById('introJS').scrollHeight - 100;
@@ -141,7 +142,7 @@ window.addEventListener('scroll', function (scrollPos,introH) {
    }
 });
 
-
+//*---------------- click link ----------------
 function activeLink(elSelector,activeClass) {
    const links = document.querySelectorAll(elSelector)
    

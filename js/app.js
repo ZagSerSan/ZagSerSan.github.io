@@ -63,7 +63,7 @@ sliderReview.slick({
    fade: true
 });
        
-});// jquery
+});// jquery ================================================================
 
 //? =========================== Java Script =================================
 
@@ -71,7 +71,7 @@ var header = document.getElementById('headerJS');
 var introH;
 var scrollPos;
 
-//*---------------- fixed header ----------------
+//?---------------- fixed header ----------------
 window.addEventListener('load', (scrollPos,introH) => {
    introH = document.getElementById('introJS').scrollHeight - 60;
    scrollPos = window.pageYOffset;
@@ -92,7 +92,7 @@ window.addEventListener('scroll', function (scrollPos,introH) {
    }
 });
 
-//*---------------- smooth scroll ----------------
+//?---------------- smooth scroll ----------------
 window.addEventListener('scroll', function (scrollPos,introH) {
    scrollPos = window.pageYOffset;
    introH = document.getElementById('introJS').scrollHeight - 100;
@@ -120,15 +120,11 @@ window.addEventListener('scroll', function (scrollPos,introH) {
       aboutL.classList.remove('active');
    } else if ((scrollPos > introH) && (scrollPos < aboutH)) {
       aboutL.classList.add('active');
-      // console.log('1');
    } else if (scrollPos > aboutH && scrollPos < quantityH) {
       aboutL.classList.remove('active');
-      // console.log('2');
    } else if (scrollPos > quantityH && scrollPos<serviceH) {
       serviceL.classList.add('active');
-      // console.log('3');
    } else if (scrollPos > logosH && scrollPos < workH) {
-      // console.log('4');
       workL.classList.add('active');
    } else if ( scrollPos > (document.getElementById('blog').getBoundingClientRect().top + window.scrollY - 100) && scrollPos < ((document.getElementById('blog').getBoundingClientRect().top + window.scrollY - 100)+(document.getElementById('blog').scrollHeight))) {
       document.querySelector('a[href="#blog"]').classList.add('active');
@@ -142,7 +138,7 @@ window.addEventListener('scroll', function (scrollPos,introH) {
    }
 });
 
-//*---------------- click link ----------------
+//?---------------- click link ----------------
 function activeLink(elSelector,activeClass) {
    const links = document.querySelectorAll(elSelector)
    
@@ -163,6 +159,9 @@ function activeLink(elSelector,activeClass) {
       });
    });
 }
-
 activeLink('#navLinkJs','active');
+
+//?---------------- burger ----------------
+
+
 

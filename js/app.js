@@ -82,7 +82,7 @@ window.addEventListener('load', (scrollPos,introH) => {
 });
 
 window.addEventListener('scroll', function (scrollPos,introH) {
-   introH = document.getElementById('introJS').scrollHeight - 60;
+   introH = document.getElementById('introJS').scrollHeight - 70;
    scrollPos = window.pageYOffset;
 
    if (scrollPos > introH) {
@@ -94,35 +94,50 @@ window.addEventListener('scroll', function (scrollPos,introH) {
 
 window.addEventListener('scroll', function (scrollPos,introH) {
    scrollPos = window.pageYOffset;
-   introH = document.getElementById('introJS').scrollHeight - 60;
+   introH = document.getElementById('introJS').scrollHeight - 100;
 
-   // links Height
-   var aboutH = document.getElementById('about').scrollHeight;
-   var quantityH = document.getElementById('quantity').scrollHeight;
-   var serviceH = document.getElementById('service').scrollHeight;
-   
    // Links
    var anhors = document.querySelectorAll('a[href^="#"]');
    var aboutL = document.querySelector('a[href="#about"]');
+   var serviceL = document.querySelector('a[href="#service"]');
+   var workL = document.querySelector('a[href="#work"]');
+
+   // links Height
+   var aboutH = document.getElementById('about').scrollHeight + introH;
+   var quantityH = document.getElementById('quantity').scrollHeight + aboutH;
+   var serviceH = document.getElementById('service').scrollHeight + quantityH;
+   var logosH = (document.getElementById('logos').scrollHeight) - 120 + document.getElementById('logos').getBoundingClientRect().top + window.scrollY;
+      console.log(window.scrollY);
+      console.log(logosH);
+   var workH = document.getElementById('work').scrollHeight + logosH;
 
    anhors.forEach((item) => {
       item.classList.remove('active');
    });
+
    if (scrollPos < introH) {
       aboutL.classList.remove('active');
-   } else if ((introH < scrollPos) && (scrollPos < introH+aboutH)) {
-      document.querySelector('a[href="#about"]').classList.add('active');
-
-      console.log('1');
-   } else if (scrollPos > (introH+aboutH) && scrollPos < (introH+aboutH+quantityH)) {
-      document.querySelector('a[href="#about"]').classList.remove('active');
-      console.log('2');
-   } else if ( (scrollPos>(introH+aboutH+quantityH)) && (scrollPos<(introH+aboutH+quantityH+serviceH)) ) {
-      document.querySelector('a[href="#service"]').classList.add('active');
-      console.log('3');
+   } else if ((scrollPos > introH) && (scrollPos < aboutH)) {
+      aboutL.classList.add('active');
+      // console.log('1');
+   } else if (scrollPos > aboutH && scrollPos < quantityH) {
+      aboutL.classList.remove('active');
+      // console.log('2');
+   } else if (scrollPos > quantityH && scrollPos<serviceH) {
+      serviceL.classList.add('active');
+      // console.log('3');
+   } else if (scrollPos > logosH && scrollPos < workH) {
+      // console.log('4');
+      workL.classList.add('active');
+   } else if ( scrollPos > (document.getElementById('blog').getBoundingClientRect().top + window.scrollY - 100) && scrollPos < ((document.getElementById('blog').getBoundingClientRect().top + window.scrollY - 100)+(document.getElementById('blog').scrollHeight))) {
+      document.querySelector('a[href="#blog"]').classList.add('active');
+   } else if (scrollPos > ((document.getElementById('blog').getBoundingClientRect().top + window.scrollY - 100)+(document.getElementById('blog').scrollHeight))) {
+      document.querySelector('a[href="#blog"]').classList.remove('active');
+      document.querySelector('a[href="#footer"]').classList.add('active');
    } else {
-      console.log('4');
-      document.querySelector('a[href="#service"]').classList.remove('active');
+      anhors.forEach((item) => {
+         item.classList.remove('active');
+      });
    }
 });
 
@@ -133,10 +148,10 @@ function activeLink(elSelector,activeClass) {
    links.forEach((thisLink) => {
       thisLink.addEventListener('click', (e) => {
          e.preventDefault();
-         // links.forEach((allLinks) => {
-         //    allLinks.classList.remove(activeClass);
-         // });
-         // thisLink.classList.add(activeClass);
+         links.forEach((allLinks) => {
+            allLinks.classList.remove(activeClass);
+         });
+         thisLink.classList.add(activeClass);
 
          // координата якоря
          coordY = document.querySelector(thisLink.getAttribute('href')).getBoundingClientRect().top + window.scrollY;

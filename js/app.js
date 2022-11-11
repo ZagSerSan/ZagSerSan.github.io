@@ -96,20 +96,33 @@ window.addEventListener('scroll', function (scrollPos,introH) {
    scrollPos = window.pageYOffset;
    introH = document.getElementById('introJS').scrollHeight - 60;
 
-   // links
+   // links Height
    var aboutH = document.getElementById('about').scrollHeight;
-   var quantityH = document.getElementById('quantity').scrollHeight + aboutH;
-   var serviceH = document.getElementById('service').scrollHeight + quantityH;
+   var quantityH = document.getElementById('quantity').scrollHeight;
+   var serviceH = document.getElementById('service').scrollHeight;
    
-   console.log();
+   // Links
+   var anhors = document.querySelectorAll('a[href^="#"]');
+   var aboutL = document.querySelector('a[href="#about"]');
 
-   if ((introH < scrollPos) && !(scrollPos > introH+aboutH)) {
+   anhors.forEach((item) => {
+      item.classList.remove('active');
+   });
+   if (scrollPos < introH) {
+      aboutL.classList.remove('active');
+   } else if ((introH < scrollPos) && (scrollPos < introH+aboutH)) {
       document.querySelector('a[href="#about"]').classList.add('active');
-   } else if ((quantityH < scrollPos) && !(scrollPos > serviceH)) {
+
+      console.log('1');
+   } else if (scrollPos > (introH+aboutH) && scrollPos < (introH+aboutH+quantityH)) {
       document.querySelector('a[href="#about"]').classList.remove('active');
+      console.log('2');
+   } else if ( (scrollPos>(introH+aboutH+quantityH)) && (scrollPos<(introH+aboutH+quantityH+serviceH)) ) {
       document.querySelector('a[href="#service"]').classList.add('active');
+      console.log('3');
    } else {
-      // document.querySelector('a[href="#service"]').classList.remove('active');
+      console.log('4');
+      document.querySelector('a[href="#service"]').classList.remove('active');
    }
 });
 
@@ -120,10 +133,10 @@ function activeLink(elSelector,activeClass) {
    links.forEach((thisLink) => {
       thisLink.addEventListener('click', (e) => {
          e.preventDefault();
-         links.forEach((allLinks) => {
-            allLinks.classList.remove(activeClass);
-         });
-         thisLink.classList.add(activeClass);
+         // links.forEach((allLinks) => {
+         //    allLinks.classList.remove(activeClass);
+         // });
+         // thisLink.classList.add(activeClass);
 
          // координата якоря
          coordY = document.querySelector(thisLink.getAttribute('href')).getBoundingClientRect().top + window.scrollY;

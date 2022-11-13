@@ -5,12 +5,10 @@
    left: 0;
    z-index: 1000;
    width: 100%;
-   // background-color: #e78183;
    &__inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // width: 100%;
       height: 80px;
    }
    &__logo {@include fontFWSC('Montserrat',700,30px,#fff);}
@@ -20,12 +18,10 @@
    }
 }
 .header-nav {
-   // burger = active
    &.active {
       width: 80%;
       box-shadow: 0px 0px 50px 30px rgb(0 0 0 / 80%);
    }
-
    &__link {
       @include fontFWSC('Montserrat',500,14px,#fff);
       text-transform: uppercase;
@@ -127,5 +123,4 @@
       }
    }
 }
-
 //=================================================================================================

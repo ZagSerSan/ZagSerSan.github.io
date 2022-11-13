@@ -1674,7 +1674,22 @@ a:hover {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 321px) {
+  .header__inner {
+    height: 50px;
+  }
+  .header__logo {
+    font-size: 25px;
+  }
+  .burger__icon {
+    width: 30px;
+  }
+  .burger__icon:after {
+    width: 30px;
+  }
+  .burger__icon:before {
+    width: 30px;
+  }
   .header-nav__link {
     font-size: 20px;
     margin-top: 30px;
@@ -1687,5 +1702,30 @@ a:hover {
     width: 25px;
     height: 25px;
     margin-top: 1px;
+  }
+  .intro__suptitle {
+    font-size: 25px;
+  }
+  .intro__title {
+    font-size: 40px;
+    max-width: 250px;
+  }
+  .quantity__number {
+    font-size: 40px;
+  }
+  .quantity__item {
+    text-align: center;
+  }
+  .service-item {
+    padding-left: 0;
+  }
+  .service-item__content {
+    padding-left: 20px;
+  }
+  .service-item.__text {
+    font-size: 14px;
+  }
+  .quote-item__text {
+    font-size: 16px;
   }
 }

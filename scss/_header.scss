@@ -71,7 +71,6 @@
    }
 }
 //====================================================================================================
-
 .burger {
 	display: none;
 	background: none;
@@ -88,7 +87,7 @@
 		border-radius: 2px;
 
 		position: relative;
-		
+      transition: background-color .1s linear;
 		&:before {
 			content: "";
 			position: absolute;
@@ -98,6 +97,7 @@
 			height: 3px;
 			background-color: #fff;
 			border-radius: 2px;
+         transition: transform .2s linear, top .2s linear;
 		}
 		&:after {
 			content: "";
@@ -107,20 +107,22 @@
 			width: 37px;
 			height: 3px;
 			background-color: #fff;
-			border-radius: 2px
+			border-radius: 2px;
+         transition: transform .2s linear, top .2s linear;
 		}
 	}
    &.active {
       .burger__icon {
-         transform: rotateZ(45deg);
-         transition: transform .2s linear;
+         background-color: transparent;
          &:before {
             top: 0px;
-            transform: rotateZ(-90deg);
+            transform: rotateZ(-45deg);
             transition: transform .2s linear;
          }
          &:after {
-            display: none;
+            top: 0;
+            transform: rotateZ(45deg);
+            transition: transform .2s linear;
          }
       }
    }

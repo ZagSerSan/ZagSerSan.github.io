@@ -1138,5 +1138,22 @@
          &__title {margin-bottom: 20px;}
       }
    }
-   
+   //? Point 5 ----------------------------------
+   @media (max-width: 320px) {
+      .header-nav{
+         &__link {
+            font-size: 20px;
+            margin-top: 30px;
+         }
+         svg {
+            width: 30px;
+            height: 30px;
+            &.search{
+               width: 25px;
+               height: 25px;
+               margin-top: 1px;
+            }
+         }
+      }
+   }
 //* </END>====================================================================================================

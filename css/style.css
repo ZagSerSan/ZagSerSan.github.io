@@ -1670,3 +1670,18 @@ a:hover {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 320px) {
+  .header-nav__link {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .header-nav svg {
+    width: 30px;
+    height: 30px;
+  }
+  .header-nav svg.search {
+    width: 25px;
+    height: 25px;
+    margin-top: 1px;
+  }
+}

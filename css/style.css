@@ -128,7 +128,7 @@ a:hover {
   border-radius: 2px;
   position: relative;
 }
-.burger__icon:before, .burger__icon:after {
+.burger__icon:before {
   content: "";
   position: absolute;
   top: 9px;
@@ -147,6 +147,18 @@ a:hover {
   height: 3px;
   background-color: #fff;
   border-radius: 2px;
+}
+.burger.active .burger__icon {
+  transform: rotateZ(45deg);
+  transition: transform 0.2s linear;
+}
+.burger.active .burger__icon:before {
+  top: 0px;
+  transform: rotateZ(-90deg);
+  transition: transform 0.2s linear;
+}
+.burger.active .burger__icon:after {
+  display: none;
 }
 
 .footer__inner {

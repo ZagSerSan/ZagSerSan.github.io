@@ -74,6 +74,7 @@ var nav = document.getElementById('navJS');
 
 burger.addEventListener('click', (e) => {
    e.preventDefault();
+   burger.classList.toggle('active');
    nav.classList.toggle('active');
 });
 
@@ -105,6 +106,7 @@ window.addEventListener('scroll', function (scrollPos,introH) {
 //?---------------- smooth scroll ----------------
 window.addEventListener('scroll', function (scrollPos,introH) {
    nav.classList.remove('active');
+   burger.classList.remove('active');
    scrollPos = window.pageYOffset;
    introH = document.getElementById('introJS').scrollHeight - 100;
 

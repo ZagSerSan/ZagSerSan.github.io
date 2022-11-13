@@ -56,39 +56,9 @@ a:hover {
   background-color: #e78383;
 }
 
-.header-nav {
-  display: flex;
-}
 .header-nav.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 3;
-  width: 60%;
-  height: 100vh;
-  padding-top: 80px;
-  background: linear-gradient(0deg, #eed78b, #e98283);
-  box-shadow: 0px 0px 60px 370px rgba(0, 0, 0, 0.8);
-  animation-duration: 1s;
-  animation-name: smoothWidth;
-}
-@keyframes smoothWidth {
-  from {
-    width: 0%;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-  }
-  to {
-    width: 60%;
-    box-shadow: 0px 0px 60px 370px rgba(0, 0, 0, 0.8);
-  }
-}
-.header-nav.active .header-nav__link {
-  font-size: 35px;
-  margin-top: 40px;
-  margin-left: 0;
+  width: 80%;
+  box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.8);
 }
 .header-nav__link {
   font-family: "Montserrat", sans-serif;
@@ -1360,7 +1330,33 @@ a:hover {
 }
 @media (max-width: 767.98px) {
   .header-nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 0%;
+    height: 100vh;
+    padding-top: 80px;
+    overflow: hidden;
+    background: linear-gradient(0deg, #eed78b, #e98283);
+    transition: box-shadow 0.3s ease-out, width 0.3s ease-out;
+  }
+  .header-nav__link {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+  .header-nav svg {
+    width: 30px;
+    height: 30px;
+  }
+  .header-nav svg.search {
+    width: 25px;
+    height: 25px;
+    margin-top: 1px;
   }
   .burger {
     display: block;
@@ -1462,25 +1458,6 @@ a:hover {
   }
 }
 @media (max-width: 479.98px) {
-  .header-nav.active {
-    width: 80%;
-    box-shadow: 0px 0px 60px 370px rgba(0, 0, 0, 0.8);
-    animation-duration: 1s;
-    animation-name: smoothWidth4;
-  }
-  @keyframes smoothWidth4 {
-    from {
-      width: 0%;
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    }
-    to {
-      width: 80%;
-      box-shadow: 0px 0px 60px 370px rgba(0, 0, 0, 0.8);
-    }
-  }
-  .header-nav.active .header-nav__link {
-    font-size: 35px;
-  }
   .intro__suptitle {
     font-size: 30px;
   }

@@ -879,7 +879,36 @@
    @media (max-width: $md3+px) {
    // header
       .header-nav{
-         display: none;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         position: absolute;
+         top: 0;
+         right: 0;
+         z-index: 3;
+
+         width: 0%;
+         height: 100vh;
+         padding-top: 80px;
+         overflow: hidden;
+
+         background: linear-gradient(0deg, #eed78b, #e98283);
+         transition: box-shadow .3s ease-out, width .3s ease-out;
+         &__link {
+            font-size: 30px;
+            margin-top: 40px;
+            margin-left: 0;
+         }
+         svg {
+            width: 30px;
+            height: 30px;
+            &.search{
+               width: 25px;
+               height: 25px;
+               margin-top: 1px;
+            }
+         }
       }
       .burger{display: block;}
    // intro
@@ -950,30 +979,6 @@
    }
 //? Point 4 ----------------------------------
    @media (max-width: $md4+px) {
-   // header
-      .header-nav {
-         &.active {
-            width: 80%;
-            box-shadow: 0px 0px 60px 370px rgb(0 0 0 / 80%);
-      
-            animation-duration: 1s;
-            animation-name: smoothWidth4;
-            @keyframes smoothWidth4 {
-               from {
-                 width: 0%;
-                 box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
-               }
-               to {
-                 width: 80%;
-                  box-shadow: 0px 0px 60px 370px rgb(0 0 0 / 80%);
-               }
-             }
-      
-            .header-nav__link {
-               font-size: 35px;
-            }
-         }
-      }
    // intro
       .intro__suptitle {
          font-size: 30px;

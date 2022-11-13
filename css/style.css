@@ -102,7 +102,6 @@ a:hover {
   fill: #fce38a;
 }
 .header-nav__link.active {
-  display: block;
   color: #fce38a;
 }
 .header-nav__link.active:before {

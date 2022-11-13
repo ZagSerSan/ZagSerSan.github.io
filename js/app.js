@@ -164,7 +164,7 @@ function activeLink(elSelector,activeClass) {
          // координата якоря
          coordY = document.querySelector(thisLink.getAttribute('href')).getBoundingClientRect().top + window.scrollY;
          window.scrollTo({
-            top: coordY,
+            top: coordY-50,
             behavior: 'smooth'
          });   
       });

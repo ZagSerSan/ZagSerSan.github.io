@@ -20,7 +20,7 @@ body {
    $md2: 991.98;
    $md3: 767.98;
    $md4: 479.98;
-   // $md5: 379.98;
+   $md5: 379.98;
    $block_padd-bottom: 100px;
 //* <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
    @import "null";
@@ -32,10 +32,7 @@ body {
    width: 100%;
    min-height: 100%;
    overflow: hidden;
-   // &.loaded {
-   // }
 }
-
 //* <ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
    max-width: $mw + px;
@@ -925,7 +922,7 @@ body {
       }
       .burger{display: block;}
    // intro
-      .intro__inner{min-height: 1px;}
+      // .intro__inner{min-height: 1px;}
    // headertitle-template
       .headertitle-template {padding: 50px 0;}
    // about
@@ -1152,7 +1149,7 @@ body {
       }
    }
 //? Point 5 ----------------------------------
-@media (max-width: 380px) {
+@media (max-width: $md5+px) {
 // headertitle-template
 .headertitle-template {
    &__suptitle {font-size: 17px;}
@@ -1272,5 +1269,5 @@ body {
 .footer-inst__photos img {
    width: 33.333%;
 }
-}
+   }
 //* </END>====================================================================================================

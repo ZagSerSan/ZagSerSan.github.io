@@ -1386,9 +1386,6 @@ a:hover {
   .burger {
     display: block;
   }
-  .intro__inner {
-    min-height: 1px;
-  }
   .headertitle-template {
     padding: 50px 0;
   }
@@ -1684,7 +1681,7 @@ a:hover {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 379.98px) {
   .headertitle-template__suptitle {
     font-size: 17px;
   }

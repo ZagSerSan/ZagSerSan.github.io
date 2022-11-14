@@ -338,7 +338,7 @@ body {
          background-color: transparent;
          border-bottom: 3px #ccc solid;
          border-right: 3px #ccc solid;
-
+         transition: top .2s linear, transform .2s linear;
       }
    }
    &__icon {display: block;}
@@ -348,20 +348,33 @@ body {
       margin-left: 14px;
    }
    &__content {
-      display: none;
+      display: block;
 
-      padding: 20px;
+      padding: 0px;
       border: 1px #e5e5e5 solid;
       border-top: none;
+      border-bottom: 0;
+      height: 0;
       max-height: 180px;
       overflow: auto;
+      transition: height .2s linear, padding .2s linear;
       p {
          @include fontFWSCL('Roboto',300,15px,#999,1.6);
          font-style: italic;
       }
    }
    &.active {
-      .accordion-item__content{display: block;}
+      .accordion-item__content{
+         height: 180px;
+         padding: 20px;
+         border-bottom: 1px #e5e5e5 solid;
+      }
+      .accordion-item__header {
+         &:after {
+            top: 20px;
+            transform: rotate(225deg);
+         }
+      }
    }
 }
 //todo -quote -------------------

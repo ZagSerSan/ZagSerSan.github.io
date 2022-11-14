@@ -121,8 +121,6 @@ window.addEventListener('scroll', function (scrollPos,introH) {
    var quantityH = document.getElementById('quantity').scrollHeight + aboutH;
    var serviceH = document.getElementById('service').scrollHeight + quantityH;
    var logosH = (document.getElementById('logos').scrollHeight) - 120 + document.getElementById('logos').getBoundingClientRect().top + window.scrollY;
-      console.log(window.scrollY);
-      console.log(logosH);
    var workH = document.getElementById('work').scrollHeight + logosH;
 
    anhors.forEach((item) => {
@@ -174,5 +172,15 @@ function activeLink(elSelector,activeClass) {
 }
 activeLink('#navLinkJs','active');
 
+// accordion
+var accordion_items = document.querySelectorAll('#accordion-itemJS');
 
-
+accordion_items.forEach((item) => {
+   item.addEventListener('click', (e) => {
+      e.preventDefault();
+      accordion_items.forEach(allItems => {
+         allItems.classList.remove('active');
+      });
+      item.classList.add('active');
+   });
+});

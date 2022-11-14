@@ -707,6 +707,7 @@ a:hover {
   background-color: transparent;
   border-bottom: 3px #ccc solid;
   border-right: 3px #ccc solid;
+  transition: top 0.2s linear, transform 0.2s linear;
 }
 .accordion-item__icon {
   display: block;
@@ -720,12 +721,15 @@ a:hover {
   margin-left: 14px;
 }
 .accordion-item__content {
-  display: none;
-  padding: 20px;
+  display: block;
+  padding: 0px;
   border: 1px #e5e5e5 solid;
   border-top: none;
+  border-bottom: 0;
+  height: 0;
   max-height: 180px;
   overflow: auto;
+  transition: height 0.2s linear, padding 0.2s linear;
 }
 .accordion-item__content p {
   font-family: "Roboto", sans-serif;
@@ -736,7 +740,13 @@ a:hover {
   font-style: italic;
 }
 .accordion-item.active .accordion-item__content {
-  display: block;
+  height: 180px;
+  padding: 20px;
+  border-bottom: 1px #e5e5e5 solid;
+}
+.accordion-item.active .accordion-item__header:after {
+  top: 20px;
+  transform: rotate(225deg);
 }
 
 .quote {
@@ -1674,7 +1684,7 @@ a:hover {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 321px) {
+@media (max-width: 371px) {
   .header__inner {
     height: 50px;
   }

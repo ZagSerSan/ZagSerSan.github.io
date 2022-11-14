@@ -888,6 +888,28 @@ body {
 //? Point 3 ----------------------------------
    @media (max-width: $md3+px) {
    // header
+      @media (max-height: 670px) {
+         .header-nav {
+            flex-wrap: wrap;
+            
+            &.active {
+               padding-top: 60px;
+               padding-left: 20px;
+               .header-nav__link{font-size: 25px;}
+            }
+         }
+         .header__inner {height: 50px;}
+         .header__logo{font-size: 25px;}
+         .burger__icon{
+            width: 30px;
+            &:after {
+               width: 30px;  
+            }
+            &:before {
+               width: 30px;      
+            }
+         }
+      }
       .header-nav{
          display: flex;
          flex-direction: column;
@@ -907,8 +929,7 @@ body {
          transition: box-shadow .3s ease-out, width .3s ease-out;
          &__link {
             font-size: 30px;
-            margin-top: 40px;
-            margin-left: 0;
+            margin: 20px 0 20px;
          }
          svg {
             width: 30px;
@@ -1176,7 +1197,7 @@ body {
 .header-nav{
    &__link {
       font-size: 20px;
-      margin-top: 30px;
+      margin: 10px 0 10px;
    }
    svg {
       width: 30px;

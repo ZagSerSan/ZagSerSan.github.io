@@ -1684,7 +1684,18 @@ a:hover {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 371px) {
+@media (max-width: 340px) {
+  .headertitle-template__suptitle {
+    font-size: 17px;
+  }
+  .headertitle-template__title {
+    font-size: 20px;
+  }
+  .headertitle-template__title:after {
+    margin-top: 27px;
+    width: 50px;
+    height: 2px;
+  }
   .header__inner {
     height: 50px;
   }
@@ -1720,6 +1731,10 @@ a:hover {
     font-size: 40px;
     max-width: 250px;
   }
+  .intro__title:after {
+    width: 50px;
+    height: 2px;
+  }
   .quantity__number {
     font-size: 40px;
   }
@@ -1732,10 +1747,83 @@ a:hover {
   .service-item__content {
     padding-left: 20px;
   }
-  .service-item.__text {
+  .service-item__text {
     font-size: 14px;
+  }
+  .quote__inner .slick-next, .quote__inner .slick-prev {
+    width: 15px;
+    height: 15px;
   }
   .quote-item__text {
     font-size: 16px;
+  }
+  .quote-item img {
+    padding: 15px;
+    height: 75px;
+  }
+  .quote-item__author {
+    font-size: 20px;
+  }
+  .quote-item__author:before {
+    width: 50px;
+    height: 2px;
+  }
+  .review__inner .slick-next, .review__inner .slick-prev {
+    width: 17px;
+    height: 17px;
+  }
+  .review-item img {
+    height: 110px;
+  }
+  .review-item__text {
+    font-size: 16px;
+  }
+  .review-item__author {
+    font-size: 20px;
+  }
+  .review-item__author:before {
+    width: 50px;
+    height: 2px;
+  }
+  .blog-item {
+    padding: 0 3px 50px;
+  }
+  .blog-item__text {
+    font-size: 14px;
+  }
+  .map__title {
+    font-size: 20px;
+  }
+  .map__line {
+    width: 50px;
+    height: 2px;
+  }
+  .footer-mogo__text {
+    font-size: 14px;
+  }
+  .footer-mogo__social {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-mogo__icons {
+    padding-left: 0;
+    margin-top: 15px;
+  }
+  .footer-mogo__icons svg {
+    margin: 0px 5px;
+  }
+  .footer-mogo__subscribe form {
+    flex-direction: column;
+  }
+  .footer-mogo__subscribe form textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+  .footer-mogo__subscribe form button {
+    margin-top: 10px;
+    width: 40%;
+  }
+  .footer-inst__photos img {
+    width: 33.333%;
   }
 }

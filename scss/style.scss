@@ -1152,7 +1152,18 @@ body {
       }
    }
 //? Point 5 ----------------------------------
-@media (max-width: 371px) {
+@media (max-width: 340px) {
+// headertitle-template
+.headertitle-template {
+   &__suptitle {font-size: 17px;}
+   &__title {font-size: 20px;
+      &:after {
+         margin-top: 27px;
+         width: 50px;
+         height: 2px;
+      }
+   }
+}
 // header
 .header__inner {height: 50px;}
 .header__logo{font-size: 25px;}
@@ -1182,7 +1193,11 @@ body {
 }
 // intro
 .intro__suptitle {font-size: 25px;}
-.intro__title {font-size: 40px;max-width: 250px;}
+.intro__title {
+   font-size: 40px;
+   max-width: 250px;
+   &:after {width: 50px;height: 2px;}
+}
 // quantity
 .quantity__number {font-size: 40px;}
 .quantity__item {text-align: center;}
@@ -1191,10 +1206,87 @@ body {
    &__content {
       padding-left: 20px;
   }
-  &.__text {font-size: 14px;}
+  &__text {font-size: 14px;}
 }
 // quote
-.quote-item__text {font-size: 16px;}
+.quote__inner .slick-next, .quote__inner .slick-prev {width: 15px;height: 15px;}
+.quote-item {
+   &__text {font-size: 16px;}
+   & img {padding: 15px;height: 75px;}
+   &__author {
+      font-size: 20px;
+      &:before {
+         width: 50px;
+         height: 2px;
+     }
+  }
+}
+// reviesw
+.review__inner .slick-next, .review__inner .slick-prev {width: 17px;height: 17px;}
+.review-item {
+   img {height: 110px;}
+   &__text {
+      font-size: 16px;
+   }
+   &__author {
+      font-size: 20px;
+      &:before {
+         width: 50px;
+         height: 2px;
+     }
+   }
+}
+// blog
+.blog-item {
+   padding: 0 3px 50px;
+   &__text {font-size: 14px;}
+}
+// map
+.map__title {font-size: 20px;}
+.map__line {width: 50px;height: 2px;}
+// footer mogo
+.footer-mogo {
+   &__text {font-size: 14px;}
+   &__social {
+      flex-direction: column;
+      align-items: center;
+   }
+   &__icons {
+      padding-left: 0;
+      margin-top: 15px;
+      svg {margin: 0px 5px;}
+   }
+   &__subscribe form {
+      flex-direction: column;
+      textarea {
+         width: 100%;
+         max-width: 100%;
+      }
+      button {
+         margin-top: 10px;
+         width: 40%;
+      }
+   }
+}
+// footer inst
+.footer-inst__photos img {
+   width: 33.333%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

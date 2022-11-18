@@ -1,72 +1,8 @@
 //====================================================================================================
-.header {
-   position: absolute;
-   top: 0;
-   left: 0;
-   z-index: 1000;
-   width: 100%;
-   &__inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 80px;
-   }
-   &__logo {@include fontFWSC('Montserrat',700,30px,#fff);}
-   &.fixed{
-      position: fixed;
-      background-color: #e78383;
-   }
-}
-.header-nav {
-   &.active {
-      width: 80%;
-      box-shadow: 0px 0px 50px 30px rgb(0 0 0 / 80%);
-   }
-   &__link {
-      @include fontFWSC('Montserrat',500,14px,#fff);
-      text-transform: uppercase;
-      margin-left: 54px;
-      transition: all .12s linear;
-      position: relative; 
-      &:before {
-         content: "";
-         position: absolute;
-         bottom: -12px;
-         left: 0;
-         width: 0%;
-         height: 3px;
-         background-color: #fce38a;
-         transition: width .2s linear;
-      }     
-      &:hover {
-         color: #fce38a;
-         text-decoration: none;
-         &:before {
-            width: 100%;
-         }   
-      }
-      svg {
-         width: 18px;
-         height: 18px;
-         fill: #fff;
-         transition: fill .1s linear;
-         &.search{
-            width: 16px;
-            height: 16px;
-            margin-top: 1px;
-         }
-         &:hover {fill: #fce38a;}
-      }
-      &.active {
-         color: #fce38a;
-         &:before {
-            width: 100%;
-         }
-         svg{fill: #fce38a;}
-      }
-   }
-}
+
 //====================================================================================================
+
+/*
 .burger {
 	display: none;
 	background: none;
@@ -74,7 +10,6 @@
 	border: 0px;
 	font-size: 0;
 	cursor: pointer;
-   z-index: 5;
 	&__icon {
 		display: block;
 		width: 37px;
@@ -83,8 +18,8 @@
 		border-radius: 2px;
 
 		position: relative;
-      transition: background-color .1s linear;
-		&:before {
+		
+		&:before, &:after {
 			content: "";
 			position: absolute;
 			top: 9px;
@@ -93,7 +28,6 @@
 			height: 3px;
 			background-color: #fff;
 			border-radius: 2px;
-         transition: transform .2s linear, top .2s linear;
 		}
 		&:after {
 			content: "";
@@ -103,24 +37,10 @@
 			width: 37px;
 			height: 3px;
 			background-color: #fff;
-			border-radius: 2px;
-         transition: transform .2s linear, top .2s linear;
+			border-radius: 2px
 		}
 	}
-   &.active {
-      .burger__icon {
-         background-color: transparent;
-         &:before {
-            top: 0px;
-            transform: rotateZ(-45deg);
-            transition: transform .2s linear;
-         }
-         &:after {
-            top: 0;
-            transform: rotateZ(45deg);
-            transition: transform .2s linear;
-         }
-      }
-   }
 }
-//=================================================================================================
+*/
+
+//====================================================================================================

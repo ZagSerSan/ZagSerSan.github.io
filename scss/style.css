@@ -1,0 +1,18 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: #6c7279;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170pxpx;
+  width: 100%;
+  margin: 0 auto;
+}

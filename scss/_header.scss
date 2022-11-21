@@ -1,4 +1,39 @@
 //====================================================================================================
+.header {
+	&__inner {
+		height: 90px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+.header-logo {
+	display: flex;
+	align-items: center;
+	img {display: block;border-radius: 50%;}
+	&__content {padding-left: 10px;}
+	&__name {
+		@include fontFWSCL('Montserrat',700,15px,#2b2a2c,1.06);
+		max-width: 80px;
+		margin-bottom: 4px;
+	}
+	&__prof {
+		@include fontFWSC('Montserrat',400,12px,#6a696b);
+	}
+}
+.header-nav {
+	&__link {
+		@include fontFWSC('Montserrat',700,14px,#2b2a2c);
+		text-transform: uppercase;
+		margin-left: 40px;
+		&:first-child {margin-left: 0;}
+		&:last-child {
+			border: 3px #2b2a2c solid;
+			border-radius: 30px;
+			padding: 12px 30px;
+		}
+	}
+}
 
 //====================================================================================================
 

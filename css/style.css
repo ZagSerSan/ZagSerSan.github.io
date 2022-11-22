@@ -210,8 +210,11 @@ a:hover {
 .social {
   display: flex;
   margin-bottom: 35px;
+  position: relative;
 }
 .social__item {
+  position: relative;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,6 +222,7 @@ a:hover {
   height: 40px;
   margin-right: 10px;
   background-color: #ccc;
+  transition: bottom 0.1s linear, box-shadow 0.1s linear;
 }
 .social__item svg {
   width: 70%;
@@ -242,6 +246,10 @@ a:hover {
 }
 .social__item.twitter {
   background-color: #56acef;
+}
+.social__item:hover {
+  bottom: 5px;
+  box-shadow: 2px 2px 5px #6a696b;
 }
 
 .intro-photo {

@@ -80,7 +80,10 @@
 .social {
    display: flex;
    margin-bottom: 35px;
+   position: relative;
    &__item {
+      position: relative;
+      bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -88,6 +91,7 @@
       height: 40px;
       margin-right: 10px;
       background-color: #ccc;
+      transition: bottom .1s linear, box-shadow .1s linear;
       svg {width: 70%;height: 70%;fill: #fff;}
       &.behance{background-color: #1869ff;}
       &.dribbble{background-color: #e51a68;}
@@ -95,6 +99,8 @@
       &.facebook{background-color: #3a5898;}
       &.instagram{background-color: #13578a;}
       &.twitter{background-color: #56acef;}
+
+      &:hover {bottom: 5px;box-shadow: 2px 2px 5px #6a696b;}
    }
 }
 .intro-photo {

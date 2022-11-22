@@ -17,20 +17,38 @@
 		max-width: 80px;
 		margin-bottom: 4px;
 	}
-	&__prof {
-		@include fontFWSC('Montserrat',400,12px,#6a696b);
-	}
+	&__prof {@include fontFWSC('Montserrat',400,12px,#6a696b);}
 }
 .header-nav {
 	&__link {
 		@include fontFWSC('Montserrat',700,14px,#2b2a2c);
 		text-transform: uppercase;
 		margin-left: 40px;
+		position: relative;
 		&:first-child {margin-left: 0;}
 		&:last-child {
 			border: 3px #2b2a2c solid;
 			border-radius: 30px;
 			padding: 12px 30px;
+			transition: background-color .2s linear, color .2s linear;
+			&:hover {
+				background-color: #2b2a2c;
+				color: #fff;
+			}
+		}
+		&:not(:last-child):before {
+			content: "";
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+			width: 0;
+			height: 3px;
+			background-color: #2b2a2c;
+			transition: width .2s linear;
+		}
+		&:hover {
+			text-decoration: none;
+			&:before {width: 100%;}
 		}
 	}
 }

@@ -14,7 +14,7 @@
    }
 //* <ПЕРЕМЕННЫЕ>===========================================================================================================
    $minwidth: 320px;
-   $mw: 1440;
+   $mw: 1400;
    $md1: $mw + 12;
    $md2: 991.98;
    $md3: 767.98;
@@ -43,9 +43,68 @@
    max-width: $mw + px;
    width: 100%;
    margin: 0 auto;
+   padding: 0 20px;
 }
 //* <ОСНОВНОЙ БЛОК>====================================================================================================
 //todo -Intro -------------------
+.intro {
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+}
+.intro-content {
+   width: 45%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   &__greeting {
+      @include fontFWSC('Montserrat',300,32px,#2b2a2c);
+      margin-bottom: 7px;
+   }
+   &__name {
+      @include fontFWSC('Montserrat',700,45px,#2b2a2c);
+      margin-bottom: 12px;
+   }
+   &__prof {
+      @include fontFWSC('Montserrat',400,18px,#6a696b);
+      margin-bottom: 20px;
+   }
+   button {
+      padding: 18px 45px;
+      margin-right: 14px;
+      font-size: 16px;
+      &:last-child {margin-right: 0;}
+   }
+}
+.social {
+   display: flex;
+   margin-bottom: 35px;
+   &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      background-color: #ccc;
+      svg {width: 70%;height: 70%;fill: #fff;}
+      &.behance{background-color: #1869ff;}
+      &.dribbble{background-color: #e51a68;}
+      &.linkedin{background-color: #007bb6;}
+      &.facebook{background-color: #3a5898;}
+      &.instagram{background-color: #13578a;}
+      &.twitter{background-color: #56acef;}
+   }
+}
+.intro-photo {
+   width: auto;
+   min-width: 55%;
+   display: flex;
+   flex-direction: row-reverse;
+   padding-right: 70px;
+   background: #fff url(../img/intro/bg.png) right no-repeat;
+}
 
 
 

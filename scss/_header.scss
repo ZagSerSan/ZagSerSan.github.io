@@ -26,16 +26,6 @@
 		margin-left: 40px;
 		position: relative;
 		&:first-child {margin-left: 0;}
-		&:last-child {
-			border: 3px #2b2a2c solid;
-			border-radius: 30px;
-			padding: 12px 30px;
-			transition: background-color .2s linear, color .2s linear;
-			&:hover {
-				background-color: #2b2a2c;
-				color: #fff;
-			}
-		}
 		&:not(:last-child):before {
 			content: "";
 			position: absolute;
@@ -52,7 +42,21 @@
 		}
 	}
 }
-
+.btn-black {
+	@include fontFWSC('Montserrat',700,14px,#2b2a2c);
+	text-transform: uppercase;
+	padding: 9px 30px;
+	border: 3px #2b2a2c solid;
+	border-radius: 30px;
+	background-color: #fff;
+	cursor: pointer;
+	transition: all .2s linear;
+	&:hover {
+		background-color: #2b2a2c;
+		color: #fff;
+		box-shadow: 2px 2px 5px #2b2a2c;
+	}
+}
 //====================================================================================================
 
 /*

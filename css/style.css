@@ -159,6 +159,14 @@ a:hover {
   overflow: hidden;
 }
 
+.empty-space {
+  height: 700px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
 .container {
   max-width: 1400px;
   width: 100%;
@@ -169,6 +177,7 @@ a:hover {
 .intro__inner {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px #f1f1f1 solid;
 }
 
 .intro-content {
@@ -259,4 +268,79 @@ a:hover {
   flex-direction: row-reverse;
   padding-right: 70px;
   background: #fff url(../img/intro/bg.png) right no-repeat;
+}
+
+.work {
+  text-align: center;
+}
+.work__btn {
+  margin: 20px 0 60px;
+}
+
+.filter {
+  text-align: center;
+  padding: 30px 0;
+}
+.filter__link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #6a696b;
+  margin-left: 33px;
+  transition: font-weight 0.1s linear;
+}
+.filter__link:first-child {
+  margin-left: 0;
+}
+.filter__link:hover {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.portfolio-item {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 31%;
+  box-shadow: 0px 0px 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  margin: 0 15px 30px;
+}
+.portfolio-item:hover {
+  bottom: 5px;
+  right: 5px;
+  box-shadow: 5px 5px 5px;
+}
+.portfolio-item__image {
+  display: block;
+  width: 100%;
+}
+.portfolio-item__suptitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  margin: 18px 10px 0;
+}
+.portfolio-item__title {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  margin: 16px 10px 15px;
 }

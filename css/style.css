@@ -168,7 +168,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1180px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -272,9 +272,10 @@ a:hover {
 
 .work {
   text-align: center;
+  padding: 0 0 125px;
 }
 .work__btn {
-  margin: 20px 0 60px;
+  margin: 20px 0 0;
 }
 
 .filter {
@@ -328,7 +329,7 @@ a:hover {
   position: relative;
   bottom: 0;
   right: 0;
-  width: 31%;
+  width: 30%;
   max-height: 435px;
   box-shadow: 0px 0px 5px;
   border-radius: 10px;
@@ -370,4 +371,55 @@ a:hover {
   color: #2b2a2c;
   text-transform: uppercase;
   margin: 16px 10px 15px;
+}
+
+.about__inner {
+  display: flex;
+  padding-bottom: 135px;
+}
+.about__col {
+  width: 100%;
+}
+.about__col:last-child {
+  padding-left: 40px;
+}
+.about__photo {
+  background: url("../img/about/bg.png") no-repeat;
+  background-position: 20% 100%;
+}
+.about__photo img {
+  display: block;
+}
+.about__suptitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: #2b2a2c;
+  line-height: 0.8;
+  text-transform: uppercase;
+  margin: 35px 0 25px;
+}
+.about__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 92px;
+  color: #dedede;
+  line-height: 0.8;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.about__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #717072;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+.about-btns__item {
+  padding: 15px 50px;
+}
+.about-btns__item:not(:last-child) {
+  margin-right: 15px;
 }

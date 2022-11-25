@@ -284,18 +284,37 @@ a:hover {
 .filter__link {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   color: #6a696b;
   margin-left: 33px;
   transition: font-weight 0.1s linear;
+  position: relative;
 }
 .filter__link:first-child {
   margin-left: 0;
 }
+.filter__link:before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2b2a2c;
+  transition: width 0.2s linear;
+}
 .filter__link:hover {
   text-decoration: none;
   color: #000;
-  font-weight: 700;
+}
+.filter__link:hover:before {
+  width: 100%;
+}
+.filter__link.active {
+  color: #000;
+}
+.filter__link.active:before {
+  width: 100%;
 }
 
 .portfolio {
@@ -310,17 +329,24 @@ a:hover {
   bottom: 0;
   right: 0;
   width: 31%;
+  max-height: 435px;
   box-shadow: 0px 0px 5px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.1s linear;
+  transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear;
   margin: 0 15px 30px;
 }
 .portfolio-item:hover {
   bottom: 5px;
   right: 5px;
   box-shadow: 5px 5px 5px;
+}
+.portfolio-item.hide {
+  width: 0;
+  max-height: 0;
+  font-size: 0;
+  margin: 0;
 }
 .portfolio-item__image {
   display: block;
@@ -333,6 +359,7 @@ a:hover {
   color: #2b2a2c;
   text-transform: uppercase;
   margin: 18px 10px 0;
+  text-align: left;
 }
 .portfolio-item__title {
   display: flex;

@@ -86,14 +86,14 @@
    <div class="container">
          
       <div class="filter">
-         <a href="#" class="filter__link">All</a>
-         <a href="#" class="filter__link">App</a>
-         <a href="#" class="filter__link">Website</a>
-         <a href="#" class="filter__link">Interaction</a>
+         <a href="#" data-filter id="btn_all" class="filter__link">All</a>
+         <a href="#" data-filter id="btn_app" class="filter__link">App</a>
+         <a href="#" data-filter id="btn_website" class="filter__link active">Website</a>
+         <a href="#" data-filter id="btn_int" class="filter__link">Interaction</a>
       </div>
       <div class="portfolio">
          <!-- App category -->
-         <div class="portfolio-item">
+         <div class="portfolio-item hide" id="app">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -101,7 +101,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item">
+         <div class="portfolio-item hide" id="app">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -109,7 +109,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item">
+         <div class="portfolio-item hide" id="app">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -118,7 +118,7 @@
             </div>
          </div>
          <!-- Website category -->
-         <div class="portfolio-item">
+         <div class="portfolio-item" id="website">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Website</div>
             <div class="portfolio-item__title">
@@ -126,7 +126,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item">
+         <div class="portfolio-item" id="website">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Website</div>
             <div class="portfolio-item__title">
@@ -134,7 +134,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item">
+         <div class="portfolio-item" id="website">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Website</div>
             <div class="portfolio-item__title">
@@ -143,7 +143,7 @@
             </div>
          </div>
          <!-- Interactive category -->
-         <div class="portfolio-item">
+         <div class="portfolio-item hide" id="int">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -151,7 +151,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item">
+         <div class="portfolio-item hide" id="int">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -159,7 +159,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item">
+         <div class="portfolio-item hide" id="int">
             <img class="portfolio-item__image" src="https://via.placeholder.com/360x300" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -168,7 +168,7 @@
             </div>
          </div>
       </div><!-- /.portfolio -->
-      <button type="button" class="work__btn btn-black">LOAD MORE WORK</button>
+      <button type="button" id="loadmoreworks" class="work__btn btn-black">LOAD MORE WORK</button>
    </div><!-- /.container -->
 </div><!-- /.work -->
 

@@ -423,3 +423,60 @@ a:hover {
 .about-btns__item:not(:last-child) {
   margin-right: 15px;
 }
+
+.reviews__text {
+  padding: 70px 0;
+  background: #332f30 url("../img/review/bg.png");
+  text-align: center;
+}
+.reviews__text p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  color: #fff;
+  line-height: 2.28;
+  max-width: 820px;
+}
+
+.reviews-client {
+  margin: -50px 0 0;
+  text-align: center;
+}
+.reviews-client__photo {
+  width: 100px;
+  height: 100px;
+  margin: 0px auto 14px;
+  border-radius: 50%;
+  border: 3px #efefef solid;
+  overflow: hidden;
+  position: relative;
+}
+.reviews-client__photo img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  display: block;
+}
+.reviews-client__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2b2a2c;
+  line-height: 0.8;
+  margin-bottom: 10px;
+}
+.reviews-client__subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #717072;
+  line-height: 0.8;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.reviews-client__ratting svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+}

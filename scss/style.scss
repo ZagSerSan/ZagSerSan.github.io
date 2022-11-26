@@ -234,6 +234,53 @@
    }
 }
 
+//todo -reviesw -------------------
+.reviews {
+   &__text {
+      padding: 70px 0;
+      background: #332f30 url('../img/review/bg.png');
+      text-align: center;
+      p {@include fontFWSCL('Montserrat',200,14px,#fff,2.28);max-width: 820px;}
+   }
+}
+.reviews-client {
+   margin: -50px 0 0;
+   text-align: center;
+   &__photo {
+      width: 100px;
+      height: 100px;
+      margin: 0px auto 14px;
+      border-radius: 50%;
+      border: 3px #efefef solid;
+      overflow: hidden;
+      position: relative;
+      img{
+         position: relative;
+         top: 50%;
+         left: 50%;
+         transform: translate3d(-50%, -50%,0);
+         display: block;
+      }
+   }
+   &__title {
+      @include fontFWSCL('Montserrat',700,14px,#2b2a2c,.8);
+      margin-bottom: 10px;
+   }
+   &__subtitle {
+      @include fontFWSCL('Montserrat',300,14px,#717072,.8);
+      font-style: italic;
+      margin-bottom: 10px;
+   }
+   &__ratting {
+      svg {
+         width: 15px;
+         height: 15px;
+         margin-right: 2px;
+      }
+   }
+}
+
+
 
 //* <АДАПТИВ>====================================================================================================
 //? Point 1 ----------------------------------

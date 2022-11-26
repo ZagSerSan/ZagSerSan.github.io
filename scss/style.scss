@@ -279,24 +279,73 @@
       }
    }
 }
+
 //todo -blog
 .blog {
    &__inner {
+      text-align: center;
       padding: 100px 0;
+      a {display:block;margin: 0 0 0 auto;}
    }
-   &__title {}
-   &__subtitle {}
-   &__content {}
-   &__link {}
+   &__title {
+      @include fontFWSCL('Montserrat',700,45px,#2b2a2c,.8);
+      text-transform: uppercase;
+      margin-bottom: 17px;
+   }
+   &__subtitle {
+      @include fontFWSCL('Montserrat',300,18px,#717072,.8);
+      margin-bottom: 20px;
+   }
+   &__content {
+      display: flex;
+      justify-content: center;
+      margin: 0 -15px;
+   }
+   &__link {
+      text-align: right;
+      a {
+         text-decoration: underline;
+         &:hover {text-decoration: none;}
+      }
+   }
 }
 .blog-item {
-   &__img {}
-   &__title {}
-   &__subtitle {}
-   &__text {}
-   &__btn {}
+   width: 30%;
+   margin: 35px 15px;
+   overflow: hidden;
+   text-align: left;
+   &__img {
+      position: relative;
+      margin-bottom: 23px;
+      img {display: block; width: 100%;}
+   }
+   &__date {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-color: #2b2a2c;
+      padding: 19px;
+      @include fontFWSCL('Montserrat',700,16px,#fff,1);
+      text-align: center;
+   }
+   &__title {
+      @include fontFWSCL('Montserrat',700,18px,#2b2a2c,.8);
+      text-transform: uppercase;
+      margin-bottom: 13px;
+   }
+   &__subtitle {
+      @include fontFWSCL('Montserrat',400,12px,#2b2a2c,.8);
+      text-transform: uppercase;
+      margin-bottom: 27px;
+   }
+   &__text {
+      @include fontFWSCL('Montserrat',300,12px,#717072,2);
+      margin-bottom: 37px;
+   }
 }
 
+//todo -footer
 
 
 //* <АДАПТИВ>====================================================================================================

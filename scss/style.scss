@@ -279,6 +279,23 @@
       }
    }
 }
+//todo -blog
+.blog {
+   &__inner {
+      padding: 100px 0;
+   }
+   &__title {}
+   &__subtitle {}
+   &__content {}
+   &__link {}
+}
+.blog-item {
+   &__img {}
+   &__title {}
+   &__subtitle {}
+   &__text {}
+   &__btn {}
+}
 
 
 

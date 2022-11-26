@@ -480,3 +480,7 @@ a:hover {
   height: 15px;
   margin-right: 2px;
 }
+
+.blog__inner {
+  padding: 100px 0;
+}

@@ -65,7 +65,7 @@ a:hover {
   color: #6a696b;
 }
 
-.header-nav__link {
+.nav__link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -74,10 +74,10 @@ a:hover {
   margin-left: 40px;
   position: relative;
 }
-.header-nav__link:first-child {
+.nav__link:first-child {
   margin-left: 0;
 }
-.header-nav__link:not(:last-child):before {
+.nav__link:not(:last-child):before {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -87,10 +87,10 @@ a:hover {
   background-color: #2b2a2c;
   transition: width 0.2s linear;
 }
-.header-nav__link:hover {
+.nav__link:hover {
   text-decoration: none;
 }
-.header-nav__link:hover:before {
+.nav__link:hover:before {
   width: 100%;
 }
 
@@ -485,10 +485,6 @@ a:hover {
   text-align: center;
   padding: 100px 0;
 }
-.blog__inner a {
-  display: block;
-  margin: 0 0 0 auto;
-}
 .blog__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -574,4 +570,67 @@ a:hover {
   color: #717072;
   line-height: 2;
   margin-bottom: 37px;
+}
+
+.footer {
+  background-color: #2b2a2c;
+}
+.footer__inner {
+  display: flex;
+  padding: 14px 0;
+}
+.footer__col {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.footer__col:last-child {
+  justify-content: end;
+}
+
+.copyright {
+  padding-right: 14px;
+  margin-right: 17px;
+  border-right: 1px #413f41 solid;
+  color: #8d8d8e;
+}
+
+.social.footer {
+  align-items: center;
+  margin-bottom: 0;
+}
+.social.footer .social__item {
+  margin-right: 0;
+}
+.social.footer .social__item svg {
+  fill: #8d8d8e;
+  transition: fill 0.1s linear;
+}
+.social.footer .social__item.behance, .social.footer .social__item.dribbble, .social.footer .social__item.linkedin, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter {
+  background-color: transparent;
+}
+.social.footer .social__item:hover {
+  bottom: 0;
+  box-shadow: none;
+}
+.social.footer .social__item:hover svg {
+  fill: #fff;
+}
+
+.nav.footer .nav__link {
+  color: #8d8d8e;
+  margin-left: 19px;
+  transition: color 0.1s linear;
+}
+.nav.footer .nav__link:hover {
+  color: #fff;
+}
+.nav.footer .nav__link.btn-black {
+  background-color: #2b2a2c;
+  border-color: #8d8d8e;
+  transition: background-color 0.1s linear;
+}
+.nav.footer .nav__link.btn-black:hover {
+  background-color: #3a393b;
+  color: #fff;
 }

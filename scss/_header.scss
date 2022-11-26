@@ -19,7 +19,7 @@
 	}
 	&__prof {@include fontFWSC('Montserrat',400,12px,#6a696b);}
 }
-.header-nav {
+.nav {
 	&__link {
 		@include fontFWSC('Montserrat',700,14px,#2b2a2c);
 		text-transform: uppercase;

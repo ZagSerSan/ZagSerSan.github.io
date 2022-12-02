@@ -114,11 +114,15 @@ var modal_hireme = document.getElementById('modal_hireme');
 btn_hireme.addEventListener('click', (e) => {
    modal_hireme_bg.classList.add('show');
    setTimeout(function(){
+      modal_hireme_bg.style.background='rgba(0, 0, 0, 0.6)';
+   }, 10);
+   setTimeout(function(){
       modal_hireme.style.transform="scale(1)";
    }, 10);
 });
 btn_hireme_close.addEventListener('click', (e) => {
    modal_hireme.style.transform="scale(0)";
+   modal_hireme_bg.style.background='none';
    setTimeout(function(){
       modal_hireme_bg.classList.remove('show');
    }, 300);

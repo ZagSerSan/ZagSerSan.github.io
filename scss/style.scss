@@ -417,10 +417,11 @@
    display: none;
    justify-content: center;
    align-items: center;
+   transition: background-color .3s linear;
 
    &.show {
       display: flex;
-      background-color: rgba(0, 0, 0, 0.6);
+      // background-color: rgba(0, 0, 0, 0.6);
    }
 }
 .modal-hireme {

@@ -645,10 +645,10 @@ a:hover {
   display: none;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s linear;
 }
 .modal-bg.show {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-hireme {

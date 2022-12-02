@@ -404,7 +404,117 @@
    }
 }
 
-//todo -modal windows -------------------
+//todo -modal 'hire me' -------------------
+.modal-bg {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   
+   width: 100%;
+   height: 100%;
+
+   display: none;
+   justify-content: center;
+   align-items: center;
+
+   background-color: rgba(0, 0, 0, 0.6);
+   // transform: scale(0);
+   // transition: transform .3s linear;
+   &.show {display: flex;}
+}
+.modal-hireme {
+   position: relative;
+
+   display: flex;
+   background-color: #fff;
+   padding: 30px;
+   width: 100%;
+   max-width: 900px;
+
+   &__btn-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 3;
+
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      transition: transform .1s linear;
+      svg {width: 100%;height: 100%;}
+      &:hover {
+         transform: rotateZ(90deg);
+      }
+   }
+   &__col {
+      min-width: 40%;
+      &:last-child {
+         width: 60%;
+         display: flex;
+         justify-content: end;
+         align-items: center;
+      }
+      img {
+         display: block;
+         width: 90%;
+         height: 90%;
+      }
+   }
+   &__title {
+      @include fontFWSCL('Montserrat',700,45px,#2b2a2c,.8);
+      text-transform: uppercase;
+      margin-bottom: 15px;
+   }
+   &__subtitle {
+      @include fontFWSCL('Montserrat',400,16px,#2b2a2c,.8);
+      text-transform: uppercase;
+   }
+   &__contacts {
+      margin: 35px 0 45px;
+   }
+   &__contacts-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      svg {
+         width: 20px;
+         height: 20px;
+         margin-right: 10px;
+      }
+      a {
+         @include fontFWSC('Montserrat',300,14px,#2b2a2c);
+      }
+   }
+}
+.form {
+   &__title {
+      @include fontFWSC('Montserrat',700,14px,#2b2a2c);
+      margin-bottom: 10px;
+   }
+   input,textarea {
+      @include fontFWSC('Montserrat',300,14px,#2b2a2c);
+      width: 100%;
+      border: 1px solid rgba(112,112,112,0.3);
+      border-radius: 30px;
+      padding: 20px;
+      margin-bottom: 30px;
+   }
+   textarea {
+      resize: none;
+      height: 200px;
+   }
+   .align-right {text-align: right;}
+   button {
+      @include fontFWSC('Montserrat',400,16px,#2b2a2c);
+      padding: 18px 55px;
+      border: 1px solid #6a696b;;
+   }
+}
 
 
 //* <АДАПТИВ>====================================================================================================

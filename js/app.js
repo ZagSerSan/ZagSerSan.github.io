@@ -107,11 +107,20 @@ btn_int.addEventListener('click', (e) => {
 // modal
 var btn_hireme = document.getElementById('btn_hireme');
 var btn_hireme_close = document.getElementById('btn_hireme_close');
+
+var modal_hireme_bg = document.getElementById('modal_hireme_bg');
 var modal_hireme = document.getElementById('modal_hireme');
 
 btn_hireme.addEventListener('click', (e) => {
-   modal_hireme.classList.add('show');
+   modal_hireme_bg.classList.add('show');
+   setTimeout(function(){
+      modal_hireme.style.transform="scale(1)";
+   }, 10);
 });
 btn_hireme_close.addEventListener('click', (e) => {
-   modal_hireme.classList.remove('show');
+   modal_hireme.style.transform="scale(0)";
+   setTimeout(function(){
+      modal_hireme_bg.classList.remove('show');
+   }, 300);
+   
 });

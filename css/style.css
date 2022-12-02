@@ -645,10 +645,10 @@ a:hover {
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 .modal-bg.show {
   display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-hireme {
@@ -658,6 +658,8 @@ a:hover {
   padding: 30px;
   width: 100%;
   max-width: 900px;
+  transform: scale(0);
+  transition: transform 0.3s linear;
 }
 .modal-hireme__btn-close {
   position: absolute;

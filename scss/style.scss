@@ -418,10 +418,10 @@
    justify-content: center;
    align-items: center;
 
-   background-color: rgba(0, 0, 0, 0.6);
-   // transform: scale(0);
-   // transition: transform .3s linear;
-   &.show {display: flex;}
+   &.show {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.6);
+   }
 }
 .modal-hireme {
    position: relative;
@@ -431,7 +431,9 @@
    padding: 30px;
    width: 100%;
    max-width: 900px;
-
+   transform: scale(0);
+   transition: transform .3s linear;
+   
    &__btn-close {
       position: absolute;
       top: 20px;

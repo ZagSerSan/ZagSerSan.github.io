@@ -693,8 +693,7 @@ a:hover {
 }
 .modal-hireme__col img {
   display: block;
-  width: 90%;
-  height: 90%;
+  height: 100%;
 }
 .modal-hireme__title {
   font-family: "Montserrat", sans-serif;

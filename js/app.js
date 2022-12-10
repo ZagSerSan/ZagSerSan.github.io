@@ -166,42 +166,32 @@ btn_close.forEach(btn => {
    });
 });
 
-// btns work item
-
 
 // modals
-const arr1 = document.querySelectorAll(".portfolio-item[data-modal]");
-const arrSub = document.querySelectorAll(".portfolio-item[data-submodal]");
+const allWorkItems = document.querySelectorAll("[data-modal]");
+const allModalWokr_btnClose = document.querySelectorAll('#btn_work_close');
+const allModals_bg = document.querySelectorAll('.modal-bg');
+const allModals_inner = document.querySelectorAll('.modal-work');
 
-const btn_work_close = document.querySelectorAll('#btn_work_close');
-
-arr1.forEach(item => {
+allWorkItems.forEach(item => {
    item.addEventListener('click', ()=> {
-      var el1 = document.getElementById(item.getAttribute('data-modal'));
-      var el2 = document.getElementById(item.getAttribute('data-submodal'));
-      el1.classList.add('show')
+      var modal_bg = document.getElementById(item.getAttribute('data-modal'));
+      var modal_inner = document.getElementById(item.getAttribute('data-submodal'));
+      modal_bg.classList.add('show')
       setTimeout(() => {
-         el2.classList.add('show')
+         modal_inner.classList.add('show')
       }, 10);
    });
 });
 
-const arr_allModals_bg = document.querySelectorAll('.modal-bg');
-const arr_allModals_inner = document.querySelectorAll('.modal-work');
-
-// console.log(arr_allModals_bg);
-console.log(arr_allModals_inner);
-
-btn_work_close.forEach(btn => {
-   
+allModalWokr_btnClose.forEach(btn => {
    btn.addEventListener('click', ()=> {
-      
-      arr_allModals_inner.forEach(item2 => {
-         item2.classList.remove('show');
+      allModals_inner.forEach(item => {
+         item.classList.remove('show');
       });
-      arr_allModals_bg.forEach(item1 => {
+      allModals_bg.forEach(item => {
          setTimeout(() => {
-            item1.classList.remove('show');
+            item.classList.remove('show');
          }, 300);
       });
    });

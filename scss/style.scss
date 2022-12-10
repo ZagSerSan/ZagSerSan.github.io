@@ -668,6 +668,110 @@
 }
 
 //todo -modal 'work' -------------------
+.modal-bg {
+}
+.modal-work {  
+   position: relative;
+   width: 100%;
+   max-width: 1200px;
+   min-height: 620px;
+
+   display: flex;
+   flex-wrap: wrap;
+
+   background-color: #fff;
+		&__preview {width: 65%;}
+		&__content {
+         position: relative;
+         width: 35%;
+         padding: 46px 92px 14px 25px;
+      }
+		&__projectname {
+         @include fontFWSC('Montserrat',700,32px,#2b2a2c);
+         text-transform: uppercase;
+         margin-bottom: 7px;
+      }
+		&__category {
+         @include fontFWSC('Montserrat',400,18px,#6a696b);
+         margin-bottom: 33px;
+         span {margin: 0 15px;}
+      }
+		&__client {
+         @include fontFWSC('Montserrat',700,16px,#2b2a2c);
+         span {
+            @include fontFWSC('Montserrat',300,14px,#6a696b);
+            font-style: italic; 
+         }
+         margin-bottom: 33px;           
+      }
+		&__text {
+         @include fontFWSCL('Montserrat',300,12px,#6a696b,2);
+         margin-bottom: 15px;
+      }
+		&__btnbox {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         z-index: 2;
+
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         padding: 15px 27px;
+         &-prew {
+            position: relative;
+            padding-left: 5px;
+            button {
+               @include fontFWSC('Montserrat',400,14px,#2b2a2c);
+               text-transform: uppercase;
+               background-color: transparent;
+               border: none;
+               cursor: pointer;
+               &:before {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  z-index: 2;
+                  transform: translateY(-50%) rotateZ(-45deg);
+
+                  width: 8px;
+                  height: 8px;
+                  border-top: 2px #b1b1b1 solid ;
+                  border-left: 2px #b1b1b1 solid ;
+               }
+            }
+         }
+         &-next {
+            position: relative;
+            padding-right: 5px;
+            cursor: pointer;
+            button {
+               @include fontFWSC('Montserrat',400,14px,#2b2a2c);
+               text-transform: uppercase;
+               background-color: transparent;
+               border: none;
+               cursor: pointer;
+               &:before {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  z-index: 2;
+                  transform: translateY(-50%) rotateZ(45deg);
+
+                  width: 8px;
+                  height: 8px;
+                  border-top: 2px #b1b1b1 solid ;
+                  border-right: 2px #b1b1b1 solid ;
+               }
+            }
+         }
+      }
+}
+.modal-hireme {
+   &__btn-close {}
+}
 
 
 //* <АДАПТИВ>====================================================================================================

@@ -974,3 +974,124 @@ a:hover {
 .education-skills-item__level[data-skill="3"] {
   background: linear-gradient(90deg, #6a696b 80%, #efefef 80%);
 }
+
+.modal-work {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 620px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.modal-work__preview {
+  width: 65%;
+}
+.modal-work__content {
+  position: relative;
+  width: 35%;
+  padding: 46px 92px 14px 25px;
+}
+.modal-work__projectname {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.modal-work__category {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #6a696b;
+  margin-bottom: 33px;
+}
+.modal-work__category span {
+  margin: 0 15px;
+}
+.modal-work__client {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #2b2a2c;
+  margin-bottom: 33px;
+}
+.modal-work__client span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #6a696b;
+  font-style: italic;
+}
+.modal-work__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #6a696b;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+.modal-work__btnbox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 27px;
+}
+.modal-work__btnbox-prew {
+  position: relative;
+  padding-left: 5px;
+}
+.modal-work__btnbox-prew button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.modal-work__btnbox-prew button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  transform: translateY(-50%) rotateZ(-45deg);
+  width: 8px;
+  height: 8px;
+  border-top: 2px #b1b1b1 solid;
+  border-left: 2px #b1b1b1 solid;
+}
+.modal-work__btnbox-next {
+  position: relative;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.modal-work__btnbox-next button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.modal-work__btnbox-next button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 2;
+  transform: translateY(-50%) rotateZ(45deg);
+  width: 8px;
+  height: 8px;
+  border-top: 2px #b1b1b1 solid;
+  border-right: 2px #b1b1b1 solid;
+}

@@ -165,3 +165,19 @@ btn_close.forEach(btn => {
       }, 300);
    });
 });
+
+// btns work item
+var btn_modalwork_1 = document.geta('btn_modal-work_1');
+
+// modals
+var modal_bg_1 = document.getElementById('modal_bg_1');
+var modal_wokr_1 = document.getElementById('modal_work_1');
+
+btn_modalwork_1.addEventListener('click', ()=>{
+   setTimeout(() => {
+      modal_bg_1.classList.add('show');
+   }, 10);
+   setTimeout(() => {
+      modal_work_1.classList.add('show');
+   }, 10);
+});

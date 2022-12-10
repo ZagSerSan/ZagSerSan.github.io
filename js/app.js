@@ -148,10 +148,6 @@ btns_resume.forEach(btn => {
    });
 });
 
-
-
-
-
 btn_close.forEach(btn => {
    btn.addEventListener('click', (e) => {
       body.classList.remove('noscroll');

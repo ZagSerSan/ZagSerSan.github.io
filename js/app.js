@@ -105,26 +105,67 @@ btn_int.addEventListener('click', (e) => {
 });
 
 // modal
-var btn_hireme = document.getElementById('btn_hireme');
-var btn_hireme_close = document.getElementById('btn_hireme_close');
+const btns_hireme = document.querySelectorAll('#btn_hireme');
+const btns_resume = document.querySelectorAll('#btn_resume');
+const btn_close = document.querySelectorAll('#btn_modal_close');
 
 var modal_hireme_bg = document.getElementById('modal_hireme_bg');
 var modal_hireme = document.getElementById('modal_hireme');
 
-btn_hireme.addEventListener('click', (e) => {
-   modal_hireme_bg.classList.add('show');
-   setTimeout(function(){
-      modal_hireme_bg.style.background='rgba(0, 0, 0, 0.6)';
-   }, 10);
-   setTimeout(function(){
-      modal_hireme.style.transform="scale(1)";
-   }, 10);
+var modal_resume_bg = document.getElementById('modal_resume_bg');
+var modal_resume = document.getElementById('modal_resume');
+var body = document.querySelector('body');
+
+btns_hireme.forEach(btn => {
+   btn.addEventListener('click', (e) => {
+      
+      modal_resume.style.transform="scale(0)";
+      modal_resume_bg.style.background='none';
+      setTimeout(() => {
+         modal_resume_bg.classList.remove('show');
+      }, 300);
+
+      body.classList.add('noscroll');
+      modal_hireme_bg.classList.add('show');
+      setTimeout(function(){
+         modal_hireme_bg.style.background='rgba(0, 0, 0, 0.6)';
+      }, 10);
+      setTimeout(function(){
+         modal_hireme.style.transform="scale(1)";
+      }, 10);
+   });
 });
-btn_hireme_close.addEventListener('click', (e) => {
-   modal_hireme.style.transform="scale(0)";
-   modal_hireme_bg.style.background='none';
-   setTimeout(function(){
-      modal_hireme_bg.classList.remove('show');
-   }, 300);
+btns_resume.forEach(btn => {
+   btn.addEventListener('click', () => {
+      body.classList.add('noscroll');
+      modal_resume_bg.classList.add('show');
+      setTimeout(function () {
+         modal_resume_bg.style.background='rgba(0, 0, 0, 0.6)';
+      }, 10);
+      setTimeout(() => {
+         modal_resume.style.transform="scale(1)";
+      }, 10);
+   });
+});
+
+
+
+
+
+btn_close.forEach(btn => {
+   btn.addEventListener('click', (e) => {
+      body.classList.remove('noscroll');
+      modal_hireme.style.transform="scale(0)";
+      modal_hireme_bg.style.background='none';
+      
+      modal_resume.style.transform="scale(0)";
+      modal_resume_bg.style.background='none';
    
+      setTimeout(function(){
+         modal_hireme_bg.classList.remove('show');
+      }, 300);
+      setTimeout(() => {
+         modal_resume_bg.classList.remove('show');
+      }, 300);
+   });
 });

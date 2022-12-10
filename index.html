@@ -8,7 +8,7 @@
    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="noscroll">
 <div class="wrapper">
    <svg style="display: none;">
       <symbol id="behance" viewBox="0 0 32 32">
@@ -332,6 +332,7 @@
    </div><!-- /.container -->
 </div><!-- /.footer -->
 
+<!---------------------------------------------------------------->
 
 <!--todo -modal hireme -->
 <div class="modal-bg" id="modal_hireme_bg">
@@ -370,7 +371,11 @@
 </div><!-- /.modal-bg -->
 
 <!--todo -modal resume -->
-<div style="display: block" class="modal-bg" id="modal__hireme_bg">
+<div class="modal-bg show" id="modal__hireme_bg">
+
+   <!-- <button class="modal-hireme__btn-close" id="btn_hireme_close" type="button">
+      <svg><use href="#close"></use></svg>
+   </button> -->
 
    <div class="modal-resume">
       <h2 class="modal-resume__title">RESUME</h2>
@@ -383,7 +388,7 @@
 
             <h4 class="experiense__title">EXPERIENCE</h4>
             <div class="experiense-item">
-               <div class="experiense-item__year"><time datetime="2017-04-29 19:00">2017</time> - Present</div>
+               <div class="experiense-item__year"><time datetime="2017-04-29 19:00">2017</time> - <b>Present</b></div>
                <div class="experiense-item__workplace">Freelancer</div>
                <div class="experiense-item__prof">Art Director</div>
                <p class="experiense-item__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
@@ -426,15 +431,15 @@
             <div class="education-skills">
                <div class="education-skills-item">
                   <div class="education-skills-item__name">UI/UX Design</div>
-                  <div class="education-skills-item__level">level</div>
+                  <div class="education-skills-item__level" data-skill="1">level</div>
                </div>
                <div class="education-skills-item">
                   <div class="education-skills-item__name">UI/UX Design</div>
-                  <div class="education-skills-item__level">level</div>
+                  <div class="education-skills-item__level" data-skill="2">level</div>
                </div>
                <div class="education-skills-item">
                   <div class="education-skills-item__name">UI/UX Design</div>
-                  <div class="education-skills-item__level">level</div>
+                  <div class="education-skills-item__level" data-skill="3">level</div>
                </div>
             </div><!-- /.education-skills -->
 
@@ -446,14 +451,13 @@
                </div>
                <div class="education-item__prof">UI/UX Design</div>
                <div class="education-item__learnplace">LA University, USA</div>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+               <p class="education-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
             </div>
 
          </div><!-- /.education -->
       </div><!-- /.modal-resume__content -->
       <button class="modal-resume__btn btn-black">Hire me</button>
    </div><!-- /.modal-resume -->
-   <button class=""></button>
 
 </div><!-- /.modal-bg -->
 

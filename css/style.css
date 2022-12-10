@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   color: #6a696b;
+}
+body.noscroll {
+  overflow: hidden;
 }
 
 body {
@@ -642,6 +645,8 @@ a:hover {
   z-index: 1000;
   width: 100%;
   height: 100%;
+  padding: 15px;
+  overflow: scroll;
   display: none;
   justify-content: center;
   align-items: center;
@@ -764,4 +769,169 @@ a:hover {
   color: #2b2a2c;
   padding: 18px 55px;
   border: 1px solid #6a696b;
+}
+
+.modal-bg.show {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-resume {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 75px 15px;
+  background-color: #fff;
+}
+.modal-resume__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  margin-bottom: 54px;
+}
+.modal-resume__btn {
+  font-size: 12px;
+  padding: 12px 20px;
+  min-width: 145px;
+}
+.modal-resume__btn:not(:last-child) {
+  margin-right: 15px;
+}
+.modal-resume__content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 768px;
+  margin: 65px auto;
+}
+
+.experiense {
+  text-align: right;
+  width: 50%;
+  padding-right: 48px;
+  border-right: 1px #000 solid;
+}
+.experiense__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+}
+
+.experiense-item:not(:last-child) {
+  margin-bottom: 39px;
+}
+.experiense-item__year {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2b2b2b;
+  text-decoration: underline;
+  margin-bottom: 12px;
+}
+.experiense-item__workplace {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #2b2b2b;
+  margin-bottom: 3px;
+}
+.experiense-item__prof {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #2b2a2c;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.experiense-item__about {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #2b2a2c;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.education {
+  text-align: left;
+  width: 50%;
+  padding-left: 48px;
+}
+.education__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+}
+
+.education-item {
+  margin-bottom: 39px;
+}
+.education-item__time {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2b2b2b;
+  text-decoration: underline;
+  margin-bottom: 12px;
+}
+.education-item__prof {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #2b2b2b;
+  margin-bottom: 3px;
+}
+.education-item__learnplace {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #2b2a2c;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.education-item__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #2b2a2c;
+  line-height: 1.5;
+}
+
+.education-skills {
+  margin-bottom: 39px;
+}
+
+.education-skills-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.education-skills-item__name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #2b2a2c;
+}
+.education-skills-item__level {
+  margin-left: 18px;
+  font-size: 0;
+  width: 150px;
+  height: 6px;
+}
+.education-skills-item__level[data-skill="1"] {
+  background: linear-gradient(90deg, #6a696b 50%, #efefef 50%);
+}
+.education-skills-item__level[data-skill="2"] {
+  background: linear-gradient(90deg, #6a696b 90%, #efefef 90%);
+}
+.education-skills-item__level[data-skill="3"] {
+  background: linear-gradient(90deg, #6a696b 80%, #efefef 80%);
 }

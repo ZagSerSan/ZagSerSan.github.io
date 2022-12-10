@@ -167,17 +167,42 @@ btn_close.forEach(btn => {
 });
 
 // btns work item
-var btn_modalwork_1 = document.geta('btn_modal-work_1');
+
 
 // modals
-var modal_bg_1 = document.getElementById('modal_bg_1');
-var modal_wokr_1 = document.getElementById('modal_work_1');
+const arr1 = document.querySelectorAll(".portfolio-item[data-modal]");
+const arrSub = document.querySelectorAll(".portfolio-item[data-submodal]");
 
-btn_modalwork_1.addEventListener('click', ()=>{
-   setTimeout(() => {
-      modal_bg_1.classList.add('show');
-   }, 10);
-   setTimeout(() => {
-      modal_work_1.classList.add('show');
-   }, 10);
+const btn_work_close = document.querySelectorAll('#btn_work_close');
+
+arr1.forEach(item => {
+   item.addEventListener('click', ()=> {
+      var el1 = document.getElementById(item.getAttribute('data-modal'));
+      var el2 = document.getElementById(item.getAttribute('data-submodal'));
+      el1.classList.add('show')
+      setTimeout(() => {
+         el2.classList.add('show')
+      }, 10);
+   });
+});
+
+const arr_allModals_bg = document.querySelectorAll('.modal-bg');
+const arr_allModals_inner = document.querySelectorAll('.modal-work');
+
+// console.log(arr_allModals_bg);
+console.log(arr_allModals_inner);
+
+btn_work_close.forEach(btn => {
+   
+   btn.addEventListener('click', ()=> {
+      
+      arr_allModals_inner.forEach(item2 => {
+         item2.classList.remove('show');
+      });
+      arr_allModals_bg.forEach(item1 => {
+         setTimeout(() => {
+            item1.classList.remove('show');
+         }, 300);
+      });
+   });
 });

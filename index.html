@@ -122,14 +122,14 @@
 <div class="work">
    <div class="container">
       <div class="filter">
-         <a href="#" data-filter id="btn_all" class="filter__link">All</a>
+         <a href="#" data-filter id="btn_all" class="filter__link active">All</a>
          <a href="#" data-filter id="btn_app" class="filter__link">App</a>
-         <a href="#" data-filter id="btn_website" class="filter__link active">Website</a>
+         <a href="#" data-filter id="btn_website" class="filter__link">Website</a>
          <a href="#" data-filter id="btn_int" class="filter__link">Interaction</a>
       </div>
       <div class="portfolio">
          <!-- App category -->
-         <div class="portfolio-item hide" id="app" data-modal="btn_modalwork_1">
+         <div class="portfolio-item" id="app" data-modal="modal_1" data-submodal="submodal_1">
             <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -137,7 +137,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item hide" id="app">
+         <div class="portfolio-item" id="app" data-modal="modal_2" data-submodal="submodal_2">
             <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -145,7 +145,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item hide" id="app">
+         <div class="portfolio-item" id="app" data-modal="modal_3" data-submodal="submodal_3">
             <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -154,7 +154,7 @@
             </div>
          </div>
          <!-- Website category -->
-         <div class="portfolio-item" id="website">
+         <div class="portfolio-item" id="website" data-modal="modal_4" data-submodal="submodal_4">
             <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Website</div>
             <div class="portfolio-item__title">
@@ -162,7 +162,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item" id="website">
+         <div class="portfolio-item" id="website" data-modal="modal_5" data-submodal="submodal_5">
             <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Website</div>
             <div class="portfolio-item__title">
@@ -170,7 +170,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item" id="website">
+         <div class="portfolio-item" id="website" data-modal="modal_6" data-submodal="submodal_6">
             <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Website</div>
             <div class="portfolio-item__title">
@@ -179,7 +179,7 @@
             </div>
          </div>
          <!-- Interactive category -->
-         <div class="portfolio-item hide" id="int">
+         <div class="portfolio-item" id="int" data-modal="modal_7" data-submodal="submodal_7">
             <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -187,7 +187,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item hide" id="int">
+         <div class="portfolio-item" id="int" data-modal="modal_8" data-submodal="submodal_8">
             <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -195,7 +195,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item hide" id="int">
+         <div class="portfolio-item" id="int" data-modal="modal_9" data-submodal="submodal_9">
             <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -465,17 +465,17 @@
 </div><!-- /.modal-bg -->
 
 <!--todo -modal work -->
-<div class="modal-bg" id="modal_bg_1">
-   <div class="modal-work" id="modal_work_1">
+<div class="modal-bg" id="modal_1">
+   <div class="modal-work" id="submodal_1">
       
-      <button class="modal-hireme__btn-close" id="btn_modal_close" type="button">
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
          <svg><use href="#close"></use></svg>
       </button>
 
       <div class="modal-work__preview">img</div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 1</h3>
-         <h4 class="modal-work__category">CATEGORY <span>|</span> 2018</h4>
+         <h4 class="modal-work__category">CATEGORY: APP <span>|</span> 2018</h4>
          <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
@@ -491,17 +491,17 @@
    </div><!-- /modal-work -->
 </div><!-- /.modal_work_bg -->
 
-<div class="modal-bg" id="modal_bg_work-2">
-   <div class="modal-work">
+<div class="modal-bg" id="modal_2">
+   <div class="modal-work" id="submodal_2">
       
-      <button class="modal-hireme__btn-close" id="btn_modal_close" type="button">
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
          <svg><use href="#close"></use></svg>
       </button>
 
       <div class="modal-work__preview">img</div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 2</h3>
-         <h4 class="modal-work__category">CATEGORY <span>|</span> 2018</h4>
+         <h4 class="modal-work__category">CATEGORY: APP <span>|</span> 2018</h4>
          <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
@@ -517,6 +517,187 @@
    </div><!-- /modal-work -->
 </div><!-- /.modal_work_bg -->
 
+<div class="modal-bg" id="modal_3">
+   <div class="modal-work" id="submodal_3">
+      
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">img</div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">PROJECT TITLE 3</h3>
+         <h4 class="modal-work__category">CATEGORY: APP <span>|</span> 2018</h4>
+         <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prew">
+               <button class="modal-work__btn">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+</div><!-- /.modal_work_bg -->
+
+<div class="modal-bg" id="modal_4">
+   <div class="modal-work" id="submodal_4">
+      
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">img</div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">PROJECT TITLE 4</h3>
+         <h4 class="modal-work__category">CATEGORY: website <span>|</span> 2018</h4>
+         <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prew">
+               <button class="modal-work__btn">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+</div><!-- /.modal_work_bg -->
+
+<div class="modal-bg" id="modal_5">
+   <div class="modal-work" id="submodal_5">
+      
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">img</div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">PROJECT TITLE 5</h3>
+         <h4 class="modal-work__category">CATEGORY: website <span>|</span> 2018</h4>
+         <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prew">
+               <button class="modal-work__btn">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+</div><!-- /.modal_work_bg -->
+
+<div class="modal-bg" id="modal_6">
+   <div class="modal-work" id="submodal_6">
+      
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">img</div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">PROJECT TITLE 6</h3>
+         <h4 class="modal-work__category">CATEGORY: website <span>|</span> 2018</h4>
+         <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prew">
+               <button class="modal-work__btn">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+</div><!-- /.modal_work_bg -->
+
+<div class="modal-bg" id="modal_7">
+   <div class="modal-work" id="submodal_7">
+      
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">img</div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">PROJECT TITLE 7</h3>
+         <h4 class="modal-work__category">CATEGORY: interaction <span>|</span> 2018</h4>
+         <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prew">
+               <button class="modal-work__btn">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+</div><!-- /.modal_work_bg -->
+
+<div class="modal-bg" id="modal_8">
+   <div class="modal-work" id="submodal_8">
+      
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">img</div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">PROJECT TITLE 8</h3>
+         <h4 class="modal-work__category">CATEGORY: interaction <span>|</span> 2018</h4>
+         <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prew">
+               <button class="modal-work__btn">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+</div><!-- /.modal_work_bg -->
+
+<div class="modal-bg" id="modal_9">
+   <div class="modal-work" id="submodal_9">
+      
+      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">img</div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">PROJECT TITLE 9</h3>
+         <h4 class="modal-work__category">CATEGORY: interaction <span>|</span> 2018</h4>
+         <div class="modal-work__client">Client:<br><span>Creative Agency</span></div>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prew">
+               <button class="modal-work__btn">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+</div><!-- /.modal_work_bg -->
 
 <!-- -Empty space -->
    <!-- <div class="empty-space">

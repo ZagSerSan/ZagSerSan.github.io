@@ -983,6 +983,11 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   background-color: #fff;
+  transform: scale(0);
+  transition: transform 0.3s linear;
+}
+.modal-work.show {
+  transform: scale(1);
 }
 .modal-work__preview {
   width: 65%;
@@ -1006,6 +1011,7 @@ a:hover {
   font-size: 18px;
   color: #6a696b;
   margin-bottom: 33px;
+  text-transform: uppercase;
 }
 .modal-work__category span {
   margin: 0 15px;

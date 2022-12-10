@@ -680,6 +680,10 @@
    flex-wrap: wrap;
 
    background-color: #fff;
+   transform: scale(0);
+   transition: transform .3s linear;
+
+   &.show {transform: scale(1);}
 		&__preview {width: 65%;}
 		&__content {
          position: relative;
@@ -694,6 +698,7 @@
 		&__category {
          @include fontFWSC('Montserrat',400,18px,#6a696b);
          margin-bottom: 33px;
+         text-transform: uppercase;
          span {margin: 0 15px;}
       }
 		&__client {

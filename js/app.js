@@ -224,20 +224,29 @@ btns_prev.forEach(item => {
       let prev_submodal = document.getElementById(item.getAttribute('data-subprev'));
 
       // текущее открытое модальное окно
-      openNow_sub.classList.remove('show');
+      openNow_sub.style.opacity="0";
+      openNow_sub.classList.add('trX_right');
       setTimeout(() => {
+         openNow_sub.classList.remove('show');
          openNow.classList.remove('bg');
       }, 10);
       setTimeout(() => {
+         //обнкление стилей js
+         openNow_sub.style.opacity="1";
          openNow.classList.remove('show');
+         openNow_sub.classList.remove('trX_right');
       }, 300);
 
       // предыдущее модальное окно
+      prev_submodal.style.opacity="0";
+      prev_submodal.classList.add('trX_left');
       prev_modal.classList.add('show');
       setTimeout(() => {
          prev_modal.classList.add('bg');
       }, 10);
       setTimeout(() => {
+         prev_submodal.style.opacity="1";
+         prev_submodal.classList.remove('trX_left');
          prev_submodal.classList.add('show');
       }, 10);
    });
@@ -251,7 +260,15 @@ btns_next.forEach(item => {
       let next_submodal = document.getElementById(item.getAttribute('data-subnext'));
 
       // текущее открытое модальное окно
+         // стилизация анимации
+      openNow_sub.style.opacity="0";
       openNow_sub.classList.remove('show');
+      openNow_sub.classList.add('trX_left');
+
+      setTimeout(() => {
+         openNow_sub.style.opacity="1";
+         openNow_sub.classList.remove('trX_left');
+      }, 300);
       setTimeout(() => {
          openNow.classList.remove('bg');
       }, 10);
@@ -261,11 +278,17 @@ btns_next.forEach(item => {
 
       // следующее модальное окно
       next_modal.classList.add('show');
+      //обнуляющие стили перед появлением окна
+      next_submodal.style.opacity="0";
+      next_submodal.classList.add('trX_right');
+
       setTimeout(() => {
          next_modal.classList.add('bg');
       }, 10);
       setTimeout(() => {
          next_submodal.classList.add('show');
+         next_submodal.style.opacity="1";
+         next_submodal.classList.remove('trX_right');
       }, 10);
    });
 });

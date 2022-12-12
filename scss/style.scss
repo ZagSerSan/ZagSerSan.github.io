@@ -667,8 +667,7 @@
 
 //todo -modal 'work' -------------------
 .modal-bg {
-   // transition: background-color .3s linear;
-   // &.show {background: rgba(0, 0, 0, 0.6);}
+   overflow: hidden;
    &.bg {background: rgba(0, 0, 0, 0.6);}
 }
 .modal-work {  
@@ -682,8 +681,10 @@
 
    background-color: #fff;
    transform: scale(0);
-   transition: transform .3s linear;
+   transition: transform .3s linear, opacity .3s linear;
 
+   &.trX_left {transform: scale(.4) translateX(-50%);}
+   &.trX_right {transform: scale(.4) translateX(50%);}
    &.show {transform: scale(1);}
 		&__preview {width: 65%;}
 		&__content {
@@ -775,10 +776,6 @@
          }
       }
 }
-.modal-hireme {
-   &__btn-close {}
-}
-
 
 //* <АДАПТИВ>====================================================================================================
 //? Point 1 ----------------------------------

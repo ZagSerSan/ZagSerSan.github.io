@@ -166,7 +166,6 @@ btn_close.forEach(btn => {
    });
 });
 
-
 // modals
 const allWorkItems = document.querySelectorAll("[data-modal]");
 const allModalWokr_btnClose = document.querySelectorAll('#btn_work_close');
@@ -196,3 +195,5 @@ allModalWokr_btnClose.forEach(btn => {
       });
    });
 });
+
+// smart switch between work items

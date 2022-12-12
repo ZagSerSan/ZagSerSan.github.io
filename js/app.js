@@ -1,18 +1,16 @@
-// filter
+//? ============ FILTER =============================================
+// все ссылки фильтра
 var allLinks = document.querySelectorAll('a[data-filter]');
-
 // btns
 var btn_all = document.getElementById('btn_all');
 var btn_app = document.getElementById('btn_app');
 var btn_website = document.getElementById('btn_website');
 var btn_int = document.getElementById('btn_int');
 var btn_loadMoreWorks = document.getElementById('loadmoreworks');
-
 // проекты с фильтрами
 const app_projects = document.querySelectorAll('#app');
 const website_projects = document.querySelectorAll('#website');
 const int_projects = document.querySelectorAll('#int');
-
 // отслеживание нажатия
 btn_loadMoreWorks.addEventListener('click', (e) => {
    e.preventDefault();
@@ -32,6 +30,7 @@ btn_loadMoreWorks.addEventListener('click', (e) => {
    });
 });
 
+//* ===== BTN FUNCTIONS =====
 btn_all.addEventListener('click', (e) => {
    e.preventDefault();
    btn_all.classList.add('active');
@@ -49,7 +48,6 @@ btn_all.addEventListener('click', (e) => {
       item.classList.remove('hide');
    });
 });
-
 btn_app.addEventListener('click', (e) => {
    e.preventDefault();
    btn_app.classList.add('active');
@@ -67,7 +65,6 @@ btn_app.addEventListener('click', (e) => {
       item.classList.add('hide');
    });
 });
-
 btn_website.addEventListener('click', (e) => {
    e.preventDefault();
    btn_website.classList.add('active');
@@ -85,7 +82,6 @@ btn_website.addEventListener('click', (e) => {
       item.classList.add('hide');
    });
 });
-
 btn_int.addEventListener('click', (e) => {
    e.preventDefault();
    btn_int.classList.add('active');
@@ -104,7 +100,9 @@ btn_int.addEventListener('click', (e) => {
    });
 });
 
-// modal
+//? ============ MODAL =============================================
+//* ===== HIREME and RESUME and BTN_CLOSE =====
+
 const btns_hireme = document.querySelectorAll('#btn_hireme');
 const btns_resume = document.querySelectorAll('#btn_resume');
 const btn_close = document.querySelectorAll('#btn_modal_close');
@@ -118,13 +116,11 @@ var body = document.querySelector('body');
 
 btns_hireme.forEach(btn => {
    btn.addEventListener('click', (e) => {
-      
       modal_resume.style.transform="scale(0)";
       modal_resume_bg.style.background='none';
       setTimeout(() => {
          modal_resume_bg.classList.remove('show');
       }, 300);
-
       body.classList.add('noscroll');
       modal_hireme_bg.classList.add('show');
       setTimeout(function(){
@@ -147,16 +143,13 @@ btns_resume.forEach(btn => {
       }, 10);
    });
 });
-
 btn_close.forEach(btn => {
    btn.addEventListener('click', (e) => {
       body.classList.remove('noscroll');
       modal_hireme.style.transform="scale(0)";
       modal_hireme_bg.style.background='none';
-      
       modal_resume.style.transform="scale(0)";
       modal_resume_bg.style.background='none';
-   
       setTimeout(function(){
          modal_hireme_bg.classList.remove('show');
       }, 300);
@@ -166,7 +159,7 @@ btn_close.forEach(btn => {
    });
 });
 
-// modals
+//* ===== WORK ITEMS and MODAL ======================================
 const allWorkItems = document.querySelectorAll("[data-modal]");
 const allModalWokr_btnClose = document.querySelectorAll('#btn_work_close');
 const allModals_bg = document.querySelectorAll('.modal-bg');
@@ -178,11 +171,13 @@ allWorkItems.forEach(item => {
       var modal_inner = document.getElementById(item.getAttribute('data-submodal'));
       modal_bg.classList.add('show')
       setTimeout(() => {
+         modal_bg.classList.add('bg');
+      }, 10);
+      setTimeout(() => {
          modal_inner.classList.add('show')
       }, 10);
    });
 });
-
 allModalWokr_btnClose.forEach(btn => {
    btn.addEventListener('click', ()=> {
       allModals_inner.forEach(item => {
@@ -190,10 +185,87 @@ allModalWokr_btnClose.forEach(btn => {
       });
       allModals_bg.forEach(item => {
          setTimeout(() => {
+            item.classList.remove('bg');
+         }, 10);
+         setTimeout(() => {
             item.classList.remove('show');
          }, 300);
       });
    });
 });
 
-// smart switch between work items
+//* ===== smart switch between work items =====
+// // filter status: if selected filter 
+// let status_all = true;
+// let status_app = false;
+// let status_website = false;
+// let status_int = false;
+
+// // modal status: if open/close window
+// let status_m1 = false;
+// let status_m2 = false;
+// let status_m3 = false;
+// let status_m4 = false;
+// let status_m5 = false;
+// let status_m6 = false;
+// let status_m7 = false;
+// let status_m8 = false;
+// let status_m9 = false;
+
+// get "next" and "prev" buttons
+const btns_prev = document.querySelectorAll('#btn_prev');
+const btns_next = document.querySelectorAll('#btn_next');
+
+btns_prev.forEach(item => {
+   item.addEventListener('click', () => {
+      let openNow = document.getElementById(item.getAttribute('data-openmodal'));
+      let openNow_sub = document.getElementById(item.getAttribute('data-opensubmodal'));
+      let prev_modal = document.getElementById(item.getAttribute('data-prev'));
+      let prev_submodal = document.getElementById(item.getAttribute('data-subprev'));
+
+      // текущее открытое модальное окно
+      openNow_sub.classList.remove('show');
+      setTimeout(() => {
+         openNow.classList.remove('bg');
+      }, 10);
+      setTimeout(() => {
+         openNow.classList.remove('show');
+      }, 300);
+
+      // предыдущее модальное окно
+      prev_modal.classList.add('show');
+      setTimeout(() => {
+         prev_modal.classList.add('bg');
+      }, 10);
+      setTimeout(() => {
+         prev_submodal.classList.add('show');
+      }, 10);
+   });
+});
+
+btns_next.forEach(item => {
+   item.addEventListener('click', () => {
+      let openNow = document.getElementById(item.getAttribute('data-openmodal'));
+      let openNow_sub = document.getElementById(item.getAttribute('data-opensubmodal'));
+      let next_modal = document.getElementById(item.getAttribute('data-next'));
+      let next_submodal = document.getElementById(item.getAttribute('data-subnext'));
+
+      // текущее открытое модальное окно
+      openNow_sub.classList.remove('show');
+      setTimeout(() => {
+         openNow.classList.remove('bg');
+      }, 10);
+      setTimeout(() => {
+         openNow.classList.remove('show');
+      }, 300);
+
+      // следующее модальное окно
+      next_modal.classList.add('show');
+      setTimeout(() => {
+         next_modal.classList.add('bg');
+      }, 10);
+      setTimeout(() => {
+         next_submodal.classList.add('show');
+      }, 10);
+   });
+});

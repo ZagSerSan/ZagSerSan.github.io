@@ -122,14 +122,14 @@
 <div class="work">
    <div class="container">
       <div class="filter">
-         <a href="#" data-filter id="btn_all" class="filter__link">All</a>
+         <a href="#" data-filter id="btn_all" class="filter__link active">All</a>
          <a href="#" data-filter id="btn_app" class="filter__link">App</a>
-         <a href="#" data-filter id="btn_website" class="filter__link active">Website</a>
+         <a href="#" data-filter id="btn_website" class="filter__link">Website</a>
          <a href="#" data-filter id="btn_int" class="filter__link">Interaction</a>
       </div>
       <div class="portfolio">
          <!-- App category -->
-         <div class="portfolio-item hide" id="app" data-modal="modal_1" data-submodal="submodal_1">
+         <div class="portfolio-item" id="app" data-modal="modal_1" data-submodal="submodal_1">
             <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -137,7 +137,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item hide" id="app" data-modal="modal_2" data-submodal="submodal_2">
+         <div class="portfolio-item" id="app" data-modal="modal_2" data-submodal="submodal_2">
             <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -145,7 +145,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item hide" id="app" data-modal="modal_3" data-submodal="submodal_3">
+         <div class="portfolio-item" id="app" data-modal="modal_3" data-submodal="submodal_3">
             <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
@@ -179,7 +179,7 @@
             </div>
          </div>
          <!-- Interactive category -->
-         <div class="portfolio-item hide" id="int" data-modal="modal_7" data-submodal="submodal_7">
+         <div class="portfolio-item" id="int" data-modal="modal_7" data-submodal="submodal_7">
             <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -187,7 +187,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item hide" id="int" data-modal="modal_8" data-submodal="submodal_8">
+         <div class="portfolio-item" id="int" data-modal="modal_8" data-submodal="submodal_8">
             <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -195,7 +195,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item hide" id="int" data-modal="modal_9" data-submodal="submodal_9">
+         <div class="portfolio-item" id="int" data-modal="modal_9" data-submodal="submodal_9">
             <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
             <div class="portfolio-item__title">
@@ -482,11 +482,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_1" data-opensubmodal="submodal_1" data-prev="modal_9" data-subprev="submodal_9">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_1" data-opensubmodal="submodal_1" data-next="modal_2" data-subnext="submodal_2">next</button>
             </div>
          </div>
       </div>
@@ -508,11 +508,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_2" data-opensubmodal="submodal_2" data-prev="modal_1" data-subprev="submodal_1">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_2" data-opensubmodal="submodal_2" data-next="modal_3" data-subnext="submodal_3">next</button>
             </div>
          </div>
       </div>
@@ -534,11 +534,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_3" data-opensubmodal="submodal_3" data-prev="modal_2" data-subprev="submodal_2">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_3" data-opensubmodal="submodal_3" data-next="modal_4" data-subnext="submodal_4">next</button>
             </div>
          </div>
       </div>
@@ -560,11 +560,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_4" data-opensubmodal="submodal_4" data-prev="modal_3" data-subprev="submodal_3">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_4" data-opensubmodal="submodal_4" data-next="modal_5" data-subnext="submodal_5">next</button>
             </div>
          </div>
       </div>
@@ -586,11 +586,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_5" data-opensubmodal="submodal_5" data-prev="modal_4" data-subprev="submodal_4">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_5" data-opensubmodal="submodal_5" data-next="modal_6" data-subnext="submodal_6">next</button>
             </div>
          </div>
       </div>
@@ -612,11 +612,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_6" data-opensubmodal="submodal_6" data-prev="modal_5" data-subprev="submodal_5">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_6" data-opensubmodal="submodal_6" data-next="modal_7" data-subnext="submodal_7">next</button>
             </div>
          </div>
       </div>
@@ -638,11 +638,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_7" data-opensubmodal="submodal_7" data-prev="modal_6" data-subprev="submodal_6">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_7" data-opensubmodal="submodal_7" data-next="modal_8" data-subnext="submodal_8">next</button>
             </div>
          </div>
       </div>
@@ -664,11 +664,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_8" data-opensubmodal="submodal_8" data-prev="modal_7" data-subprev="submodal_7">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_8" data-opensubmodal="submodal_8" data-next="modal_9" data-subnext="submodal_9">next</button>
             </div>
          </div>
       </div>
@@ -690,11 +690,11 @@
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
          <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prew">
-               <button class="modal-work__btn">previous</button>
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_9" data-opensubmodal="submodal_9" data-prev="modal_8" data-subprev="submodal_8">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_9" data-opensubmodal="submodal_9" data-next="modal_1" data-subnext="submodal_1">next</button>
             </div>
          </div>
       </div>

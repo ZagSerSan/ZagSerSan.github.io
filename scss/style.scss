@@ -548,8 +548,6 @@
 
 //todo -modal 'resume' -------------------
 .modal-bg {
-   transition: background-color .3s linear;
-   &.show {background: rgba(0, 0, 0, 0.6);}
 }
 .modal-resume {
    position: relative;
@@ -669,6 +667,9 @@
 
 //todo -modal 'work' -------------------
 .modal-bg {
+   // transition: background-color .3s linear;
+   // &.show {background: rgba(0, 0, 0, 0.6);}
+   &.bg {background: rgba(0, 0, 0, 0.6);}
 }
 .modal-work {  
    position: relative;
@@ -723,7 +724,7 @@
          display: flex;
          justify-content: space-between;
          padding: 15px 27px;
-         &-prew {
+         &-prev {
             position: relative;
             padding-left: 5px;
             button {

@@ -800,13 +800,6 @@ a:hover {
   border: 1px solid #6a696b;
 }
 
-.modal-bg {
-  transition: background-color 0.3s linear;
-}
-.modal-bg.show {
-  background: rgba(0, 0, 0, 0.6);
-}
-
 .modal-resume {
   position: relative;
   text-align: center;
@@ -975,6 +968,10 @@ a:hover {
   background: linear-gradient(90deg, #6a696b 80%, #efefef 80%);
 }
 
+.modal-bg.bg {
+  background: rgba(0, 0, 0, 0.6);
+}
+
 .modal-work {
   position: relative;
   width: 100%;
@@ -1048,11 +1045,11 @@ a:hover {
   justify-content: space-between;
   padding: 15px 27px;
 }
-.modal-work__btnbox-prew {
+.modal-work__btnbox-prev {
   position: relative;
   padding-left: 5px;
 }
-.modal-work__btnbox-prew button {
+.modal-work__btnbox-prev button {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -1062,7 +1059,7 @@ a:hover {
   border: none;
   cursor: pointer;
 }
-.modal-work__btnbox-prew button:before {
+.modal-work__btnbox-prev button:before {
   content: "";
   position: absolute;
   top: 50%;

@@ -284,12 +284,16 @@ a:hover {
 }
 
 .intro-photo {
-  width: auto;
-  min-width: 55%;
+  width: 40%;
   display: flex;
   flex-direction: row-reverse;
   padding-right: 70px;
   background: #fff url(../img/intro/bg.png) right no-repeat;
+}
+.intro-photo img {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 .work {
@@ -1123,3 +1127,19 @@ a:hover {
   border-top: 2px #b1b1b1 solid;
   border-right: 2px #b1b1b1 solid;
 }
+
+@media (max-width: 990px) {
+  .intro-content button {
+    padding: 15px 30px;
+  }
+}
+/*//? Point 1 ----------------------------------
+   @media (max-width: $md1+px) {}
+//? Point 2 ----------------------------------
+   @media (max-width: $md2+px) {}
+//? Point 3 ----------------------------------
+   @media (max-width: $md3+px) {}
+//? Point 4 ----------------------------------
+   @media (max-width: $md4+px) {}
+//? Point 5 ----------------------------------
+   @media (max-width: $md5+px) {} */

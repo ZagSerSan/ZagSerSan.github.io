@@ -5,7 +5,7 @@ let scroll_pos;
 
 window.addEventListener('scroll', function (header, h_intro, scroll_pos) {
    header = document.getElementById('header');
-   h_intro = document.getElementById('intro').clientHeight;
+   h_intro = document.getElementById('intro').clientHeight-210;
    scroll_pos = window.pageYOffset;
 
    if (scroll_pos > h_intro) {

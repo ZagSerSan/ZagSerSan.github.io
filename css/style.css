@@ -47,6 +47,10 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
+.header__nav {
+  display: flex;
+  align-items: center;
+}
 .header.fixed {
   position: fixed;
   z-index: 1000;
@@ -94,7 +98,7 @@ a:hover {
 .nav__link:first-child {
   margin-left: 0;
 }
-.nav__link:not(:last-child):before {
+.nav__link:not(button):before {
   content: "";
   position: absolute;
   bottom: -4px;

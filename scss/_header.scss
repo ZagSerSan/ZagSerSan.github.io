@@ -1,10 +1,22 @@
 //====================================================================================================
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
 	&__inner {
 		height: 90px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+	&.fixed {
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+		background-color: #fff;
+		box-shadow: 0px 4px 6px #4c4c4c;
 	}
 }
 .header-logo {

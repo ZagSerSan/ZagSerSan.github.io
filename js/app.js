@@ -1,3 +1,20 @@
+//? ============ FIXED HEADER =============================================
+let header;
+let h_intro;
+let scroll_pos;
+
+window.addEventListener('scroll', function (header, h_intro, scroll_pos) {
+   header = document.getElementById('header');
+   h_intro = document.getElementById('intro').clientHeight;
+   scroll_pos = window.pageYOffset;
+
+   if (scroll_pos > h_intro) {
+      header.classList.add('fixed');
+   } else {
+      header.classList.remove('fixed');
+   }
+});
+
 //? ============ FILTER =============================================
 // все ссылки фильтра
 var allLinks = document.querySelectorAll('a[data-filter]');

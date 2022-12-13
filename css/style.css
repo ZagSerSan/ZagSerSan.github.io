@@ -968,9 +968,6 @@ a:hover {
   background: linear-gradient(90deg, #6a696b 80%, #efefef 80%);
 }
 
-.modal-bg {
-  overflow: hidden;
-}
 .modal-bg.bg {
   background: rgba(0, 0, 0, 0.6);
 }

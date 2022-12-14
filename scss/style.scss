@@ -310,6 +310,7 @@
    }
    &__content {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       margin: 0 -15px;
    }
@@ -929,6 +930,16 @@
 //? reviews ----------------------------------
 @media (max-width: 900px) {
    .reviews__text {padding: 30px 20px 70px}
+}
+//? blog ----------------------------------
+@media (max-width: 910px) {
+   .blog-item {width: 45%;}
+   .blog__title {font-size: 40px;}
+}
+@media (max-width: 610px) {
+   .blog__inner {padding-bottom: 80px;}
+   .blog-item {width: 90%;}
+   .blog__title {font-size: 35px;}
 }
 
 

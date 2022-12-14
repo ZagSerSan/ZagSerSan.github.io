@@ -74,8 +74,6 @@
 	}
 }
 //====================================================================================================
-
-/*
 .burger {
 	display: none;
 	background: none;
@@ -87,7 +85,7 @@
 		display: block;
 		width: 37px;
 		height: 3px;
-		background-color: #fff;
+		background-color: #2b2a2c;
 		border-radius: 2px;
 
 		position: relative;
@@ -99,7 +97,7 @@
 			left: 0;
 			width: 37px;
 			height: 3px;
-			background-color: #fff;
+			background-color: #2b2a2c;
 			border-radius: 2px;
 		}
 		&:after {
@@ -109,11 +107,26 @@
 			left: 0;
 			width: 37px;
 			height: 3px;
-			background-color: #fff;
+			background-color: #2b2a2c;
 			border-radius: 2px
 		}
 	}
 }
-*/
-
+//* <АДАПТИВ>====================================================================================================
+//? header ----------------------------------
+@media (max-width: 990px) {
+   .nav__link {margin-left: 25px;}
+}
+@media (max-width: 760px) {
+   .nav {display: none;}
+	.burger {display: block;}
+	button.nav__link {
+		margin-left: 0;
+		margin-right: 30px;
+	}
+}
+@media (max-width: 440px) {
+   .nav__link {margin-left: 25px;}
+	button.nav__link {display: none;}
+}
 //====================================================================================================

@@ -134,46 +134,68 @@ a:hover {
   box-shadow: 2px 2px 5px #2b2a2c;
 }
 
-/*
 .burger {
-	display: none;
-	background: none;
-	padding: 13px 2px;
-	border: 0px;
-	font-size: 0;
-	cursor: pointer;
-	&__icon {
-		display: block;
-		width: 37px;
-		height: 3px;
-		background-color: #fff;
-		border-radius: 2px;
-
-		position: relative;
-
-		&:before, &:after {
-			content: "";
-			position: absolute;
-			top: 9px;
-			left: 0;
-			width: 37px;
-			height: 3px;
-			background-color: #fff;
-			border-radius: 2px;
-		}
-		&:after {
-			content: "";
-			position: absolute;
-			top: -9px;
-			left: 0;
-			width: 37px;
-			height: 3px;
-			background-color: #fff;
-			border-radius: 2px
-		}
-	}
+  display: none;
+  background: none;
+  padding: 13px 2px;
+  border: 0px;
+  font-size: 0;
+  cursor: pointer;
 }
-*/
+.burger__icon {
+  display: block;
+  width: 37px;
+  height: 3px;
+  background-color: #2b2a2c;
+  border-radius: 2px;
+  position: relative;
+}
+.burger__icon:before, .burger__icon:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 37px;
+  height: 3px;
+  background-color: #2b2a2c;
+  border-radius: 2px;
+}
+.burger__icon:after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 37px;
+  height: 3px;
+  background-color: #2b2a2c;
+  border-radius: 2px;
+}
+
+@media (max-width: 990px) {
+  .nav__link {
+    margin-left: 25px;
+  }
+}
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  button.nav__link {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 440px) {
+  .nav__link {
+    margin-left: 25px;
+  }
+  button.nav__link {
+    display: none;
+  }
+}
 .wrapper {
   width: 100%;
   min-height: 100%;

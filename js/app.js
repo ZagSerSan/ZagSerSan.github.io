@@ -186,6 +186,7 @@ allWorkItems.forEach(item => {
    item.addEventListener('click', ()=> {
       var modal_bg = document.getElementById(item.getAttribute('data-modal'));
       var modal_inner = document.getElementById(item.getAttribute('data-submodal'));
+      body.classList.add('noscroll');
       modal_bg.classList.add('show')
       setTimeout(() => {
          modal_bg.classList.add('bg');
@@ -197,6 +198,7 @@ allWorkItems.forEach(item => {
 });
 allModalWokr_btnClose.forEach(btn => {
    btn.addEventListener('click', ()=> {
+      body.classList.remove('noscroll');
       allModals_inner.forEach(item => {
          item.classList.remove('show');
       });

@@ -425,10 +425,11 @@ a:hover {
 
 .about__inner {
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 135px;
 }
 .about__col {
-  width: 100%;
+  width: 50%;
 }
 .about__col:last-child {
   padding-left: 40px;
@@ -1208,6 +1209,10 @@ a:hover {
     padding: 10px 20px;
     font-size: 15px;
   }
+  .btn-black {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
 }
 @media (max-width: 400px) {
   .intro-photo img {
@@ -1226,8 +1231,15 @@ a:hover {
     padding: 10px 15px;
     font-size: 14px;
   }
+  .btn-black {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 }
 @media (max-width: 900px) {
+  .work {
+    padding-bottom: 80px;
+  }
   .portfolio-item {
     width: 45%;
     margin: 10px;
@@ -1246,6 +1258,78 @@ a:hover {
   }
   .filter__link {
     margin-left: 18px;
+  }
+}
+@media (max-width: 1130px) {
+  .about__suptitle {
+    font-size: 35px;
+  }
+  .about__title {
+    font-size: 72px;
+  }
+  .about__text, .about .about-btns {
+    margin-left: -80px;
+  }
+  .about__photo {
+    background-size: 70%;
+  }
+  .about__photo img {
+    height: 500px;
+  }
+}
+@media (max-width: 1015px) {
+  .about__suptitle {
+    font-size: 30px;
+  }
+  .about__title {
+    font-size: 55px;
+  }
+}
+@media (max-width: 900px) {
+  .about__inner {
+    padding-bottom: 80px;
+  }
+  .about__col {
+    width: 100%;
+  }
+  .about__col:last-child {
+    padding: 0;
+    text-align: center;
+  }
+  .about__photo {
+    display: flex;
+    justify-content: center;
+    background-size: 330px;
+    background-position: center bottom;
+  }
+  .about__text, .about .about-btns {
+    margin-left: auto;
+  }
+}
+@media (max-width: 510px) {
+  .about__photo {
+    background-size: 270px;
+  }
+  .about__photo img {
+    height: 400px;
+  }
+}
+@media (max-width: 420px) {
+  .about__suptitle {
+    font-size: 23px;
+  }
+  .about__title {
+    font-size: 43px;
+  }
+  .about__text {
+    max-height: 350px;
+    overflow: scroll;
+  }
+  .about__photo {
+    background-size: 200px;
+  }
+  .about__photo img {
+    height: 300px;
   }
 }
 /*//? Point 1 ----------------------------------

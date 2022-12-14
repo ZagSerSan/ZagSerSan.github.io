@@ -211,9 +211,13 @@
 
 //todo -about -------------------
 .about {
-   &__inner {display: flex;padding-bottom: 135px;}
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 135px;
+   }
    &__col {
-      width: 100%;
+      width: 50%;
       &:last-child {padding-left: 40px;}
    }
    &__photo {
@@ -833,6 +837,7 @@
       &__prof {font-size: 16px;}
       button {padding: 10px 20px;font-size: 15px;}
    }
+   .btn-black {padding: 10px 20px;font-size: 15px;}
 }
 @media (max-width: 400px) {
    .intro-photo {img {height: 300px;}}
@@ -842,10 +847,11 @@
       &__prof {font-size: 14px;}
       button {padding: 10px 15px;font-size: 14px;}
    }
-
+   .btn-black {padding: 10px 15px;font-size: 14px;}
 }
 //? work ----------------------------------
 @media (max-width: 900px) {
+   .work {padding-bottom: 80px;}
    .portfolio-item {width: 45%;margin: 10px;}
 }
 @media (max-width: 600px) {
@@ -859,9 +865,67 @@
    .portfolio-item {width: 90%;}
    .filter__link {margin-left: 18px;}
 }
-
-
-
+//? about ----------------------------------
+@media (max-width: 1130px) {
+   .about {
+      &__suptitle {font-size: 35px;}
+      &__title {font-size: 72px;}
+      &__text,.about-btns {margin-left: -80px;}
+      &__photo {
+         background-size: 70%;
+         img {
+            height: 500px;
+         }
+      }
+   }
+}
+@media (max-width: 1015px) {
+   .about {
+      &__suptitle {font-size: 30px;}
+      &__title {font-size: 55px;}
+   }
+}
+@media (max-width: 900px) {
+   .about {
+      &__inner {padding-bottom: 80px;}
+      &__col {
+         width: 100%;
+         &:last-child {
+            padding: 0;
+            text-align: center;
+         }
+      }
+      &__photo {
+         display: flex;
+         justify-content: center;
+         background-size: 330px;
+         background-position: center bottom;
+      }
+      &__text,.about-btns {margin-left: auto;}
+   }
+}
+@media (max-width: 510px) {
+   .about {
+      &__photo {
+         background-size: 270px;
+         img {height: 400px;}
+      }
+   }
+}
+@media (max-width: 420px) {
+   .about {
+      &__suptitle {font-size: 23px;}
+      &__title {font-size: 43px;}
+      &__text {
+         max-height: 350px;
+          overflow: scroll;
+      }
+      &__photo {
+         background-size: 200px;
+         img {height: 300px;}
+      }
+   }
+}
 
 /*//? Point 1 ----------------------------------
    @media (max-width: $md1+px) {}

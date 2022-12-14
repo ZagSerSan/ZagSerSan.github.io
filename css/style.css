@@ -1210,6 +1210,9 @@ a:hover {
     padding: 10px 20px;
     font-size: 15px;
   }
+  .intro-content .social__item:last-child {
+    margin-right: 0;
+  }
   .btn-black {
     padding: 10px 20px;
     font-size: 15px;
@@ -1355,6 +1358,33 @@ a:hover {
   }
   .blog__title {
     font-size: 35px;
+  }
+}
+@media (max-width: 1010px) {
+  .footer__col {
+    width: 100%;
+    justify-content: center;
+  }
+  .footer__col:last-child {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .footer__inner {
+    padding: 20px 0 30px;
+  }
+  .footer__col {
+    flex-direction: column-reverse;
+  }
+  .footer__col .social {
+    margin-bottom: 10px;
+  }
+  .footer__col .copyright {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: 0;
+    border-top: 1px #413f41 solid;
+    padding-top: 10px;
   }
 }
 /*//? Point 1 ----------------------------------

@@ -1332,6 +1332,11 @@ a:hover {
     height: 300px;
   }
 }
+@media (max-width: 900px) {
+  .reviews__text {
+    padding: 30px 20px 70px;
+  }
+}
 /*//? Point 1 ----------------------------------
    @media (max-width: $md1+px) {}
 //? Point 2 ----------------------------------

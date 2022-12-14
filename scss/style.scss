@@ -51,6 +51,7 @@
 .intro {
    &__inner {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       border-bottom: 1px #f1f1f1 solid;
       padding-top: 90px;
@@ -107,7 +108,7 @@
    }
 }
 .intro-photo {
-   width: 40%;
+   width: 50%;
    // min-width: 55%;
    display: flex;
    flex-direction: row-reverse;
@@ -786,9 +787,62 @@
 //* <АДАПТИВ>====================================================================================================
 //? intro ----------------------------------
 @media (max-width: 990px) {
-.intro-content button {padding: 15px 30px;}
+   .intro__inner{
+      background: #fff url(../img/intro/bg.png) right -70px bottom no-repeat;
+   }
+   .intro-content {
+      width: auto;
+      button {padding: 15px 30px;}
+   }
+   .intro-photo {
+      width: auto;
+      padding-right: 0;
+      background: none;
+   }
+}
+@media (max-width: 990px) {
+   .intro__inner{
+      flex-direction: column-reverse;
+      background: none;
+   }
+   .intro-photo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: #fff url(../img/intro/bg.png) center no-repeat;
+   }
+   .intro-content {
+      width: 100%;
+      text-align: center;
+      margin: 60px 0;
+      & .social {
+         justify-content: center;
+      }
+   }
+}
+@media (max-width: 560px) {
+   .intro-photo {
+      background-size: cover;
+      img {height: 400px;}
+   }
+   .intro-content {
+      &__greeting {font-size: 27px;}
+      &__name {font-size: 40px;}
+      &__prof {font-size: 16px;}
+      button {padding: 10px 20px;font-size: 15px;}
+   }
+}
+@media (max-width: 400px) {
+   .intro-photo {img {height: 300px;}}
+   .intro-content {
+      &__greeting {font-size: 21px;}
+      &__name {font-size: 30px;}
+      &__prof {font-size: 14px;}
+      button {padding: 10px 15px;font-size: 14px;}
+   }
 
 }
+
 
 
 /*//? Point 1 ----------------------------------

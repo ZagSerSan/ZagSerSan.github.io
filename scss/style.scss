@@ -163,6 +163,7 @@
    justify-content: center;
    flex-wrap: wrap;
    position: relative;
+   margin: auto -20px;
 }
 .portfolio-item {
    position: relative;
@@ -785,6 +786,7 @@
 }
 
 //* <АДАПТИВ>====================================================================================================
+// it's no break points
 //? intro ----------------------------------
 @media (max-width: 990px) {
    .intro__inner{
@@ -800,7 +802,7 @@
       background: none;
    }
 }
-@media (max-width: 990px) {
+@media (max-width: 800px) {
    .intro__inner{
       flex-direction: column-reverse;
       background: none;
@@ -842,6 +844,22 @@
    }
 
 }
+//? work ----------------------------------
+@media (max-width: 900px) {
+   .portfolio-item {width: 45%;margin: 10px;}
+}
+@media (max-width: 600px) {
+   .portfolio-item {
+      width: 85%;
+      margin: 10px;
+      max-height: none;
+   }
+}
+@media (max-width: 400px) {
+   .portfolio-item {width: 90%;}
+   .filter__link {margin-left: 18px;}
+}
+
 
 
 

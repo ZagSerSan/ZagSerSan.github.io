@@ -573,16 +573,15 @@
    transform: scale(0);
    transition: transform .3s linear;
 
-   button.modal-resume__btn {padding: 16px 27px; font-size: 16px;min-width: 170px}
    &__title {
       @include fontFWSC('Montserrat',700,45px,#2b2a2c);
       text-transform: uppercase;
       margin-bottom: 54px;
    }
    &__btn {
-      font-size: 12px;
-      padding: 12px 20px;
-      min-width: 145px;
+      font-size: 16px;
+      padding: 16px 27px;
+      min-width: 170px;
       &:not(:last-child) {margin-right: 15px;}
    }
    &__content {
@@ -990,8 +989,8 @@
 }
 @media (max-width: 420px) {
    .modal-hireme {
-      min-width: 320px;
-      padding: 30px 20px;
+      min-width: 290px;
+      padding: 20px 20px;
       &__title {font-size: 28px;margin-bottom: 25px;}
       &__subtitle {font-size: 15px;line-height: 1.3;}
       &__contacts {margin: 25px 0 35px;}
@@ -1002,12 +1001,84 @@
          height: 35px;
       }
       .form {
-         textarea {height: 150px;}
+         textarea {
+            padding: 10px;
+            height: 90px;
+            max-height: 200px;
+            min-height: 40px;
+            resize: vertical;
+            border-radius: 10px;
+            margin-bottom: 20px;
+         }
          button {font-size: 15px;padding: 10px 30px;}
+         input {
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+         }
       }
    }
 }
 // resume
+@media (max-width: 1000px) {
+   .modal-resume {
+      &__title {font-size: 40px;}
+      &__btn {padding: 12px 17px;font-size: 15px;}
+   }
+}
+@media (max-width: 700px) {
+   .modal-resume {
+      padding: 40px 15px;
+      &__title {margin-bottom: 45px;}
+      .education-skills-item {
+         flex-wrap: wrap;
+         margin-bottom: 0;
+         justify-content: center;
+         &__level {margin: 10px 15px 20px;}
+      }
+   }
+}
+@media (max-width: 600px) {
+   .modal-resume {
+      padding: 50px 30px;
+      &__btn {padding: 10px 15px;font-size: 14px;}
+      &__title {font-size: 35px;}
+      &__content {margin-bottom: 20px;}
+   }
+   .experiense {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 20px;
+      text-align: center;
+      border-right: 0;
+      border-bottom: 1px #000 solid;;
+   }
+   .education {
+      width: 100%;
+      padding: 40px 0 0 0;
+      text-align: center;
+      &__title{margin-bottom: 30px;}
+   }
+   .education-item {
+      margin-bottom: 30px;
+   }
+   .education-skills {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+@media (max-width: 460px) {
+   .modal-resume {
+      .modal-hireme__btn-close {width: 35px;height: 35px;}
+      &__btns {
+         text-align: center;
+         // display: flex;
+         // flex-wrap: wrap;
+         button:first-child {margin: 0 0 20px 0;}
+      }
+   }
+}
 
 
 

@@ -861,11 +861,6 @@ a:hover {
   transform: scale(0);
   transition: transform 0.3s linear;
 }
-.modal-resume button.modal-resume__btn {
-  padding: 16px 27px;
-  font-size: 16px;
-  min-width: 170px;
-}
 .modal-resume__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -875,9 +870,9 @@ a:hover {
   margin-bottom: 54px;
 }
 .modal-resume__btn {
-  font-size: 12px;
-  padding: 12px 20px;
-  min-width: 145px;
+  font-size: 16px;
+  padding: 16px 27px;
+  min-width: 170px;
 }
 .modal-resume__btn:not(:last-child) {
   margin-right: 15px;
@@ -1407,8 +1402,8 @@ a:hover {
 }
 @media (max-width: 420px) {
   .modal-hireme {
-    min-width: 320px;
-    padding: 30px 20px;
+    min-width: 290px;
+    padding: 20px 20px;
   }
   .modal-hireme__title {
     font-size: 28px;
@@ -1428,11 +1423,98 @@ a:hover {
     height: 35px;
   }
   .modal-hireme .form textarea {
-    height: 150px;
+    padding: 10px;
+    height: 90px;
+    max-height: 200px;
+    min-height: 40px;
+    resize: vertical;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }
   .modal-hireme .form button {
     font-size: 15px;
     padding: 10px 30px;
+  }
+  .modal-hireme .form input {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .modal-resume__title {
+    font-size: 40px;
+  }
+  .modal-resume__btn {
+    padding: 12px 17px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .modal-resume {
+    padding: 40px 15px;
+  }
+  .modal-resume__title {
+    margin-bottom: 45px;
+  }
+  .modal-resume .education-skills-item {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+  .modal-resume .education-skills-item__level {
+    margin: 10px 15px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .modal-resume {
+    padding: 50px 30px;
+  }
+  .modal-resume__btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  .modal-resume__title {
+    font-size: 35px;
+  }
+  .modal-resume__content {
+    margin-bottom: 20px;
+  }
+  .experiense {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    border-right: 0;
+    border-bottom: 1px #000 solid;
+  }
+  .education {
+    width: 100%;
+    padding: 40px 0 0 0;
+    text-align: center;
+  }
+  .education__title {
+    margin-bottom: 30px;
+  }
+  .education-item {
+    margin-bottom: 30px;
+  }
+  .education-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 460px) {
+  .modal-resume .modal-hireme__btn-close {
+    width: 35px;
+    height: 35px;
+  }
+  .modal-resume__btns {
+    text-align: center;
+  }
+  .modal-resume__btns button:first-child {
+    margin: 0 0 20px 0;
   }
 }
 /*//? Point 1 ----------------------------------

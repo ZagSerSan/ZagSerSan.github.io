@@ -443,6 +443,7 @@
    position: relative;
 
    display: flex;
+   justify-content: space-between;
    background-color: #fff;
    padding: 30px;
    width: 100%;
@@ -560,8 +561,6 @@
 }
 
 //todo -modal 'resume' -------------------
-.modal-bg {
-}
 .modal-resume {
    position: relative;
    text-align: center;
@@ -968,6 +967,49 @@
       }
    }
 }
+//? modal ----------------------------------
+// hireme
+@media (max-width: 1000px) {
+   .modal-hireme {
+      // width: 80%;
+      &__col:last-child {
+         width: 50%;
+         img {height: auto;width: 100%;}
+      }
+   }
+}
+@media (max-width: 710px) {
+   .modal-hireme {
+      &__col {
+         width: 100%;
+         &:last-child {
+            display: none;
+         }
+      }
+   }
+}
+@media (max-width: 420px) {
+   .modal-hireme {
+      min-width: 320px;
+      padding: 30px 20px;
+      &__title {font-size: 28px;margin-bottom: 25px;}
+      &__subtitle {font-size: 15px;line-height: 1.3;}
+      &__contacts {margin: 25px 0 35px;}
+      &__btn-close {
+         top: 15px;
+         right: 15px;
+         width: 35px;
+         height: 35px;
+      }
+      .form {
+         textarea {height: 150px;}
+         button {font-size: 15px;padding: 10px 30px;}
+      }
+   }
+}
+// resume
+
+
 
 /*//? Point 1 ----------------------------------
    @media (max-width: $md1+px) {}

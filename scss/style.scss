@@ -697,7 +697,10 @@
    &.trX_left {transform: scale(.4) translateX(-50%);}
    &.trX_right {transform: scale(.4) translateX(50%);}
    &.show {transform: scale(1);}
-		&__preview {width: 65%;}
+		&__preview {
+         width: 65%;
+         background-color: #727173;
+      }
 		&__content {
          position: relative;
          width: 35%;
@@ -789,7 +792,6 @@
 }
 
 //* <АДАПТИВ>====================================================================================================
-// it's no break points
 //? intro ----------------------------------
 @media (max-width: 990px) {
    .intro__inner{
@@ -997,8 +999,8 @@
       &__btn-close {
          top: 15px;
          right: 15px;
-         width: 35px;
-         height: 35px;
+         width: 30px;
+         height: 30px;
       }
       .form {
          textarea {
@@ -1070,7 +1072,7 @@
 }
 @media (max-width: 460px) {
    .modal-resume {
-      .modal-hireme__btn-close {width: 35px;height: 35px;}
+      .modal-hireme__btn-close {width: 30px;height: 30px;}
       &__btns {
          text-align: center;
          // display: flex;
@@ -1079,9 +1081,74 @@
       }
    }
 }
+// work
+@media (max-width: 1200px) {
+   .modal-work {
+      &__content {
+         padding: 46px 25px 14px;
+      }
+      &__projectname {padding-right: 45px;line-height: 1;}
+      &__preview {width: 60%;}
+      &__content {
+         width: 40%;
+      }
+   } 
+}
+@media (max-width: 900px) {
+   .modal-work {
+      &__projectname {font-size: 28px;}
+      &__category {font-size: 16px;}
+   }
+}
+@media (max-width: 800px) {
+   .modal-work {
+      flex-direction: column;
+      height: 700px;
+      &__preview {width: 100%;height: 50%;}
+      &__content {
+         width: 100%;
+         height: 50%;
+         padding: 20px 15px;
+      }
+      &__category {margin-bottom: 25px;}
+      &__client {margin-bottom: 25px;}
+		&__textbox {overflow: auto;max-height: 130px;}
+   }
+}
+@media (max-width: 400px) {
+   .modal-work {
+      height: 570px;
+      min-height: 530px;
+      &__preview {height: 45%;}
+      &__content {height: 55%;}
+      &__projectname {font-size: 20px;}
+      &__category {font-size: 14px;}
+      &__client {margin-bottom: 15px;}
+      &__btnbox {
+         padding: 15px 15px;
+         button {font-size: 13px;}
+      }
+      .modal-hireme__btn-close {
+         width: 30px;
+         height: 30px;
+     }
+   }
+}
+@media (max-height: 650px) {
+   .modal-work {
+      height: 530px;
+      &__projectname {font-size: 16px;}
+      &__category {font-size: 13px;}
+      &__client {
+         font-size: 15px;
+         margin-bottom: 10px;
+         span {font-size: 14px;}
+      }
+      &__textbox {max-height: 110px;}
+   }
+}
 
-
-
+//! it's no break points bellow
 /*//? Point 1 ----------------------------------
    @media (max-width: $md1+px) {}
 //? Point 2 ----------------------------------

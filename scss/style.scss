@@ -1033,7 +1033,6 @@
       .education-skills-item {
          flex-wrap: wrap;
          margin-bottom: 0;
-         justify-content: center;
          &__level {margin: 10px 15px 20px;}
       }
    }
@@ -1044,6 +1043,7 @@
       &__btn {padding: 10px 15px;font-size: 14px;}
       &__title {font-size: 35px;}
       &__content {margin-bottom: 20px;}
+      .education-skills-item {justify-content: center;}
    }
    .experiense {
       width: 100%;

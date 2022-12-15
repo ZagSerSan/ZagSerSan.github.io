@@ -1460,7 +1460,6 @@ a:hover {
   .modal-resume .education-skills-item {
     flex-wrap: wrap;
     margin-bottom: 0;
-    justify-content: center;
   }
   .modal-resume .education-skills-item__level {
     margin: 10px 15px 20px;
@@ -1479,6 +1478,9 @@ a:hover {
   }
   .modal-resume__content {
     margin-bottom: 20px;
+  }
+  .modal-resume .education-skills-item {
+    justify-content: center;
   }
   .experiense {
     width: 100%;

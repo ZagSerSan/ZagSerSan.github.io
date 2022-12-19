@@ -15,6 +15,27 @@ window.addEventListener('scroll', function (header, h_intro, scroll_pos) {
    }
 });
 
+//? ============ SMOOTH SCROLL =============================================
+const allHeaderLinks = document.querySelectorAll('.navlinkJS');
+
+allHeaderLinks.forEach(item => {
+   item.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+         top: coordY-150,
+         behavior: 'smooth'
+      });   
+   });
+});
+
+
+
+
+
+
+
 //? ============ FILTER =============================================
 // все ссылки фильтра
 var allLinks = document.querySelectorAll('a[data-filter]');

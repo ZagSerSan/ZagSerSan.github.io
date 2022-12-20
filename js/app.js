@@ -1,14 +1,15 @@
 //? ============ FIXED HEADER =============================================
 let header;
-let h_intro;
-let scroll_pos;
+let introH;
+let scrollPos;
 
-window.addEventListener('scroll', function (header, h_intro, scroll_pos) {
+window.addEventListener('scroll', function (header, introH, scrollPos, workOffset,
+   aboutOffset) {
    header = document.getElementById('header');
-   h_intro = document.getElementById('intro').clientHeight-210;
-   scroll_pos = window.pageYOffset;
+   introH = document.getElementById('intro').clientHeight-210;
 
-   if (scroll_pos > h_intro) {
+
+   if (scrollPos > introH) {
       header.classList.add('fixed');
    } else {
       header.classList.remove('fixed');
@@ -31,10 +32,37 @@ allHeaderLinks.forEach(item => {
 });
 
 //? ============ INTERACTIVE SCROLL =============================================
+// heights blocks: headerH = header Height
+let workOffset;
+let aboutOffset;
+let reviewsOffset;
+let blogOffset;
+
+window.addEventListener('scroll', function (scrollPos, workOffset, aboutOffset, reviewsOffset, blogOffset) {
+// отступ скролла от верха
+   scrollPos = window.pageYOffset;
+// отступы блоков от верха
+   introOffset = document.getElementById('intro').getBoundingClientRect().top + window.scrollY;
+   workOffset = document.getElementById('work').getBoundingClientRect().top + window.scrollY;
+   aboutOffset = document.getElementById('about').getBoundingClientRect().top + window.scrollY;
+   reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY;
+   blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY;
+
+// ccылки меню
+   let navLink_work;
+
+   // navLink_work = document.querySelector('a[data-scroll="work"]').classList.add('active');
+   // navLink_work = document.querySelector('a[data-scroll="work"]').classList.remove('active');
 
 
+   // console.log('----------------');
+// console.log('offsetTOP: ' + scrollPos);
+// console.log('workOffset: ' + workOffset);
+// console.log('aboutOffset: ' + aboutOffset);
+// console.log('reviewsOffset: ' + reviewsOffset);
+// console.log('blogOffset: ' + blogOffset);
 
-
+});
 
 
 //? ============ FILTER =============================================

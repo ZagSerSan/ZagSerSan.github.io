@@ -56,6 +56,10 @@
 			text-decoration: none;
 			&:before {width: 100%;}
 		}
+		&.active {
+			text-decoration: none;
+			&:before {width: 100%;}
+		}
 	}
 }
 .btn-black {

@@ -114,6 +114,12 @@ a:hover {
 .nav__link:hover:before {
   width: 100%;
 }
+.nav__link.active {
+  text-decoration: none;
+}
+.nav__link.active:before {
+  width: 100%;
+}
 
 .btn-black {
   font-family: "Montserrat", sans-serif;

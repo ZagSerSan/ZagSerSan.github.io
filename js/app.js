@@ -3,11 +3,10 @@ let header;
 let introH;
 let scrollPos;
 
-window.addEventListener('scroll', function (header, introH, scrollPos, workOffset,
-   aboutOffset) {
+window.addEventListener('scroll', function (header, introH, scrollPos) {
    header = document.getElementById('header');
    introH = document.getElementById('intro').clientHeight-210;
-
+   scrollPos = window.pageYOffset;
 
    if (scrollPos > introH) {
       header.classList.add('fixed');
@@ -33,35 +32,64 @@ allHeaderLinks.forEach(item => {
 
 //? ============ INTERACTIVE SCROLL =============================================
 // heights blocks: headerH = header Height
+let introOffset;
 let workOffset;
 let aboutOffset;
 let reviewsOffset;
 let blogOffset;
+// ccылки меню
+let navLink_work;
 
-window.addEventListener('scroll', function (scrollPos, workOffset, aboutOffset, reviewsOffset, blogOffset) {
+window.addEventListener('scroll', function (scrollPos, introOffset, workOffset, aboutOffset, reviewsOffset, blogOffset, navLink_work) {
 // отступ скролла от верха
    scrollPos = window.pageYOffset;
 // отступы блоков от верха
-   introOffset = document.getElementById('intro').getBoundingClientRect().top + window.scrollY;
-   workOffset = document.getElementById('work').getBoundingClientRect().top + window.scrollY;
-   aboutOffset = document.getElementById('about').getBoundingClientRect().top + window.scrollY;
-   reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY;
-   blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY;
-
-// ccылки меню
-   let navLink_work;
-
-   // navLink_work = document.querySelector('a[data-scroll="work"]').classList.add('active');
-   // navLink_work = document.querySelector('a[data-scroll="work"]').classList.remove('active');
-
+   introOffset = document.getElementById('intro').getBoundingClientRect().top + window.scrollY-150;
+   workOffset = document.getElementById('work').getBoundingClientRect().top + window.scrollY-150;
+   aboutOffset = document.getElementById('about').getBoundingClientRect().top + window.scrollY-150;
+   reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY-150;
+   blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY-150;
 
    // console.log('----------------');
+   // console.log('offsetTOP: ' + scrollPos);
+   // console.log('introOffset: ' + introOffset);
+   // console.log('workOffset: ' + workOffset);
+   // console.log('aboutOffset: ' + aboutOffset);
+   // console.log('reviewsOffset: ' + reviewsOffset);
+   // console.log('blogOffset: ' + blogOffset);
+
+   if ((scrollPos > workOffset) && (scrollPos < aboutOffset)) {
+      allHeaderLinks.forEach(item =>{
+         item.classList.remove('active');
+      });
+      navLink_work = document.querySelector('a[data-scroll="work"]').classList.add('active');
+   } else if ((scrollPos > aboutOffset) && (scrollPos < reviewsOffset)) {
+      allHeaderLinks.forEach(item =>{
+         item.classList.remove('active');
+      });
+      navLink_work = document.querySelector('a[data-scroll="about"]').classList.add('active');
+   } else if ((scrollPos > reviewsOffset) && (scrollPos < blogOffset)) {
+      allHeaderLinks.forEach(item =>{
+         item.classList.remove('active');
+      });
+      navLink_work = document.querySelector('a[data-scroll="reviews"]').classList.add('active');
+   }  else if (scrollPos > blogOffset) {
+      allHeaderLinks.forEach(item =>{
+         item.classList.remove('active');
+      });
+      navLink_work = document.querySelector('a[data-scroll="blog"]').classList.add('active');
+   } else {
+      console.log("else");
+      allHeaderLinks.forEach(item =>{
+         item.classList.remove('active');
+      });
+   }
+// console.log('----------------');
 // console.log('offsetTOP: ' + scrollPos);
 // console.log('workOffset: ' + workOffset);
 // console.log('aboutOffset: ' + aboutOffset);
 // console.log('reviewsOffset: ' + reviewsOffset);
 // console.log('blogOffset: ' + blogOffset);
-
 });
 
 

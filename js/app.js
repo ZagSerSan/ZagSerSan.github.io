@@ -48,11 +48,11 @@ window.addEventListener('scroll', function (scrollPos, introOffset, workOffset, 
 // отступ скролла от верха
    scrollPos = window.pageYOffset;
 // отступы блоков от верха
-   introOffset = document.getElementById('intro').getBoundingClientRect().top + window.scrollY-150;
-   workOffset = document.getElementById('work').getBoundingClientRect().top + window.scrollY-150;
-   aboutOffset = document.getElementById('about').getBoundingClientRect().top + window.scrollY-150;
-   reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY-150;
-   blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY-150;
+   introOffset = document.getElementById('intro').getBoundingClientRect().top + window.scrollY-160;
+   workOffset = document.getElementById('work').getBoundingClientRect().top + window.scrollY-160;
+   aboutOffset = document.getElementById('about').getBoundingClientRect().top + window.scrollY-160;
+   reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY-160;
+   blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY-160;
 
    // console.log('----------------');
    // console.log('offsetTOP: ' + scrollPos);

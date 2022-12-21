@@ -248,7 +248,7 @@ a:hover {
     right: 13%;
     z-index: 3;
     opacity: 0;
-    transition: opacity 0.2s linears;
+    transition: opacity 0.2s linear;
   }
   button.nav__link.show {
     opacity: 1;

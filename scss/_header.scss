@@ -184,7 +184,7 @@
 		right: 13%;
 		z-index: 3;
 		opacity: 0;
-		transform: opacity .2s linears;
+		transition: opacity .2s linears;
 		&.show {
 			opacity: 1;
 		}

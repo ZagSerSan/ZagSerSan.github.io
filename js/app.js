@@ -1,6 +1,14 @@
 //todo ============ TODO =============================================
 // переключение фильтра по нажатию на айтем определённой категории.
-// + burger
+
+//? ============ BURGER ==================================================
+let burger = document.getElementById('burgerJS');
+let nav = document.getElementById('navJS');
+
+burger.addEventListener('click', () => {
+   burger.classList.toggle('active');
+   nav.classList.toggle('active');
+});
 
 //? ============ FIXED HEADER =============================================
 let header;
@@ -17,6 +25,9 @@ window.addEventListener('scroll', function (header, introH, scrollPos) {
    } else {
       header.classList.remove('fixed');
    }
+   // burger nav close by scroll
+   burger.classList.remove('active');
+   nav.classList.remove('active');
 });
 
 //? ============ SMOOTH SCROLL =============================================
@@ -30,7 +41,9 @@ allHeaderLinks.forEach(item => {
       window.scrollTo({
          top: coordY-150,
          behavior: 'smooth'
-      });   
+      });
+      burger.classList.remove('active');
+      nav.classList.remove('active');
    });
 });
 
@@ -54,14 +67,6 @@ window.addEventListener('scroll', function (scrollPos, introOffset, workOffset, 
    reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY-160;
    blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY-160;
 
-   // console.log('----------------');
-   // console.log('offsetTOP: ' + scrollPos);
-   // console.log('introOffset: ' + introOffset);
-   // console.log('workOffset: ' + workOffset);
-   // console.log('aboutOffset: ' + aboutOffset);
-   // console.log('reviewsOffset: ' + reviewsOffset);
-   // console.log('blogOffset: ' + blogOffset);
-
    if ((scrollPos > workOffset) && (scrollPos < aboutOffset)) {
       allHeaderLinks.forEach(item =>{
          item.classList.remove('active');
@@ -83,17 +88,10 @@ window.addEventListener('scroll', function (scrollPos, introOffset, workOffset, 
       });
       navLink_work = document.querySelector('a[data-scroll="blog"]').classList.add('active');
    } else {
-      console.log("else");
       allHeaderLinks.forEach(item =>{
          item.classList.remove('active');
       });
    }
-// console.log('----------------');
-// console.log('offsetTOP: ' + scrollPos);
-// console.log('workOffset: ' + workOffset);
-// console.log('aboutOffset: ' + aboutOffset);
-// console.log('reviewsOffset: ' + reviewsOffset);
-// console.log('blogOffset: ' + blogOffset);
 });
 
 

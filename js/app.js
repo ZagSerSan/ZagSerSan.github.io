@@ -4,10 +4,13 @@
 //? ============ BURGER ==================================================
 let burger = document.getElementById('burgerJS');
 let nav = document.getElementById('navJS');
+//  button hireme in media440px
+let btnHeader_hierme = document.querySelector('.btnHeaderJS');
 
 burger.addEventListener('click', () => {
    burger.classList.toggle('active');
    nav.classList.toggle('active');
+   btnHeader_hierme.classList.toggle('show');
 });
 
 //? ============ FIXED HEADER =============================================
@@ -28,6 +31,7 @@ window.addEventListener('scroll', function (header, introH, scrollPos) {
    // burger nav close by scroll
    burger.classList.remove('active');
    nav.classList.remove('active');
+   btnHeader_hierme.classList.remove('show');
 });
 
 //? ============ SMOOTH SCROLL =============================================

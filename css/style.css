@@ -235,12 +235,23 @@ a:hover {
   }
 }
 @media (max-width: 440px) {
+  .nav.active {
+    width: 90vw;
+  }
   .nav__link:not(button) {
     font-size: 20px;
     margin-bottom: 50px;
   }
   button.nav__link {
-    display: none;
+    position: fixed;
+    top: 22px;
+    right: 13%;
+    z-index: 3;
+    opacity: 0;
+    transform: opacity 0.2s linears;
+  }
+  button.nav__link.show {
+    opacity: 1;
   }
 }
 .wrapper {

@@ -174,7 +174,20 @@
 	}
 }
 @media (max-width: 440px) {
+	.nav {
+		&.active {width: 90vw;}
+	}
    .nav__link:not(button) {font-size: 20px;margin-bottom: 50px;}
-	button.nav__link {display: none;}
+	button.nav__link {
+		position: fixed;
+		top: 22px;
+		right: 13%;
+		z-index: 3;
+		opacity: 0;
+		transform: opacity .2s linears;
+		&.show {
+			opacity: 1;
+		}
+	}
 }
 //====================================================================================================

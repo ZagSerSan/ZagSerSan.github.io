@@ -1,5 +1,5 @@
 //todo ============ TODO =============================================
-// переключение фильтра по нажатию на айтем определённой категории.
+// none
 
 //? ============ BURGER ==================================================
 let burger = document.getElementById('burgerJS');
@@ -98,20 +98,20 @@ window.addEventListener('scroll', function (scrollPos, introOffset, workOffset, 
    }
 });
 
-
 //? ============ FILTER =============================================
 // все ссылки фильтра
 var allLinks = document.querySelectorAll('a[data-filter]');
 // btns
-var btn_all = document.getElementById('btn_all');
-var btn_app = document.getElementById('btn_app');
-var btn_website = document.getElementById('btn_website');
-var btn_int = document.getElementById('btn_int');
+var btn_all = document.querySelector('.btn_all');
+var btn_app = document.querySelector('.btn_app');
+var btn_website = document.querySelector('.btn_website');
+var btn_int = document.querySelector('.btn_int');
 var btn_loadMoreWorks = document.getElementById('loadmoreworks');
 // проекты с фильтрами
 const app_projects = document.querySelectorAll('#app');
 const website_projects = document.querySelectorAll('#website');
 const int_projects = document.querySelectorAll('#int');
+
 // отслеживание нажатия
 btn_loadMoreWorks.addEventListener('click', (e) => {
    e.preventDefault();
@@ -270,8 +270,24 @@ allWorkItems.forEach(item => {
    item.addEventListener('click', ()=> {
       var modal_bg = document.getElementById(item.getAttribute('data-modal'));
       var modal_inner = document.getElementById(item.getAttribute('data-submodal'));
+
+      // переключение кнопок-ссылок фильтра при нажании на ворк_айтем
+      let attrDataFilter = item.getAttribute('data-filter')
+      const allThisIdLink = document.querySelectorAll(attrDataFilter);
+      let filterLink = document.querySelector(`a[href="${attrDataFilter}"]`);
+
+      btn_all.classList.remove('active');
+      filterLink.classList.add('active')
+      allWorkItems.forEach(allLink => {
+         allLink.classList.add('hide');
+      });
+      allThisIdLink.forEach(thisLink => {
+         thisLink.classList.remove('hide');
+      });
+
       body.classList.add('noscroll');
       modal_bg.classList.add('show')
+
       setTimeout(() => {
          modal_bg.classList.add('bg');
       }, 10);

@@ -699,7 +699,19 @@
    &.show {transform: scale(1);}
 		&__preview {
          width: 65%;
-         background-color: #727173;
+         // background-color: #727173;
+         &.app {
+            background: url('/img/works/app.png') no-repeat center;
+            background-size: cover;
+         }
+         &.website {
+            background: url('/img/works/website.png') no-repeat center;
+            background-size: cover;
+         }
+         &.int {
+            background: url('/img/works/interaction.png') no-repeat center;
+            background-size: cover;
+         }
       }
 		&__content {
          position: relative;

@@ -127,87 +127,92 @@
 <div class="work" id="work">
    <div class="container">
       <div class="filter">
-         <a href="#" data-filter id="btn_all" class="filter__link">All</a>
-         <a href="#" data-filter id="btn_app" class="filter__link">App</a>
-         <a href="#" data-filter id="btn_website" class="filter__link active">Website</a>
-         <a href="#" data-filter id="btn_int" class="filter__link">Interaction</a>
+         <a href="#all" data-filter id="" class="filter__link btn_all active">All</a>
+         <a href="#app" data-filter id="" class="filter__link btn_app #app">App</a>
+         <a href="#website" data-filter id="" class="filter__link btn_website">Website</a>
+         <a href="#int" data-filter id="" class="filter__link btn_int">Interaction</a>
       </div>
       <div class="portfolio">
+         <!-- string 1 -->
+         <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_1" data-submodal="submodal_1">
+            <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: App</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="website" data-filter="#website" data-modal="modal_4" data-submodal="submodal_4">
+            <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Website</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="int" data-filter="#int" data-modal="modal_7" data-submodal="submodal_7">
+            <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <!-- string 2 -->
+         <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_2" data-submodal="submodal_2">
+            <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: App</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="website" data-filter="#website" data-modal="modal_5" data-submodal="submodal_5">
+            <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Website</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="int" data-filter="#int" data-modal="modal_8" data-submodal="submodal_8">
+            <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <!-- string 3 -->
+         <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_3" data-submodal="submodal_3">
+            <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: App</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="website" data-filter="#website" data-modal="modal_6" data-submodal="submodal_6">
+            <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Website</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>         
+         <div class="portfolio-item" id="int" data-filter="#int" data-modal="modal_9" data-submodal="submodal_9">
+            <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
+            <div class="portfolio-item__title">
+               PROJECT TITLE
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+
          <!-- App category -->
-         <div class="portfolio-item hide" id="app" data-modal="modal_1" data-submodal="submodal_1">
-            <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: App</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
-         <div class="portfolio-item hide" id="app" data-modal="modal_2" data-submodal="submodal_2">
-            <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: App</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
-         <div class="portfolio-item hide" id="app" data-modal="modal_3" data-submodal="submodal_3">
-            <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: App</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
          <!-- Website category -->
-         <div class="portfolio-item" id="website" data-modal="modal_4" data-submodal="submodal_4">
-            <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: Website</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
-         <div class="portfolio-item" id="website" data-modal="modal_5" data-submodal="submodal_5">
-            <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: Website</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
-         <div class="portfolio-item" id="website" data-modal="modal_6" data-submodal="submodal_6">
-            <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: Website</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
          <!-- Interactive category -->
-         <div class="portfolio-item hide" id="int" data-modal="modal_7" data-submodal="submodal_7">
-            <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
-         <div class="portfolio-item hide" id="int" data-modal="modal_8" data-submodal="submodal_8">
-            <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
-         <div class="portfolio-item hide" id="int" data-modal="modal_9" data-submodal="submodal_9">
-            <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
-            <div class="portfolio-item__title">
-               PROJECT TITLE
-               <time datetime="2022-11-23">2022</time>
-            </div>
-         </div>
+
       </div><!-- /.portfolio -->
       <button type="button" id="loadmoreworks" class="work__btn btn-black">LOAD MORE WORK</button>
    </div><!-- /.container -->
@@ -478,7 +483,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview"></div>
+      <div class="modal-work__preview app"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 1</h3>
          <h4 class="modal-work__category">CATEGORY: APP <span>|</span> 2018</h4>
@@ -506,7 +511,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview"></div>
+      <div class="modal-work__preview app"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 2</h3>
          <h4 class="modal-work__category">CATEGORY: APP <span>|</span> 2018</h4>
@@ -534,7 +539,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-awork__preview"></div>
+      <div class="modal-work__preview app"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 3</h3>
          <h4 class="modal-work__category">CATEGORY: APP <span>|</span> 2018</h4>
@@ -562,7 +567,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview"></div>
+      <div class="modal-work__preview website"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 4</h3>
          <h4 class="modal-work__category">CATEGORY: website <span>|</span> 2018</h4>
@@ -590,7 +595,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview"></div>
+      <div class="modal-work__preview website"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 5</h3>
          <h4 class="modal-work__category">CATEGORY: website <span>|</span> 2018</h4>
@@ -618,7 +623,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview"></div>
+      <div class="modal-work__preview website"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 6</h3>
          <h4 class="modal-work__category">CATEGORY: website <span>|</span> 2018</h4>
@@ -646,7 +651,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview"></div>
+      <div class="modal-work__preview int"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 7</h3>
          <h4 class="modal-work__category">CATEGORY: interaction <span>|</span> 2018</h4>
@@ -674,7 +679,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview"></div>
+      <div class="modal-work__preview int"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 8</h3>
          <h4 class="modal-work__category">CATEGORY: interaction <span>|</span> 2018</h4>
@@ -702,7 +707,7 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview"></div>
+      <div class="modal-work__preview int"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 9</h3>
          <h4 class="modal-work__category">CATEGORY: interaction <span>|</span> 2018</h4>

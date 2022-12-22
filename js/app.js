@@ -1,5 +1,6 @@
 //todo ============ TODO =============================================
-// positiion sticky for filter on mobile version
+// 1) positiion sticky for filter on mobile version
+// 2) изменять положение скролла до выбранного элемента (на мобилке)
 
 //? ============ BURGER ==================================================
 let burger = document.getElementById('burgerJS');

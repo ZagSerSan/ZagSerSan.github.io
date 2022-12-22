@@ -1,5 +1,5 @@
 //todo ============ TODO =============================================
-// none
+// positiion sticky for filter on mobile version
 
 //? ============ BURGER ==================================================
 let burger = document.getElementById('burgerJS');

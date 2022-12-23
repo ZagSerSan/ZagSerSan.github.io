@@ -173,6 +173,15 @@
 		margin-right: 30px;
 	}
 }
+@media (max-width: 550px) {
+	.header__inner {
+		height: 75px;
+	}
+	.header-logo img {
+		width: 55px;
+		height: 55px;
+	}
+}
 @media (max-width: 440px) {
 	.nav {
 		&.active {width: 90vw;}

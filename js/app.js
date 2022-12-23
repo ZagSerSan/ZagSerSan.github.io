@@ -277,6 +277,16 @@ allWorkItems.forEach(item => {
       const allThisIdLink = document.querySelectorAll(attrDataFilter);
       let filterLink = document.querySelector(`a[href="${attrDataFilter}"]`);
 
+      // scroll to changed item
+      setTimeout(() => {
+         let itemCoordY = item.getBoundingClientRect().top + window.scrollY;
+         console.log(itemCoordY);
+         window.scrollTo({
+            top: itemCoordY-150,
+            behavior: 'smooth'
+         });
+      }, 400);
+      
       btn_all.classList.remove('active');
       filterLink.classList.add('active')
       allWorkItems.forEach(allLink => {

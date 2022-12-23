@@ -1,5 +1,5 @@
-//todo ============ TODO =============================================
-// 1) positiion sticky for filter on mobile version
+//todo ============ TODO_TEMP =============================================
+// 1) positiion sticky for filter on mobile version BY MEDIA 900px
 
 //? ============ BURGER ==================================================
 let burger = document.getElementById('burgerJS');
@@ -111,6 +111,20 @@ var btn_loadMoreWorks = document.getElementById('loadmoreworks');
 const app_projects = document.querySelectorAll('#app');
 const website_projects = document.querySelectorAll('#website');
 const int_projects = document.querySelectorAll('#int');
+
+// скролл после применения фильтра при media 900px TODO_TEMP
+const mediaQuery = window.matchMedia('(min-width: 900px)');
+if (mediaQuery.matches) {
+   let coordY_portfolio = document.querySelector('.portfolioJS').getBoundingClientRect().top + window.scrollY;
+   allLinks.forEach(item => {
+      item.addEventListener('click', () => {
+      window.scrollTo({
+         top: coordY_portfolio-150,
+         behavior: 'smooth'
+         });
+      });
+   });
+}
 
 // отслеживание нажатия
 btn_loadMoreWorks.addEventListener('click', (e) => {

@@ -30,7 +30,7 @@
 .wrapper {
    width: 100%;
    min-height: 100%;
-   overflow: hidden;
+   overflow: clip;
 }
 .empty-space {
    height: 700px;
@@ -164,6 +164,7 @@
    flex-wrap: wrap;
    position: relative;
    margin: auto -20px;
+   // min-height: 1500px;
 }
 .portfolio-item {
    position: relative;
@@ -866,6 +867,15 @@
 //? work ----------------------------------
 @media (max-width: 900px) {
    .work {padding-bottom: 80px;}
+   // position sticky
+   .filter {
+      position: sticky;
+      top: 75px;
+      z-index: 1;
+      background-color: #fff;
+      padding: 20px 0;
+      border-bottom: 1px #f1f1f1 solid;
+   }
    .portfolio-item {width: 45%;margin: 10px;}
 }
 @media (max-width: 600px) {

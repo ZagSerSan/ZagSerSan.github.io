@@ -186,6 +186,15 @@ a:hover {
     margin-left: 25px;
   }
 }
+@media (max-width: 900px) {
+  .header__inner {
+    height: 75px;
+  }
+  .header-logo img {
+    width: 55px;
+    height: 55px;
+  }
+}
 @media (max-width: 760px) {
   .nav {
     display: flex;
@@ -234,15 +243,6 @@ a:hover {
     margin-right: 30px;
   }
 }
-@media (max-width: 550px) {
-  .header__inner {
-    height: 75px;
-  }
-  .header-logo img {
-    width: 55px;
-    height: 55px;
-  }
-}
 @media (max-width: 440px) {
   .nav.active {
     width: 90vw;
@@ -266,7 +266,7 @@ a:hover {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .empty-space {
@@ -1318,6 +1318,14 @@ a:hover {
 @media (max-width: 900px) {
   .work {
     padding-bottom: 80px;
+  }
+  .filter {
+    position: sticky;
+    top: 75px;
+    z-index: 1;
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px #f1f1f1 solid;
   }
   .portfolio-item {
     width: 45%;

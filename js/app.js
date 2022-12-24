@@ -1,5 +1,5 @@
 //todo ============ TODO_TEMP =============================================
-// 1) positiion sticky for filter on mobile version BY MEDIA 900px
+// 1) ---
 
 //? ============ BURGER ==================================================
 let burger = document.getElementById('burgerJS');
@@ -112,7 +112,7 @@ const app_projects = document.querySelectorAll('#app');
 const website_projects = document.querySelectorAll('#website');
 const int_projects = document.querySelectorAll('#int');
 
-// скролл после применения фильтра при media 900px TODO_TEMP
+// скролл после применения фильтра при media 900px
 function filterScroll() {
    let coordY_portfolio = document.querySelector('.portfolioJS').getBoundingClientRect().top + window.scrollY;
    window.scrollTo({
@@ -320,7 +320,7 @@ allWorkItems.forEach(item => {
       // scroll to changed item
       setTimeout(() => {
          let itemCoordY = item.getBoundingClientRect().top + window.scrollY;
-         console.log(itemCoordY);
+         // console.log(itemCoordY);
          window.scrollTo({
             top: itemCoordY-150,
             behavior: 'smooth'
@@ -365,7 +365,15 @@ allModalWokr_btnClose.forEach(btn => {
 });
 
 //* ===== smart switch between work items =====
-// // filter status: if selected filter 
+// todo_temp
+/*
+   Получать в массив модальные окна относящиеся к нажатому фильтру и потом листать
+   кнопками по этому масиву: типа "prev" предыдущее из массива, "prev" следущее.
+   Логика: когда нажимаю кнопку "prev", то из следующего элемента массива извлекать инфу про
+   модальное окно и открывать его.
+*/
+
+// filter status: if selected filter 
 // let status_all = true;
 // let status_app = false;
 // let status_website = false;
@@ -381,6 +389,7 @@ allModalWokr_btnClose.forEach(btn => {
 // let status_m7 = false;
 // let status_m8 = false;
 // let status_m9 = false;
+
 
 // get "next" and "prev" buttons
 const btns_prev = document.querySelectorAll('#btn_prev');

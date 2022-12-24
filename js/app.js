@@ -113,18 +113,45 @@ const website_projects = document.querySelectorAll('#website');
 const int_projects = document.querySelectorAll('#int');
 
 // скролл после применения фильтра при media 900px TODO_TEMP
-const mediaQuery = window.matchMedia('(min-width: 900px)');
-if (mediaQuery.matches) {
+function filterScroll() {
    let coordY_portfolio = document.querySelector('.portfolioJS').getBoundingClientRect().top + window.scrollY;
-   allLinks.forEach(item => {
-      item.addEventListener('click', () => {
-      window.scrollTo({
-         top: coordY_portfolio-150,
-         behavior: 'smooth'
-         });
-      });
+   window.scrollTo({
+      top: coordY_portfolio - 160,
+      behavior: 'smooth'
    });
 }
+window.addEventListener('load', () => {
+   if (window.matchMedia("(max-width: 900px)").matches) {
+      allLinks.forEach(item => {
+         item.addEventListener('click', filterScroll);
+      });
+   } else {
+      allLinks.forEach(item => {
+         item.removeEventListener('click', filterScroll);
+      });
+   }
+});
+/* неудачный другой вариант объединения двух событий
+function filterScroll () {
+   function scrollToTop() {
+      let coordY_portfolio = document.querySelector('.portfolioJS').getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+         top: coordY_portfolio - 160,
+         behavior: 'smooth'
+      });
+   if (window.matchMedia("(max-width: 1000px)").matches) {
+      allLinks.forEach(item => {
+         item.addEventListener('click', scrollToTop);
+      });
+   } else {
+      allLinks.forEach(item => {
+         item.removeEventListener('click', scrollToTop);
+      });
+   }
+};
+window.addEventListener('resize', filterScroll);
+window.addEventListener('load', filterScroll);
+*/
 
 // отслеживание нажатия
 btn_loadMoreWorks.addEventListener('click', (e) => {

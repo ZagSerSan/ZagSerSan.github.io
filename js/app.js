@@ -471,3 +471,11 @@ btns_next.forEach(item => {
       }, 10);
    });
 });
+
+//? ============ slider =============================================
+$(function(){
+
+   $('#sliderJS').slick({
+      dots: true
+   });
+});

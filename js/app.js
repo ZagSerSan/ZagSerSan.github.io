@@ -474,8 +474,12 @@ btns_next.forEach(item => {
 
 //? ============ slider =============================================
 $(function(){
-
-   $('#sliderJS').slick({
+   
+   $('.slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
       dots: true
    });
+   
 });

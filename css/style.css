@@ -1106,14 +1106,23 @@ a:hover {
 }
 .modal-work__preview {
   width: 65%;
+}
+.modal-work__preview .slider {
   position: relative;
+  height: 100%;
   max-height: 620px;
   overflow: clip;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
 }
-.modal-work__preview img {
+.modal-work__preview .slider img {
   width: 100%;
 }
-.modal-work__preview-item:last-child {
+.modal-work__preview .slider-item:last-child {
   display: block;
   align-items: flex-end;
 }

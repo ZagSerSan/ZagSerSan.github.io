@@ -697,22 +697,36 @@
 
    &.trX_left {transform: scale(.4) translateX(-50%);}
    &.trX_right {transform: scale(.4) translateX(50%);}
-   &.show {transform: scale(1);}
+   &.show {
+      transform: scale(1);
+   }
 		&__preview {
          width: 65%;
          // background-color: #727173;
-         position: relative;
-         max-height: 620px;
-         overflow: clip;
-         img {
-            width: 100%;
-         }
-         &-item:last-child {
-            display: block;
-            align-items: flex-end;
+
+      // slider
+         .slider {
+            position: relative;
+            height: 100%;
+            max-height: 620px;
+            overflow: clip;
+
+            box-sizing: border-box;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+
+            img {
+               width: 100%;
+            }
+            &-item:last-child {
+               display: block;
+               align-items: flex-end;
+            }
          }
       
-      // slider
          .slick-prev {
             position: absolute;
             top: 50%;

@@ -479,36 +479,40 @@
 </div><!-- /.modal-bg -->
 
 <!--todo -modal work -->
-<div class="modal-bg show" style="background-color: rgba(0,0,0,0.8);" id="modal_1">
-   <div class="modal-work show" id="submodal_1">
+<div class="modal-bg" id="modal_1">
+   <div class="modal-work" id="submodal_1">
       <!-- <div class="modal-work" id="submodal_1"> -->
       
       <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview app" id="sliderJS">
-         <div>
-            <div class="modal-work__preview-item">
-               <img src="img/works/slide_1.jpg" alt="slide_1">
+      <div class="modal-work__preview">
+         <div class="slider">
+
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/slide_1.jpg" alt="slide_1">
+               </div>
             </div>
-         </div>
-         <div>
-            <div class="modal-work__preview-item">
-               <img src="img/works/slide_2.jpg" alt="slide_2">
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/slide_2.jpg" alt="slide_2">
+               </div>
             </div>
-         </div>
-         <div>
-            <div class="modal-work__preview-item">
-               <img src="img/works/slide_3.jpg" alt="slide_3">
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/slide_3.jpg" alt="slide_3">
+               </div>
             </div>
-         </div>
-         <div>
-            <div class="modal-work__preview-item">
-               <img src="img/works/slide_4.jpg" alt="slide_4">
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/slide_4.jpg" alt="slide_4">
+               </div>
             </div>
-         </div>
-      </div>
+
+         </div><!-- /.slider -->
+      </div><!-- /.modal-work__preview -->
 
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 1</h3>
@@ -537,7 +541,33 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview app"></div>
+      <div class="modal-work__preview">
+         <div class="slider">
+
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/slide_1.jpg" alt="slide_1">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/slide_2.jpg" alt="slide_2">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/slide_3.jpg" alt="slide_3">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/slide_4.jpg" alt="slide_4">
+               </div>
+            </div>
+
+         </div><!-- /.slider -->
+      </div><!-- /.modal-work__preview -->
+
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">PROJECT TITLE 2</h3>
          <h4 class="modal-work__category">CATEGORY: APP <span>|</span> 2018</h4>
@@ -754,16 +784,13 @@
    </div><!-- /modal-work -->
 </div><!-- /.modal_work_bg -->
 
-<!-- -Empty space -->
-   <!-- <div class="empty-space">
-      <div class="container">
-         <div class="empty-space__inner">Empty space</div>
-      </div>
-   </div> -->
-</div>
+</div><!-- /.wrapper -->
+
+   <!-- js -->
    <script src="js/app.js"></script>
    <!-- slick slider -->
    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
 </html>

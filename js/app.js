@@ -304,8 +304,21 @@ btn_close.forEach(btn => {
 //* ===== WORK ITEMS and MODAL ======================================
 const allWorkItems = document.querySelectorAll("[data-modal]");
 const allModalWokr_btnClose = document.querySelectorAll('#btn_work_close');
-const allModals_bg = document.querySelectorAll('.modal-bg');
+const allModals_bg = document.querySelectorAll('.modal-bg--work');
 const allModals_inner = document.querySelectorAll('.modal-work');
+
+allModals_bg.forEach(item => {
+   setTimeout(() => {
+      item.style.display = 'none';
+      
+   }, 100);
+})
+allModals_inner.forEach(item => {
+   setTimeout(() => {
+      item.style.transform = 'scale(0)';
+      item.style.opacity = '1';
+   }, 100);
+});
 
 allWorkItems.forEach(item => {
    item.addEventListener('click', ()=> {
@@ -336,8 +349,12 @@ allWorkItems.forEach(item => {
          thisLink.classList.remove('hide');
       });
 
+      //TODO_temp
+
       body.classList.add('noscroll');
       modal_bg.classList.add('show')
+      modal_bg.style.removeProperty("display");
+      modal_inner.style.transform = 'scale(1)';
 
       setTimeout(() => {
          modal_bg.classList.add('bg');
@@ -481,5 +498,7 @@ $(function(){
       slidesToScroll: 1,
       dots: true
    });
-   
+
+   // $(".slider").slick('reinit');
+
 });

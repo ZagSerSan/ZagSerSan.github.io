@@ -1128,6 +1128,16 @@ a:hover {
 .modal-work__preview {
   width: 65%;
 }
+.modal-work__preview .last-slide--align {
+  display: flex;
+  align-items: flex-end;
+  height: 620px;
+}
+@media (max-width: 800px) {
+  .modal-work__preview .last-slide--align {
+    height: 350px;
+  }
+}
 .modal-work__preview .slider {
   position: relative;
   height: 100%;
@@ -1136,10 +1146,6 @@ a:hover {
 }
 .modal-work__preview .slider img {
   width: 100%;
-}
-.modal-work__preview .slider-item:last-child {
-  display: block;
-  align-items: flex-end;
 }
 .modal-work__preview .slick-prev {
   position: absolute;

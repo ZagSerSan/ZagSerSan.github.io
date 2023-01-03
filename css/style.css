@@ -823,7 +823,8 @@ a:hover {
   margin: 0;
   cursor: pointer;
   border: none;
-  background-color: transparent;
+  background: radial-gradient(#fff 60%, #000 40%);
+  border-radius: 50%;
   transition: transform 0.1s linear;
 }
 .modal-hireme__btn-close svg {
@@ -1089,12 +1090,16 @@ a:hover {
   height: 100%;
   padding: 15px;
   overflow: auto;
+  display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s linear;
 }
 .modal-bg--work.bg {
   background: rgba(0, 0, 0, 0.6);
+}
+.modal-bg--work.hide {
+  display: none;
 }
 
 .modal-work {
@@ -1105,6 +1110,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   background-color: #fff;
+  opacity: 0;
   transition: transform 0.3s linear, opacity 0.3s linear;
 }
 .modal-work.trX_left {
@@ -1112,6 +1118,9 @@ a:hover {
 }
 .modal-work.trX_right {
   transform: scale(0.4) translateX(50%);
+}
+.modal-work.hide {
+  transform: scale(0);
 }
 .modal-work.show {
   transform: scale(1);
@@ -1124,12 +1133,6 @@ a:hover {
   height: 100%;
   max-height: 620px;
   overflow: clip;
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
 }
 .modal-work__preview .slider img {
   width: 100%;

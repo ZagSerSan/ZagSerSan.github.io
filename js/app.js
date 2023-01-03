@@ -1,5 +1,5 @@
 //todo ============ TODO_TEMP =============================================
-// 1) ---
+// 1) fix "next" and "prev" buttons
 
 //? ============ BURGER ==================================================
 let burger = document.getElementById('burgerJS');
@@ -307,17 +307,20 @@ const allModalWokr_btnClose = document.querySelectorAll('#btn_work_close');
 const allModals_bg = document.querySelectorAll('.modal-bg--work');
 const allModals_inner = document.querySelectorAll('.modal-work');
 
+// скрытие фона с задержкой
 allModals_bg.forEach(item => {
    setTimeout(() => {
       item.style.display = 'none';
-      
-   }, 100);
+   }, 1000);
 })
+// уменьшение окна и добавление прозрачности
 allModals_inner.forEach(item => {
    setTimeout(() => {
-      item.style.transform = 'scale(0)';
-      item.style.opacity = '1';
-   }, 100);
+      item.classList.add('hide');
+      setTimeout(() => {
+         item.style.opacity = '1';
+      }, 1500);
+   }, 1000);
 });
 
 allWorkItems.forEach(item => {
@@ -349,12 +352,9 @@ allWorkItems.forEach(item => {
          thisLink.classList.remove('hide');
       });
 
-      //TODO_temp
-
       body.classList.add('noscroll');
       modal_bg.classList.add('show')
       modal_bg.style.removeProperty("display");
-      modal_inner.style.transform = 'scale(1)';
 
       setTimeout(() => {
          modal_bg.classList.add('bg');
@@ -376,13 +376,13 @@ allModalWokr_btnClose.forEach(btn => {
          }, 10);
          setTimeout(() => {
             item.classList.remove('show');
+            item.style.display = 'none';
          }, 300);
       });
    });
 });
 
 //* ===== smart switch between work items =====
-// todo_temp
 /*
    Получать в массив модальные окна относящиеся к нажатому фильтру и потом листать
    кнопками по этому масиву: типа "prev" предыдущее из массива, "prev" следущее.
@@ -407,6 +407,7 @@ allModalWokr_btnClose.forEach(btn => {
 // let status_m8 = false;
 // let status_m9 = false;
 
+      //TODO_temp
 
 // get "next" and "prev" buttons
 const btns_prev = document.querySelectorAll('#btn_prev');

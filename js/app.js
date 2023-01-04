@@ -1,5 +1,6 @@
 //todo ============ TODO_TEMP =============================================
-// 1) fix "next" and "prev" buttons
+// 1) ---
+// todo_2) (не обьязательно)
 
 //? ============ BURGER ==================================================
 let burger = document.getElementById('burgerJS');
@@ -52,7 +53,6 @@ allHeaderLinks.forEach(item => {
 });
 
 //? ============ INTERACTIVE SCROLL =============================================
-// heights blocks: headerH = header Height
 let introOffset;
 let workOffset;
 let aboutOffset;
@@ -131,27 +131,6 @@ window.addEventListener('load', () => {
       });
    }
 });
-/* неудачный другой вариант объединения двух событий
-function filterScroll () {
-   function scrollToTop() {
-      let coordY_portfolio = document.querySelector('.portfolioJS').getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-         top: coordY_portfolio - 160,
-         behavior: 'smooth'
-      });
-   if (window.matchMedia("(max-width: 1000px)").matches) {
-      allLinks.forEach(item => {
-         item.addEventListener('click', scrollToTop);
-      });
-   } else {
-      allLinks.forEach(item => {
-         item.removeEventListener('click', scrollToTop);
-      });
-   }
-};
-window.addEventListener('resize', filterScroll);
-window.addEventListener('load', filterScroll);
-*/
 
 // отслеживание нажатия
 btn_loadMoreWorks.addEventListener('click', (e) => {
@@ -387,7 +366,8 @@ allModalWokr_btnClose.forEach(btn => {
 });
 
 //* ===== smart switch between work items =====
-/*
+// todo_2
+/* 
    Получать в массив модальные окна относящиеся к нажатому фильтру и потом листать
    кнопками по этому масиву: типа "prev" предыдущее из массива, "prev" следущее.
    Логика: когда нажимаю кнопку "prev", то из следующего элемента массива извлекать инфу про
@@ -445,7 +425,7 @@ btns_prev.forEach(item => {
          openNow.style.display="none";
       }, 300);
 
-      // предыдущее модальное окно
+   // предыдущее модальное окно
       prev_modal.style.display="flex";
       // анимация вылета окна, обнуление перед появлением
       prev_submodal.style.opacity=".5";
@@ -462,9 +442,6 @@ btns_prev.forEach(item => {
       }, 10);
    });
 });
-
-      //TODO_temp
-
 btns_next.forEach(item => {
    item.addEventListener('click', () => {
       let openNow = document.getElementById(item.getAttribute('data-openmodal'));
@@ -491,7 +468,6 @@ btns_next.forEach(item => {
          // фон
          openNow.style.display="none";
       }, 300);
-
    // следующее модальное окно
       next_modal.style.display="flex";
       // анимация вылета окна, обнуление перед появлением
@@ -511,6 +487,7 @@ btns_next.forEach(item => {
 });
 
 //? ============ slider (jquery) =============================================
+
 $(function(){
    $('.slider').slick({
       infinite: true,

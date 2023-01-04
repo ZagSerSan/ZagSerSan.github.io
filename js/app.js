@@ -316,11 +316,12 @@ allModals_bg.forEach(item => {
 // уменьшение окна и добавление прозрачности
 allModals_inner.forEach(item => {
    setTimeout(() => {
-      item.classList.add('hide');
+      // item.classList.add('hide');
+      item.style.transform = 'scale(0)';
       setTimeout(() => {
          item.style.opacity = '1';
-      }, 1500);
-   }, 1000);
+      }, 600);
+   }, 500);
 });
 
 allWorkItems.forEach(item => {
@@ -355,20 +356,23 @@ allWorkItems.forEach(item => {
       body.classList.add('noscroll');
       modal_bg.classList.add('show')
       modal_bg.style.removeProperty("display");
+      modal_inner.classList.remove('hide');
 
       setTimeout(() => {
          modal_bg.classList.add('bg');
       }, 10);
       setTimeout(() => {
-         modal_inner.classList.add('show')
-      }, 10);
+         // modal_inner.classList.add('show')
+         modal_inner.style.transform = 'scale(1)';
+      }, 100);
    });
 });
 allModalWokr_btnClose.forEach(btn => {
    btn.addEventListener('click', ()=> {
       body.classList.remove('noscroll');
       allModals_inner.forEach(item => {
-         item.classList.remove('show');
+         // item.classList.remove('show');
+         item.style.transform = 'scale(0)';
       });
       allModals_bg.forEach(item => {
          setTimeout(() => {

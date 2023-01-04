@@ -1119,12 +1119,6 @@ a:hover {
 .modal-work.trX_right {
   transform: scale(0.4) translateX(50%);
 }
-.modal-work.hide {
-  transform: scale(0);
-}
-.modal-work.show {
-  transform: scale(1);
-}
 .modal-work__preview {
   width: 65%;
 }

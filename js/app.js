@@ -411,8 +411,6 @@ allModalWokr_btnClose.forEach(btn => {
 // let status_m8 = false;
 // let status_m9 = false;
 
-      //TODO_temp
-
 // get "next" and "prev" buttons
 const btns_prev = document.querySelectorAll('#btn_prev');
 const btns_next = document.querySelectorAll('#btn_next');
@@ -465,6 +463,8 @@ btns_prev.forEach(item => {
    });
 });
 
+      //TODO_temp
+
 btns_next.forEach(item => {
    item.addEventListener('click', () => {
       let openNow = document.getElementById(item.getAttribute('data-openmodal'));
@@ -472,50 +472,50 @@ btns_next.forEach(item => {
       let next_modal = document.getElementById(item.getAttribute('data-next'));
       let next_submodal = document.getElementById(item.getAttribute('data-subnext'));
 
-      // текущее открытое модальное окно
-         // стилизация анимации
+   // текущее открытое модальное окно
+      // удаление свойства, добавленное через js, которое препятствовало анимации.
+      openNow_sub.style.removeProperty('transform');
       openNow_sub.style.opacity="0";
-      openNow_sub.classList.remove('show');
+      // класс анимации исчезновения окна
       openNow_sub.classList.add('trX_left');
-
+      openNow.classList.remove('bg');
+      setTimeout(() => {
+         openNow_sub.style.display="none";
+      }, 200);
+      // обнуление состояния окна после анимации закрытия
       setTimeout(() => {
          openNow_sub.style.opacity="1";
          openNow_sub.classList.remove('trX_left');
-      }, 300);
-      setTimeout(() => {
-         openNow.classList.remove('bg');
-      }, 10);
-      setTimeout(() => {
-         openNow.classList.remove('show');
+         openNow_sub.style.transform="scale(0)";
+         openNow_sub.style.display="flex";
+         // фон
+         openNow.style.display="none";
       }, 300);
 
-      // следующее модальное окно
-      next_modal.classList.add('show');
-      //обнуляющие стили перед появлением окна
-      next_submodal.style.opacity="0";
+   // следующее модальное окно
+      next_modal.style.display="flex";
+      // анимация вылета окна, обнуление перед появлением
+      next_submodal.style.opacity=".5";
+      next_submodal.style.removeProperty('transform');
+      // присвоение стилей точки вылета
       next_submodal.classList.add('trX_right');
-
       setTimeout(() => {
          next_modal.classList.add('bg');
-      }, 10);
-      setTimeout(() => {
-         next_submodal.classList.add('show');
+         // вылет
+         next_submodal.style.transform="scale(1)";
          next_submodal.style.opacity="1";
+         // стремится к стандартному отображению
          next_submodal.classList.remove('trX_right');
       }, 10);
    });
 });
 
-//? ============ slider =============================================
+//? ============ slider (jquery) =============================================
 $(function(){
-   
    $('.slider').slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: true
    });
-
-   // $(".slider").slick('reinit');
-
 });

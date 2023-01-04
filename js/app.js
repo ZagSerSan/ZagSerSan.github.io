@@ -418,37 +418,49 @@ const btns_prev = document.querySelectorAll('#btn_prev');
 const btns_next = document.querySelectorAll('#btn_next');
 
 btns_prev.forEach(item => {
+   // событие нажания на 'эту' кнопку 'предыдущий':
    item.addEventListener('click', () => {
+      // получаем текущее открытое модальное окно
       let openNow = document.getElementById(item.getAttribute('data-openmodal'));
       let openNow_sub = document.getElementById(item.getAttribute('data-opensubmodal'));
+      // получаем предыдущее модальное окно
       let prev_modal = document.getElementById(item.getAttribute('data-prev'));
       let prev_submodal = document.getElementById(item.getAttribute('data-subprev'));
 
-      // текущее открытое модальное окно
+   // текущее открытое модальное окно
+      // удаление свойства, добавленное через js, которое препятствовало анимации.
+      openNow_sub.style.removeProperty('transform');
       openNow_sub.style.opacity="0";
+      // класс анимации исчезновения окна
       openNow_sub.classList.add('trX_right');
+      openNow.classList.remove('bg');
       setTimeout(() => {
-         openNow_sub.classList.remove('show');
-         openNow.classList.remove('bg');
-      }, 10);
+         openNow_sub.style.display="none";
+      }, 200);
+      // обнуление состояния окна после анимации закрытия
       setTimeout(() => {
-         //обнкление стилей js
          openNow_sub.style.opacity="1";
-         openNow.classList.remove('show');
          openNow_sub.classList.remove('trX_right');
+         openNow_sub.style.transform="scale(0)";
+         openNow_sub.style.display="flex";
+         // фон
+         openNow.style.display="none";
       }, 300);
 
       // предыдущее модальное окно
-      prev_submodal.style.opacity="0";
+      prev_modal.style.display="flex";
+      // анимация вылета окна, обнуление перед появлением
+      prev_submodal.style.opacity=".5";
+      prev_submodal.style.removeProperty('transform');
+      // присвоение стилей точки вылета
       prev_submodal.classList.add('trX_left');
-      prev_modal.classList.add('show');
       setTimeout(() => {
          prev_modal.classList.add('bg');
-      }, 10);
-      setTimeout(() => {
+         // вылет
+         prev_submodal.style.transform="scale(1)";
          prev_submodal.style.opacity="1";
+         // стремится к стандартному отображению
          prev_submodal.classList.remove('trX_left');
-         prev_submodal.classList.add('show');
       }, 10);
    });
 });

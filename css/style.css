@@ -1132,6 +1132,11 @@ a:hover {
     height: 350px;
   }
 }
+@media (max-width: 400px) {
+  .modal-work__preview .last-slide--align {
+    height: 257px;
+  }
+}
 .modal-work__preview .slider {
   position: relative;
   height: 100%;

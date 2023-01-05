@@ -1,0 +1,1293 @@
+//* <МИКСИНЫ>===============================================================================================
+   @import "_mixins";
+//* <ШРИФТЫ>===============================================================================================
+//<Подключаем шрифты>=======================================================================================
+   @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;600;700&family=Roboto:ital,wght@0,400;1,300&display=swap');   
+//<Иконочные шрифты>==========================================================================================
+//<Шрифт по умолчанию>==========================================================================================
+body {
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   -webkit-font-smoothing: antialiased;
+   color: #333333;
+}
+//* <ПЕРЕМЕННЫЕ>===========================================================================================================
+   $minwidth: 320px;
+   $mw: 1200;
+   $md1: $mw + 12;
+   $md2: 991.98;
+   $md3: 767.98;
+   $md4: 479.98;
+   $md5: 379.98;
+   $block_padd-bottom: 100px;
+//* <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+   @import "null";
+//* <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+   @import "header";
+   @import "footer";
+//* <ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+}
+//* <ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+   max-width: $mw + px;
+   width: 100%;
+   margin: 0 auto;
+}
+//* <ОСНОВНОЙ БЛОК>====================================================================================================
+//todo -intro -------------------
+.intro {
+   background: url(../img/intro/intro-bg.jpg) center no-repeat;
+   background-size: cover;
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      height: 92vh;
+      min-height: 815px;
+      padding-top: 80px;
+   }
+   &__suptitle {
+      @include fontFWSC('Kaushan Script',400,72px,#fff);
+   }
+   &__title {
+      @include fontFWSC('Montserrat',700,150px,#fff);
+      margin-top: 40px;
+      text-transform: uppercase;
+      text-align: center;
+      max-width: 930px;
+      &:after {
+         content: "";
+         display: block;
+         width: 60px;
+         height: 3px;
+         background-color: #fff;
+         margin: 60px auto 0;
+      }
+   }
+   &__link {
+      display: inline-block;
+      @include fontFWSC('Montserrat',700,14px,#fff);
+      text-transform: uppercase;
+      padding: 12px 30px;
+      border: 3px #fff solid;
+      margin-top: 50px;
+      transition:  all .12s linear;
+      &:hover {
+         text-decoration: none;
+         background-color: #fff;
+         color: #e99384;
+      }
+   }
+   .slider {
+      display: flex;
+      justify-content: space-between;
+		&__item {
+         width: 23%;
+      }
+		&__title {
+         display: inline-block;
+         @include fontFWSC('Montserrat',400,18px,#fff);
+         text-transform: uppercase;
+         padding: 25px 0;
+         width: 100%;
+         position: relative;
+         span{font-weight: 700;font-size: 24px;}
+         &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: block;
+            background: #fff;
+            opacity: .5;
+            height: 3px;
+         }
+         &.active {
+            &:before {
+               content: "";
+               opacity: 1;
+               background: linear-gradient(90deg,#f38181 25%,#fff 25%,);
+            }
+         }
+      }
+   }
+}
+//todo -about -------------------
+.about {
+   &__inner {
+      padding-bottom: $block_padd-bottom;
+   }
+}
+.headertitle-template {
+   text-align: center;
+   padding: 100px 0;
+   &__suptitle {
+      @include fontFWSC('Kaushan Script',400,24px,#333);
+   }
+   &__title {
+      @include fontFWSC('Montserrat',700,30px,#333);
+      text-transform: uppercase;
+      margin-top: 20px;
+      &:after {
+         content: "";
+         display: block;
+         width: 60px;
+         height: 3px;
+         background-color: #f38181;
+         margin: 40px auto 0;
+      }
+   }
+   &__text {
+      @include fontFWSCL('Roboto',400,15px,#999,1.6);
+      text-align: center;
+      max-width: 970px;
+      margin-top: 45px;
+   }
+}
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.cards-item {
+   width: 32%;
+   // height: 250px;
+   background-color: #95e1d3;
+   position: relative;
+   cursor: pointer;
+
+   &__inner {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      // height: 250px;
+      background: linear-gradient(-360deg,#fce38a 20%, #f38181 80%);
+      overflow: hidden;
+      transition: all .12s linear;
+      img{
+         width: 100%;
+         display: block;
+         transition: opacity .12s linear;
+      }
+   }
+   &:hover {
+      .cards-item__inner  {
+         top: -10px;
+         left: -10px;
+      }
+      img{opacity: .1;}
+      .cards-item__container{opacity: 1;}
+   }
+   &__container {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      opacity: 0;
+      transition: opacity .12s linear;
+      svg{
+         fill: #fff;
+         width: 30px;
+         height: 30px;
+      }
+   }
+   &__name {
+      @include fontFWSC('Montserrat',700,18px,#fff);
+      text-transform: uppercase;
+      margin-top: 10px;
+   }
+}
+//todo -quantity -------------------
+.quantity {
+   background-color: #95e1d3;
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__item {
+      width: 20%;
+      height: 270px;
+      border-right: 1px #b5eae0 solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &:first-child{border-left: 1px #b5eae0 solid;}
+   }
+   &__number {
+      @include fontFWSC('Montserrat',700,72px,#fff);
+      text-transform: uppercase;
+   }
+   &__subtitle {
+      @include fontFWSC('Montserrat',400,14px,#fff);
+      margin-top: 30px;
+   }
+}
+//todo -service -------------------
+.service {
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+   }
+}
+.service-item {
+   width: 33.333%;
+   display: flex;
+   padding-bottom: 50px;
+
+   &[data-border="bottom"]{border-bottom: 1px solid #e5e5e5;}
+   &[data-padding="top"]{padding-top: 50px;}
+   
+   &__icon {
+      img{display: block;}
+   }
+   &__content {
+      padding-left: 30px;
+   }
+   &__title {
+      @include fontFWSC('Montserrat',700,14px,#333);
+      text-transform: uppercase;
+   }
+   &__text {
+      @include fontFWSCL('Roboto',400,15px,#999,1.6);
+      margin-top: 20px;
+      max-width: 280px;
+   }
+}
+//todo -design -------------------
+.design {
+   .headertitle-template {padding-bottom: 45px;}
+   background: url('../img/design/bg.jpg') center no-repeat;
+   background-size: cover;
+}
+.devices {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   img{display: block;}
+   &__iphone {
+      position: absolute;
+      bottom: -88px;
+      right: 17%;
+   }
+}
+//todo -whatwedo -------------------
+.whatwedo__inner{padding-bottom: 100px;}
+.whatwedo-content {
+   display: flex;
+   flex-wrap: wrap;
+   &__photo {
+      width: 50%;
+      padding-right: 13px;
+      overflow: hidden;
+      img{display: block;width: 100%;}
+   }
+}
+.accordion {
+   width: 50%;
+   padding-left: 17px;
+}
+.accordion-item {
+   margin-bottom: 10px;
+   &:last-child {
+      margin-bottom: 0;
+   }
+   &__header {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border: 1px #e5e5e5 solid;
+      cursor: pointer;
+      transition: background-color .12s linear;
+      position: relative;
+      &:hover {
+         background-color: #f9f9f9;
+      }
+      &:after {
+         content: "";
+         position: absolute;
+         top: auto;
+         right: 20px;
+         // transform: translateY(-50%);
+         transform: rotate(45deg);
+
+         width: 15px;
+         height: 15px;
+         background-color: transparent;
+         border-bottom: 3px #ccc solid;
+         border-right: 3px #ccc solid;
+         transition: top .2s linear, transform .2s linear;
+      }
+   }
+   &__icon {display: block;}
+   &__title {
+      @include fontFWSC('Montserrat',600,14px,#333);
+      text-transform: uppercase;
+      margin-left: 14px;
+   }
+   &__content {
+      display: block;
+
+      padding: 0px;
+      border: 1px #e5e5e5 solid;
+      border-top: none;
+      border-bottom: 0;
+      height: 0;
+      max-height: 180px;
+      overflow: auto;
+      transition: height .2s linear, padding .2s linear;
+      p {
+         @include fontFWSCL('Roboto',300,15px,#999,1.6);
+         font-style: italic;
+      }
+   }
+   &.active {
+      .accordion-item__content{
+         height: 180px;
+         padding: 20px;
+         border-bottom: 1px #e5e5e5 solid;
+      }
+      .accordion-item__header {
+         &:after {
+            top: 20px;
+            transform: rotate(225deg);
+         }
+      }
+   }
+}
+//todo -quote -------------------
+.quote {
+   background-color: #f8f8f8;
+   &__inner {
+      padding: 70px 0px;
+      position: relative;
+      .slick-prev {
+         position: absolute;
+         top: 50%;
+         left: 25px;
+         z-index: 4;
+         transform: translateY(-50%);
+         transform: rotate(135deg);
+
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+
+         font-size: 0;
+         color: transparent;
+         background-color: transparent;
+         border: none;
+         border-bottom: 3px #ccc solid;
+         border-right: 3px #ccc solid;
+         transition: border-color .1s linear;
+         &:focus{outline: none;}
+         &:hover {
+            border-color: #7c7c7c;
+         }
+      }
+      .slick-next {
+         position: absolute;
+         top: 50%;
+         right: 25px;
+         z-index: 4;
+         transform: translateY(-50%);
+         transform: rotate(-45deg);
+
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+
+         font-size: 0;
+         color: transparent;
+         background-color: transparent;
+         border: none;
+         border-bottom: 3px #ccc solid;
+         border-right: 3px #ccc solid;
+         transition: border-color .1s linear;
+         &:focus{outline: none;}
+         &:hover {
+            border-color: #7c7c7c;
+         }
+      }
+   }
+   &__slider{
+      padding: 0 100px;
+   }
+}
+.quote-item {
+   display: flex;
+   align-items: center;
+   &__icon {
+      padding: 40px;
+      border: 3px #95e1d3 solid;
+   }
+   &__content {
+      padding-left: 60px;
+   }
+   &__text {
+      @include fontFWSCL('Roboto',300,24px,#999999,1.5);
+      font-style: italic;
+   }
+   &__author {
+      @include fontFWSC('Kaushan Script',400,24px,#333333);
+      margin-top: 25px;
+      padding-left: 70px;
+      position: relative;
+      &:before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 0;
+         transform: translateY(-50%);
+
+         width: 60px;
+         height: 3px;
+
+         background-color: #f38181;
+      }
+   }
+}
+//todo -team -------------------
+.team__inner {
+   padding-bottom: 100px;
+   .cards {
+      .team__item {
+         width: 32%;
+         text-align: center;
+      }
+      .team__name {
+         @include fontFWSC('Montserrat',600,14px,#333);
+         text-transform: uppercase;
+         margin-top: 30px;
+      }
+      .team__prof {
+         @include fontFWSC('Roboto',300,15px,#999);
+         font-style: italic;
+         margin-top: 15px;
+      }
+      .cards-item {
+         width: 100%;
+         &__photo {
+            display: block;
+            // height: 470px;
+            height: auto;
+         }
+         &__container.social {
+            display: flex;
+            flex-direction: row;
+            .cards-item__icon {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 56px;
+               height: 56px;
+               background-color: #fce38a;
+               transition: background-color .12s linear;
+               svg {
+                  height: 26px;
+                  fill: #f38181;
+                  transition: fill .12s linear;
+               }
+               &:hover {
+                  background-color: #f38181;
+                  svg {
+                     height: 26px;
+                     fill: #fff;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+//todo -team -------------------
+.logos {
+   background-color: #f8f8f8;
+   &__inner {
+      padding: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__item{
+      width: 16.6%;
+      padding: 30px 0;
+   }
+   &__img {
+      display: block;
+      margin: 0px auto;
+   }
+}
+//todo -work -------------------
+.work-cards {
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 1920px;
+   margin: 0px auto;
+   &__column {
+      width: 25%;
+   }
+   &__row {
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(-360deg,#fce38a 20%, #f38181 80%);
+      &:hover {
+         .work-cards__img {opacity: .1;}
+         .work-cards__content{opacity: 1;}
+      }
+   }
+   &__img {
+      position: relative;
+      top: 0;
+      right: -50%;
+      width: 100%;
+      display: block;
+      transform: translateX(-50%);
+      transition: opacity .12s linear;
+   }
+   &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity .12s linear;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   &__icon {display: block;}
+   &__title {
+      @include fontFWSC('Montserrat',600,14px,#fff);
+      text-transform: uppercase;
+      margin-top: 20px;
+   }
+   &__text {
+      @include fontFWSC('Roboto',300,15px,#fff);
+      font-style: italic;
+      margin-top: 20px;
+   }
+}
+//todo -reviews -------------------
+.review {
+   background-color: #fff;
+   &__inner {
+      padding: 70px 0;
+      position: relative;
+      .slick-prev {
+         position: absolute;
+         top: 50%;
+         left: 25px;
+         z-index: 4;
+         transform: translateY(-50%);
+         transform: rotate(135deg);
+
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+
+         font-size: 0;
+         color: transparent;
+         background-color: transparent;
+         border: none;
+         border-bottom: 3px #ccc solid;
+         border-right: 3px #ccc solid;
+         transition: border-color .1s linear;
+         &:focus{outline: none;}
+         &:hover {
+            border-color: #7c7c7c;
+         }
+      }
+      .slick-next {
+         position: absolute;
+         top: 50%;
+         right: 25px;
+         z-index: 4;
+         transform: translateY(-50%);
+         transform: rotate(-45deg);
+
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+
+         font-size: 0;
+         color: transparent;
+         background-color: transparent;
+         border: none;
+         border-bottom: 3px #ccc solid;
+         border-right: 3px #ccc solid;
+         transition: border-color .1s linear;
+         &:focus{outline: none;}
+         &:hover {
+            border-color: #7c7c7c;
+         }
+      }
+   }
+   &__slider{
+      padding: 0 100px;
+   }
+}
+.review-item {
+   display: flex;
+   align-items: center;
+   &__content {
+      padding-left: 30px;
+   }
+   &__text {
+      @include fontFWSCL('Roboto',300,24px,#999999,1.5);
+      font-style: italic;
+   }
+   &__author {
+      @include fontFWSC('Kaushan Script',400,24px,#333333);
+      margin-top: 25px;
+      padding-left: 70px;
+      position: relative;
+      &:before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 0;
+         transform: translateY(-50%);
+
+         width: 60px;
+         height: 3px;
+
+         background-color: #f38181;
+      }
+   }
+}
+//todo -Clientsay -------------------
+.clientsay {
+   background: url('../img/clientsay/bg.jpg') center no-repeat;
+   background-size: cover;
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+   }
+}
+.clientsay-item {
+   width: 50%;
+   display: flex;
+   padding: 0 40px;
+   margin-bottom: 70px;
+   &__photo {
+      img{display: block;}
+   }
+   &__content {
+      padding-left: 30px;
+   }
+   &__name {
+      @include fontFWSC('Montserrat',700,14px,#333);
+      text-transform: uppercase;
+   }
+   &__prof {
+      @include fontFWSC('Roboto',300,15px,#333);
+      font-style: italic;
+      margin-top: 17px;
+   }
+   &__line {
+      height: 3px;
+      width: 60px;
+      background-color: #f38181;
+      margin-top: 20px;
+      font-size: 0;
+      color: transparent
+   }
+   &__text {
+      @include fontFWSCL('Roboto',400,15px,#999,1.6);
+      margin-top: 25px;
+   }
+}
+//todo -blog -------------------
+.blog {
+   .headertitle-template{padding-bottom: 45px;}
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 100px;
+   }
+}
+.blog-item {
+   width: 33.3333%;
+   padding: 0 15px;
+   &__photo {
+      position: relative;
+      img{
+         display: block;
+         width: 100%;
+      }
+   }
+   &__data {
+      position: absolute;
+      bottom: 10px;
+      left: -10px;
+      z-index: 2;
+
+      height: 70px;
+      width: 60px;
+      background-color: #95e1d3;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   &__number {
+      @include fontFWSCL('Montserrat',700,30px,#fff,1);
+   }
+   &__month {
+      @include fontFWSC('Roboto',300,15px,#fff);
+      font-style: italic;
+   }
+   &__title {
+      @include fontFWSC('Montserrat',600,14px,#333);
+      text-transform: uppercase;
+      margin-top: 20px;
+   }
+   &__text {
+      @include fontFWSCL('Roboto',300,15px,#999,1.6);
+      margin-top: 12px;
+   }
+   &__statistics {
+      border-top: 1px #e5e5e5 solid;
+      display: flex;
+      margin-top: 20px;
+      padding-top: 20px;
+   }
+   &__views {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   &__messages{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px;
+   }
+   &__svg {
+      height: 20px;
+      max-width: 20px;
+      fill: #95e1d3;
+      margin-right: 6px;
+   }
+   &__quantity {
+      @include fontFWSCL('Roboto',300,15px,#999,1);
+      font-style: italic;
+   }
+}
+//todo -map
+.map {
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: url('../img/map/bg.jpg') #ccc center no-repeat;
+   background-size: cover;
+   &__svg {
+      fill: #f38181;
+      height: 30px;
+      max-width: 30px;
+      margin-bottom: 18px;
+   }
+   &__title {
+      @include fontFWSC('Montserrat',700,24px,#f38181);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+   }
+   &__line {
+      background-color: #f38181;
+      height: 3px;
+      width: 60px;
+      font-size: 0;
+      color: transparent;
+   }
+}
+//* <АДАПТИВ>====================================================================================================
+//? Point 1 ----------------------------------
+@media (max-width: $md1+px) {
+// container
+   .container{padding: 0 15px;}
+// intro
+   .intro__suptitle{font-size: 52px;}
+   .intro__title {font-size: 120px;max-width: 700px;}
+// whatwedo
+   .whatwedo-content__photo {
+      img{width: auto;height: 100%;}
+   }
+}
+//? Point 2 ----------------------------------
+@media (max-width: $md2+px) {
+// header
+   .header-nav__link{margin-left: 40px;}
+// intro
+   .intro__inner{min-height: 700px;}
+   .intro__suptitle{font-size: 45px;}
+   .intro__title {font-size: 100px;max-width: 600px;}
+   .intro .slider__title {padding: 15px 0;}
+// .headertitle-template
+   .headertitle-template__suptitle{font-size: 20px;}
+   .headertitle-template__title{font-size: 26px;}
+   .headertitle-template__text{font-size: 14px;}
+// quantity
+   .quantity__item{height: 210px;}
+   .quantity__number{font-size: 65px;}
+// service
+   .service-item{width: 50%;justify-content: center;
+      &[data-padding="top"]{padding-top: 0;}
+      &[data-border="bottom"]{border-bottom: none;}
+   }
+// device
+   .devices__ipad{height: 500px;}
+   .devices__iphone{height: 90%;}
+// whatwedo
+   .accordion-item__content p{font-size: 14px;}
+// quote
+   .quote__inner {padding: 40px 70px;}
+   .quote-item__content {padding-left: 40px;}
+// work
+   .work-cards__column {
+      width: 50%;
+   }
+// review
+   .review__inner{padding: 40px 70px;}
+// clientsay
+   .clientsay-item{padding: 0 20px 0 0;}
+// footer
+   .footer-mogo{width: 100%;padding-bottom: 40px;}
+   .footer-blogs{width: 60%;}
+   .footer-inst{
+      width: 40%;
+      &__photos img{width: 25%;}}
+}
+//? Point 3 ----------------------------------
+@media (max-width: $md3+px) {
+// header
+   @media (max-height: 670px) {
+      .header-nav {
+         flex-wrap: wrap;
+         
+         &.active {
+            padding-top: 60px;
+            padding-left: 20px;
+            .header-nav__link{font-size: 25px;}
+         }
+      }
+      .header__inner {height: 50px;}
+      .header__logo{font-size: 25px;}
+      .burger__icon{
+         width: 30px;
+         &:after {
+            width: 30px;  
+         }
+         &:before {
+            width: 30px;      
+         }
+      }
+   }
+   .header-nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 3;
+
+      width: 0%;
+      height: 100vh;
+      padding-top: 80px;
+      overflow: hidden;
+
+      background: linear-gradient(0deg, #eed78b, #e98283);
+      transition: box-shadow .3s ease-out, width .3s ease-out;
+      &__link {
+         font-size: 30px;
+         margin: 20px 0 20px;
+      }
+      svg {
+         width: 30px;
+         height: 30px;
+         &.search{
+            width: 25px;
+            height: 25px;
+            margin-top: 1px;
+         }
+      }
+   }
+   .burger{display: block;}
+// intro
+   // .intro__inner{min-height: 1px;}
+// headertitle-template
+   .headertitle-template {padding: 50px 0;}
+// about
+   .about__inner{padding-bottom: 50px;}
+   .cards-item {
+      width: 49%;
+      margin-bottom: 20px;
+   }
+// quantity
+   .quantity__inner{justify-content: center;}
+   .quantity__item{
+      width: 33.3333%;
+      border: 1px #b5eae0 solid;
+      height: 170px;
+   }
+   .quantity__number {font-size: 55px;}
+// whatwedo
+   .whatwedo__inner{padding-top: 50px;}
+   .whatwedo-content__photo{
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 30px;
+      img{width: 100%;height: auto;}
+   }
+   .accordion{width: 100%;padding-left: 0;}
+// quote
+   .quote__inner {padding: 40px 0;}
+   .quote__slider{padding: 0 70px;}
+   .quote-item__icon{padding: 20px;}
+   .quote-item__text{font-size: 20px;}
+// team
+   .team__inner {
+      padding-bottom: 4px;
+      .cards .team__item{width: 49%;margin-bottom: 60px;}
+   }
+// logos
+   .logos__item{width: 33.333%;}
+// review
+   .review__inner {padding: 40px 0;}
+   .review__slider{padding: 0 70px;}
+   .review-item{
+      img{height: 140px;}
+      &__text{font-size: 20px;}
+   }
+// clientsay
+   .clientsay-item{
+      width: 100%;
+      padding: 0px 0px 0px 20px;
+   }
+// blog
+   .blog__inner{padding-bottom: 50px;}
+   .blog-item {
+      width: 50%;
+      padding: 0 15px 50px;
+   }
+// footer
+   .footer__inner {
+      padding: 40px 0;
+   }
+   .footer-mogo {
+      padding-right: 0;
+      &__title{font-size: 36px;margin-bottom: 30px;}
+   }
+}
+//? Point 4 ----------------------------------
+@media (max-width: $md4+px) {
+// intro
+   .intro__suptitle {
+      font-size: 30px;
+   }
+   .intro__title {
+      font-size: 55px;
+      max-width: 350px;
+   }
+   .intro__link {
+      font-weight: 600;
+      font-size: 12px;
+      padding: 10px 20px;
+      border: 2px #fff solid;
+   }
+   .intro .slider {display: none;}
+// .headertitle-template
+   .headertitle-template {
+      &__title{
+         font-size: 23px;
+         &:after{margin-top: 30px;}
+      }
+      &__text {margin-top: 35px;}
+   }
+// about
+   .cards-item{width: 100%;}
+// quantity
+   .quantity__item{width: 50%;height: 150px;}
+   .quantity__number{font-size: 45px;}
+   .quantity__subtitle{margin-top: 10px;}
+// 
+   .service-item{
+      width: 100%;
+      padding-left: 20px;
+      &__text{max-width: none;}
+   }
+// device
+   .devices__ipad {
+      height: 300px;
+   }
+   .devices__iphone {
+      bottom: -60px;
+      height: 80%;
+      right: 5%;
+   }
+// .whatwedo
+   .whatwedo__inner {padding-bottom: 50px;padding-top: 10px;}
+   .accordion-item {
+      &__title{font-size: 13px;}
+      &__header {padding: 10px;}
+      &__icon {height: 25px;}
+   }
+// quote
+   .quote__inner {
+      padding: 40px 0px;
+      & .slick-prev {left: 10px;top: 40px;}
+      & .slick-next {right: 10px;top: 40px;}
+   }
+   .quote__slider {padding: 0;}
+   .quote-item {
+      flex-direction: column;
+      &__content {
+         padding-left: 0;
+         padding-top: 30px;
+         text-align: center;
+      }
+      &__text {
+         font-size: 18px;
+      }
+      &__author{
+         padding-left: 0;
+         margin-top: 40px;
+         &:before {
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+      }
+      &__icon{height: 90px;}
+   }
+// team
+   .cards {
+      justify-content: center;
+   }
+   .team__inner{padding-bottom: 0;}
+   .team__inner .cards .team__item {
+      width: 80%;
+   }
+// logos
+   .logos__item {
+      width: 50%;
+   }
+// work
+   .work-cards__column{width: 100%;}
+// reviews
+   .review__inner {
+      padding: 40px 0px;
+      & .slick-prev {left: 10px;top: 40px;}
+      & .slick-next {right: 10px;top: 40px;}
+   }
+   .review__slider {padding: 0;}
+   .review-item {
+      flex-direction: column;
+      &__content {
+         padding-left: 0;
+         padding-top: 30px;
+         text-align: center;
+      }
+      &__text{font-size: 18px;}
+      &__author{
+         padding-left: 0;
+         margin-top: 40px;
+         &:before {
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+      }
+   }
+// clientsay
+   .clientsay-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+      &__line{
+         // display: none;
+         margin: 20px auto 0px;
+      }
+      &__name {
+         margin-top: 17px;
+      }
+      &__content {
+         padding-left: 0px;
+      }
+   }
+// blog
+   .blog__inner{padding-bottom: 0;}
+   .blog-item {
+      width: 100%;
+      &__statistics {margin-top: 10px;padding-top: 10px;}
+   }
+// footer
+   .footer-mogo__subscribe {
+      form {
+         button {width: 30%;}
+         textarea {width: 70%;max-width: 70%;}
+      }
+   }
+         .footer-mogo__icons svg {margin-right: 10px;}
+   .footer-blogs {
+      width: 100%;
+      padding-right: 0;
+      &__header {margin-bottom: 20px;}
+   }
+   .footer-inst{
+      width: 100%;
+      &__title {margin-bottom: 20px;}
+   }
+}
+//? Point 5 ----------------------------------
+@media (max-width: $md5+px) {
+// headertitle-template
+.headertitle-template {
+   &__suptitle {font-size: 17px;}
+   &__title {font-size: 20px;
+      &:after {
+         margin-top: 27px;
+         width: 50px;
+         height: 2px;
+      }
+   }
+}
+// header
+.header__inner {height: 50px;}
+.header__logo{font-size: 25px;}
+.burger__icon{
+   width: 30px;
+   &:after {
+      width: 30px;  
+   }
+   &:before {
+      width: 30px;      
+   }
+}
+.header-nav{
+   &__link {
+      font-size: 20px;
+      margin: 10px 0 10px;
+   }
+   svg {
+      width: 30px;
+      height: 30px;
+      &.search{
+         width: 25px;
+         height: 25px;
+         margin-top: 1px;
+      }
+   }
+}
+// intro
+.intro__suptitle {font-size: 25px;}
+.intro__title {
+   font-size: 40px;
+   max-width: 250px;
+   &:after {width: 50px;height: 2px;}
+}
+// quantity
+.quantity__number {font-size: 40px;}
+.quantity__item {text-align: center;}
+// services
+.service-item {padding-left: 0;
+   &__content {
+      padding-left: 20px;
+  }
+  &__text {font-size: 14px;}
+}
+// quote
+.quote__inner .slick-next, .quote__inner .slick-prev {width: 15px;height: 15px;}
+.quote-item {
+   &__text {font-size: 16px;}
+   & img {padding: 15px;height: 75px;}
+   &__author {
+      font-size: 20px;
+      &:before {
+         width: 50px;
+         height: 2px;
+     }
+  }
+}
+// reviesw
+.review__inner .slick-next, .review__inner .slick-prev {width: 17px;height: 17px;}
+.review-item {
+   img {height: 110px;}
+   &__text {
+      font-size: 16px;
+   }
+   &__author {
+      font-size: 20px;
+      &:before {
+         width: 50px;
+         height: 2px;
+     }
+   }
+}
+// blog
+.blog-item {
+   padding: 0 3px 50px;
+   &__text {font-size: 14px;}
+}
+// map
+.map__title {font-size: 20px;}
+.map__line {width: 50px;height: 2px;}
+// footer mogo
+.footer-mogo {
+   &__text {font-size: 14px;}
+   &__social {
+      flex-direction: column;
+      align-items: center;
+   }
+   &__icons {
+      padding-left: 0;
+      margin-top: 15px;
+      svg {margin: 0px 5px;}
+   }
+   &__subscribe form {
+      flex-direction: column;
+      textarea {
+         width: 100%;
+         max-width: 100%;
+      }
+      button {
+         margin-top: 10px;
+         width: 40%;
+      }
+   }
+}
+// footer inst
+.footer-inst__photos img {
+   width: 33.333%;
+}
+}
+//* </END>====================================================================================================

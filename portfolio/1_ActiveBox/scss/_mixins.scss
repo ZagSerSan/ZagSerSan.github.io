@@ -1,0 +1,13 @@
+@mixin fontFWSC($f,$w,$s,$c) {
+   font-family: $f, sans-serif;
+   font-weight: $w;
+   font-size: $s;
+   color: $c;
+ }
+@mixin fontFWSCL($f,$w,$s,$c,$l) {
+  font-family: $f, sans-serif;
+  font-weight: $w;
+  font-size: $s;
+  color: $c;
+  line-height: $l;
+}

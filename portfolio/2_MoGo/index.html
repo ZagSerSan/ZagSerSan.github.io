@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>MoGo</title>
+   <meta charset="UTF-8">
+   <!-- css links -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- adapm -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- slider links -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <!-- Favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/">
+   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon//favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon//favicon-16x16.png">
+   <link rel="manifest" href="img/favicon//site.webmanifest">
+   <link rel="mask-icon" href="img/favicon//safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<main class="wrapper">
+<!-- Sprites -->
+   <svg style="display: none;">
+      <symbol id="cart" viewBox="0 0 256 256">
+         <path d="M215.64941,133.00879l12.15723-66.86231A12.00043,12.00043,0,0,0,216,52H58.01514L53.72852,28.42285A19.99033,19.99033,0,0,0,34.05078,12H16a12,12,0,0,0,0,24H30.71289l26.4707,145.59229A31.98171,31.98171,0,1,0,110.9873,196h42.0254A32.00193,32.00193,0,1,0,184,172H79.833l-2.90918-16H188.10156A27.98561,27.98561,0,0,0,215.64941,133.00879ZM88,204a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,88,204Zm96,8a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,184,212ZM62.37891,76H201.62109l-9.585,52.71631A3.99708,3.99708,0,0,1,188.10156,132H72.56055Z"/>
+      </symbol>
+      <symbol id="search" viewBox="0 0 56.966 56.966">
+         <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+         s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+         c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+         s-17-7.626-17-17S14.61,6,23.984,6z"/>
+      </symbol>
+      <symbol id="team" viewBox="0 0 512 512">
+         <path d="M314.773,348.629l-58.795-14.677l-2.347-9.451c40.256-7.189,61.12-19.328,62.08-19.904
+         c3.008-1.771,4.885-4.971,5.12-8.448c0.256-3.499-1.301-6.933-4.011-9.131c-0.277-0.213-27.413-23.104-27.413-101.952
+         c0-69.845-16.853-105.28-50.091-105.28h-3.541C224.491,69.077,215.147,64,192,64c-30.528,0-97.387,30.485-97.387,121.045
+         c0,78.869-27.136,101.739-27.264,101.845c-2.837,2.133-4.437,5.525-4.245,9.067c0.171,3.563,2.112,6.763,5.141,8.597
+         c0.939,0.555,21.632,12.779,62.144,19.989l-2.347,9.387l-58.795,14.699C28.459,358.805,0,395.285,0,437.333
+         C0,443.221,4.779,448,10.667,448h362.667c5.888,0,10.667-4.821,10.667-10.709C384,395.285,355.541,358.805,314.773,348.629z"/>
+         <path d="M442.773,348.629l-58.795-14.677l-4.331-17.429c15.552-15.915,26.304-37.248,29.888-59.264
+         c9.195-3.264,16.128-11.499,17.365-21.632l3.947-31.531c0.939-7.467-1.365-14.976-6.315-20.629
+         c-2.411-2.773-5.376-4.992-8.64-6.528l1.301-26.667l5.184-5.205c9.557-10.197,17.536-27.563,1.173-52.565
+         c-12.373-18.901-33.259-28.48-62.059-28.48c-11.499,0-38.421,0-63.211,17.6c-4.245,3.029-5.696,8.725-3.371,13.397
+         c10.496,21.333,15.829,51.627,15.829,90.048c0,52.459,12.608,75.733,18.048,83.307c0.875,1.237,2.027,2.261,3.328,3.029
+         c8.576,4.971,12.736,12.928,13.035,25.045c0.235,8.853-5.269,15.829-9.92,20.117c-2.645,2.453-3.883,6.059-3.285,9.6
+         c0.576,3.563,2.944,6.571,6.229,8c40.789,17.963,67.157,58.453,67.157,103.168c0,5.888,4.779,10.667,10.667,10.667h85.333
+         c5.888,0,10.667-4.821,10.667-10.709C512,395.285,483.541,358.805,442.773,348.629z"/>
+      </symbol>
+      <symbol id="facebook" viewBox="0 0 16 16">
+         <path d="M12 5.5H9v-2a1 1 0 0 1 1-1h1V0H9a3 3 0 0 0-3 3v2.5H4V8h2v8h3V8h2l1-2.5z" clip-rule="evenodd"/>
+      </symbol>
+      <symbol id="twitter" viewBox="0 0 410.155 410.155">
+         <path d="M403.632,74.18c-9.113,4.041-18.573,7.229-28.28,9.537c10.696-10.164,18.738-22.877,23.275-37.067
+         l0,0c1.295-4.051-3.105-7.554-6.763-5.385l0,0c-13.504,8.01-28.05,14.019-43.235,17.862c-0.881,0.223-1.79,0.336-2.702,0.336
+         c-2.766,0-5.455-1.027-7.57-2.891c-16.156-14.239-36.935-22.081-58.508-22.081c-9.335,0-18.76,1.455-28.014,4.325
+         c-28.672,8.893-50.795,32.544-57.736,61.724c-2.604,10.945-3.309,21.9-2.097,32.56c0.139,1.225-0.44,2.08-0.797,2.481
+         c-0.627,0.703-1.516,1.106-2.439,1.106c-0.103,0-0.209-0.005-0.314-0.015c-62.762-5.831-119.358-36.068-159.363-85.14l0,0
+         c-2.04-2.503-5.952-2.196-7.578,0.593l0,0C13.677,65.565,9.537,80.937,9.537,96.579c0,23.972,9.631,46.563,26.36,63.032
+         c-7.035-1.668-13.844-4.295-20.169-7.808l0,0c-3.06-1.7-6.825,0.485-6.868,3.985l0,0c-0.438,35.612,20.412,67.3,51.646,81.569
+         c-0.629,0.015-1.258,0.022-1.888,0.022c-4.951,0-9.964-0.478-14.898-1.421l0,0c-3.446-0.658-6.341,2.611-5.271,5.952l0,0
+         c10.138,31.651,37.39,54.981,70.002,60.278c-27.066,18.169-58.585,27.753-91.39,27.753l-10.227-0.006
+         c-3.151,0-5.816,2.054-6.619,5.106c-0.791,3.006,0.666,6.177,3.353,7.74c36.966,21.513,79.131,32.883,121.955,32.883
+         c37.485,0,72.549-7.439,104.219-22.109c29.033-13.449,54.689-32.674,76.255-57.141c20.09-22.792,35.8-49.103,46.692-78.201
+         c10.383-27.737,15.871-57.333,15.871-85.589v-1.346c-0.001-4.537,2.051-8.806,5.631-11.712c13.585-11.03,25.415-24.014,35.16-38.591
+         l0,0C411.924,77.126,407.866,72.302,403.632,74.18L403.632,74.18z"/>
+      </symbol>
+      <symbol id="pinterest" viewBox="0 0 20 20">
+         <path d="M8.617 13.227C8.091 15.981 7.45 18.621 5.549 20c-.586-4.162.861-7.287 1.534-10.605-1.147-1.93.138-5.812 2.555-4.855 2.975 1.176-2.576 7.172 1.15 7.922 3.891.781 5.479-6.75 3.066-9.199C10.369-.275 3.708 3.18 4.528 8.245c.199 1.238 1.478 1.613.511 3.322-2.231-.494-2.897-2.254-2.811-4.6.138-3.84 3.449-6.527 6.771-6.9 4.201-.471 8.144 1.543 8.689 5.494.613 4.461-1.896 9.293-6.389 8.945-1.218-.095-1.728-.699-2.682-1.279z"/>
+      </symbol>
+      <symbol id="instagram" viewBox="0 0 300 300">
+         <path d="M38.52,0.012h222.978C282.682,0.012,300,17.336,300,38.52v222.978c0,21.178-17.318,38.49-38.502,38.49
+         H38.52c-21.184,0-38.52-17.313-38.52-38.49V38.52C0,17.336,17.336,0.012,38.52,0.012z M218.546,33.329
+         c-7.438,0-13.505,6.091-13.505,13.525v32.314c0,7.437,6.067,13.514,13.505,13.514h33.903c7.426,0,13.506-6.077,13.506-13.514
+         V46.854c0-7.434-6.08-13.525-13.506-13.525H218.546z M266.084,126.868h-26.396c2.503,8.175,3.86,16.796,3.86,25.759
+         c0,49.882-41.766,90.34-93.266,90.34c-51.487,0-93.254-40.458-93.254-90.34c0-8.963,1.37-17.584,3.861-25.759H33.35v126.732
+         c0,6.563,5.359,11.902,11.916,11.902h208.907c6.563,0,11.911-5.339,11.911-11.902V126.868z M150.283,90.978
+         c-33.26,0-60.24,26.128-60.24,58.388c0,32.227,26.98,58.375,60.24,58.375c33.278,0,60.259-26.148,60.259-58.375
+         C210.542,117.105,183.561,90.978,150.283,90.978z"/>
+      </symbol>
+      <symbol id="view" viewBox="0 0 512.011 512.011">
+         <path d="M505.755,240.92l-89.088-89.088c-88.576-88.597-232.747-88.597-321.323,0L6.256,240.92
+         c-8.341,8.341-8.341,21.824,0,30.165l89.088,89.088c44.288,44.288,102.464,66.453,160.661,66.453s116.373-22.165,160.661-66.453
+         l89.088-89.088C514.096,262.744,514.096,249.261,505.755,240.92z M256.005,362.669c-58.816,0-106.667-47.851-106.667-106.667
+         s47.851-106.667,106.667-106.667s106.667,47.851,106.667,106.667S314.821,362.669,256.005,362.669z"/>
+			<path d="M256.005,192.003c-35.285,0-64,28.715-64,64s28.715,64,64,64s64-28.715,64-64S291.291,192.003,256.005,192.003z"/>
+      </symbol>
+      <symbol id="message" viewBox="0 0 120 120">
+         <path d="M60,15.166C28.611,15.166,3.166,34.343,3.166,58c0,11.58,6.107,22.079,16.015,29.789l0.016,25.699L48.9,100.012
+         c3.591,0.535,7.3,0.822,11.1,0.822c31.389,0,56.834-19.178,56.834-42.834C116.834,34.343,91.389,15.166,60,15.166z M36.074,67
+         c-4.418,0-8-3.582-8-8c0-4.418,3.582-8,8-8c4.418,0,8,3.582,8,8C44.074,63.418,40.492,67,36.074,67z M59.972,67
+         c-4.418,0-8-3.582-8-8c0-4.418,3.582-8,8-8s8,3.582,8,8C67.973,63.418,64.391,67,59.972,67z M83.542,67c-4.419,0-8-3.582-8-8
+         c0-4.418,3.581-8,8-8s8,3.582,8,8C91.542,63.418,87.961,67,83.542,67z"/>
+      </symbol>
+      <symbol id="map" viewBox="0 0 293.334 293.334">
+         <path d="M146.667,0C94.903,0,52.946,41.957,52.946,93.721c0,22.322,7.849,42.789,20.891,58.878
+			c4.204,5.178,11.237,13.331,14.903,18.906c21.109,32.069,48.19,78.643,56.082,116.864c1.354,6.527,2.986,6.641,4.743,0.212
+			c5.629-20.609,20.228-65.639,50.377-112.757c3.595-5.619,10.884-13.483,15.409-18.379c6.554-7.098,12.009-15.224,16.154-24.084
+			c5.651-12.086,8.882-25.466,8.882-39.629C240.387,41.962,198.43,0,146.667,0z M146.667,144.358
+			c-28.892,0-52.313-23.421-52.313-52.313c0-28.887,23.421-52.307,52.313-52.307s52.313,23.421,52.313,52.307
+			C198.98,120.938,175.559,144.358,146.667,144.358z"/>
+		   <circle cx="146.667" cy="90.196" r="21.756"/>
+      </symbol>
+      <symbol id="googleplus" viewBox="0 0 555.562 555.562">
+         <path d="M543.312,85.472H482.32c-6.762,0-12.24-5.477-12.24-12.24V12.24c0-6.763-5.477-12.24-12.24-12.24h-18.256
+			c-6.762,0-12.238,5.478-12.238,12.24v60.992c0,6.763-5.479,12.24-12.24,12.24h-60.992c-6.764,0-12.24,5.478-12.24,12.24v18.256
+			c0,6.763,5.477,12.24,12.24,12.24h60.992c6.762,0,12.24,5.478,12.24,12.24v60.992c0,6.763,5.477,12.24,12.238,12.24h18.256
+			c6.764,0,12.24-5.477,12.24-12.24v-60.992c0-6.762,5.479-12.24,12.24-12.24h60.992c6.764,0,12.24-5.478,12.24-12.24V97.712
+			C555.552,90.949,550.076,85.472,543.312,85.472z"/>
+		   <path d="M35.719,521.669c10.459,7.681,22.534,14.131,36.225,19.37c13.69,5.22,27.265,8.953,40.729,11.181
+			c13.464,2.222,26.763,3.342,39.896,3.342c59.646,0,106.39-14.578,140.228-43.733c31.156-27.161,46.744-58.538,46.744-94.15
+			c0-12.681-1.836-24.541-5.508-35.558c-3.672-11.016-8.465-20.478-14.357-28.378c-5.9-7.895-12.412-15.239-19.529-22.032
+			c-7.123-6.787-14.246-12.962-21.365-18.525c-7.124-5.562-13.635-10.899-19.529-16.028c-5.9-5.116-10.686-10.459-14.357-16.028
+			c-3.672-5.557-5.508-11.236-5.508-17.025c0-8.017,2.559-15.526,7.681-22.534c5.117-7.008,11.353-13.801,18.697-20.368
+			c7.344-6.561,14.688-13.739,22.038-21.53c7.344-7.791,13.574-18.084,18.697-30.881c5.115-12.803,7.68-27.436,7.68-43.905
+			c0-19.584-4.338-38.397-13.023-56.426c-6.775-14.07-15.715-25.698-26.824-34.884c-5.208-4.309-4.418-7.185,2.338-7.185h20.593
+			c6.764,0,16.971-2.767,22.805-6.182l23.947-14.015c5.832-3.415,5.086-6.181-1.678-6.181H208.677
+			c-20.698,0-41.518,2.228-62.436,6.677c-30.943,6.897-56.978,22.656-78.122,47.247c-21.15,24.596-31.72,52.473-31.72,83.63
+			c0,32.944,11.854,60.325,35.557,82.136c23.703,21.812,52.136,32.718,85.301,32.718c3.586,0,7.484-0.159,11.708-0.478
+			c6.457-0.489,11.236,0.447,10.581,2.43c-0.355,1.071-0.777,2.258-1.261,3.562c-1.114,3.005-2.001,5.398-2.668,7.179
+			s-1.224,3.954-1.671,6.505c-0.453,2.564-0.667,5.177-0.667,7.846c0,12.001,4.749,25.263,14.26,39.792
+			c3.702,5.655,1.627,10.086-5.117,10.465c-12.748,0.729-25.361,2.057-37.852,3.997c-16.475,2.563-33.721,6.572-51.75,12.025
+			c-18.03,5.453-34.168,13.354-48.409,23.703c-14.248,10.349-24.933,22.649-32.051,36.892c-8.237,16.48-12.35,31.499-12.35,45.067
+			c0,14.92,3.342,28.434,10.019,40.569C16.692,504.086,25.254,513.988,35.719,521.669z M158.584,223.692
+			c-10.239-5.784-18.923-13.299-26.041-22.534c-7.124-9.235-13.354-19.639-18.697-31.218c-5.343-11.573-9.296-23.152-11.854-34.725
+			c-2.559-11.567-3.837-22.589-3.837-33.054c0-21.371,5.679-39.731,17.026-55.086C126.534,31.72,142.556,24.04,163.26,24.04
+			c14.688,0,27.987,4.565,39.896,13.696c11.903,9.131,21.249,20.698,28.042,34.719c6.787,14.027,12.02,28.55,15.692,43.575
+			c3.672,15.024,5.508,29.21,5.508,42.57c0,16.879-2.785,31.225-8.348,43.042c-2.876,6.114-9.29,15.184-14.572,19.395
+			c-9.492,7.564-22.332,11.346-38.513,11.346C179.619,232.376,168.817,229.488,158.584,223.692z M70.775,400.315
+			c6.01-10.459,13.69-18.807,23.036-25.043c9.345-6.23,20.251-11.353,32.717-15.355c12.46-4.009,24.48-6.787,36.059-8.348
+			c11.573-1.561,23.373-2.344,35.392-2.344c3.109,0,5.894,0.043,8.36,0.122c4.615,0.153,10.625,2.1,13.434,4.039
+			c1.426,0.985,3.121,2.161,5.085,3.52c5.453,3.788,9.125,6.347,11.016,7.675c1.885,1.334,5.343,3.898,10.349,7.681
+			c5.006,3.788,8.568,6.628,10.686,8.519c2.111,1.892,5.177,4.73,9.18,8.513c4.009,3.788,6.953,7.068,8.85,9.854
+			c1.885,2.784,4.224,6.175,7.013,10.178c2.779,4.009,4.725,7.846,5.846,11.523c1.107,3.672,2.172,7.675,3.17,12.02
+			c1.004,4.34,1.506,8.85,1.506,13.514c0,14.026-3.066,26.267-9.18,36.726c-6.126,10.459-14.413,18.642-24.873,24.548
+			c-10.465,5.894-21.646,10.232-33.556,13.017c-11.91,2.785-24.431,4.174-37.559,4.174c-14.247,0-28.378-1.671-42.399-5.006
+			c-14.021-3.342-27.436-8.396-40.227-15.189c-12.803-6.794-23.152-16.139-31.053-28.048c-7.901-11.91-11.854-25.423-11.854-40.563
+			C61.76,422.678,64.765,410.78,70.775,400.315z"/>
+      </symbol>
+      <symbol id="youtube" viewBox="0 0 310 310">
+         <path d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
+         C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527
+         C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991
+         c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764
+         c0-3.492,1.822-6.732,4.808-8.546c2.987-1.814,6.702-1.938,9.801-0.328l65.038,33.772c3.309,1.718,5.387,5.134,5.392,8.861
+         C204.394,157.263,202.325,160.684,199.021,162.41z"/>
+      </symbol>
+      <symbol id="dribbble" viewBox="0 0 186.846 186.846">
+         <path d="M93.423,0.001C41.909,0.001,0,41.91,0,93.423s41.909,93.422,93.423,93.422s93.423-41.909,93.423-93.422
+         S144.937,0.001,93.423,0.001z M154.303,44.061c10.488,12.91,16.945,29.205,17.482,46.968c-19.428-4.022-37.02-3.55-52.55-0.505
+         c-2.812-6.576-5.723-12.841-8.661-18.762C127.487,64.476,142.211,55.17,154.303,44.061z M143.779,33.365
+         c-12.003,10.956-25.913,19.068-40.156,25.057C93.169,39.305,83.167,24.909,77.074,16.728c5.276-1.124,10.743-1.727,16.349-1.727
+         C112.58,15.001,130.145,21.915,143.779,33.365z M61.924,21.627c4.601,5.962,15.56,20.89,27.332,42.129
+         C59.67,73.395,30.962,75.019,17.167,75.17C22.917,51.15,39.738,31.399,61.924,21.627z M15.082,90.208
+         c0.148,0,0.291,0.001,0.442,0.001c9.532,0,26.996-0.641,47.556-4.39c11.73-2.139,22.853-5.018,33.29-8.586
+         c2.717,5.415,5.418,11.127,8.037,17.114c-14.614,4.705-26.938,11.475-36.7,18.197c-16.37,11.273-27.838,23.78-34.1,31.513
+         C22.013,130.384,15,112.712,15,93.423C15,92.345,15.038,91.276,15.082,90.208z M44.416,154.582
+         c5.391-6.788,16.364-19.143,32.237-29.984c10.787-7.368,21.947-12.842,33.436-16.435c6.666,17.278,12.357,36.369,15.75,56.64
+         c-9.888,4.508-20.858,7.042-32.416,7.042C74.891,171.845,57.852,165.37,44.416,154.582z M139.639,156.726
+         c-3.497-18.617-8.712-36.122-14.741-52.12c14.83-2.502,30.157-1.986,45.899,1.55C167.402,126.846,155.889,144.83,139.639,156.726z"
+         />
+      </symbol>
+      <symbol id="tumblr" viewBox="0 0 24 24">
+         <path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/>
+      </symbol>
+   </svg>
+<!--todo -header -->
+   <header class="header" id="headerJS">
+      <div class="container">
+         <div class="header__inner">
+            <div class="header__logo">MoGo</div>
+            <nav class="header-nav" id="navJS">
+               <a href="#about" id="navLinkJs" class="header-nav__link">About</a>
+               <a href="#service" id="navLinkJs" class="header-nav__link">service</a>
+               <a href="#work" id="navLinkJs" class="header-nav__link">work</a>
+               <a href="#blog" id="navLinkJs" class="header-nav__link">blog</a>
+               <a href="#footer" id="navLinkJs" class="header-nav__link">contact</a>
+               <a href="" id="" class="header-nav__link"><svg><use href="#cart"></use></svg></a>
+               <a href="" id="" class="header-nav__link"><svg class="search"><use href="#search"></use></svg></a>
+            </nav>
+            <div class="burger" id="burgerJS">
+               <div class="burger__icon">line</div>
+            </div>
+         </div>
+      </div>
+   </header>
+<!--todo -intro -->
+   <section class="intro" id="introJS">
+      <div class="container">
+         <div class="intro__inner">
+            <h2 class="intro__suptitle">Creative Template</h2>
+            <h1 class="intro__title">Welcome to MoGo</h1>
+            <a href="#about" id="navLinkJs" class="intro__link">Learn more</a>
+         </div>
+         <div class="slider">
+            <div class="slider__item"><div class="slider__title active"><span>01</span> intro</div></div>
+            <div class="slider__item"><div class="slider__title"><span>02</span> work</div></div>
+            <div class="slider__item"><div class="slider__title"><span>03</span> about</div></div>
+            <div class="slider__item"><div class="slider__title"><span>04</span> contacts</div></div>
+         </div>
+      </div>
+   </section>
+<!--todo -about -->
+   <section class="about" id="about">
+      <div class="container">
+         <div class="about__inner">
+
+            <div class="headertitle-template">
+               <h3 class="headertitle-template__suptitle">What we do</h3>
+               <h2 class="headertitle-template__title">Story about us</h2>
+               <p class="headertitle-template__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+
+            <div class="cards">
+               <div class="cards-item" data-index="1">
+                  <div class="cards-item__inner">
+                     <img src="img/about/item-1.png" alt="фото 1" class="cards-item__photo">
+                     <div class="cards-item__container">
+                        <svg><use href="#team"></use></svg>
+                        <div class="cards-item__name">super team</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="cards-item" data-index="2">
+                  <div class="cards-item__inner">
+                     <img src="img/about/item-2.png" alt="фото 2" class="cards-item__photo">
+                     <div class="cards-item__container">
+                        <svg><use href="#team"></use></svg>
+                        <div class="cards-item__name">super team</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="cards-item" data-index="3">
+                  <div class="cards-item__inner">
+                     <img src="img/about/item-3.png" alt="фото 3" class="cards-item__photo">
+                     <div class="cards-item__container">
+                        <svg><use href="#team"></use></svg>
+                        <div class="cards-item__name">super team</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+<!--todo -quantity -->
+   <section class="quantity" id="quantity">
+      <div class="container">
+         <div class="quantity__inner">
+            <div class="quantity__item">
+               <div class="quantity__number">42</div>
+               <div class="quantity__subtitle">Web Design Projects</div>
+            </div>
+            <div class="quantity__item">
+               <div class="quantity__number">123</div>
+               <div class="quantity__subtitle">happy client</div>
+            </div>
+            <div class="quantity__item">
+               <div class="quantity__number">15</div>
+               <div class="quantity__subtitle">award winner</div>
+            </div>
+            <div class="quantity__item">
+               <div class="quantity__number">99</div>
+               <div class="quantity__subtitle">cup of coffee</div>
+            </div>
+            <div class="quantity__item">
+               <div class="quantity__number">24</div>
+               <div class="quantity__subtitle">members</div>
+            </div>
+         </div>
+      </div>
+   </section>
+<!--todo -service -->
+   <section class="service" id="service">
+      <div class="container">
+         <div class="service__inner">
+            
+            <div class="headertitle-template">
+               <h3 class="headertitle-template__suptitle">We work with</h3>
+               <h2 class="headertitle-template__title">Amazing Services</h2>
+            </div>
+
+            <div class="service__items">
+               <div class="service-item" data-border="bottom">
+                  <div class="service-item__icon">
+                     <img src="img/service/serviceicon-1.png" alt="service-icon_1" >
+                  </div>
+                  <div class="service-item__content">
+                     <h5 class="service-item__title">Photography</h5>
+                     <p class="service-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                  </div>
+               </div>
+               <div class="service-item" data-border="bottom">
+                  <div class="service-item__icon">
+                     <img src="img/service/serviceicon-2.png" alt="service-icon_2">
+                  </div>
+                  <div class="service-item__content">
+                     <h5 class="service-item__title">Web Design</h5>
+                     <p class="service-item__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                  </div>
+               </div>
+               <div class="service-item" data-border="bottom">
+                  <div class="service-item__icon">
+                     <img src="img/service/serviceicon-3.png" alt="service-icon_3">
+                  </div>
+                  <div class="service-item__content">
+                     <h5 class="service-item__title">Creativity</h5>
+                     <p class="service-item__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                  </div>
+               </div>
+               <div class="service-item" data-padding="top">
+                  <div class="service-item__icon">
+                     <img src="img/service/serviceicon-4.png" alt="service-icon_4">
+                  </div>
+                  <div class="service-item__content">
+                     <h5 class="service-item__title">seo</h5>
+                     <p class="service-item__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                  </div>
+               </div>
+               <div class="service-item" data-padding="top">
+                  <div class="service-item__icon">
+                     <img src="img/service/serviceicon-5.png" alt="service-icon_5">
+                  </div>
+                  <div class="service-item__content">
+                     <h5 class="service-item__title">Css/Html</h5>
+                     <p class="service-item__text">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
+                  </div>
+               </div>
+               <div class="service-item" data-padding="top">
+                  <div class="service-item__icon">
+                     <img src="img/service/serviceicon-6.png" alt="service-icon_6">
+                  </div>
+                  <div class="service-item__content">
+                     <h5 class="service-item__title">digital</h5>
+                     <p class="service-item__text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                  </div>
+               </div>
+            </div><!-- /.service__items -->
+         </div><!-- ./service__inner -->
+      </div><!-- /.container -->
+   </section><!-- /.service -->
+<!--todo -design -->
+   <section class="design" id="design">
+      <div class="container">
+         <div class="design__inner">
+            <div class="headertitle-template">
+               <h3 class="headertitle-template__suptitle">For all devices</h3>
+               <h2 class="headertitle-template__title">Unique design</h2>
+            </div>
+            <div class="devices">
+               <img src="img/design/design-big_red.png" alt="ipad" class="devices__ipad">
+               <img src="img/design/design-small.png" alt="iphone" class="devices__iphone">
+            </div>
+         </div>
+      </div>
+   </section>
+<!--todo -service -->
+   <section class="whatwedo" id="whatwedo">
+      <div class="container">
+         <div class="whatwedo__inner">
+
+            <div class="headertitle-template">
+               <h3 class="headertitle-template__suptitle">Service</h3>
+               <h2 class="headertitle-template__title">What we do</h2>
+               <p class="headertitle-template__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div class="whatwedo-content">
+               <div class="whatwedo-content__photo">
+                  <img src="img/whatwedo/preview.png" alt="preview">
+               </div>
+               <div class="accordion">
+                  <div class="accordion-item active" id="accordion-itemJS">
+                     <div class="accordion-item__header" >
+                        <img src="img/whatwedo/icon-photography.png" alt="icon" class="accordion-item__icon">
+                        <div class="accordion-item__title">Photography</div>
+                     </div>
+                     <div class="accordion-item__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     </div>
+                  </div><!-- /.accordion-item -->
+                  <div class="accordion-item" id="accordion-itemJS">
+                     <div class="accordion-item__header" >
+                        <img src="img/whatwedo/icon-EQUALIZER.png" alt="icon" class="accordion-item__icon">
+                        <div class="accordion-item__title">creativity</div>
+                     </div>
+                     <div class="accordion-item__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     </div>
+                  </div><!-- /.accordion-item -->
+                  <div class="accordion-item" id="accordion-itemJS">
+                     <div class="accordion-item__header" >
+                        <img src="img/whatwedo/icon-BULLSEYE.png" alt="icon" class="accordion-item__icon">
+                        <div class="accordion-item__title">web design</div>
+                     </div>
+                     <div class="accordion-item__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     </div>
+                  </div><!-- /.accordion-item -->
+               </div><!-- /.accordion -->
+            </div><!-- /.whatwedo__content -->
+
+         </div><!-- /.whatwedo__inner -->
+      </div><!-- /.container -->
+   </section><!-- /.whatwedo -->
+<!--todo -quote -->
+   <section class="quote" id="quote">
+      <div class="container">
+         <div class="quote__inner">
+            <div class="quote__slider" id="sliderQuote">
+               <div>
+                  <div class="quote-item">
+                     <img src="img/quote/quoet-icon1.png" alt="quote icon" class="quote-item__icon">
+                     <div class="quote-item__content">
+                        <div class="quote-item__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+                        <div class="quote-item__author">Jon Doe</div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="quote-item">
+                     <img src="img/quote/quoet-icon2.png" alt="quote icon" class="quote-item__icon">
+                     <div class="quote-item__content">
+                        <div class="quote-item__text">“Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</div>
+                        <div class="quote-item__author">Mike Doe</div>
+                     </div>
+                  </div>
+               </div>
+            </div><!-- /quote__slider -->
+         </div><!-- /.quote__inner -->
+      </div><!-- /.container -->
+   </section><!-- /.quote -->
+<!--todo -team -->
+   <section class="team" id="team">
+      <div class="container">
+         <div class="team__inner">
+            
+            <div class="headertitle-template">
+               <h3 class="headertitle-template__suptitle">Who we are</h3>
+               <h2 class="headertitle-template__title">Meet our team</h2>
+               <p class="headertitle-template__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+
+            <div class="cards">
+               <div class="team__item">
+                  <div class="cards-item" data-index="1">
+                     <div class="cards-item__inner">
+                        <img src="img/team/photo_1.png" alt="фото 1" class="cards-item__photo">
+                        <div class="cards-item__container social">
+                           <div class="cards-item__icon"><svg><use href="#facebook"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#twitter"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#pinterest"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#instagram"></use></svg></div>
+                        </div>
+                     </div>
+                  </div><!-- /.cards__item -->
+                  <h4 class="team__name">Matthew Dix</h4>
+                  <div class="team__prof">Graphic Design</div>
+               </div><!-- /.team__item -->
+
+               <div class="team__item">
+                  <div class="cards-item" data-index="2">
+                     <div class="cards-item__inner">
+                        <img src="img/team/photo_2.png" alt="фото 2" class="cards-item__photo">
+                        <div class="cards-item__container social">
+                           <div class="cards-item__icon"><svg><use href="#facebook"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#twitter"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#pinterest"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#instagram"></use></svg></div>
+                        </div>
+                     </div>
+                  </div>
+                  <h4 class="team__name">Christopher Campbell</h4>
+                  <div class="team__prof">Branding/UX design</div>
+               </div><!-- /.team__item -->
+
+               <div class="team__item">
+                  <div class="cards-item" data-index="3">
+                     <div class="cards-item__inner">
+                        <img src="img/team/photo_3.png" alt="фото 3" class="cards-item__photo">
+                        <div class="cards-item__container social">
+                           <div class="cards-item__icon"><svg><use href="#facebook"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#twitter"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#pinterest"></use></svg></div>
+                           <div class="cards-item__icon"><svg><use href="#instagram"></use></svg></div>
+                        </div>
+                     </div>
+                  </div>
+                  <h4 class="team__name">Michael Fertig </h4>
+                  <div class="team__prof">Developer</div>
+               </div><!-- /.team__item -->
+
+            </div><!-- /.cards -->
+
+         </div><!-- /.team__inner -->
+      </div><!-- /container -->
+   </section><!-- /.container -->
+<!--todo --logos -->
+   <section class="logos" id="logos">
+      <div class="container">
+         <div class="logos__inner">
+            <div class="logos__item">
+               <img src="img/logos/logo-1.png" alt="logo" class="logos__img">
+            </div>
+            <div class="logos__item">
+               <img src="img/logos/logo-2.png" alt="logo" class="logos__img">
+            </div>
+            <div class="logos__item">
+               <img src="img/logos/logo-3.png" alt="logo" class="logos__img">
+            </div>
+            <div class="logos__item">
+               <img src="img/logos/logo-4.png" alt="logo" class="logos__img">
+            </div>
+            <div class="logos__item">
+               <img src="img/logos/logo-5.png" alt="logo" class="logos__img">
+            </div>
+            <div class="logos__item">
+               <img src="img/logos/logo-6.png" alt="logo" class="logos__img">
+            </div>
+         </div><!-- /.logos__inner -->
+      </div><!-- /.container -->
+   </section><!-- /.logos -->
+<!--todo -work -->
+   <section class="work" id="work">
+      <div class="container">
+            <div class="headertitle-template">
+               <h3 class="headertitle-template__suptitle">What we do</h3>
+               <h2 class="headertitle-template__title">some of our work</h2>
+               <p class="headertitle-template__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+      </div><!-- /.container -->
+      <div class="work-cards">
+         <div class="work-cards__column">
+            <div class="work-cards__row">
+               <img src="img/work/work-11.png" alt="preview" class="work-cards__img">
+               <div class="work-cards__content">
+                  <img src="img/work/icon-PICTURE.png" alt="icon" class="work-cards__icon">
+                  <div class="work-cards__title">creatively designed</div>
+                  <p class="work-cards__text">Lorem ipsum dolor sit</p>
+               </div>
+            </div>
+            <div class="work-cards__row">
+               <img src="img/work/work-12.png" alt="preview" class="work-cards__img">
+               <div class="work-cards__content">
+                  <img src="img/work/icon-PICTURE.png" alt="icon" class="work-cards__icon">
+                  <div class="work-cards__title">creatively designed</div>
+                  <p class="work-cards__text">Lorem ipsum dolor sit</p>
+               </div>
+            </div>
+         </div><!-- /.work-cards__column -->
+         <div class="work-cards__column">
+            <div class="work-cards__row">
+               <img src="img/work/work-21.png" alt="preview" class="work-cards__img">
+               <div class="work-cards__content">
+                  <img src="img/work/icon-PICTURE.png" alt="icon" class="work-cards__icon">
+                  <div class="work-cards__title">creatively designed</div>
+                  <p class="work-cards__text">Lorem ipsum dolor sit</p>
+               </div>
+            </div>
+            <div class="work-cards__row">
+               <img src="img/work/work-22.png" alt="preview" class="work-cards__img">
+               <div class="work-cards__content">
+                  <img src="img/work/icon-PICTURE.png" alt="icon" class="work-cards__icon">
+                  <div class="work-cards__title">creatively designed</div>
+                  <p class="work-cards__text">Lorem ipsum dolor sit</p>
+               </div>
+            </div>
+         </div><!-- /.work-cards__column -->
+         <div class="work-cards__column">
+            <div class="work-cards__row">
+               <img src="img/work/work-3.png" alt="preview" class="work-cards__img">
+               <div class="work-cards__content">
+                  <img src="img/work/icon-PICTURE.png" alt="icon" class="work-cards__icon">
+                  <div class="work-cards__title">creatively designed</div>
+                  <p class="work-cards__text">Lorem ipsum dolor sit</p>
+               </div>
+            </div>
+         </div><!-- /.work-cards__column -->
+         <div class="work-cards__column">
+            <div class="work-cards__row">
+               <img src="img/work/work-41.png" alt="preview" class="work-cards__img">
+               <div class="work-cards__content">
+                  <img src="img/work/icon-PICTURE.png" alt="icon" class="work-cards__icon">
+                  <div class="work-cards__title">creatively designed</div>
+                  <p class="work-cards__text">Lorem ipsum dolor sit</p>
+               </div>
+            </div>
+            <div class="work-cards__row">
+               <img src="img/work/work-42.png" alt="preview" class="work-cards__img">
+               <div class="work-cards__content">
+                  <img src="img/work/icon-PICTURE.png" alt="icon" class="work-cards__icon">
+                  <div class="work-cards__title">creatively designed</div>
+                  <p class="work-cards__text">Lorem ipsum dolor sit</p>
+               </div>
+            </div>
+         </div><!-- /.work-cards__column -->
+      </div><!-- /.work-cards -->
+   </section><!-- /.work -->
+<!--todo -reviews -->
+   <section class="review">
+      <div class="container">
+         <div class="review__inner">
+            <div class="review__slider" id="sliderReview">
+               <div>
+                  <div class="review-item">
+                     <img src="img/review/review-icon1.png" alt="review icon" class="review-item__icon">
+                     <div class="review-item__content">
+                        <div class="review-item__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+                        <div class="review-item__author">Joshua Earle</div>
+                     </div>
+                  </div><!-- /.review-item -->
+               </div>
+               <div>
+                  <div class="review-item">
+                     <img src="img/review/review-icon2.png" alt="review icon" class="review-item__icon">
+                     <div class="review-item__content">
+                        <div class="review-item__text">“Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</div>
+                        <div class="review-item__author">John Earle</div>
+                     </div>
+                  </div><!-- /.review-item -->
+               </div>
+            </div><!-- /.review__slider -->
+         </div><!-- /.review__inner -->
+      </div><!-- /.container -->
+   </section><!-- /.review -->
+<!--todo -clientsay -->
+   <section class="clientsay">
+      <div class="container">
+
+         <div class="headertitle-template">
+            <h3 class="headertitle-template__suptitle">Happy Clients</h3>
+            <h2 class="headertitle-template__title">What people say</h2>
+         </div>
+
+         <div class="clientsay__inner">
+            <div class="clientsay-item">
+               <div class="clientsay-item__photo">
+                  <img src="img/clientsay/photo-1.png" alt="">
+               </div>
+               <div class="clientsay-item__content">
+                  <div class="clientsay-item__name">Matthew Dix</div>
+                  <div class="clientsay-item__prof">Graphic Design</div>
+                  <div class="clientsay-item__line">line</div>
+                  <div class="clientsay-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</div>
+               </div>
+            </div><!-- /.clientsay-item -->
+            <div class="clientsay-item">
+               <div class="clientsay-item__photo">
+                  <img src="img/clientsay/photo-2.png" alt="">
+               </div>
+               <div class="clientsay-item__content">
+                  <div class="clientsay-item__name">Nick Karvounis</div>
+                  <div class="clientsay-item__prof">Graphic Design</div>
+                  <div class="clientsay-item__line">line</div>
+                  <div class="clientsay-item__text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+               </div>
+            </div><!-- /.clientsay-item -->
+            <div class="clientsay-item">
+               <div class="clientsay-item__photo">
+                  <img src="img/clientsay/photo-3.png" alt="">
+               </div>
+               <div class="clientsay-item__content">
+                  <div class="clientsay-item__name">Jaelynn Castillo </div>
+                  <div class="clientsay-item__prof">Graphic Design</div>
+                  <div class="clientsay-item__line">line</div>
+                  <div class="clientsay-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</div>
+               </div>
+            </div><!-- /.clientsay-item -->
+            <div class="clientsay-item">
+               <div class="clientsay-item__photo">
+                  <img src="img/clientsay/photo-4.png" alt="">
+               </div>
+               <div class="clientsay-item__content">
+                  <div class="clientsay-item__name">Mike Petrucci</div>
+                  <div class="clientsay-item__prof">Graphic Design</div>
+                  <div class="clientsay-item__line">line</div>
+                  <div class="clientsay-item__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</div>
+               </div>
+            </div><!-- /.clientsay-item -->
+         </div><!-- /.clientsay__inner -->
+      </div><!-- /.container -->
+   </section><!-- /.clientsay -->
+<!--todo -blog -->
+   <section class="blog" id="blog">
+      <div class="container">
+         <div class="headertitle-template">
+            <h3 class="headertitle-template__suptitle">Our stories</h3>
+            <h2 class="headertitle-template__title">Latest blog</h2>
+         </div>
+         <div class="blog__inner">
+
+            <div class="blog-item">
+               <div class="blog-item__photo">
+                  <img src="img/blog/prev-1.png" alt="preview">
+                  <div class="blog-item__data">
+                     <span class="blog-item__number">15</span>
+                     <span class="blog-item__month">Jan</span>
+                  </div>
+               </div>
+               <div class="blog-item__title">Lorem ipsum dolor sit amet</div>
+               <div class="blog-item__text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+               <div class="blog-item__statistics">
+                  <div class="blog-item__views">
+                     <svg class="blog-item__svg"><use href="#view"></use></svg>
+                     <span class="blog-item__quantity">542</span>
+                  </div>
+                  <div class="blog-item__messages">
+                     <svg class="blog-item__svg"><use href="#message"></use></svg>
+                     <span class="blog-item__quantity">17</span>
+                  </div>
+               </div>
+            </div><!-- /.blog-item -->
+            <div class="blog-item">
+               <div class="blog-item__photo">
+                  <img src="img/blog/prev-2.png" alt="preview">
+                  <div class="blog-item__data">
+                     <span class="blog-item__number">14</span>
+                     <span class="blog-item__month">Jan</span>
+                  </div>
+               </div>
+               <div class="blog-item__title">sed do eiusmod tempor</div>
+               <div class="blog-item__text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+               <div class="blog-item__statistics">
+                  <div class="blog-item__views">
+                     <svg class="blog-item__svg"><use href="#view"></use></svg>
+                     <span class="blog-item__quantity">542</span>
+                  </div>
+                  <div class="blog-item__messages">
+                     <svg class="blog-item__svg"><use href="#message"></use></svg>
+                     <span class="blog-item__quantity">17</span>
+                  </div>
+               </div>
+            </div><!-- /.blog-item -->
+            <div class="blog-item">
+               <div class="blog-item__photo">
+                  <img src="img/blog/prev-3.png" alt="preview">
+                  <div class="blog-item__data">
+                     <span class="blog-item__number">12</span>
+                     <span class="blog-item__month">Jan</span>
+                  </div>
+               </div>
+               <div class="blog-item__title">incididunt ut labore et dolore</div>
+               <div class="blog-item__text">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+               <div class="blog-item__statistics">
+                  <div class="blog-item__views">
+                     <svg class="blog-item__svg"><use href="#view"></use></svg>
+                     <span class="blog-item__quantity">1560</span>
+                  </div>
+                  <div class="blog-item__messages">
+                     <svg class="blog-item__svg"><use href="#message"></use></svg>
+                     <span class="blog-item__quantity">98</span>
+                  </div>
+               </div>
+            </div><!-- /.blog-item -->
+         </div><!-- /.blog__inner -->
+      </div><!-- /.container -->
+   </section><!-- /.blog -->
+<!--todo -map -->
+   <section class="map">
+      <svg class="map__svg"><use href="#map"></use></svg>
+      <a target="_blank" href="https://goo.gl/maps/92869Ttvba3tnV3k8" class="map__title">Open map</a>
+      <div class="map__line">line</div>
+   </section>
+<!--todo -footer -->
+   <footer class="footer" id="footer">
+      <div class="container">
+         <div class="footer__inner">
+         <!-- footer-mogo ------------------------------------- -->
+            <!-- <div class="footer__column"> -->
+               <div class="footer-mogo">
+                  <h3 class="footer-mogo__title">MoGo</h3>
+                  <p class="footer-mogo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  <p class="footer-mogo__followers"><span>15k</span> followers</p>
+                  <div class="footer-mogo__social">
+                     <span>Follow Us:</span>
+                     <div class="footer-mogo__icons">
+                        <svg><use href="#facebook"></use></svg>
+                        <svg><use href="#twitter"></use></svg>
+                        <svg><use href="#instagram"></use></svg>
+                        <svg><use href="#pinterest"></use></svg>
+                        <svg><use href="#googleplus"></use></svg>
+                        <svg><use href="#youtube"></use></svg>
+                        <svg><use href="#dribbble"></use></svg>
+                        <svg><use href="#tumblr"></use></svg>
+                     </div>
+                  </div>
+                  <div class="footer-mogo__subscribe">
+                     <form action="#">
+                        <textarea name="">Your Email...</textarea>
+                        <button type="submit">Subscribe</button>
+                     </form>
+                  </div>
+               </div><!-- /.footer-mogo -->
+            <!-- </div> -->
+         <!-- footer-blogs ------------------------------------- -->
+            <!-- <div class="footer__column"> -->
+               <div class="footer-blogs">
+                  
+                  <h3 class="footer-blogs__header">blogs</h3>
+
+                  <div class="footer-blogs__row">
+                     <img src="img/footer/footer-blogs-img1.png" alt="img" class="footer-blogs__img">
+                     <div class="footer-blogs__content">
+                        <a href="" class="footer-blogs__title">Lorem ipsum dolor sit amet, 
+                           consectetur adipiscing</a>
+                        <div class="footer-blogs__subtitle">Jan 9, 2022</div>
+                     </div>
+                  </div>
+                  <div class="footer-blogs__row">
+                     <img src="img/footer/footer-blogs-img2.png" alt="img" class="footer-blogs__img">
+                     <div class="footer-blogs__content">
+                        <a href="" class="footer-blogs__title">Consectetur adipiscing elit, 
+                           sed do eiusmod tempor</a>
+                        <div class="footer-blogs__subtitle">Jan 9, 2022</div>
+                     </div>
+                  </div>
+                  <div class="footer-blogs__row">
+                     <img src="img/footer/footer-blogs-img3.png" alt="img" class="footer-blogs__img">
+                     <div class="footer-blogs__content">
+                        <a href="" class="footer-blogs__title">sed do eiusmod tempor 
+                           incididunt ut labore</a>
+                        <div class="footer-blogs__subtitle">Jan 9, 2022</div>
+                     </div>
+                  </div>
+
+               </div><!-- /.footer-blogs -->
+            <!-- </div> -->
+         <!-- footer-inst ------------------------------------- -->
+            <!-- <div class="footer__column"> -->
+               <div class="footer-inst">
+                  <h3 class="footer-inst__title">instagram</h3>
+                  <div class="footer-inst__photos">
+                     <img src="img/footer/footer-inst-img1.png" alt="img">
+                     <img src="img/footer/footer-inst-img2.png" alt="img">
+                     <img src="img/footer/footer-inst-img3.png" alt="img">
+                     <img src="img/footer/footer-inst-img4.png" alt="img">
+                     <img src="img/footer/footer-inst-img5.png" alt="img">
+                     <img src="img/footer/footer-inst-img6.png" alt="img">
+                     <img src="img/footer/footer-inst-img7.png" alt="img">
+                     <img src="img/footer/footer-inst-img8.png" alt="img">
+                     <img src="img/footer/footer-inst-img9.png" alt="img">
+                  </div>
+                  <a href="" class="footer-inst__link">View more photos</a>
+               </div><!-- /.footer-inst -->
+            <!-- </div> -->
+         </div><!-- /.footer__inner -->
+      </div><!-- /.container -->
+   </footer><!-- /.footer -->
+<!--todo -copyright -->
+   <section class="copyright">
+      <div class="container">
+         <div class="copyright__inner">
+            © 2022 MoGo free PSD template by <span>Laaqiq</span>
+         </div>
+      </div>
+   </section>
+</main><!-- /.wrapper -->
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <script src="js/app.js"></script>
+</body>
+</html>

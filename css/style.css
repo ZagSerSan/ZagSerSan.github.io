@@ -1220,18 +1220,6 @@ a:hover {
   padding: 0;
   background-color: rgba(44, 44, 44, 0.6);
 }
-.modal-work__preview.app {
-  background: url("/img/works/app.png") no-repeat center;
-  background-size: cover;
-}
-.modal-work__preview.website {
-  background: url("/img/works/website.png") no-repeat center;
-  background-size: cover;
-}
-.modal-work__preview.int {
-  background: url("/img/works/interaction.png") no-repeat center;
-  background-size: cover;
-}
 .modal-work__content {
   position: relative;
   width: 35%;

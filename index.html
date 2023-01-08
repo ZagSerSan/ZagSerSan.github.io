@@ -136,41 +136,40 @@
    <div class="container">
       <div class="filter">
          <a href="#all" data-filter id="" class="filter__link btn_all active">All</a>
-         <a href="#app" data-filter id="" class="filter__link btn_app #app">App</a>
-         <a href="#website" data-filter id="" class="filter__link btn_website">Website</a>
-         <a href="#int" data-filter id="" class="filter__link btn_int">Interaction</a>
+         <a href="#lending" data-filter id="" class="filter__link btn_lending">Lending</a>
+         <a href="#website" data-filter id="" class="filter__link btn_website">Store</a>
+         <a href="#int" data-filter id="" class="filter__link btn_int">Other</a>
       </div>
       
       <div class="portfolio portfolioJS">
          <!-- string 1 -->
-         <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_1" data-submodal="submodal_1">
-            <img class="portfolio-item__image" src="img/works/app.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: App</div>
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_1" data-submodal="submodal_1">
+            <img class="portfolio-item__image" src="img/works/1_ActiveBox/activebox_preview.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
             <div class="portfolio-item__title">
-               PROJECT TITLE
+               ActiveBox
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item" id="website" data-filter="#website" data-modal="modal_4" data-submodal="submodal_4">
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_2" data-submodal="submodal_2">
             <img class="portfolio-item__image" src="img/works/website.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: Website</div>
+            <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
             <div class="portfolio-item__title">
-               PROJECT TITLE
+               MoGo
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item" id="int" data-filter="#int" data-modal="modal_7" data-submodal="submodal_7">
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_3" data-submodal="submodal_3">
             <img class="portfolio-item__image" src="img/works/interaction.png" alt="preview">
-            <div class="portfolio-item__suptitle">CATEGORY: Interactive</div>
+            <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
             <div class="portfolio-item__title">
-               PROJECT TITLE
+               Designer Portfolio
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         
 
       </div><!-- /.portfolio -->
-      <button type="button" id="loadmoreworks" class="work__btn btn-black">LOAD MORE WORK</button>
+      <!-- <button type="button" id="loadmoreworks" class="work__btn btn-black">LOAD MORE WORK</button> -->
    </div><!-- /.container -->
 </div><!-- /.work -->
 
@@ -234,7 +233,7 @@
                   <img src="img/blog/photo.png" alt="cover photo">
                   <div class="blog-item__date">10<br>june</div>
                </div>
-               <h3 class="blog-item__title">TEN THE BEST APP IN 2017</h3>
+               <h3 class="blog-item__title">TEN THE BEST lending IN 2017</h3>
                <h4 class="blog-item__subtitle">CATEGORY</h4>
                <p class="blog-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.</p>
                <button class="blog-item__btn btn-black">READ MORE</button>
@@ -432,7 +431,7 @@
 
 <!--todo__temp -modal work -->
 <!-- 
-   001 портфолио
+   todo_001 портфолио
    01 запихнуть все внутрение модалки в один фон... переделать js под это
    1 Сделать слайдер на всех работах (опционально)
    1.2 сделать первый айтем слайд this-сайта в портфолио 3 
@@ -441,6 +440,7 @@
       на мобил версии, как в инстаграмм
  -->
 
+<!--? ActiveBox -->
 <div class="modal-bg--work" id="modal_1">
    <div class="modal-work" id="submodal_1">
       <!-- <div class="modal-work" id="submodal_1"> -->
@@ -454,22 +454,22 @@
 
             <div>
                <div class="modal-work__preview-item">
-                  <img src="img/works/slide_1.jpg" alt="slide_1">
+                  <img src="img/works/1_ActiveBox/slide_1.jpg" alt="slide_1">
                </div>
             </div>
             <div>
                <div class="modal-work__preview-item">
-                  <img src="img/works/slide_2.jpg" alt="slide_2">
+                  <img src="img/works/1_ActiveBox/slide_2.jpg" alt="slide_2">
                </div>
             </div>
             <div>
                <div class="modal-work__preview-item">
-                  <img src="img/works/slide_3.jpg" alt="slide_3">
+                  <img src="img/works/1_ActiveBox/slide_3.jpg" alt="slide_3">
                </div>
             </div>
             <div>
                <div class="modal-work__preview-item last-slide--align">
-                  <img src="img/works/slide_4.jpg" alt="slide_4">
+                  <img src="img/works/1_ActiveBox/slide_4.jpg" alt="slide_4">
                </div>
             </div>
 
@@ -477,10 +477,10 @@
       </div><!-- /.modal-work__preview -->
 
       <div class="modal-work__content">
-         <h3 class="modal-work__projectname">Active Box</h3>
+         <h3 class="modal-work__projectname">ActiveBox</h3>
          <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
          <div class="modal-work__client">
-            <a href="#portfolio/1_ActiveBox/index.html" target="_blank">Open website</a>
+            <a href="portfolio/1_ActiveBox/index.html" target="_blank">Open website</a>
          </div>
          <div class="modal-work__textbox">
             <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
@@ -488,7 +488,7 @@
          </div>
          <div class="modal-work__btnbox">
             <div class="modal-work__btnbox-prev">
-               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_1" data-opensubmodal="submodal_1" data-prev="modal_9" data-subprev="submodal_9">previous</button>
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_1" data-opensubmodal="submodal_1" data-prev="modal_3" data-subprev="submodal_3">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
                <button class="modal-work__btn" id="btn_next" data-openmodal="modal_1" data-opensubmodal="submodal_1" data-next="modal_2" data-subnext="submodal_2">next</button>
@@ -498,6 +498,7 @@
    </div><!-- /modal-work -->
 </div><!-- /.modal_work_bg -->
 
+<!--? MoGo -->
 <div class="modal-bg--work" id="modal_2">
    <div class="modal-work" id="submodal_2">
       
@@ -510,22 +511,22 @@
 
             <div>
                <div class="modal-work__preview-item">
-                  <img src="img/works/slide_1.jpg" alt="slide_1">
+                  <img src="img/works/1_ActiveBox/slide_1.jpg" alt="slide_1">
                </div>
             </div>
             <div>
                <div class="modal-work__preview-item">
-                  <img src="img/works/slide_2.jpg" alt="slide_2">
+                  <img src="img/works/1_ActiveBox/slide_2.jpg" alt="slide_2">
                </div>
             </div>
             <div>
                <div class="modal-work__preview-item">
-                  <img src="img/works/slide_3.jpg" alt="slide_3">
+                  <img src="img/works/1_ActiveBox/slide_3.jpg" alt="slide_3">
                </div>
             </div>
             <div>
                <div class="modal-work__preview-item">
-                  <img src="img/works/slide_4.jpg" alt="slide_4">
+                  <img src="img/works/1_ActiveBox/slide_4.jpg" alt="slide_4">
                </div>
             </div>
 
@@ -536,7 +537,7 @@
          <h3 class="modal-work__projectname">MoGo</h3>
          <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
          <div class="modal-work__client">
-            <a href="#portfolio/2_MoGo/index.html" target="_blank">Open website</a>
+            <a href="portfolio/2_MoGo/index.html" target="_blank">Open website</a>
          </div>
          <div class="modal-work__textbox">
             <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
@@ -554,6 +555,7 @@
    </div><!-- /modal-work -->
 </div><!-- /.modal_work_bg -->
 
+<!--? Design Portfolio -->
 <div class="modal-bg--work" id="modal_3">
    <div class="modal-work" id="submodal_3">
       
@@ -561,12 +563,12 @@
          <svg><use href="#close"></use></svg>
       </button>
 
-      <div class="modal-work__preview app"></div>
+      <div class="modal-work__preview lending"></div>
       <div class="modal-work__content">
          <h3 class="modal-work__projectname">Designer Portfolio</h3>
          <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2018</h4>
          <div class="modal-work__client">
-            <a href="#portfolio/3_Designer_Portfolio/index.html" target="_blank">Open website</a>
+            <a href="portfolio/3_Designer_Portfolio/index.html" target="_blank">Open website</a>
          </div>
          <div class="modal-work__textbox">
             <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
@@ -577,7 +579,7 @@
                <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_3" data-opensubmodal="submodal_3" data-prev="modal_2" data-subprev="submodal_2">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_3" data-opensubmodal="submodal_3" data-next="modal_4" data-subnext="submodal_4">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_3" data-opensubmodal="submodal_3" data-next="modal_1" data-subnext="submodal_1">next</button>
             </div>
          </div>
       </div>

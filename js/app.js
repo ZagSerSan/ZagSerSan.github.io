@@ -485,14 +485,3 @@ btns_next.forEach(item => {
       }, 10);
    });
 });
-
-//? ============ slider (jquery) =============================================
-
-$(function(){
-   $('.slider').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: true
-   });
-});

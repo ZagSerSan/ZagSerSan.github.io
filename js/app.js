@@ -11,7 +11,7 @@ let nav = document.getElementById('navJS');
 burger.addEventListener('click', () => {
    burger.classList.toggle('active');
    nav.classList.toggle('active');
-   btnHeader_hierme.classList.toggle('show');
+   // btnHeader_hierme.classList.toggle('show');
 });
 
 //? ============ FIXED HEADER =============================================
@@ -71,9 +71,9 @@ window.addEventListener('scroll', function (scrollPos, introOffset, workOffset, 
    // reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY-160;
    // blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY-160;
 
-   console.log(scrollPos);
-   console.log(introOffset);
-   console.log(aboutOffset);
+   // console.log(scrollPos);
+   // console.log(introOffset);
+   // console.log(aboutOffset);
 
    if ((scrollPos > workOffset) && (scrollPos < aboutOffset)) {
       allHeaderLinks.forEach(item =>{

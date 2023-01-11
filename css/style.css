@@ -1120,17 +1120,7 @@ a:hover {
 .modal-work__preview .last-slide--align {
   display: flex;
   align-items: flex-end;
-  height: 620px;
-}
-@media (max-width: 800px) {
-  .modal-work__preview .last-slide--align {
-    height: 350px;
-  }
-}
-@media (max-width: 400px) {
-  .modal-work__preview .last-slide--align {
-    height: 257px;
-  }
+  height: 100%;
 }
 .modal-work__preview .slider {
   position: relative;
@@ -1727,18 +1717,20 @@ a:hover {
   }
 }
 @media (max-width: 800px) {
+  .modal-bg--work {
+    align-items: flex-start;
+  }
   .modal-work {
     flex-direction: column;
-    height: 700px;
+    height: auto;
   }
   .modal-work__preview {
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
   .modal-work__content {
     width: 100%;
-    height: 50%;
-    padding: 20px 15px;
+    padding: 20px 15px 40px;
   }
   .modal-work__category {
     margin-bottom: 25px;
@@ -1746,19 +1738,8 @@ a:hover {
   .modal-work__client {
     margin-bottom: 25px;
   }
-  .modal-work__textbox {
-    overflow: auto;
-    max-height: 130px;
-  }
 }
 @media (max-width: 400px) {
-  .modal-work {
-    height: 570px;
-    min-height: 530px;
-  }
-  .modal-work__preview {
-    height: 45%;
-  }
   .modal-work__content {
     height: 55%;
   }
@@ -1783,9 +1764,6 @@ a:hover {
   }
 }
 @media (max-height: 650px) {
-  .modal-work {
-    height: 530px;
-  }
   .modal-work__projectname {
     font-size: 16px;
   }
@@ -1798,9 +1776,6 @@ a:hover {
   }
   .modal-work__client span {
     font-size: 14px;
-  }
-  .modal-work__textbox {
-    max-height: 110px;
   }
 }
 /*//? Point 1 ----------------------------------

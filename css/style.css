@@ -350,23 +350,17 @@ a:hover {
   height: 70%;
   fill: #fff;
 }
-.social__item.behance {
-  background-color: #1869ff;
-}
-.social__item.dribbble {
-  background-color: #e51a68;
-}
-.social__item.linkedin {
-  background-color: #007bb6;
-}
 .social__item.facebook {
   background-color: #3a5898;
 }
 .social__item.instagram {
-  background-color: #13578a;
+  background: linear-gradient(45deg, #FB8A2E 0%, #C62F94 100%);
 }
-.social__item.twitter {
-  background-color: #56acef;
+.social__item.viber {
+  background-color: #7D3DAF;
+}
+.social__item.telegram {
+  background-color: #37aee2;
 }
 .social__item:hover {
   bottom: 5px;

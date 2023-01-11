@@ -97,12 +97,10 @@
       background-color: #ccc;
       transition: bottom .1s linear, box-shadow .1s linear;
       svg {width: 70%;height: 70%;fill: #fff;}
-      &.behance{background-color: #1869ff;}
-      &.dribbble{background-color: #e51a68;}
-      &.linkedin{background-color: #007bb6;}
       &.facebook{background-color: #3a5898;}
-      &.instagram{background-color: #13578a;}
-      &.twitter{background-color: #56acef;}
+      &.instagram{background: linear-gradient(45deg,#FB8A2E 0%, #C62F94 100%);}
+      &.viber{background-color: #7D3DAF;}
+      &.telegram{background-color: #37aee2;}
 
       &:hover {bottom: 5px;box-shadow: 2px 2px 5px #6a696b;}
    }

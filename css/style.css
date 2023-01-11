@@ -719,8 +719,9 @@ a:hover {
   fill: #8d8d8e;
   transition: fill 0.1s linear;
 }
-.social.footer .social__item.behance, .social.footer .social__item.dribbble, .social.footer .social__item.linkedin, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter {
+.social.footer .social__item.telegram, .social.footer .social__item.viber, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter {
   background-color: transparent;
+  background: transparent;
 }
 .social.footer .social__item:hover {
   bottom: 0;

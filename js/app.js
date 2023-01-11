@@ -6,7 +6,7 @@
 let burger = document.getElementById('burgerJS');
 let nav = document.getElementById('navJS');
 //  button hireme in media440px
-let btnHeader_hierme = document.querySelector('.btnHeaderJS');
+// let btnHeader_hierme = document.querySelector('.btnHeaderJS');
 
 burger.addEventListener('click', () => {
    burger.classList.toggle('active');
@@ -32,7 +32,7 @@ window.addEventListener('scroll', function (header, introH, scrollPos) {
    // burger nav close by scroll
    burger.classList.remove('active');
    nav.classList.remove('active');
-   btnHeader_hierme.classList.remove('show');
+   // btnHeader_hierme.classList.remove('show');
 });
 
 //? ============ SMOOTH SCROLL =============================================
@@ -55,9 +55,9 @@ allHeaderLinks.forEach(item => {
 //? ============ INTERACTIVE SCROLL =============================================
 let introOffset;
 let workOffset;
-let aboutOffset;
-let reviewsOffset;
-let blogOffset;
+// let aboutOffset;
+// let reviewsOffset;
+// let blogOffset;
 // ccылки меню
 let navLink_work;
 
@@ -68,20 +68,25 @@ window.addEventListener('scroll', function (scrollPos, introOffset, workOffset, 
    introOffset = document.getElementById('intro').getBoundingClientRect().top + window.scrollY-160;
    workOffset = document.getElementById('work').getBoundingClientRect().top + window.scrollY-160;
    aboutOffset = document.getElementById('about').getBoundingClientRect().top + window.scrollY-160;
-   reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY-160;
-   blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY-160;
+   // reviewsOffset = document.getElementById('reviews').getBoundingClientRect().top + window.scrollY-160;
+   // blogOffset = document.getElementById('blog').getBoundingClientRect().top + window.scrollY-160;
+
+   console.log(scrollPos);
+   console.log(introOffset);
+   console.log(aboutOffset);
 
    if ((scrollPos > workOffset) && (scrollPos < aboutOffset)) {
       allHeaderLinks.forEach(item =>{
          item.classList.remove('active');
+         // console.log('here');
       });
       navLink_work = document.querySelector('a[data-scroll="work"]').classList.add('active');
-   } else if ((scrollPos > aboutOffset) && (scrollPos < reviewsOffset)) {
+   } else if (scrollPos > aboutOffset) {
       allHeaderLinks.forEach(item =>{
          item.classList.remove('active');
       });
       navLink_work = document.querySelector('a[data-scroll="about"]').classList.add('active');
-   } else if ((scrollPos > reviewsOffset) && (scrollPos < blogOffset)) {
+   } /*else if ((scrollPos > reviewsOffset) && (scrollPos < blogOffset)) {
       allHeaderLinks.forEach(item =>{
          item.classList.remove('active');
       });
@@ -91,7 +96,7 @@ window.addEventListener('scroll', function (scrollPos, introOffset, workOffset, 
          item.classList.remove('active');
       });
       navLink_work = document.querySelector('a[data-scroll="blog"]').classList.add('active');
-   } else {
+   }*/ else {
       allHeaderLinks.forEach(item =>{
          item.classList.remove('active');
       });

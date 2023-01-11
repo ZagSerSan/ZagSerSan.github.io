@@ -386,12 +386,14 @@
          fill: #8d8d8e;
          transition: fill .1s linear;
       }
-      &.behance,
-      &.dribbble,
-      &.linkedin,
+      &.telegram,
+      &.viber,
       &.facebook,
       &.instagram,
-      &.twitter {background-color: transparent;}
+      &.twitter {
+         background-color: transparent;
+         background: transparent;
+      }
       &:hover {
          bottom: 0;
          box-shadow: none;

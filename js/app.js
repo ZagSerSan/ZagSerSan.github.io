@@ -34,6 +34,21 @@ window.addEventListener('scroll', function (header, introH, scrollPos) {
    nav.classList.remove('active');
    // btnHeader_hierme.classList.remove('show');
 });
+window.addEventListener('load', function (header, introH, scrollPos) {
+   header = document.getElementById('header');
+   introH = document.getElementById('intro').clientHeight-210;
+   scrollPos = window.pageYOffset;
+
+   if (scrollPos > introH) {
+      header.classList.add('fixed');
+   } else {
+      header.classList.remove('fixed');
+   }
+   // burger nav close by scroll
+   burger.classList.remove('active');
+   nav.classList.remove('active');
+   // btnHeader_hierme.classList.remove('show');
+});
 
 //? ============ SMOOTH SCROLL =============================================
 const allHeaderLinks = document.querySelectorAll('.navlinkJS');

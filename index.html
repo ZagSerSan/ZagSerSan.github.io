@@ -22,8 +22,7 @@
 <!--todo__temp -modal work -->
 <!-- 
    todoCSS_1 = 682
-   todo_1 портфолио
-   01 запихнуть все внутрение модалки в один фон... переделать js под это
+   todo_01 запихнуть все внутрение модалки в один фон... переделать js под это
    1 Сделать слайдер на всех работах (опционально)
    1.2 сделать первый айтем слайд this-сайта в портфолио 3 
    2 превью (опционально)
@@ -224,136 +223,6 @@
 </div><!-- /.footer -->
 
 <!---------------------------------------------------------------->
-
-<!-- -modal hireme -->
-<div class="modal-bg" id="modal_hireme_bg">
-   
-   <div class="modal-hireme" id="modal_hireme">
-      <button class="modal-hireme__btn-close" id="btn_modal_close" type="button">
-         <svg><use href="#close"></use></svg>
-      </button>
-      <div class="modal-hireme__col">
-         <h3 class="modal-hireme__title">LET'S TALK!</h3>
-         <h4 class="modal-hireme__subtitle">CALL ME OR SEND ME A REQUEST</h4>
-         <div class="modal-hireme__contacts">
-            <div class="modal-hireme__contacts-item">
-               <svg><use href="#tel"></use></svg>
-               <a href="tel:(200) 100 3000">(200) 100 3000</a>
-            </div>
-            <div class="modal-hireme__contacts-item">
-               <svg><use href="#mail"></use></svg>
-               <a href="tel:(200) 100 3000">designer@ui43.com</a>
-            </div>
-         </div>
-         <form action="send" method="post" class="form">
-            <p class="form__title">Adress e-mail</p>
-            <input type="text" name="mail" placeholder="Adress e-mail">
-            <p class="form__title">Request</p>
-            <textarea type="text" name="request" placeholder="Type your request..."></textarea>
-            <div class="align-right">
-               <button class="btn-black" type="reset" name="button">SEND</button>
-            </div>
-         </form>
-      </div><!-- /.modal-hireme__col -->
-      <div class="modal-hireme__col">
-         <img src="img/modal/photo.png" alt="my photo">
-      </div><!-- /.modal-hireme__col -->
-   </div><!-- /.modal-hireme -->
-</div><!-- /.modal-bg -->
-
-<!-- -modal resume -->
-<div class="modal-bg" id="modal_resume_bg">
-
-   <div class="modal-resume" id="modal_resume">
-      <div class="modal-hireme__btnbox">
-         <div>
-            <button class="modal-hireme__btn-close" id="btn_modal_close" type="button">
-               <svg><use href="#close"></use></svg>
-            </button>
-         </div>
-      </div>
-      <h2 class="modal-resume__title">RESUME</h2>
-      <div class="modal-resume__btns">
-         <button class="modal-resume__btn btn-black">DOWNLOAD PDF</button>
-         <button class="modal-resume__btn btn-black">PRINT</button>
-      </div>
-      <div class="modal-resume__content">
-         <div class="experiense">
-
-            <h4 class="experiense__title">EXPERIENCE</h4>
-            <div class="experiense-item">
-               <div class="experiense-item__year"><time datetime="2017-04-29 19:00">2017</time> - <b>Present</b></div>
-               <div class="experiense-item__workplace">Freelancer</div>
-               <div class="experiense-item__prof">Art Director</div>
-               <p class="experiense-item__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
-            </div>
-            <div class="experiense-item">
-               <div class="experiense-item__year"><time datetime="2017-04-29 19:00">2017</time> - Present</div>
-               <div class="experiense-item__workplace">Freelancer</div>
-               <div class="experiense-item__prof">Art Director</div>
-               <p class="experiense-item__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
-            </div>
-            <div class="experiense-item">
-               <div class="experiense-item__year"><time datetime="2017-04-29 19:00">2017</time> - Present</div>
-               <div class="experiense-item__workplace">Freelancer</div>
-               <div class="experiense-item__prof">Art Director</div>
-               <p class="experiense-item__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
-            </div>
-
-         </div><!-- /.experiense -->
-         <div class="education">
-
-            <h4 class="education__title">EDUCATION</h4>
-
-            <div class="education-item">
-               <div class="education-item__time">
-                  <time datatime="2005">2005</time> - <time datatime="2010">2010</time>
-               </div>
-               <div class="education-item__prof">UI/UX Design</div>
-               <div class="education-item__learnplace">LA University, USA</div>
-            </div>
-            <div class="education-item">
-               <div class="education-item__time">
-                  <time datatime="2005">2005</time> - <time datatime="2010">2010</time>
-               </div>
-               <div class="education-item__prof">UI/UX Design</div>
-               <div class="education-item__learnplace">LA University, USA</div>
-            </div>
-            
-            <h4 class="education__title">SKILLS</h4>
-
-            <div class="education-skills">
-               <div class="education-skills-item">
-                  <div class="education-skills-item__name">UI/UX Design</div>
-                  <div class="education-skills-item__level" data-skill="1">level</div>
-               </div>
-               <div class="education-skills-item">
-                  <div class="education-skills-item__name">UI/UX Design</div>
-                  <div class="education-skills-item__level" data-skill="2">level</div>
-               </div>
-               <div class="education-skills-item">
-                  <div class="education-skills-item__name">UI/UX Design</div>
-                  <div class="education-skills-item__level" data-skill="3">level</div>
-               </div>
-            </div><!-- /.education-skills -->
-
-            <h4 class="education__title">AWARDS</h4>
-            
-            <div class="education-item">
-               <div class="education-item__time">
-                  <time datatime="2005">2010</time>
-               </div>
-               <div class="education-item__prof">UI/UX Design</div>
-               <div class="education-item__learnplace">LA University, USA</div>
-               <p class="education-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
-            </div>
-
-         </div><!-- /.education -->
-      </div><!-- /.modal-resume__content -->
-      <button class="modal-resume__btn btn-black" id="btn_hireme">Hire me</button>
-   </div><!-- /.modal-resume -->
-
-</div><!-- /.modal-bg -->
 
 <!--? ActiveBox -->
 <div class="modal-bg--work" id="modal_1">

@@ -421,8 +421,7 @@
 
 // todoCSS_1
 /* 
-   Заменить "display: none" для открытия модального окна,
-   чтобы заработал нормально слайдер
+   закончить фиксацию модальных окон
 */
 
 //todo -modal 'work' -------------------
@@ -430,7 +429,7 @@
    position: fixed;
    top: 0;
    left: 0;
-   z-index: 1000;
+   z-index: 5;
    
    width: 100%;
    height: 100%;
@@ -450,6 +449,9 @@
 }
 .modal-work {  
    position: fixed;
+   top: 50%;
+   left: 50%;
+   z-index: 6;
    width: 100%;
    max-width: 1200px;
    min-height: 620px;
@@ -459,15 +461,33 @@
 
    background-color: #fff;
    opacity: 0;
-   transform: scale(0);
+   transform: translate3d(-50%,-50%,0) scale(0);
    transition: transform .3s linear, opacity .3s linear;
    &.hide {
       opacity: 0;
-      transform: scale(0);
+      transform: translate3d(-50%,-50%,0) scale(0);
    }
    &.active {
-      transform: scale(1);
+      transform: translate3d(-50%,-50%,0) scale(1);
       opacity: 1;
+   }
+
+   .modal-hireme__btn-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 6;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      background: radial-gradient(#fff 30%, #000 100%);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      svg {
+         width: 100%;
+         height: 100%;
+      }
    }
 
    &.trX_left {transform: scale(.4) translateX(-50%);}

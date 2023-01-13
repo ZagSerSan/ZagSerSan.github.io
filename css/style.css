@@ -55,7 +55,7 @@ a:hover {
 }
 .header.fixed {
   position: fixed;
-  z-index: 1000;
+  z-index: 4;
   width: 100%;
   background-color: #fff;
   box-shadow: 0px 4px 6px #4c4c4c;
@@ -751,14 +751,13 @@ a:hover {
 }
 
 /* 
-   Заменить "display: none" для открытия модального окна,
-   чтобы заработал нормально слайдер
+   закончить фиксацию модальных окон
 */
 .modal-bg--work {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 5;
   width: 100%;
   height: 100%;
   padding: 15px;
@@ -778,6 +777,9 @@ a:hover {
 
 .modal-work {
   position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
   width: 100%;
   max-width: 1200px;
   min-height: 620px;
@@ -785,16 +787,33 @@ a:hover {
   flex-wrap: wrap;
   background-color: #fff;
   opacity: 0;
-  transform: scale(0);
+  transform: translate3d(-50%, -50%, 0) scale(0);
   transition: transform 0.3s linear, opacity 0.3s linear;
 }
 .modal-work.hide {
   opacity: 0;
-  transform: scale(0);
+  transform: translate3d(-50%, -50%, 0) scale(0);
 }
 .modal-work.active {
-  transform: scale(1);
+  transform: translate3d(-50%, -50%, 0) scale(1);
   opacity: 1;
+}
+.modal-work .modal-hireme__btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 6;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: radial-gradient(#fff 30%, #000 100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-work .modal-hireme__btn-close svg {
+  width: 100%;
+  height: 100%;
 }
 .modal-work.trX_left {
   transform: scale(0.4) translateX(-50%);

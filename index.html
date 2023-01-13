@@ -144,7 +144,7 @@
       
       <div class="portfolio portfolioJS">
          <!-- string 1 -->
-         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_1" data-submodal="submodal_1">
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_1">
             <img class="portfolio-item__image" src="img/works/1-activebox/preview.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
             <div class="portfolio-item__title">
@@ -152,7 +152,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_2" data-submodal="submodal_2">
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_2">
             <img class="portfolio-item__image" src="img/works/2-mogo/preview.png">
             <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
             <div class="portfolio-item__title">
@@ -160,7 +160,7 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
-         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_3" data-submodal="submodal_3">
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_3">
             <img class="portfolio-item__image" src="img/works/3-designer-portfolio/preview.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
             <div class="portfolio-item__title">
@@ -223,188 +223,185 @@
 </div><!-- /.footer -->
 
 <!---------------------------------------------------------------->
+<!-- modal bg -->
+<div class="modal-bg--work" id="modal_bg">
+</div><!-- /.modal_work_bg -->
 
 <!--? ActiveBox -->
-<div class="modal-bg--work" id="modal_1">
-   <div class="modal-work" id="submodal_1">
-      <!-- <div class="modal-work" id="submodal_1"> -->
-      
-      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
-         <svg><use href="#close"></use></svg>
-      </button>
+<div class="modal-work" id="modal_1">
+   <!-- <div class="modal-work" id="modal_1"> -->
+   
+   <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+      <svg><use href="#close"></use></svg>
+   </button>
 
-      <div class="modal-work__preview">
-         <div class="slider">
+   <div class="modal-work__preview">
+      <div class="slider">
 
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/1-activebox/slide_1.jpg" alt="slide-1">
-               </div>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/1-activebox/slide_1.jpg" alt="slide-1">
             </div>
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/1-activebox/slide_2.jpg" alt="slide-2">
-               </div>
-            </div>
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/1-activebox/slide_3.jpg" alt="slide-3">
-               </div>
-            </div>
-            <div>
-               <div class="modal-work__preview-item last-slide--align">
-                  <img src="img/works/1-activebox/slide_4.jpg" alt="slide-4">
-               </div>
-            </div>
-
-         </div><!-- /.slider -->
-      </div><!-- /.modal-work__preview -->
-
-      <div class="modal-work__content">
-         <h3 class="modal-work__projectname">ActiveBox</h3>
-         <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
-         <div class="modal-work__client">
-            <a href="portfolio/1-activebox/index.html" target="_blank">Open website</a>
          </div>
-         <div class="modal-work__textbox">
-            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
-            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/1-activebox/slide_2.jpg" alt="slide-2">
+            </div>
          </div>
-         <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prev">
-               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_1" data-opensubmodal="submodal_1" data-prev="modal_3" data-subprev="submodal_3">previous</button>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/1-activebox/slide_3.jpg" alt="slide-3">
             </div>
-            <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_1" data-opensubmodal="submodal_1" data-next="modal_2" data-subnext="submodal_2">next</button>
+         </div>
+         <div>
+            <div class="modal-work__preview-item last-slide--align">
+               <img src="img/works/1-activebox/slide_4.jpg" alt="slide-4">
             </div>
+         </div>
+
+      </div><!-- /.slider -->
+   </div><!-- /.modal-work__preview -->
+
+   <div class="modal-work__content">
+      <h3 class="modal-work__projectname">ActiveBox</h3>
+      <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
+      <div class="modal-work__client">
+         <a href="portfolio/1-activebox/index.html" target="_blank">Open website</a>
+      </div>
+      <div class="modal-work__textbox">
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+      </div>
+      <div class="modal-work__btnbox">
+         <div class="modal-work__btnbox-prev">
+            <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_1" data-openmodal_1" data-prev="modal_3" data-subprev="modal_3">previous</button>
+         </div>
+         <div class="modal-work__btnbox-next">
+            <button class="modal-work__btn" id="btn_next" data-openmodal="modal_1" data-openmodal_1" data-next="modal_2" data-subnext="modal_2">next</button>
          </div>
       </div>
-   </div><!-- /modal-work -->
-</div><!-- /.modal_work_bg -->
+   </div>
+</div><!-- /modal-work -->
 
 <!--? MoGo -->
-<div class="modal-bg--work" id="modal_2">
-   <div class="modal-work" id="submodal_2">
-      
-      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
-         <svg><use href="#close"></use></svg>
-      </button>
+<div class="modal-work" id="modal_2">
+   
+   <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+      <svg><use href="#close"></use></svg>
+   </button>
 
-      <div class="modal-work__preview">
-         <div class="slider">
+   <div class="modal-work__preview">
+      <div class="slider">
 
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/2-mogo/slide-1.png" alt="slide_1">
-               </div>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/2-mogo/slide-1.png" alt="slide_1">
             </div>
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/2-mogo/slide-2.png" alt="slide_2">
-               </div>
-            </div>
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/2-mogo/slide-3.png" alt="slide_3">
-               </div>
-            </div>
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/2-mogo/slide-4.png" alt="slide_4">
-               </div>
-            </div>
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/2-mogo/slide-5.png" alt="slide_5">
-               </div>
-            </div>
-            <div>
-               <div class="modal-work__preview-item last-slide--align">
-                  <img src="img/works/2-mogo/slide-6.png" alt="slide_6">
-               </div>
-            </div>
-            
-
-         </div><!-- /.slider -->
-      </div><!-- /.modal-work__preview -->
-
-      <div class="modal-work__content">
-         <h3 class="modal-work__projectname">MoGo</h3>
-         <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
-         <div class="modal-work__client">
-            <a href="portfolio/2-mogo/index.html" target="_blank">Open website</a>
          </div>
-         <div class="modal-work__textbox">
-            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
-            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/2-mogo/slide-2.png" alt="slide_2">
+            </div>
          </div>
-         <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prev">
-               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_2" data-opensubmodal="submodal_2" data-prev="modal_1" data-subprev="submodal_1">previous</button>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/2-mogo/slide-3.png" alt="slide_3">
             </div>
-            <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_2" data-opensubmodal="submodal_2" data-next="modal_3" data-subnext="submodal_3">next</button>
+         </div>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/2-mogo/slide-4.png" alt="slide_4">
             </div>
+         </div>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/2-mogo/slide-5.png" alt="slide_5">
+            </div>
+         </div>
+         <div>
+            <div class="modal-work__preview-item last-slide--align">
+               <img src="img/works/2-mogo/slide-6.png" alt="slide_6">
+            </div>
+         </div>
+         
+
+      </div><!-- /.slider -->
+   </div><!-- /.modal-work__preview -->
+
+   <div class="modal-work__content">
+      <h3 class="modal-work__projectname">MoGo</h3>
+      <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
+      <div class="modal-work__client">
+         <a href="portfolio/2-mogo/index.html" target="_blank">Open website</a>
+      </div>
+      <div class="modal-work__textbox">
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+      </div>
+      <div class="modal-work__btnbox">
+         <div class="modal-work__btnbox-prev">
+            <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_2" data-openmodal="modal_2" data-prev="modal_1" data-subprev="modal_1">previous</button>
+         </div>
+         <div class="modal-work__btnbox-next">
+            <button class="modal-work__btn" id="btn_next" data-openmodal="modal_2" data-openmodal="modal_2" data-next="modal_3" data-subnext="modal_3">next</button>
          </div>
       </div>
-   </div><!-- /modal-work -->
-</div><!-- /.modal_work_bg -->
+   </div>
+</div><!-- /modal-work -->
 
 <!--? Design Portfolio -->
-<div class="modal-bg--work" id="modal_3">
-   <div class="modal-work" id="submodal_3">
-      
-      <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
-         <svg><use href="#close"></use></svg>
-      </button>
+<div class="modal-work" id="modal_3">
+   
+   <button class="modal-hireme__btn-close" id="btn_work_close" type="button">
+      <svg><use href="#close"></use></svg>
+   </button>
 
-      <div class="modal-work__preview">
-         <div class="slider">
+   <div class="modal-work__preview">
+      <div class="slider">
 
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/3-designer-portfolio/slide-1.png" alt="slide-1">
-               </div>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/3-designer-portfolio/slide-1.png" alt="slide-1">
             </div>
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/3-designer-portfolio/slide-2.png" alt="slide-2">
-               </div>
+         </div>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/3-designer-portfolio/slide-2.png" alt="slide-2">
             </div>
-            <div>
-               <div class="modal-work__preview-item">
-                  <img src="img/works/3-designer-portfolio/slide-3.png" alt="slide-3">
-               </div>
+         </div>
+         <div>
+            <div class="modal-work__preview-item">
+               <img src="img/works/3-designer-portfolio/slide-3.png" alt="slide-3">
             </div>
-            <div>
-               <div class="modal-work__preview-item last-slide--align">
-                  <img src="img/works/3-designer-portfolio/slide-4.png" alt="slide-4">
-               </div>
+         </div>
+         <div>
+            <div class="modal-work__preview-item last-slide--align">
+               <img src="img/works/3-designer-portfolio/slide-4.png" alt="slide-4">
             </div>
+         </div>
 
-         </div><!-- /.slider -->
+      </div><!-- /.slider -->
+   </div>
+   <div class="modal-work__content">
+      <h3 class="modal-work__projectname">Designer Portfolio</h3>
+      <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2018</h4>
+      <div class="modal-work__client">
+         <a href="portfolio/3-designer-portfolio/index.html" target="_blank">Open website</a>
       </div>
-      <div class="modal-work__content">
-         <h3 class="modal-work__projectname">Designer Portfolio</h3>
-         <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2018</h4>
-         <div class="modal-work__client">
-            <a href="portfolio/3-designer-portfolio/index.html" target="_blank">Open website</a>
+      <div class="modal-work__textbox">
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+      </div>
+      <div class="modal-work__btnbox">
+         <div class="modal-work__btnbox-prev">
+            <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_3" data-openmodal="modal_3" data-prev="modal_2" data-subprev="modal_2">previous</button>
          </div>
-         <div class="modal-work__textbox">
-            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
-            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
-         </div>
-         <div class="modal-work__btnbox">
-            <div class="modal-work__btnbox-prev">
-               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_3" data-opensubmodal="submodal_3" data-prev="modal_2" data-subprev="submodal_2">previous</button>
-            </div>
-            <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_3" data-opensubmodal="submodal_3" data-next="modal_1" data-subnext="submodal_1">next</button>
-            </div>
+         <div class="modal-work__btnbox-next">
+            <button class="modal-work__btn" id="btn_next" data-openmodal="modal_3" data-openmodal="modal_3" data-next="modal_1" data-subnext="modal_1">next</button>
          </div>
       </div>
-   </div><!-- /modal-work -->
-</div><!-- /.modal_work_bg -->
+   </div>
+</div><!-- /modal-work -->
 
 </div><!-- /.wrapper -->
 

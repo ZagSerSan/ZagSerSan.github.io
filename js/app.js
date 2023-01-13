@@ -1,5 +1,4 @@
 //todo ============ TODO_TEMP =============================================
-// 1) ---
 // todo_2) (не обьязательно)
 
 //? ============ BURGER ==================================================
@@ -242,48 +241,11 @@ btn_int.addEventListener('click', (e) => {
 });
 
 //? ============ MODAL =============================================
-//* ===== HIREME and RESUME and BTN_CLOSE =====
+//* ===== BTN_CLOSE =====
 
-const btns_hireme = document.querySelectorAll('#btn_hireme');
-const btns_resume = document.querySelectorAll('#btn_resume');
 const btn_close = document.querySelectorAll('#btn_modal_close');
-
-var modal_hireme_bg = document.getElementById('modal_hireme_bg');
-var modal_hireme = document.getElementById('modal_hireme');
-
-var modal_resume_bg = document.getElementById('modal_resume_bg');
-var modal_resume = document.getElementById('modal_resume');
 var body = document.querySelector('body');
 
-btns_hireme.forEach(btn => {
-   btn.addEventListener('click', (e) => {
-      modal_resume.style.transform="scale(0)";
-      modal_resume_bg.style.background='none';
-      setTimeout(() => {
-         modal_resume_bg.classList.remove('show');
-      }, 300);
-      body.classList.add('noscroll');
-      modal_hireme_bg.classList.add('show');
-      setTimeout(function(){
-         modal_hireme_bg.style.background='rgba(0, 0, 0, 0.6)';
-      }, 10);
-      setTimeout(function(){
-         modal_hireme.style.transform="scale(1)";
-      }, 10);
-   });
-});
-btns_resume.forEach(btn => {
-   btn.addEventListener('click', () => {
-      body.classList.add('noscroll');
-      modal_resume_bg.classList.add('show');
-      setTimeout(function () {
-         modal_resume_bg.style.background='rgba(0, 0, 0, 0.6)';
-      }, 10);
-      setTimeout(() => {
-         modal_resume.style.transform="scale(1)";
-      }, 10);
-   });
-});
 btn_close.forEach(btn => {
    btn.addEventListener('click', (e) => {
       body.classList.remove('noscroll');
@@ -303,30 +265,14 @@ btn_close.forEach(btn => {
 //* ===== WORK ITEMS and MODAL ======================================
 const allWorkItems = document.querySelectorAll("[data-modal]");
 const allModalWokr_btnClose = document.querySelectorAll('#btn_work_close');
-const allModals_bg = document.querySelectorAll('.modal-bg--work');
 const allModals_inner = document.querySelectorAll('.modal-work');
 
 // скрытие фона с задержкой
-allModals_bg.forEach(item => {
-   setTimeout(() => {
-      item.style.display = 'none';
-   }, 1000);
-})
-// уменьшение окна и добавление прозрачности
-allModals_inner.forEach(item => {
-   setTimeout(() => {
-      // item.classList.add('hide');
-      item.style.transform = 'scale(0)';
-      setTimeout(() => {
-         item.style.opacity = '1';
-      }, 600);
-   }, 500);
-});
 
 allWorkItems.forEach(item => {
    item.addEventListener('click', ()=> {
-      var modal_bg = document.getElementById(item.getAttribute('data-modal'));
-      var modal_inner = document.getElementById(item.getAttribute('data-submodal'));
+      let modal_bg = document.getElementById('modal_bg');
+      let modal_inner = document.getElementById(item.getAttribute('data-modal'));
 
       // переключение кнопок-ссылок фильтра при нажании на ворк_айтем
       let attrDataFilter = item.getAttribute('data-filter')
@@ -353,16 +299,13 @@ allWorkItems.forEach(item => {
       });
 
       body.classList.add('noscroll');
-      modal_bg.classList.add('show')
-      modal_bg.style.removeProperty("display");
-      modal_inner.classList.remove('hide');
-
+      modal_bg.classList.add('display');
       setTimeout(() => {
          modal_bg.classList.add('bg');
-      }, 10);
+      }, 100);
+
       setTimeout(() => {
-         // modal_inner.classList.add('show')
-         modal_inner.style.transform = 'scale(1)';
+         modal_inner.classList.add('active');
       }, 100);
    });
 });
@@ -373,7 +316,7 @@ allModalWokr_btnClose.forEach(btn => {
          // item.classList.remove('show');
          item.style.transform = 'scale(0)';
       });
-      allModals_bg.forEach(item => {
+      modal_bg.forEach(item => {
          setTimeout(() => {
             item.classList.remove('bg');
          }, 10);

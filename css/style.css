@@ -750,334 +750,7 @@ a:hover {
   color: #fff;
 }
 
-.modal-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  overflow: auto;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s linear;
-}
-.modal-bg.show {
-  display: flex;
-}
-
-.modal-hireme {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  padding: 30px;
-  width: 100%;
-  max-width: 900px;
-  transform: scale(0);
-  transition: transform 0.3s linear;
-}
-.modal-hireme__btnbox {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 3;
-  height: 100%;
-}
-.modal-hireme__btnbox div {
-  position: relative;
-  height: 100%;
-}
-.modal-hireme__btnbox div button {
-  position: sticky;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  transition: transform 0.1s linear;
-}
-.modal-hireme__btnbox div button svg {
-  width: 100%;
-  height: 100%;
-}
-.modal-hireme__btnbox div button:hover {
-  transform: rotateZ(90deg);
-}
-.modal-hireme__btn-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 3;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  border: none;
-  background: radial-gradient(#fff 60%, #000 40%);
-  border-radius: 50%;
-  transition: transform 0.1s linear;
-}
-.modal-hireme__btn-close svg {
-  width: 100%;
-  height: 100%;
-}
-.modal-hireme__btn-close:hover {
-  transform: rotateZ(90deg);
-}
-.modal-hireme__col {
-  min-width: 40%;
-}
-.modal-hireme__col:last-child {
-  width: 60%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.modal-hireme__col img {
-  display: block;
-  height: 100%;
-}
-.modal-hireme__title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 45px;
-  color: #2b2a2c;
-  line-height: 0.8;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-.modal-hireme__subtitle {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #2b2a2c;
-  line-height: 0.8;
-  text-transform: uppercase;
-}
-.modal-hireme__contacts {
-  margin: 35px 0 45px;
-}
-.modal-hireme__contacts-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.modal-hireme__contacts-item svg {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-.modal-hireme__contacts-item a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: #2b2a2c;
-}
-
-.form__title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: #2b2a2c;
-  margin-bottom: 10px;
-}
-.form input, .form textarea {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: #2b2a2c;
-  width: 100%;
-  border: 1px solid rgba(112, 112, 112, 0.3);
-  border-radius: 30px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
-.form textarea {
-  resize: none;
-  height: 200px;
-}
-.form .align-right {
-  text-align: right;
-}
-.form button {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #2b2a2c;
-  padding: 18px 55px;
-  border: 1px solid #6a696b;
-}
-
-.modal-resume {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 75px 15px;
-  background-color: #fff;
-  transform: scale(0);
-  transition: transform 0.3s linear;
-}
-.modal-resume__title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 45px;
-  color: #2b2a2c;
-  text-transform: uppercase;
-  margin-bottom: 54px;
-}
-.modal-resume__btn {
-  font-size: 16px;
-  padding: 16px 27px;
-  min-width: 170px;
-}
-.modal-resume__btn:not(:last-child) {
-  margin-right: 15px;
-}
-.modal-resume__content {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 768px;
-  margin: 65px auto;
-}
-
-.experiense {
-  text-align: right;
-  width: 50%;
-  padding-right: 48px;
-  border-right: 1px #000 solid;
-}
-.experiense__title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #2b2a2c;
-  text-transform: uppercase;
-  margin-bottom: 39px;
-}
-
-.experiense-item:not(:last-child) {
-  margin-bottom: 39px;
-}
-.experiense-item__year {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #2b2b2b;
-  text-decoration: underline;
-  margin-bottom: 12px;
-}
-.experiense-item__workplace {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #2b2b2b;
-  margin-bottom: 3px;
-}
-.experiense-item__prof {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: #2b2a2c;
-  font-style: italic;
-  margin-bottom: 12px;
-}
-.experiense-item__about {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 12px;
-  color: #2b2a2c;
-  line-height: 1.5;
-  margin-bottom: 12px;
-}
-
-.education {
-  text-align: left;
-  width: 50%;
-  padding-left: 48px;
-}
-.education__title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #2b2a2c;
-  text-transform: uppercase;
-  margin-bottom: 39px;
-}
-
-.education-item {
-  margin-bottom: 39px;
-}
-.education-item__time {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #2b2b2b;
-  text-decoration: underline;
-  margin-bottom: 12px;
-}
-.education-item__prof {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #2b2b2b;
-  margin-bottom: 3px;
-}
-.education-item__learnplace {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: #2b2a2c;
-  font-style: italic;
-  margin-bottom: 12px;
-}
-.education-item__text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 12px;
-  color: #2b2a2c;
-  line-height: 1.5;
-}
-
-.education-skills {
-  margin-bottom: 39px;
-}
-
-.education-skills-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.education-skills-item__name {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: #2b2a2c;
-}
-.education-skills-item__level {
-  margin-left: 18px;
-  font-size: 0;
-  width: 150px;
-  height: 6px;
-}
-.education-skills-item__level[data-skill="1"] {
-  background: linear-gradient(90deg, #6a696b 50%, #efefef 50%);
-}
-.education-skills-item__level[data-skill="2"] {
-  background: linear-gradient(90deg, #6a696b 90%, #efefef 90%);
-}
-.education-skills-item__level[data-skill="3"] {
-  background: linear-gradient(90deg, #6a696b 80%, #efefef 80%);
-}
-
-/*
+/* 
    Заменить "display: none" для открытия модального окна,
    чтобы заработал нормально слайдер
 */
@@ -1090,20 +763,21 @@ a:hover {
   height: 100%;
   padding: 15px;
   overflow: auto;
+  display: none;
+  opacity: 0;
+  background-color: transparent;
+  transition: background-color 0.2s linear;
+}
+.modal-bg--work.display {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s linear;
 }
 .modal-bg--work.bg {
-  background: rgba(0, 0, 0, 0.6);
-}
-.modal-bg--work.hide {
-  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
 }
 
 .modal-work {
-  position: relative;
+  position: fixed;
   width: 100%;
   max-width: 1200px;
   min-height: 620px;
@@ -1111,7 +785,16 @@ a:hover {
   flex-wrap: wrap;
   background-color: #fff;
   opacity: 0;
+  transform: scale(0);
   transition: transform 0.3s linear, opacity 0.3s linear;
+}
+.modal-work.hide {
+  opacity: 0;
+  transform: scale(0);
+}
+.modal-work.active {
+  transform: scale(1);
+  opacity: 1;
 }
 .modal-work.trX_left {
   transform: scale(0.4) translateX(-50%);
@@ -1560,142 +1243,6 @@ a:hover {
     border-right: 0;
     border-top: 1px #413f41 solid;
     padding-top: 10px;
-  }
-}
-@media (max-width: 1000px) {
-  .modal-hireme__col:last-child {
-    width: 50%;
-  }
-  .modal-hireme__col:last-child img {
-    height: auto;
-    width: 100%;
-  }
-}
-@media (max-width: 710px) {
-  .modal-hireme__col {
-    width: 100%;
-  }
-  .modal-hireme__col:last-child {
-    display: none;
-  }
-}
-@media (max-width: 420px) {
-  .modal-hireme {
-    min-width: 290px;
-    padding: 20px 20px;
-  }
-  .modal-hireme__title {
-    font-size: 28px;
-    margin-bottom: 25px;
-  }
-  .modal-hireme__subtitle {
-    font-size: 15px;
-    line-height: 1.3;
-  }
-  .modal-hireme__contacts {
-    margin: 25px 0 35px;
-  }
-  .modal-hireme__btn-close {
-    top: 15px;
-    right: 15px;
-    width: 30px;
-    height: 30px;
-  }
-  .modal-hireme .form textarea {
-    padding: 10px;
-    height: 90px;
-    max-height: 200px;
-    min-height: 40px;
-    resize: vertical;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  .modal-hireme .form button {
-    font-size: 15px;
-    padding: 10px 30px;
-  }
-  .modal-hireme .form input {
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 1000px) {
-  .modal-resume__title {
-    font-size: 40px;
-  }
-  .modal-resume__btn {
-    padding: 12px 17px;
-    font-size: 15px;
-  }
-}
-@media (max-width: 700px) {
-  .modal-resume {
-    padding: 40px 15px;
-  }
-  .modal-resume__title {
-    margin-bottom: 45px;
-  }
-  .modal-resume .education-skills-item {
-    flex-wrap: wrap;
-    margin-bottom: 0;
-  }
-  .modal-resume .education-skills-item__level {
-    margin: 10px 15px 20px;
-  }
-}
-@media (max-width: 600px) {
-  .modal-resume {
-    padding: 50px 30px;
-  }
-  .modal-resume__btn {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-  .modal-resume__title {
-    font-size: 35px;
-  }
-  .modal-resume__content {
-    margin-bottom: 20px;
-  }
-  .modal-resume .education-skills-item {
-    justify-content: center;
-  }
-  .experiense {
-    width: 100%;
-    padding-right: 0;
-    padding-bottom: 20px;
-    text-align: center;
-    border-right: 0;
-    border-bottom: 1px #000 solid;
-  }
-  .education {
-    width: 100%;
-    padding: 40px 0 0 0;
-    text-align: center;
-  }
-  .education__title {
-    margin-bottom: 30px;
-  }
-  .education-item {
-    margin-bottom: 30px;
-  }
-  .education-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (max-width: 460px) {
-  .modal-resume .modal-hireme__btn-close {
-    width: 30px;
-    height: 30px;
-  }
-  .modal-resume__btns {
-    text-align: center;
-  }
-  .modal-resume__btns button:first-child {
-    margin: 0 0 20px 0;
   }
 }
 @media (max-width: 1200px) {

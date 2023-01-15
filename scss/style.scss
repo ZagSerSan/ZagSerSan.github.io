@@ -439,11 +439,15 @@
    display: none;
    opacity: 0;
    background-color: transparent;
-   transition: background-color .2s linear;
+   transition: background-color .2s linear, opacity .2s linear;
 
-   &.display {display: flex;}
+   &.display {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.1);
+   }
    &.bg {
       background-color: rgba(0, 0, 0, 0.7);
+      transition: background-color .2s linear;
       opacity: 1;
    }
 }
@@ -471,7 +475,6 @@
       transform: translate3d(-50%,-50%,0) scale(1);
       opacity: 1;
    }
-
    .modal-hireme__btn-close {
       position: absolute;
       top: 20px;
@@ -489,9 +492,13 @@
          height: 100%;
       }
    }
-
-   &.trX_left {transform: scale(.4) translateX(-50%);}
-   &.trX_right {transform: scale(.4) translateX(50%);}
+   &.trX_left {
+      transform: scale(.6) translate3d(-150%, -30%, 0);
+      opacity: 0;
+   }
+   &.trX_right {
+      transform: scale(.6) translate3d(0%, -30%, 0);
+   }
 		&__preview {
          width: 65%;
          .last-slide--align {

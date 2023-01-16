@@ -333,7 +333,6 @@ allModalWokr_btnClose.forEach(btn => {
 });
 
 //* ===== smart switch between work items =====
-
 // get "next" and "prev" buttons
 const btns_prev = document.querySelectorAll('#btn_prev');
 const btns_next = document.querySelectorAll('#btn_next');
@@ -348,17 +347,23 @@ btns_prev.forEach(item => {
 
    // текущее открытое модальное окно
       openNow.classList.add('trX_right');
-      openNow.classList.remove('active');
+      openNow.classList.remove('scale');
       setTimeout(() => {
+         openNow.classList.remove('display');
          openNow.classList.remove('trX_right');
-      }, 200);
-
+      }, 170);
    // предыдущее модальное окно
       prev_modal.classList.add('trX_left');
-      prev_modal.classList.add('active');
+      prev_modal.classList.add('display');
       setTimeout(() => {
+         prev_modal.classList.add('scale');
          prev_modal.classList.remove('trX_left');
       }, 170);
+      setTimeout(() => {
+         $(function(){
+            $('.slider').slick('setPosition');
+         });
+      }, 300);
    });
 });
 btns_next.forEach(item => {
@@ -368,15 +373,22 @@ btns_next.forEach(item => {
 
    // текущее открытое модальное окно
       openNow.classList.add('trX_left');
-      openNow.classList.remove('active');
+      openNow.classList.remove('scale');
       setTimeout(() => {
+         openNow.classList.remove('display');
          openNow.classList.remove('trX_left');
-      }, 200);
+      }, 170);
    // следующее модальное окно
       next_modal.classList.add('trX_right');
-      next_modal.classList.add('active');
+      next_modal.classList.add('display');
       setTimeout(() => {
+         next_modal.classList.add('scale');
          next_modal.classList.remove('trX_right');
       }, 170);
+      setTimeout(() => {
+         $(function(){
+            $('.slider').slick('setPosition');
+         });
+      }, 200);
    });
 });

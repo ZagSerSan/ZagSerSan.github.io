@@ -274,6 +274,8 @@ allWorkItems.forEach(item => {
    item.addEventListener('click', ()=> {
       let modal_bg = document.getElementById('modal_bg');
       let modal_inner = document.getElementById(item.getAttribute('data-modal'));
+      // тестовое
+      let test = document.querySelector('.test');
 
       // переключение кнопок-ссылок фильтра при нажании на ворк_айтем
       let attrDataFilter = item.getAttribute('data-filter')
@@ -298,6 +300,8 @@ allWorkItems.forEach(item => {
       allThisIdLink.forEach(thisLink => {
          thisLink.classList.remove('hide');
       });
+
+      test.classList.add('show');
 
       body.classList.add('noscroll');
       modal_bg.classList.add('display');

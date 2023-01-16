@@ -451,11 +451,30 @@
       opacity: 1;
    }
 }
-.modal-work {  
+
+.test {
    position: fixed;
-   top: 50%;
-   left: 50%;
+   top: 0;
+   left: 0;
    z-index: 6;
+   padding: 20px 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   overflow: auto;
+   transform: scale(0);
+   &.show {
+      transform: scale(1);
+   }
+}
+
+.modal-work {  
+   // position: fixed;
+   // top: 50%;
+   // left: 50%;
+   // z-index: 6;
    width: 94%;
    max-width: 1200px;
    min-height: 620px;
@@ -465,7 +484,8 @@
 
    background-color: #fff;
    opacity: 0;
-   transform: translate3d(-50%,-50%,0) scale(0);
+   // transform: translate3d(-50%,-50%,0) scale(0);
+   // transform: scale(0);
    transition: transform .3s linear, opacity .3s linear;
    &.hide {
       opacity: 0;

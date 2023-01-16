@@ -329,7 +329,6 @@ allModalWokr_btnClose.forEach(btn => {
       setTimeout(() => {
          modal_bg.classList.remove('display');
       }, 400);
-      console.log(modal_bg);
    });
 });
 

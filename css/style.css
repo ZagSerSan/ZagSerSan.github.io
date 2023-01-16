@@ -816,8 +816,19 @@ a:hover {
 .modal-work.trX_right {
   transform: scale(0.6) translate3d(0%, -30%, 0);
 }
+.modal-work .flex--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .modal-work__preview {
   width: 65%;
+}
+.modal-work__preview.calculatop {
+  background-color: #888888;
+}
+.modal-work__preview.calculatop img {
+  width: 80%;
 }
 .modal-work__preview .last-slide--align {
   display: flex;

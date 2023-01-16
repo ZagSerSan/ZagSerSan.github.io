@@ -484,8 +484,17 @@
    &.trX_right {
       transform: scale(.6) translate3d(0%, -30%, 0);
    }
+   .flex--center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
    &__preview {
       width: 65%;
+      &.calculatop {
+         background-color: #888888;
+         img {width: 80%;}
+      }
       .last-slide--align {
          // align bottom
          display: flex;

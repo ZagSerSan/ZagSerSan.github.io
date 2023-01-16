@@ -344,7 +344,6 @@ btns_prev.forEach(item => {
       let openNow = document.getElementById(item.getAttribute('data-openmodal'));
       // получаем предыдущее модальное окно
       let prev_modal = document.getElementById(item.getAttribute('data-prev'));
-
    // текущее открытое модальное окно
       openNow.classList.add('trX_right');
       openNow.classList.remove('scale');
@@ -370,7 +369,6 @@ btns_next.forEach(item => {
    item.addEventListener('click', () => {
       let openNow = document.getElementById(item.getAttribute('data-openmodal'));
       let next_modal = document.getElementById(item.getAttribute('data-next'));
-
    // текущее открытое модальное окно
       openNow.classList.add('trX_left');
       openNow.classList.remove('scale');

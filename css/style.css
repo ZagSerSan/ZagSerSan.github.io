@@ -762,15 +762,15 @@ a:hover {
   height: 100%;
   padding: 15px;
   overflow: auto;
-  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   opacity: 0;
-  transform: scale(0);
   transition: background-color 0.2s linear, opacity 0.2s linear;
 }
 .modal-bg--work.display {
-  transform: scale(1);
-  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 .modal-bg--work.bg {
   background-color: rgba(0, 0, 0, 0.7);
@@ -784,7 +784,6 @@ a:hover {
   min-height: 620px;
   display: none;
   flex-wrap: wrap;
-  margin: auto;
   background-color: #fff;
   opacity: 0;
   transform: scale(0);
@@ -795,8 +794,10 @@ a:hover {
      transform: scale(0);
   }*/
 }
-.modal-work.active {
+.modal-work.display {
   display: flex;
+}
+.modal-work.scale {
   transform: scale(1);
   opacity: 1;
 }

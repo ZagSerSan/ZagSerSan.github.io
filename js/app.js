@@ -274,8 +274,6 @@ allWorkItems.forEach(item => {
    item.addEventListener('click', ()=> {
       let modal_bg = document.getElementById('modal_bg');
       let modal_inner = document.getElementById(item.getAttribute('data-modal'));
-      // тестовое
-      // let test = document.querySelector('.test');
 
       // переключение кнопок-ссылок фильтра при нажании на ворк_айтем
       let attrDataFilter = item.getAttribute('data-filter')
@@ -285,7 +283,6 @@ allWorkItems.forEach(item => {
       // scroll to changed item
       setTimeout(() => {
          let itemCoordY = item.getBoundingClientRect().top + window.scrollY;
-         // console.log(itemCoordY);
          window.scrollTo({
             top: itemCoordY-150,
             behavior: 'smooth'
@@ -301,16 +298,15 @@ allWorkItems.forEach(item => {
          thisLink.classList.remove('hide');
       });
 
-      // test.classList.add('show');
-
       body.classList.add('noscroll');
       modal_bg.classList.add('display');
       setTimeout(() => {
          modal_bg.classList.add('bg');
       }, 100);
 
+      modal_inner.classList.add('display');
       setTimeout(() => {
-         modal_inner.classList.add('active');
+         modal_inner.classList.add('scale');
          $(function(){
             $('.slider').slick('setPosition');
          });
@@ -319,24 +315,23 @@ allWorkItems.forEach(item => {
 });
 allModalWokr_btnClose.forEach(btn => {
    btn.addEventListener('click', ()=> {
+      let modal_bg = document.getElementById('modal_bg');
       body.classList.remove('noscroll');
       
       allModals_inner.forEach(item => {
-         item.classList.remove('active');
+         item.classList.remove('scale');
+         setTimeout(() => {
+            item.classList.remove('display');
+         }, 100);
       });
+
       modal_bg.classList.remove('bg');
       setTimeout(() => {
          modal_bg.classList.remove('display');
       }, 400);
-
-      modal_bg.classList.remove('bg');
-         setTimeout(() => {
-            item.classList.remove('show');
-            item.style.display = 'none';
-         }, 300);
-      });
+      console.log(modal_bg);
    });
-// });
+});
 
 //* ===== smart switch between work items =====
 

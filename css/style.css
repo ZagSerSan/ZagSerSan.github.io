@@ -777,25 +777,11 @@ a:hover {
   opacity: 1;
 }
 
-.test {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 6;
-  padding: 20px 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: auto;
-  transform: scale(0);
-}
-.test.show {
-  transform: scale(1);
-}
-
 .modal-work {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
   width: 94%;
   max-width: 1200px;
   min-height: 620px;
@@ -803,6 +789,7 @@ a:hover {
   flex-wrap: wrap;
   background-color: #fff;
   opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0);
   transition: transform 0.3s linear, opacity 0.3s linear;
 }
 .modal-work.hide {

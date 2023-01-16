@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
@@ -750,9 +749,6 @@ a:hover {
   color: #fff;
 }
 
-/* 
-   центровка и скрол модального окна
-*/
 .modal-bg--work {
   position: fixed;
   top: 0;
@@ -788,11 +784,6 @@ a:hover {
   opacity: 0;
   transform: scale(0);
   transition: transform 0.3s linear, opacity 0.3s linear;
-  /*&.hide {
-     opacity: 0;
-     // transform: translate3d(-50%,-50%,0) scale(0);
-     transform: scale(0);
-  }*/
 }
 .modal-work.display {
   display: flex;
@@ -801,7 +792,7 @@ a:hover {
   transform: scale(1);
   opacity: 1;
 }
-.modal-work .modal-hireme__btn-close {
+.modal-work__btn-close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -814,7 +805,7 @@ a:hover {
   border-radius: 50%;
   cursor: pointer;
 }
-.modal-work .modal-hireme__btn-close svg {
+.modal-work__btn-close svg {
   width: 100%;
   height: 100%;
 }

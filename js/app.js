@@ -311,6 +311,9 @@ allWorkItems.forEach(item => {
 
       setTimeout(() => {
          modal_inner.classList.add('active');
+         $(function(){
+            $('.slider').slick('setPosition');
+         });
       }, 100);
    });
 });

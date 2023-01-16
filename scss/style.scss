@@ -437,9 +437,9 @@
    overflow: auto;
 
    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column-reverse;
+   // justify-content: center;
+   // align-items: center;
+   // flex-direction: column-reverse;
 
    background-color: transparent;
    opacity: 0;
@@ -484,15 +484,16 @@
    width: 100%;
    max-width: 1200px;
    min-height: 620px;
+   // max-height: 620px;
 
-   display: flex;
+   display: none;
    flex-wrap: wrap;
+   margin: auto;
 
    background-color: #fff;
    opacity: 0;
    // transform: translate3d(-50%,-50%,0) scale(0);
    transform: scale(0);
-   // transform: scale(1);
    transition: transform .3s linear, opacity .3s linear;
    /*&.hide {
       opacity: 0;
@@ -500,6 +501,7 @@
       transform: scale(0);
    }*/
    &.active {
+      display: flex;
       transform: scale(1);
       // transform: translate3d(-50%,-50%,0) scale(1);
       opacity: 1;

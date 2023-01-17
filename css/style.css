@@ -962,6 +962,12 @@ a:hover {
   color: #6a696b;
   font-style: italic;
 }
+.modal-work__client a {
+  text-decoration: underline;
+}
+.modal-work__client a:hover {
+  text-decoration: none;
+}
 .modal-work__text {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;

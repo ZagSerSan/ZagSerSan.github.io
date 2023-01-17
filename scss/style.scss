@@ -616,11 +616,17 @@
    }
    &__client {
       @include fontFWSC('Montserrat',700,16px,#2b2a2c);
+      margin-bottom: 33px;     
       span {
          @include fontFWSC('Montserrat',300,14px,#6a696b);
-         font-style: italic; 
+         font-style: italic;
       }
-      margin-bottom: 33px;           
+      a {
+         text-decoration: underline;
+         &:hover {
+            text-decoration: none;
+         }
+      }
    }
    &__text {
       @include fontFWSCL('Montserrat',300,12px,#6a696b,2);

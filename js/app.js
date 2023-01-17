@@ -123,13 +123,13 @@ var allLinks = document.querySelectorAll('a[data-filter]');
 // btns
 var btn_all = document.querySelector('.btn_all');
 var btn_lending = document.querySelector('.btn_lending');
-var btn_website = document.querySelector('.btn_website');
-var btn_int = document.querySelector('.btn_int');
-var btn_loadMoreWorks = document.getElementById('loadmoreworks');
+var btn_app = document.querySelector('.btn_app');
+// var btn_website = document.querySelector('.btn_website');
+// var btn_loadMoreWorks = document.getElementById('loadmoreworks');
 // проекты с фильтрами
 const lending_projects = document.querySelectorAll('#lending');
-const website_projects = document.querySelectorAll('#website');
-const int_projects = document.querySelectorAll('#int');
+// const website_projects = document.querySelectorAll('#website');
+const app_projects = document.querySelectorAll('#app');
 
 // скролл после применения фильтра при media 900px
 function filterScroll() {
@@ -157,7 +157,7 @@ window.addEventListener('load', () => {
    btn_all.classList.add('active');
    btn_lending.classList.remove('active');
    btn_website.classList.remove('active');
-   btn_int.classList.remove('active');
+   btn_app.classList.remove('active');
 
    lending_projects.forEach(item => {
       item.classList.remove('hide');
@@ -165,7 +165,7 @@ window.addEventListener('load', () => {
    webs1_ActiveBox1_ActiveBoxite_projects.forEach(item => {
       item.classList.remove('hide');
    });
-   int_projects.forEach(item => {
+   app_projects.forEach(item => {
       item.classList.remove('hide');
    });
 }); */
@@ -175,16 +175,16 @@ btn_all.addEventListener('click', (e) => {
    e.preventDefault();
    btn_all.classList.add('active');
    btn_lending.classList.remove('active');
-   btn_website.classList.remove('active');
-   btn_int.classList.remove('active');
+   btn_app.classList.remove('active');
+   // btn_website.classList.remove('active');
 
    lending_projects.forEach(item => {
       item.classList.remove('hide');
    });
-   website_projects.forEach(item => {
-      item.classList.remove('hide');
-   });
-   int_projects.forEach(item => {
+   // website_projects.forEach(item => {
+   //    item.classList.remove('hide');
+   // });
+   app_projects.forEach(item => {
       item.classList.remove('hide');
    });
 });
@@ -192,25 +192,26 @@ btn_lending.addEventListener('click', (e) => {
    e.preventDefault();
    btn_lending.classList.add('active');
    btn_all.classList.remove('active');
-   btn_website.classList.remove('active');
-   btn_int.classList.remove('active');
+   btn_app.classList.remove('active');
+   // btn_website.classList.remove('active');
 
    lending_projects.forEach(item => {
       item.classList.remove('hide');
    });
-   website_projects.forEach(item => {
-      item.classList.add('hide');
-   });
-   int_projects.forEach(item => {
+   // website_projects.forEach(item => {
+   //    item.classList.add('hide');
+   // });
+   app_projects.forEach(item => {
       item.classList.add('hide');
    });
 });
+/*
 btn_website.addEventListener('click', (e) => {
    e.preventDefault();
    btn_website.classList.add('active');
    btn_all.classList.remove('active');
    btn_lending.classList.remove('active');
-   btn_int.classList.remove('active');
+   btn_app.classList.remove('active');
 
    website_projects.forEach(item => {
       item.classList.remove('hide');
@@ -218,23 +219,24 @@ btn_website.addEventListener('click', (e) => {
    lending_projects.forEach(item => {
       item.classList.add('hide');
    });
-   int_projects.forEach(item => {
+   app_projects.forEach(item => {
       item.classList.add('hide');
    });
 });
-btn_int.addEventListener('click', (e) => {
+*/
+btn_app.addEventListener('click', (e) => {
    e.preventDefault();
-   btn_int.classList.add('active');
+   btn_app.classList.add('active');
    btn_all.classList.remove('active');
-   btn_website.classList.remove('active');
    btn_lending.classList.remove('active');
+   // btn_website.classList.remove('active');
 
-   int_projects.forEach(item => {
+   app_projects.forEach(item => {
       item.classList.remove('hide');
    });
-   website_projects.forEach(item => {
-      item.classList.add('hide');
-   });
+   // website_projects.forEach(item => {
+   //    item.classList.add('hide');
+   // });
    lending_projects.forEach(item => {
       item.classList.add('hide');
    });
@@ -332,7 +334,7 @@ allModalWokr_btnClose.forEach(btn => {
    });
 });
 
-//* ===== smart switch between work items =====
+//* =============== smart switch between work items ===========================
 // get "next" and "prev" buttons
 const btns_prev = document.querySelectorAll('#btn_prev');
 const btns_next = document.querySelectorAll('#btn_next');
@@ -350,19 +352,22 @@ btns_prev.forEach(item => {
       setTimeout(() => {
          openNow.classList.remove('display');
          openNow.classList.remove('trX_right');
-      }, 170);
+      }, 200);
    // предыдущее модальное окно
+   setTimeout(() => {
       prev_modal.classList.add('trX_left');
       prev_modal.classList.add('display');
       setTimeout(() => {
          prev_modal.classList.add('scale');
          prev_modal.classList.remove('trX_left');
-      }, 170);
+      }, 180);
       setTimeout(() => {
          $(function(){
             $('.slider').slick('setPosition');
          });
       }, 300);
+   }, 210);
+
    });
 });
 btns_next.forEach(item => {
@@ -375,8 +380,9 @@ btns_next.forEach(item => {
       setTimeout(() => {
          openNow.classList.remove('display');
          openNow.classList.remove('trX_left');
-      }, 170);
+      }, 200);
    // следующее модальное окно
+   setTimeout(() => {
       next_modal.classList.add('trX_right');
       next_modal.classList.add('display');
       setTimeout(() => {
@@ -388,5 +394,6 @@ btns_next.forEach(item => {
             $('.slider').slick('setPosition');
          });
       }, 200);
+   }, 210);
    });
 });

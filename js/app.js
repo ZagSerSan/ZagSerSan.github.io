@@ -397,3 +397,11 @@ btns_next.forEach(item => {
    }, 210);
    });
 });
+
+let a = 3;
+let b = 2;
+let c = '7';
+
+x = a + b + c;
+console.log(a+b);
+console.log(x);

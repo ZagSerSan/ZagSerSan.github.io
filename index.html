@@ -164,11 +164,20 @@
                <time datetime="2022-11-23">2022</time>
             </div>
          </div>
+         <!-- string 2 -->
          <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_4">
             <img class="portfolio-item__image" src="img/works/4-calculator/preview.png" alt="preview">
             <div class="portfolio-item__suptitle">CATEGORY: App</div>
             <div class="portfolio-item__title">
                Custom calculator
+               <time datetime="2022-11-23">2023</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_5">
+            <img class="portfolio-item__image" src="img/works/5-TodoList/preview.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: App</div>
+            <div class="portfolio-item__title">
+               Todo list
                <time datetime="2022-11-23">2023</time>
             </div>
          </div>
@@ -229,6 +238,7 @@
 <!-- modal bg -->
 <div class="modal-bg--work" id="modal_bg">
 
+<!--?=================== LENDINGS =========================-->
    <!--? ActiveBox -->
    <div class="modal-work" id="modal_1">
       <!-- <div class="modal-work" id="modal_1"> -->
@@ -405,6 +415,7 @@
       </div>
    </div><!-- /modal-work -->
 
+<!--?=================== APPS =========================-->
    <!--? Custom Calculator -->
    <div class="modal-work" id="modal_4">
       
@@ -436,6 +447,36 @@
       </div>
    </div><!-- /modal-work -->
 
+   <!--? Todo List -->
+   <div class="modal-work" id="modal_5">
+      
+      <button type="button" class="modal-work__btn-close" id="btn_work_close">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview flex--center todo-list">
+         <img src="img/works/5-TodoList/slider1.png" alt="image">
+      </div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">Todo list</h3>
+         <h4 class="modal-work__category">CATEGORY: App<span>|</span> 2023</h4>
+         <div class="modal-work__client">
+            <a href="portfolio/APP/2 todoList/index.html" target="_blank">Open website</a>
+         </div>
+         <div class="modal-work__textbox">
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         </div>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_5" data-prev="modal_4">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_5" data-next="modal_1">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
    
 </div><!-- /.modal_work_bg -->
 </div><!-- /.wrapper -->

@@ -1,31 +1,33 @@
 //* <МИКСИНЫ>===============================================================================================
-   @import "mixins";
+@import "mixins";
 //* <ШРИФТЫ>===============================================================================================
 //<Подключаем шрифты>=======================================================================================
-   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap');
-   // font-family: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap");
+// font-family: 'Montserrat', sans-serif;
 //<Иконочные шрифты>==========================================================================================
 //<Шрифт по умолчанию>==========================================================================================
-   body {
-      font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-      -webkit-font-smoothing: antialiased;
-      color: #6a696b;
-      &.noscroll {overflow: hidden;}
+body {
+   font-family: "Montserrat", sans-serif;
+   font-size: 14px;
+   -webkit-font-smoothing: antialiased;
+   color: #6a696b;
+   &.noscroll {
+      overflow: hidden;
    }
+}
 //* <ПЕРЕМЕННЫЕ>===========================================================================================================
-   $minwidth: 320px;
-   $mw: 1180;
-   // $md1: $mw + 12;
-   // $md2: 991.98;
-   // $md3: 767.98;
-   // $md4: 479.98;
-   // $md5: 379.98;
+$minwidth: 320px;
+$mw: 1180;
+// $md1: $mw + 12;
+// $md2: 991.98;
+// $md3: 767.98;
+// $md4: 479.98;
+// $md5: 379.98;
 //* <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
-   @import "null";
+@import "null";
 //* <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-   @import "header";
-   // @import "footer.scss";
+@import "header";
+// @import "footer.scss";
 //* <ОБОЛОЧКА>===========================================================================================================
 .wrapper {
    width: 100%;
@@ -63,22 +65,24 @@
    flex-direction: column;
    justify-content: center;
    &__greeting {
-      @include fontFWSC('Montserrat',300,32px,#2b2a2c);
+      @include fontFWSC("Montserrat", 300, 32px, #2b2a2c);
       margin-bottom: 7px;
    }
    &__name {
-      @include fontFWSC('Montserrat',700,45px,#2b2a2c);
+      @include fontFWSC("Montserrat", 700, 45px, #2b2a2c);
       margin-bottom: 12px;
    }
    &__prof {
-      @include fontFWSC('Montserrat',400,18px,#6a696b);
+      @include fontFWSC("Montserrat", 400, 18px, #6a696b);
       margin-bottom: 20px;
    }
    button {
       padding: 18px 45px;
       margin-right: 14px;
       font-size: 16px;
-      &:last-child {margin-right: 0;}
+      &:last-child {
+         margin-right: 0;
+      }
    }
 }
 .social {
@@ -95,14 +99,29 @@
       height: 40px;
       margin-right: 10px;
       background-color: #ccc;
-      transition: bottom .1s linear, box-shadow .1s linear;
-      svg {width: 70%;height: 70%;fill: #fff;}
-      &.facebook{background-color: #3a5898;}
-      &.instagram{background: linear-gradient(45deg,#FB8A2E 0%, #C62F94 100%);}
-      &.viber{background-color: #7D3DAF;}
-      &.telegram{background-color: #37aee2;}
+      transition: bottom 0.1s linear, box-shadow 0.1s linear;
+      svg {
+         width: 70%;
+         height: 70%;
+         fill: #fff;
+      }
+      &.facebook {
+         background-color: #3a5898;
+      }
+      &.instagram {
+         background: linear-gradient(45deg, #fb8a2e 0%, #c62f94 100%);
+      }
+      &.viber {
+         background-color: #7d3daf;
+      }
+      &.telegram {
+         background-color: #37aee2;
+      }
 
-      &:hover {bottom: 5px;box-shadow: 2px 2px 5px #6a696b;}
+      &:hover {
+         bottom: 5px;
+         box-shadow: 2px 2px 5px #6a696b;
+      }
    }
 }
 .intro-photo {
@@ -120,20 +139,24 @@
 }
 
 //todo -work -------------------
-.work{
+.work {
    text-align: center;
    padding: 0 0 125px;
-   &__btn {margin: 20px 0 0;}
+   &__btn {
+      margin: 20px 0 0;
+   }
 }
 .filter {
    text-align: center;
    padding: 30px 0;
    &__link {
-      @include fontFWSC('Montserrat',400,14px,#6a696b);
+      @include fontFWSC("Montserrat", 400, 14px, #6a696b);
       margin-left: 33px;
-      transition: font-weight .1s linear;
+      transition: font-weight 0.1s linear;
       position: relative;
-      &:first-child {margin-left: 0;}
+      &:first-child {
+         margin-left: 0;
+      }
 
       &:before {
          content: "";
@@ -143,16 +166,20 @@
          width: 0;
          height: 2px;
          background-color: #2b2a2c;
-         transition: width .2s linear;
+         transition: width 0.2s linear;
       }
       &:hover {
          text-decoration: none;
          color: #000;
-         &:before {width: 100%;}
+         &:before {
+            width: 100%;
+         }
       }
       &.active {
          color: #000;
-         &:before {width: 100%;}
+         &:before {
+            width: 100%;
+         }
       }
    }
 }
@@ -174,12 +201,8 @@
    border-radius: 10px;
    overflow: hidden;
    cursor: pointer;
-   transition: bottom .1s linear,
-      right .1s linear,
-      box-shadow .1s linear,
-      width .3s linear,
-      max-height .3s linear,
-      font-size .3s linear;
+   transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear,
+      font-size 0.3s linear;
    margin: 0 15px 30px;
    &:hover {
       bottom: 5px;
@@ -192,9 +215,12 @@
       font-size: 0;
       margin: 0;
    }
-   &__image {display: block;width: 100%;}
+   &__image {
+      display: block;
+      width: 100%;
+   }
    &__suptitle {
-      @include fontFWSC('Montserrat',400,12px,#2b2a2c);
+      @include fontFWSC("Montserrat", 400, 12px, #2b2a2c);
       text-transform: uppercase;
       margin: 18px 10px 0;
       text-align: left;
@@ -202,7 +228,7 @@
    &__title {
       display: flex;
       justify-content: space-between;
-      @include fontFWSC('Montserrat',700,16px,#2b2a2c);
+      @include fontFWSC("Montserrat", 700, 16px, #2b2a2c);
       text-transform: uppercase;
       margin: 16px 10px 15px;
    }
@@ -217,32 +243,38 @@
    }
    &__col {
       width: 50%;
-      &:last-child {padding-left: 40px;}
+      &:last-child {
+         padding-left: 40px;
+      }
    }
    &__photo {
-      background: url('../img/about/bg.png') no-repeat;
+      background: url("../img/about/bg.png") no-repeat;
       background-position: 20% 100%;
-      img {display: block;}
+      img {
+         display: block;
+      }
    }
    &__suptitle {
-      @include fontFWSCL('Montserrat',700,45px,#2b2a2c,.8);
+      @include fontFWSCL("Montserrat", 700, 45px, #2b2a2c, 0.8);
       text-transform: uppercase;
       margin: 35px 0 25px;
    }
    &__title {
-      @include fontFWSCL('Montserrat',700,92px,#dedede,.8);
+      @include fontFWSCL("Montserrat", 700, 92px, #dedede, 0.8);
       text-transform: uppercase;
       margin-bottom: 35px;
    }
    &__text {
-      @include fontFWSCL('Montserrat',300,12px,#717072,2);
+      @include fontFWSCL("Montserrat", 300, 12px, #717072, 2);
       margin-bottom: 40px;
    }
 }
 .about-btns {
    &__item {
       padding: 15px 50px;
-      &:not(:last-child) {margin-right: 15px;}
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
    }
 }
 
@@ -250,9 +282,12 @@
 .reviews {
    &__text {
       padding: 70px 0;
-      background: #332f30 url('../img/review/bg.png');
+      background: #332f30 url("../img/review/bg.png");
       text-align: center;
-      p {@include fontFWSCL('Montserrat',200,14px,#fff,2.28);max-width: 820px;}
+      p {
+         @include fontFWSCL("Montserrat", 200, 14px, #fff, 2.28);
+         max-width: 820px;
+      }
    }
 }
 .reviews-client {
@@ -266,20 +301,20 @@
       border: 3px #efefef solid;
       overflow: hidden;
       position: relative;
-      img{
+      img {
          position: relative;
          top: 50%;
          left: 50%;
-         transform: translate3d(-50%, -50%,0);
+         transform: translate3d(-50%, -50%, 0);
          display: block;
       }
    }
    &__title {
-      @include fontFWSCL('Montserrat',700,14px,#2b2a2c,.8);
+      @include fontFWSCL("Montserrat", 700, 14px, #2b2a2c, 0.8);
       margin-bottom: 10px;
    }
    &__subtitle {
-      @include fontFWSCL('Montserrat',300,14px,#717072,.8);
+      @include fontFWSCL("Montserrat", 300, 14px, #717072, 0.8);
       font-style: italic;
       margin-bottom: 10px;
    }
@@ -299,12 +334,12 @@
       padding: 100px 0;
    }
    &__title {
-      @include fontFWSCL('Montserrat',700,45px,#2b2a2c,.8);
+      @include fontFWSCL("Montserrat", 700, 45px, #2b2a2c, 0.8);
       text-transform: uppercase;
       margin-bottom: 17px;
    }
    &__subtitle {
-      @include fontFWSCL('Montserrat',300,18px,#717072,.8);
+      @include fontFWSCL("Montserrat", 300, 18px, #717072, 0.8);
       margin-bottom: 20px;
    }
    &__content {
@@ -317,7 +352,9 @@
       text-align: right;
       a {
          text-decoration: underline;
-         &:hover {text-decoration: none;}
+         &:hover {
+            text-decoration: none;
+         }
       }
    }
 }
@@ -329,7 +366,10 @@
    &__img {
       position: relative;
       margin-bottom: 23px;
-      img {display: block; width: 100%;}
+      img {
+         display: block;
+         width: 100%;
+      }
    }
    &__date {
       position: absolute;
@@ -338,21 +378,21 @@
       z-index: 2;
       background-color: #2b2a2c;
       padding: 19px;
-      @include fontFWSCL('Montserrat',700,16px,#fff,1);
+      @include fontFWSCL("Montserrat", 700, 16px, #fff, 1);
       text-align: center;
    }
    &__title {
-      @include fontFWSCL('Montserrat',700,18px,#2b2a2c,.8);
+      @include fontFWSCL("Montserrat", 700, 18px, #2b2a2c, 0.8);
       text-transform: uppercase;
       margin-bottom: 13px;
    }
    &__subtitle {
-      @include fontFWSCL('Montserrat',400,12px,#2b2a2c,.8);
+      @include fontFWSCL("Montserrat", 400, 12px, #2b2a2c, 0.8);
       text-transform: uppercase;
       margin-bottom: 27px;
    }
    &__text {
-      @include fontFWSCL('Montserrat',300,12px,#717072,2);
+      @include fontFWSCL("Montserrat", 300, 12px, #717072, 2);
       margin-bottom: 37px;
    }
 }
@@ -368,7 +408,9 @@
       width: 50%;
       display: flex;
       align-items: center;
-      &:last-child {justify-content: end;}
+      &:last-child {
+         justify-content: end;
+      }
    }
 }
 .copyright {
@@ -384,7 +426,7 @@
       margin-right: 0;
       svg {
          fill: #8d8d8e;
-         transition: fill .1s linear;
+         transition: fill 0.1s linear;
       }
       &.telegram,
       &.viber,
@@ -397,7 +439,9 @@
       &:hover {
          bottom: 0;
          box-shadow: none;
-         svg {fill: #fff;}
+         svg {
+            fill: #fff;
+         }
       }
    }
 }
@@ -405,12 +449,14 @@
    .nav__link {
       color: #8d8d8e;
       margin-left: 19px;
-      transition: color .1s linear;
-      &:hover {color: #fff;}
+      transition: color 0.1s linear;
+      &:hover {
+         color: #fff;
+      }
       &.btn-black {
          background-color: #2b2a2c;
          border-color: #8d8d8e;
-         transition: background-color .1s linear;
+         transition: background-color 0.1s linear;
          &:hover {
             background-color: #3a393b;
             color: #fff;
@@ -425,7 +471,7 @@
    top: 0;
    left: 0;
    z-index: 5;
-   
+
    width: 100%;
    height: 100%;
    padding: 15px;
@@ -437,15 +483,17 @@
 
    background-color: transparent;
    opacity: 0;
-   transition: background-color .3s linear, opacity .3s linear;
-   &.display {display: flex;}
+   transition: background-color 0.3s linear, opacity 0.3s linear;
+   &.display {
+      display: flex;
+   }
    &.bg {
       background-color: rgba(0, 0, 0, 0.7);
-      transition: background-color .3s linear;
+      transition: background-color 0.3s linear;
       opacity: 1;
    }
 }
-.modal-work {  
+.modal-work {
    width: 100%;
    max-width: 1200px;
    min-height: 620px;
@@ -456,9 +504,14 @@
    background-color: #fff;
    opacity: 0;
    transform: scale(0);
-   transition: transform .3s linear, opacity .3s linear;
-   &.display {display: flex;}
-   &.scale {transform: scale(1);opacity: 1;}
+   transition: transform 0.3s linear, opacity 0.3s linear;
+   &.display {
+      display: flex;
+   }
+   &.scale {
+      transform: scale(1);
+      opacity: 1;
+   }
 
    &__btn-close {
       position: absolute;
@@ -478,11 +531,11 @@
       }
    }
    &.trX_left {
-      transform: scale(.6) translate3d(-50%, 20%, 0);
+      transform: scale(0.6) translate3d(-50%, 20%, 0);
       opacity: 0;
    }
    &.trX_right {
-      transform: scale(.6) translate3d(50%, 20%, 0);
+      transform: scale(0.6) translate3d(50%, 20%, 0);
       opacity: 0;
    }
    .flex--center {
@@ -494,8 +547,17 @@
       width: 65%;
       &.calculatop {
          background-color: #888888;
-         img {width: 80%;}
+         img {
+            width: 80%;
+         }
       }
+      &.todo-list {
+         background-color: #fff;
+         img {
+            width: 80%;
+         }
+      }
+
       .last-slide--align {
          // align bottom
          display: flex;
@@ -509,7 +571,9 @@
          height: 100%;
          max-height: 620px;
          overflow: clip;
-         img { width: 100%;}
+         img {
+            width: 100%;
+         }
       }
       .slick-prev {
          position: absolute;
@@ -520,15 +584,19 @@
          border: 0;
          border-left: #5e5e5e 4px solid;
          border-bottom: #5e5e5e 4px solid;
-         transition: border-color .2s linear;
+         transition: border-color 0.2s linear;
 
          font-size: 0;
          width: 30px;
          height: 30px;
          background-color: transparent;
          cursor: pointer;
-         &:focus {outline: 0;}
-         &:hover {border-color: #ccc;}
+         &:focus {
+            outline: 0;
+         }
+         &:hover {
+            border-color: #ccc;
+         }
       }
       .slick-next {
          position: absolute;
@@ -539,15 +607,19 @@
          border: 0;
          border-bottom: #5e5e5e 4px solid;
          border-right: #5e5e5e 4px solid;
-         transition: border-color .2s linear;
+         transition: border-color 0.2s linear;
 
          font-size: 0;
          width: 30px;
          height: 30px;
          background-color: transparent;
          cursor: pointer;
-         &:focus {outline: 0;}
-         &:hover {border-color: #ccc;}
+         &:focus {
+            outline: 0;
+         }
+         &:hover {
+            border-color: #ccc;
+         }
       }
       .slick-dots {
          position: absolute;
@@ -564,13 +636,17 @@
          margin: 0;
          list-style: none;
          background: linear-gradient(360deg, #b6b6b6 0%, transparent 100%);
-         &:focus{outline: 0;}
+         &:focus {
+            outline: 0;
+         }
          li {
             width: 13px;
             height: 13px;
             margin: 0 10px 0 0;
             &.slick-active {
-               button {background-color: #e2e2e2;}
+               button {
+                  background-color: #e2e2e2;
+               }
             }
          }
          button {
@@ -604,21 +680,23 @@
       padding: 46px 92px 14px 25px;
    }
    &__projectname {
-      @include fontFWSC('Montserrat',700,32px,#2b2a2c);
+      @include fontFWSC("Montserrat", 700, 32px, #2b2a2c);
       text-transform: uppercase;
       margin-bottom: 7px;
    }
    &__category {
-      @include fontFWSC('Montserrat',400,18px,#6a696b);
+      @include fontFWSC("Montserrat", 400, 18px, #6a696b);
       margin-bottom: 33px;
       text-transform: uppercase;
-      span {margin: 0 15px;}
+      span {
+         margin: 0 15px;
+      }
    }
    &__client {
-      @include fontFWSC('Montserrat',700,16px,#2b2a2c);
-      margin-bottom: 33px;     
+      @include fontFWSC("Montserrat", 700, 16px, #2b2a2c);
+      margin-bottom: 33px;
       span {
-         @include fontFWSC('Montserrat',300,14px,#6a696b);
+         @include fontFWSC("Montserrat", 300, 14px, #6a696b);
          font-style: italic;
       }
       a {
@@ -629,7 +707,7 @@
       }
    }
    &__text {
-      @include fontFWSCL('Montserrat',300,12px,#6a696b,2);
+      @include fontFWSCL("Montserrat", 300, 12px, #6a696b, 2);
       margin-bottom: 15px;
    }
    &__btnbox {
@@ -646,7 +724,7 @@
          position: relative;
          padding-left: 5px;
          button {
-            @include fontFWSC('Montserrat',400,14px,#2b2a2c);
+            @include fontFWSC("Montserrat", 400, 14px, #2b2a2c);
             text-transform: uppercase;
             background-color: transparent;
             border: none;
@@ -661,8 +739,8 @@
 
                width: 8px;
                height: 8px;
-               border-top: 2px #b1b1b1 solid ;
-               border-left: 2px #b1b1b1 solid ;
+               border-top: 2px #b1b1b1 solid;
+               border-left: 2px #b1b1b1 solid;
             }
          }
       }
@@ -671,7 +749,7 @@
          padding-right: 5px;
          cursor: pointer;
          button {
-            @include fontFWSC('Montserrat',400,14px,#2b2a2c);
+            @include fontFWSC("Montserrat", 400, 14px, #2b2a2c);
             text-transform: uppercase;
             background-color: transparent;
             border: none;
@@ -686,8 +764,8 @@
 
                width: 8px;
                height: 8px;
-               border-top: 2px #b1b1b1 solid ;
-               border-right: 2px #b1b1b1 solid ;
+               border-top: 2px #b1b1b1 solid;
+               border-right: 2px #b1b1b1 solid;
             }
          }
       }
@@ -697,12 +775,14 @@
 //* <АДАПТИВ>====================================================================================================
 //? intro ----------------------------------
 @media (max-width: 990px) {
-   .intro__inner{
+   .intro__inner {
       background: #fff url(../img/intro/bg.png) right -70px bottom no-repeat;
    }
    .intro-content {
       width: auto;
-      button {padding: 15px 30px;}
+      button {
+         padding: 15px 30px;
+      }
    }
    .intro-photo {
       width: auto;
@@ -711,7 +791,7 @@
    }
 }
 @media (max-width: 800px) {
-   .intro__inner{
+   .intro__inner {
       flex-direction: column-reverse;
       background: none;
    }
@@ -733,30 +813,64 @@
 @media (max-width: 560px) {
    .intro-photo {
       background-size: cover;
-      img {height: 400px;}
+      img {
+         height: 400px;
+      }
    }
    .intro-content {
-      &__greeting {font-size: 27px;}
-      &__name {font-size: 40px;}
-      &__prof {font-size: 16px;}
-      button {padding: 10px 20px;font-size: 15px;}
-      .social__item:last-child {margin-right: 0;}
+      &__greeting {
+         font-size: 27px;
+      }
+      &__name {
+         font-size: 40px;
+      }
+      &__prof {
+         font-size: 16px;
+      }
+      button {
+         padding: 10px 20px;
+         font-size: 15px;
+      }
+      .social__item:last-child {
+         margin-right: 0;
+      }
    }
-   .btn-black {padding: 7px 20px;font-size: 14px;}
+   .btn-black {
+      padding: 7px 20px;
+      font-size: 14px;
+   }
 }
 @media (max-width: 400px) {
-   .intro-photo {img {height: 300px;}}
-   .intro-content {
-      &__greeting {font-size: 21px;}
-      &__name {font-size: 30px;}
-      &__prof {font-size: 14px;}
-      button {padding: 10px 15px;font-size: 14px;}
+   .intro-photo {
+      img {
+         height: 300px;
+      }
    }
-   .btn-black {padding: 10px 15px;font-size: 14px;}
+   .intro-content {
+      &__greeting {
+         font-size: 21px;
+      }
+      &__name {
+         font-size: 30px;
+      }
+      &__prof {
+         font-size: 14px;
+      }
+      button {
+         padding: 10px 15px;
+         font-size: 14px;
+      }
+   }
+   .btn-black {
+      padding: 10px 15px;
+      font-size: 14px;
+   }
 }
 //? work ----------------------------------
 @media (max-width: 900px) {
-   .work {padding-bottom: 80px;}
+   .work {
+      padding-bottom: 80px;
+   }
    // position sticky
    .filter {
       position: sticky;
@@ -767,7 +881,10 @@
       margin: 0px -20px;
       border-bottom: 1px #f1f1f1 solid;
    }
-   .portfolio-item {width: 45%;margin: 10px;}
+   .portfolio-item {
+      width: 45%;
+      margin: 10px;
+   }
 }
 @media (max-width: 600px) {
    .portfolio-item {
@@ -777,15 +894,26 @@
    }
 }
 @media (max-width: 400px) {
-   .portfolio-item {width: 90%;}
-   .filter__link {margin-left: 18px;}
+   .portfolio-item {
+      width: 90%;
+   }
+   .filter__link {
+      margin-left: 18px;
+   }
 }
 //? about ----------------------------------
 @media (max-width: 1130px) {
    .about {
-      &__suptitle {font-size: 35px;}
-      &__title {font-size: 72px;}
-      &__text,.about-btns {margin-left: -80px;}
+      &__suptitle {
+         font-size: 35px;
+      }
+      &__title {
+         font-size: 72px;
+      }
+      &__text,
+      .about-btns {
+         margin-left: -80px;
+      }
       &__photo {
          background-size: 70%;
          img {
@@ -796,13 +924,19 @@
 }
 @media (max-width: 1015px) {
    .about {
-      &__suptitle {font-size: 30px;}
-      &__title {font-size: 55px;}
+      &__suptitle {
+         font-size: 30px;
+      }
+      &__title {
+         font-size: 55px;
+      }
    }
 }
 @media (max-width: 900px) {
    .about {
-      &__inner {padding-bottom: 80px;}
+      &__inner {
+         padding-bottom: 80px;
+      }
       &__col {
          width: 100%;
          &:last-child {
@@ -816,44 +950,67 @@
          background-size: 330px;
          background-position: center bottom;
       }
-      &__text,.about-btns {margin-left: auto;}
+      &__text,
+      .about-btns {
+         margin-left: auto;
+      }
    }
 }
 @media (max-width: 510px) {
    .about {
       &__photo {
          background-size: 270px;
-         img {height: 400px;}
+         img {
+            height: 400px;
+         }
       }
    }
 }
 @media (max-width: 420px) {
    .about {
-      &__suptitle {font-size: 23px;}
-      &__title {font-size: 43px;}
+      &__suptitle {
+         font-size: 23px;
+      }
+      &__title {
+         font-size: 43px;
+      }
       &__text {
          max-height: 350px;
-          overflow: scroll;
+         overflow: scroll;
       }
       &__photo {
          background-size: 200px;
-         img {height: 300px;}
+         img {
+            height: 300px;
+         }
       }
    }
 }
 //? reviews ----------------------------------
 @media (max-width: 900px) {
-   .reviews__text {padding: 30px 20px 70px}
+   .reviews__text {
+      padding: 30px 20px 70px;
+   }
 }
 //? blog ----------------------------------
 @media (max-width: 910px) {
-   .blog-item {width: 45%;}
-   .blog__title {font-size: 40px;}
+   .blog-item {
+      width: 45%;
+   }
+   .blog__title {
+      font-size: 40px;
+   }
 }
 @media (max-width: 610px) {
-   .blog__inner {padding-bottom: 80px;}
-   .blog-item {width: 90%;}
-   .blog__title {font-size: 35px;}
+   .blog__inner {
+      padding-bottom: 80px;
+   }
+   .blog-item {
+      width: 90%;
+   }
+   .blog__title {
+      font-size: 35px;
+   }
 }
 //? footer ----------------------------------
 @media (max-width: 1010px) {
@@ -861,23 +1018,29 @@
       &__col {
          width: 100%;
          justify-content: center;
-         &:last-child {display: none;}
+         &:last-child {
+            display: none;
+         }
       }
    }
 }
 @media (max-width: 520px) {
    .footer {
-      &__inner {padding: 20px 0 30px;}
+      &__inner {
+         padding: 20px 0 30px;
+      }
       &__col {
          flex-direction: column-reverse;
-         .social {margin-bottom: 10px;}
+         .social {
+            margin-bottom: 10px;
+         }
          .copyright {
             padding-right: 0;
             margin-right: 0;
             border-right: 0;
             border-top: 1px #413f41 solid;
             padding-top: 10px;
-        }
+         }
       }
    }
 }
@@ -885,16 +1048,29 @@
 // work
 @media (max-width: 1200px) {
    .modal-work {
-      &__content {padding: 46px 25px 14px;}
-      &__projectname {padding-right: 45px;line-height: 1;}
-      &__preview {width: 60%;}
-      &__content {width: 40%;}
-   } 
+      &__content {
+         padding: 46px 25px 14px;
+      }
+      &__projectname {
+         padding-right: 45px;
+         line-height: 1;
+      }
+      &__preview {
+         width: 60%;
+      }
+      &__content {
+         width: 40%;
+      }
+   }
 }
 @media (max-width: 900px) {
    .modal-work {
-      &__projectname {font-size: 28px;}
-      &__category {font-size: 16px;}
+      &__projectname {
+         font-size: 28px;
+      }
+      &__category {
+         font-size: 16px;
+      }
    }
 }
 @media (max-width: 800px) {
@@ -905,15 +1081,22 @@
    .modal-work {
       flex-direction: column;
       height: auto;
-      &__preview {width: 100%;height: 100%;}
+      &__preview {
+         width: 100%;
+         height: 100%;
+      }
       &__content {
          width: 100%;
          // height: 50%;
          padding: 20px 15px 40px;
       }
-      &__category {margin-bottom: 25px;}
-      &__client {margin-bottom: 25px;}
-		// &__textbox {overflow: auto;max-height: 130px;}
+      &__category {
+         margin-bottom: 25px;
+      }
+      &__client {
+         margin-bottom: 25px;
+      }
+      // &__textbox {overflow: auto;max-height: 130px;}
    }
 }
 @media (max-width: 400px) {
@@ -921,29 +1104,45 @@
       // height: 570px;
       // min-height: 530px;
       // &__preview {height: 45%;}
-      &__content {height: 55%;}
-      &__projectname {font-size: 20px;}
-      &__category {font-size: 14px;}
-      &__client {margin-bottom: 15px;}
+      &__content {
+         height: 55%;
+      }
+      &__projectname {
+         font-size: 20px;
+      }
+      &__category {
+         font-size: 14px;
+      }
+      &__client {
+         margin-bottom: 15px;
+      }
       &__btnbox {
          padding: 15px 15px;
-         button {font-size: 13px;}
+         button {
+            font-size: 13px;
+         }
       }
       .modal-hireme__btn-close {
          width: 30px;
          height: 30px;
-     }
+      }
    }
 }
 @media (max-height: 650px) {
    .modal-work {
       // height: 530px;
-      &__projectname {font-size: 16px;}
-      &__category {font-size: 13px;}
+      &__projectname {
+         font-size: 16px;
+      }
+      &__category {
+         font-size: 13px;
+      }
       &__client {
          font-size: 15px;
          margin-bottom: 10px;
-         span {font-size: 14px;}
+         span {
+            font-size: 14px;
+         }
       }
       // &__textbox {max-height: 110px;}
    }

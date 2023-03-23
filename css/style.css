@@ -354,10 +354,10 @@ a:hover {
   background-color: #3a5898;
 }
 .social__item.instagram {
-  background: linear-gradient(45deg, #FB8A2E 0%, #C62F94 100%);
+  background: linear-gradient(45deg, #fb8a2e 0%, #c62f94 100%);
 }
 .social__item.viber {
-  background-color: #7D3DAF;
+  background-color: #7d3daf;
 }
 .social__item.telegram {
   background-color: #37aee2;
@@ -831,6 +831,12 @@ a:hover {
 .modal-work__preview.calculatop img {
   width: 80%;
 }
+.modal-work__preview.todo-list {
+  background-color: #fff;
+}
+.modal-work__preview.todo-list img {
+  width: 80%;
+}
 .modal-work__preview .last-slide--align {
   display: flex;
   align-items: flex-end;
@@ -1166,7 +1172,8 @@ a:hover {
   .about__title {
     font-size: 72px;
   }
-  .about__text, .about .about-btns {
+  .about__text,
+.about .about-btns {
     margin-left: -80px;
   }
   .about__photo {
@@ -1201,7 +1208,8 @@ a:hover {
     background-size: 330px;
     background-position: center bottom;
   }
-  .about__text, .about .about-btns {
+  .about__text,
+.about .about-btns {
     margin-left: auto;
   }
 }

@@ -573,6 +573,7 @@ a:hover {
 }
 
 .about__inner {
+  height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,17 +582,21 @@ a:hover {
   padding-bottom: 135px;
 }
 .about__col {
+  height: 100%;
   width: 50%;
 }
 .about__col:last-child {
-  padding-left: 40px;
+  margin-left: -50px;
 }
 .about__photo {
+  height: 100%;
   background: url("../img/about/bg.png") no-repeat;
   background-position: 20% 100%;
 }
 .about__photo img {
   display: block;
+  height: 100%;
+  margin: 0px auto;
 }
 .about__suptitle {
   font-family: "Montserrat", sans-serif;
@@ -606,15 +611,15 @@ a:hover {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 92px;
-  color: #dedede;
+  color: #bbbbbb;
   line-height: 0.8;
   text-transform: uppercase;
   margin-bottom: 35px;
 }
 .about__text {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 16px;
   color: #717072;
   line-height: 2;
   margin-bottom: 40px;

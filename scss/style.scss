@@ -240,21 +240,27 @@ $mw: 1180;
 //todo -about -------------------
 .about {
    &__inner {
+      height: 700px;
       display: flex;
       flex-wrap: wrap;
       padding-bottom: 135px;
    }
    &__col {
+      height: 100%;
       width: 50%;
       &:last-child {
-         padding-left: 40px;
+         margin-left: -50px;
+         // padding-left: 40px;
       }
    }
    &__photo {
+      height: 100%;
       background: url("../img/about/bg.png") no-repeat;
       background-position: 20% 100%;
       img {
          display: block;
+         height: 100%;
+         margin: 0px auto;
       }
    }
    &__suptitle {
@@ -263,12 +269,12 @@ $mw: 1180;
       margin: 35px 0 25px;
    }
    &__title {
-      @include fontFWSCL("Montserrat", 700, 92px, #dedede, 0.8);
+      @include fontFWSCL("Montserrat", 700, 92px, #bbbbbb, 0.8);
       text-transform: uppercase;
       margin-bottom: 35px;
    }
    &__text {
-      @include fontFWSCL("Montserrat", 300, 12px, #717072, 2);
+      @include fontFWSCL("Montserrat", 500, 16px, #717072, 2);
       margin-bottom: 40px;
    }
 }

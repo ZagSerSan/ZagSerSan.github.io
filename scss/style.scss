@@ -52,6 +52,8 @@ $mw: 1180;
 //todo -Intro -------------------
 .intro {
    &__inner {
+      height: 600px;
+      max-height: 700px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -125,6 +127,7 @@ $mw: 1180;
    }
 }
 .intro-photo {
+   max-height: 100%;
    width: 50%;
    // min-width: 55%;
    display: flex;

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <title>Serhii Zahorskyi</title>
+   <meta charset="UTF-8">
+   <!-- <meta name="format-detection" content="telephone=no"> -->
+   <link rel="stylesheet" href="css/style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+   <link rel="manifest" href="img/favicon/site.webmanifest">
+   <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+   <!-- slick slider -->
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<!--todo__temp -->
+<!-- 
+   todoCSS_1 = 442
+   1.2 сделать первый айтем слайд this-сайта в портфолио 3 
+   todo_3 попробовать сделать длинее окно просмотра слайдера (media 400px)
+      на мобил версии, как в инстаграмм
+   todo_NEW: адаптив для todo list
+ -->
+<body>   
+<div class="wrapper">
+   <svg style="display: none;">
+      <symbol id="viber" viewBox="-0.5 0 24 24">
+         <path d="m20.19 2.337c-.595-.545-3.005-2.297-8.372-2.32 0 0-6.333-.379-9.418 2.452-1.716 1.716-2.317 4.229-2.386 7.346s-.146 8.959 5.485 10.547h.005l-.005 2.419s-.037.98.607 1.177c.778.244 1.238-.502 1.983-1.304.408-.441.97-1.087 1.397-1.58.6.059 1.296.092 2.001.092 1.827 0 3.602-.225 5.298-.649l-.15.032c.778-.253 5.18-.816 5.892-6.657.744-6.03-.354-9.834-2.337-11.555zm.652 11.115c-.607 4.875-4.173 5.185-4.829 5.395-1.432.364-3.076.572-4.769.572-.486 0-.968-.017-1.445-.051l.064.004s-2.438 2.939-3.197 3.703c-.248.248-.521.228-.516-.267 0-.323.019-4.018.019-4.018-4.767-1.322-4.491-6.298-4.435-8.897s.544-4.735 1.997-6.169c2.612-2.367 7.989-2.016 7.989-2.016 4.543.019 6.718 1.388 7.224 1.847 1.674 1.435 2.527 4.867 1.898 9.896zm-6.511-3.788v.014c0 .168-.136.304-.304.304-.163 0-.296-.128-.303-.289v-.001c.004-.042.007-.092.007-.141 0-.801-.649-1.45-1.45-1.45-.03 0-.06.001-.089.003h.004c-.161-.009-.288-.141-.288-.303 0-.168.136-.304.304-.304h.017-.001c.02-.001.045-.001.069-.001 1.126 0 2.038.912 2.038 2.038 0 .046-.002.092-.005.137v-.006zm.951.531c.047-1.988-1.195-3.544-3.553-3.718-.159-.011-.283-.143-.283-.303 0-.168.136-.304.304-.304.007 0 .015 0 .022.001h-.001.017c2.267 0 4.106 1.838 4.106 4.106 0 .081-.002.162-.007.242l.001-.011c-.004.165-.138.296-.303.296-.168 0-.304-.136-.304-.304 0-.003 0-.005 0-.008zm2.2.629v.002c0 .168-.136.304-.304.304s-.302-.135-.303-.301c-.024-3.822-2.573-5.903-5.662-5.925-.168 0-.303-.136-.303-.303s.136-.303.303-.303c3.459.024 6.239 2.411 6.267 6.525zm-.525 4.598v.009c-.506.891-1.453 1.875-2.428 1.561l-.009-.014c-1.832-.684-3.416-1.578-4.831-2.679l.041.03c-.743-.592-1.396-1.245-1.969-1.963l-.019-.025c-.509-.638-.986-1.352-1.402-2.106l-.04-.079c-.457-.746-.87-1.608-1.193-2.513l-.03-.098c-.314-.975.665-1.922 1.561-2.428h.009c.13-.083.288-.133.458-.133.267 0 .505.123.662.314l.001.002s.581.693.83 1.036c.234.319.549.83.712 1.115.094.147.149.327.149.52 0 .288-.124.547-.322.726l-.001.001-.562.45c-.155.15-.251.36-.251.592 0 .023.001.045.003.067v-.003c.579 1.903 2.048 3.372 3.91 3.941l.042.011c.019.002.042.003.064.003.232 0 .442-.096.592-.25l.45-.562c.18-.199.439-.323.727-.323.193 0 .372.056.524.152l-.004-.002c.813.463 1.516.972 2.157 1.549l-.011-.01c.192.154.313.389.313.652 0 .169-.05.326-.137.458l.002-.003z"/>
+      </symbol>
+      <symbol id="telegram" viewBox="0 0 48 48">
+         <path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"/>
+      </symbol>
+      <symbol id="facebook" viewBox="0 0 24 24">
+         <path fill="none" d="M0 0h24v24H0z"/>
+         <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/>
+      </symbol>
+      <symbol id="instagram" viewBox="0 0 24 24">
+         <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"/><circle cx="16.806" cy="7.207" r="1.078"/><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"/>
+      </symbol>
+      <symbol id="star" viewBox="0 0 329.942 329.942">
+         <path d="M329.208,126.666c-1.765-5.431-6.459-9.389-12.109-10.209l-95.822-13.922l-42.854-86.837
+         c-2.527-5.12-7.742-8.362-13.451-8.362c-5.71,0-10.925,3.242-13.451,8.362l-42.851,86.836l-95.825,13.922
+         c-5.65,0.821-10.345,4.779-12.109,10.209c-1.764,5.431-0.293,11.392,3.796,15.377l69.339,67.582L57.496,305.07
+         c-0.965,5.628,1.348,11.315,5.967,14.671c2.613,1.899,5.708,2.865,8.818,2.865c2.387,0,4.784-0.569,6.979-1.723l85.711-45.059
+         l85.71,45.059c2.208,1.161,4.626,1.714,7.021,1.723c8.275-0.012,14.979-6.723,14.979-15c0-1.152-0.13-2.275-0.376-3.352
+         l-16.233-94.629l69.339-67.583C329.501,138.057,330.972,132.096,329.208,126.666z"/>
+      </symbol>
+      <symbol id="star-half" viewBox="0 -32 576 576">
+         <path d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"/>
+      </symbol>
+      <symbol id="mail" viewBox="0 0 455.862 455.862">
+         <path d="M441.088,63.154H14.774C6.615,63.154,0,69.77,0,77.93v300.003c0,8.16,6.615,14.775,14.774,14.775h426.313
+			c8.16,0,14.775-6.614,14.775-14.775V77.93C455.862,69.77,449.248,63.154,441.088,63.154z M403.394,316.659
+			c6.256,5.43,6.926,14.903,1.497,21.16c-5.43,6.254-14.901,6.928-21.161,1.496c-3.876-3.364-101.683-88.252-105.452-91.523
+			l-40.515,35.164c-2.82,2.448-6.326,3.672-9.832,3.672s-7.012-1.224-9.832-3.672l-40.515-35.164
+			c-3.77,3.272-101.576,88.159-105.452,91.523c-6.257,5.43-15.731,4.761-21.161-1.496c-5.43-6.257-4.76-15.73,1.497-21.16
+			L154.7,227.93L52.468,139.203c-6.256-5.43-6.926-14.903-1.497-21.16c5.431-6.256,14.904-6.928,21.161-1.496
+			c5.07,4.4,146.594,127.231,155.799,135.22c7.972-6.919,150.305-130.451,155.799-135.22c6.256-5.431,15.731-4.762,21.161,1.496
+			c5.43,6.257,4.76,15.731-1.497,21.16L301.162,227.93L403.394,316.659z"/>
+      </symbol>
+      <symbol id="tel" viewBox="0 0 222 222">
+         <path d="M222,190.367l-37.75,31.632L131.447,222L0,90.55l3.908-62.823L31.633,0l54.012,54.011L68.053,90.55l63.393,63.397
+	      l36.543-17.593L222,190.367z"/>
+      </symbol>
+      <symbol id="close" viewBox="0 0 330 330">
+         <path id="XMLID_29_" d="M165,0C120.926,0,79.492,17.163,48.328,48.327c-64.334,64.333-64.334,169.011-0.002,233.345
+         C79.49,312.837,120.926,330,165,330c44.072,0,85.508-17.163,116.672-48.328c64.334-64.334,64.334-169.012,0-233.345
+         C250.508,17.163,209.072,0,165,0z M239.246,239.245c-2.93,2.929-6.768,4.394-10.607,4.394c-3.838,0-7.678-1.465-10.605-4.394
+         L165,186.213l-53.033,53.033c-2.93,2.929-6.768,4.394-10.607,4.394c-3.838,0-7.678-1.465-10.605-4.394
+         c-5.859-5.857-5.859-15.355,0-21.213L143.787,165l-53.033-53.033c-5.859-5.857-5.859-15.355,0-21.213
+         c5.857-5.857,15.355-5.857,21.213,0L165,143.787l53.031-53.033c5.857-5.857,15.355-5.857,21.213,0
+         c5.859,5.857,5.859,15.355,0,21.213L186.213,165l53.033,53.032C245.104,223.89,245.104,233.388,239.246,239.245z"/>   
+      </symbol>
+   </svg>
+<!-- -header -->
+<header class="header headerJS" id="header">
+   <div class="container">
+      <div class="header__inner">
+         <div class="header-logo">
+            <img src="img/header/logo-icon2.png" alt="logo">
+            <div class="header-logo__content">
+               <div class="header-logo__name">Serhii Zahorskyi</div>
+               <div class="header-logo__prof">Frontend dev</div>
+            </div>
+         </div>
+         <div class="header__nav">
+            <nav class="nav" id="navJS">
+               <a href="#work" class="nav__link navlinkJS" data-scroll="work">WORK</a>
+               <a href="#about" class="nav__link navlinkJS" data-scroll="about">ABOUT ME</a>
+            </nav>
+            <!-- <button type="button" class="nav__link btn-black btnHeaderJS" id="btn_hireme">HIRE ME</button> -->
+            <div class="burger" id="burgerJS">
+               <div class="burger__icon">line</div>
+            </div>
+         </div>
+      </div><!-- /.header__inner -->
+   </div><!-- /.container -->
+</header><!-- /.header -->
+
+<!-- -intro -->
+<div class="intro" id="intro">
+   <div class="container">
+      <div class="intro__inner">
+         <div class="intro-content">
+            <div>
+               <h2 class="intro-content__greeting">Hello, I’m</h2>
+               <h1 class="intro-content__name">Serhii Zahorskyi</h1>
+               <p class="intro-content__prof">Frontend developer</p>
+               <div class="social">
+                  <a href="https://www.facebook.com/profile.php?id=100036791829059" target="_blank" class="social__item facebook"><svg><use href="#facebook"></use></svg></a>
+                  <a href="https://www.instagram.com/zagsersan/" target="_blank" class="social__item instagram"><svg><use href="#instagram"></use></svg></a>
+                  <a href="https://t.me/ZagSerSan" target="_blank" class="social__item telegram"><svg><use href="#telegram"></use></svg></a>
+                  <a href="https://viber.click/48577782439" target="_blank" class="social__item viber"><svg><use href="#viber"></use></svg></a>
+               </div>
+               <!-- <button type="button" class="btn-black" id="btn_hireme">HIRE ME</button> -->
+               <!-- <button type="button" class="btn-black" id="btn_resume">SEE MY RESUME</button> -->
+            </div>
+         </div><!-- /.intro-content -->
+         <div class="intro-photo">
+            <img src="img/intro/photo.png" alt="photo">
+         </div>
+      </div><!-- /.intro__inner -->
+   </div><!-- /.container -->
+</div><!-- /.intro -->
+
+<!-- -work -->
+<div class="work" id="work">
+   <div class="container">
+      <div class="filter">
+         <a href="#all" data-filter class="filter__link btn_all active">All</a>
+         <a href="#lending" data-filter class="filter__link btn_lending">Lending</a>
+         <!-- <a href="#website" data-filter class="filter__link btn_website">Store</a> -->
+         <a href="#app" data-filter class="filter__link btn_app">App</a>
+      </div>
+      
+      <div class="portfolio portfolioJS">
+         <!-- string 1 -->
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_1">
+            <img class="portfolio-item__image" src="img/works/1-activebox/preview.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
+            <div class="portfolio-item__title">
+               ActiveBox
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_2">
+            <img class="portfolio-item__image" src="img/works/2-mogo/preview.png">
+            <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
+            <div class="portfolio-item__title">
+               MoGo
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="lending" data-filter="#lending" data-modal="modal_3">
+            <img class="portfolio-item__image" src="img/works/3-designer-portfolio/preview.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: Lending</div>
+            <div class="portfolio-item__title">
+               Designer Portfolio
+               <time datetime="2022-11-23">2022</time>
+            </div>
+         </div>
+         <!-- string 2 -->
+         <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_4">
+            <img class="portfolio-item__image" src="img/works/4-calculator/preview.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: App</div>
+            <div class="portfolio-item__title">
+               Custom calculator
+               <time datetime="2022-11-23">2023</time>
+            </div>
+         </div>
+         <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_5">
+            <img class="portfolio-item__image" src="img/works/5-TodoList/preview.png" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: App</div>
+            <div class="portfolio-item__title">
+               Todo list
+               <time datetime="2022-11-23">2023</time>
+            </div>
+         </div>
+         
+      </div><!-- /.portfolio -->
+      <!-- <button type="button" id="loadmoreworks" class="work__btn btn-black">LOAD MORE WORK</button> -->
+   </div><!-- /.container -->
+</div><!-- /.work -->
+
+<!-- -about -->
+<div class="about" id="about">
+   <div class="container">
+      <div class="about__inner">
+         <div class="about__col">
+            <div class="about__photo">
+               <img src="img/about/photo.png" alt="designer_photo">
+            </div>
+         </div>
+         <div class="about__col">
+            <h3 class="about__suptitle">ABOUT ME</h3>
+            <h2 class="about__title">WHO AM I</h2>
+            <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus. Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.</div>
+            <!-- <div class="about-btns">
+               <button type="button" class="about-btns__item btn-black" id="btn_hireme">HIRE ME</button>
+               <button type="button" class="about-btns__item btn-black" id="btn_resume">SEE MY RESUME</button>
+            </div> -->
+         </div>
+      </div><!-- /.about__inner -->
+   </div><!-- /.container -->
+</div><!-- /.about -->
+
+<!-- -footer -->
+<div class="footer">
+   <div class="container">
+      <div class="footer__inner">
+         
+         <div class="footer__col">
+            <div class="copyright">© 2023 Serhii Zahorskyi - Portfolio</div>
+            <div class="social footer">
+               <a href="https://www.facebook.com/profile.php?id=100036791829059" target="_blank" class="social__item facebook"><svg><use href="#facebook"></use></svg></a>
+               <a href="https://www.instagram.com/zagsersan/" target="_blank" class="social__item instagram"><svg><use href="#instagram"></use></svg></a>
+               <a href="https://t.me/ZagSerSan" target="_blank" class="social__item telegram"><svg><use href="#telegram"></use></svg></a>
+               <a href="https://viber.click/48577782439" target="_blank" class="social__item viber"><svg><use href="#viber"></use></svg></a>
+            </div>
+         </div>
+         <div class="footer__col">
+            <nav class="nav footer">
+               <a href="#work" class="nav__link navlinkJS" data-scroll="work">WORK</a>
+               <a href="#about" class="nav__link navlinkJS" data-scroll="about">ABOUT ME</a>
+               <!-- <button type="button" class="nav__link btn-black" id="btn_hireme">HIRE ME</button> -->
+            </nav>
+         </div>
+         
+      </div><!-- /.footer__inner -->
+   </div><!-- /.container -->
+</div><!-- /.footer -->
+<!---------------------------------------------------------------->
+<!-- modal bg -->
+<div class="modal-bg--work" id="modal_bg">
+
+<!--?=================== LENDINGS =========================-->
+   <!--? ActiveBox -->
+   <div class="modal-work" id="modal_1">
+      <!-- <div class="modal-work" id="modal_1"> -->
+      
+      <button type="button" class="modal-work__btn-close" id="btn_work_close">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">
+         <div class="slider">
+
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/1-activebox/slide_1.jpg" alt="slide-1">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/1-activebox/slide_2.jpg" alt="slide-2">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/1-activebox/slide_3.jpg" alt="slide-3">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item last-slide--align">
+                  <img src="img/works/1-activebox/slide_4.jpg" alt="slide-4">
+               </div>
+            </div>
+
+         </div><!-- /.slider -->
+      </div><!-- /.modal-work__preview -->
+
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">ActiveBox</h3>
+         <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
+         <div class="modal-work__client">
+            <a href="portfolio/1-activebox/index.html" target="_blank">Open website</a>
+         </div>
+         <div class="modal-work__textbox">
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         </div>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_1" data-prev="modal_4">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_1" data-next="modal_2">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+
+   <!--? MoGo -->
+   <div class="modal-work" id="modal_2">
+      
+      <button type="button" class="modal-work__btn-close" id="btn_work_close">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">
+         <div class="slider">
+
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/2-mogo/slide-1.png" alt="slide_1">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/2-mogo/slide-2.png" alt="slide_2">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/2-mogo/slide-3.png" alt="slide_3">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/2-mogo/slide-4.png" alt="slide_4">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/2-mogo/slide-5.png" alt="slide_5">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item last-slide--align">
+                  <img src="img/works/2-mogo/slide-6.png" alt="slide_6">
+               </div>
+            </div>
+            
+
+         </div><!-- /.slider -->
+      </div><!-- /.modal-work__preview -->
+
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">MoGo</h3>
+         <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
+         <div class="modal-work__client">
+            <a href="portfolio/2-mogo/index.html" target="_blank">Open website</a>
+         </div>
+         <div class="modal-work__textbox">
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         </div>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_2" data-prev="modal_1">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_2" data-next="modal_3">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+
+   <!--? Design Portfolio -->
+   <div class="modal-work" id="modal_3">
+      
+      <button type="button" class="modal-work__btn-close" id="btn_work_close">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">
+         <div class="slider">
+
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/3-designer-portfolio/slide-1.png" alt="slide-1">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/3-designer-portfolio/slide-2.png" alt="slide-2">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/3-designer-portfolio/slide-3.png" alt="slide-3">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item last-slide--align">
+                  <img src="img/works/3-designer-portfolio/slide-4.png" alt="slide-4">
+               </div>
+            </div>
+
+         </div><!-- /.slider -->
+      </div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">Designer Portfolio</h3>
+         <h4 class="modal-work__category">CATEGORY: Lending <span>|</span> 2022</h4>
+         <div class="modal-work__client">
+            <a href="portfolio/3-designer-portfolio/index.html" target="_blank">Open website</a>
+         </div>
+         <div class="modal-work__textbox">
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         </div>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_3" data-prev="modal_2">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_3" data-next="modal_4">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+
+<!--?=================== APPS =========================-->
+   <!--? Custom Calculator -->
+   <div class="modal-work" id="modal_4">
+      
+      <button type="button" class="modal-work__btn-close" id="btn_work_close">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview flex--center calculatop">
+         <img src="img/works/4-calculator/preview.png" alt="image">
+      </div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">Custom Calculator</h3>
+         <h4 class="modal-work__category">CATEGORY: App<span>|</span> 2023</h4>
+         <div class="modal-work__client">
+            <a href="portfolio/4-calculator/index.html" target="_blank">Open website</a>
+         </div>
+         <div class="modal-work__textbox">
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         </div>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_4" data-prev="modal_3">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_4" data-next="modal_5">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+
+   <!--? Todo List -->
+   <div class="modal-work" id="modal_5">
+      
+      <button type="button" class="modal-work__btn-close" id="btn_work_close">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview flex--center todo-list">
+         <img src="img/works/5-TodoList/slider1.png" alt="image">
+      </div>
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">Todo list</h3>
+         <h4 class="modal-work__category">CATEGORY: App<span>|</span> 2023</h4>
+         <div class="modal-work__client">
+            <a href="portfolio/APP/2 todoList/index.html" target="_blank">Open website</a>
+         </div>
+         <div class="modal-work__textbox">
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+            <p class="modal-work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+         </div>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_5" data-prev="modal_4">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_5" data-next="modal_1">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+   
+</div><!-- /.modal_work_bg -->
+</div><!-- /.wrapper -->
+<!-- js -->
+<script src="js/app.js" defer></script>
+<script src="js/slider.js" defer></script>
+</body>
+</html>

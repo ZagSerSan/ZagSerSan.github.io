@@ -858,10 +858,30 @@ $mw: 1180;
       }
    }
 }
+@media (max-width: 600px) {
+   .intro__inner {
+      flex-direction: column-reverse;
+      background: none;
+   }
+   .intro-photo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: #fff url(../img/intro/bg.png) center bottom no-repeat;
+      background-size: 400px;
+   }
+   .intro-content {
+      margin: 50px auto;
+      text-align: center;
+   }
+   .social {
+      justify-content: center;
+   }
+}
 
 @media (max-width: 560px) {
    .intro-photo {
-      background-size: cover;
+      // background-size: cover;
       img {
          height: 400px;
       }
@@ -913,6 +933,16 @@ $mw: 1180;
    .btn-black {
       padding: 10px 15px;
       font-size: 14px;
+   }
+
+   .social {
+      flex-wrap: wrap;
+      a {
+         margin: 10px 6%;
+      }
+   }
+   .intro-content .social__item:last-child {
+      margin-right: 6%;
    }
 }
 //? work ----------------------------------

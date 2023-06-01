@@ -430,6 +430,9 @@ a:hover {
 .social__item.github {
   background-color: #161616;
 }
+.social__item.linkedin {
+  background-color: #0a66c2;
+}
 .social__item:hover {
   bottom: 5px;
   -webkit-box-shadow: 2px 2px 5px #6a696b;

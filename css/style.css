@@ -427,6 +427,9 @@ a:hover {
 .social__item.telegram {
   background-color: #37aee2;
 }
+.social__item.github {
+  background-color: #161616;
+}
 .social__item:hover {
   bottom: 5px;
   -webkit-box-shadow: 2px 2px 5px #6a696b;
@@ -832,7 +835,7 @@ a:hover {
   -webkit-transition: fill 0.1s linear;
   transition: fill 0.1s linear;
 }
-.social.footer .social__item.telegram, .social.footer .social__item.viber, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter {
+.social.footer .social__item.telegram, .social.footer .social__item.viber, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter, .social.footer .social__item.github {
   background-color: transparent;
   background: transparent;
 }

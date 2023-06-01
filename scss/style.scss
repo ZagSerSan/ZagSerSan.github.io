@@ -119,6 +119,9 @@ $mw: 1180;
       &.telegram {
          background-color: #37aee2;
       }
+      &.github {
+         background-color: #161616;
+      }
 
       &:hover {
          bottom: 5px;
@@ -441,7 +444,8 @@ $mw: 1180;
       &.viber,
       &.facebook,
       &.instagram,
-      &.twitter {
+      &.twitter,
+      &.github {
          background-color: transparent;
          background: transparent;
       }

@@ -828,31 +828,37 @@ $mw: 1180;
       }
    }
    .intro-photo {
-      width: auto;
+      width: 50%;
       padding-right: 0;
       background: none;
    }
 }
 @media (max-width: 800px) {
    .intro__inner {
-      flex-direction: column-reverse;
-      background: none;
-   }
-   .intro-photo {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      background: #fff url(../img/intro/bg.png) center no-repeat;
-   }
-   .intro-content {
-      width: 100%;
-      text-align: center;
-      margin: 60px 0;
-      & .social {
-         justify-content: center;
+      background: #fff url(../img/intro/bg.png) right -100px bottom no-repeat;
+      background-size: 450px;
+
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: center;
+
+      height: auto;
+      max-height: 1200px;
+
+      .intro-photo {
+         img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            height: 100%;
+            max-height: 400px;
+            width: auto;
+         }
       }
    }
 }
+
 @media (max-width: 560px) {
    .intro-photo {
       background-size: cover;

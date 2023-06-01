@@ -838,7 +838,7 @@ a:hover {
   -webkit-transition: fill 0.1s linear;
   transition: fill 0.1s linear;
 }
-.social.footer .social__item.telegram, .social.footer .social__item.viber, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter, .social.footer .social__item.github {
+.social.footer .social__item.telegram, .social.footer .social__item.viber, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter, .social.footer .social__item.github, .social.footer .social__item.linkedin {
   background-color: transparent;
   background: transparent;
 }
@@ -1443,6 +1443,7 @@ a:hover {
     padding: 30px 0 0;
     margin: 0 auto;
     text-align: center;
+    max-height: none;
   }
   .about__photo {
     max-height: 620px;

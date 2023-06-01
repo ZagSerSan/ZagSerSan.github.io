@@ -702,10 +702,37 @@ $mw: 1180;
    }
    &__category {
       @include fontFWSC("Montserrat", 400, 18px, #6a696b);
-      margin-bottom: 33px;
+      margin-bottom: 20px;
       text-transform: uppercase;
       span {
          margin: 0 15px;
+      }
+   }
+   &__used-stack {
+      margin-bottom: 15px;
+      svg {
+         height: 30px;
+         width: 30px;
+         margin-right: 5px;
+
+         &.scss {
+            height: 40px;
+            width: 40px;
+            margin: -5px 0;
+            margin-right: 5px;
+         }
+         &.jquery {
+            height: 80px;
+            width: 80px;
+            margin: -25px 0;
+            margin-right: 5px;
+         }
+         &.react {
+            height: 40px;
+            width: 40px;
+            margin: -5px 0;
+            margin-right: 5px;
+         }
       }
    }
    &__client {

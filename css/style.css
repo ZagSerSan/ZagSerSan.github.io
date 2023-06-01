@@ -1109,11 +1109,37 @@ a:hover {
   font-weight: 400;
   font-size: 18px;
   color: #6a696b;
-  margin-bottom: 33px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 .modal-work__category span {
   margin: 0 15px;
+}
+.modal-work__used-stack {
+  margin-bottom: 15px;
+}
+.modal-work__used-stack svg {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+.modal-work__used-stack svg.scss {
+  height: 40px;
+  width: 40px;
+  margin: -5px 0;
+  margin-right: 5px;
+}
+.modal-work__used-stack svg.jquery {
+  height: 80px;
+  width: 80px;
+  margin: -25px 0;
+  margin-right: 5px;
+}
+.modal-work__used-stack svg.react {
+  height: 40px;
+  width: 40px;
+  margin: -5px 0;
+  margin-right: 5px;
 }
 .modal-work__client {
   font-family: "Montserrat", sans-serif;

@@ -626,8 +626,8 @@ a:hover {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #717072;
-  line-height: 2;
+  color: #181818;
+  line-height: 1.7;
   margin-bottom: 40px;
 }
 
@@ -1412,13 +1412,13 @@ a:hover {
   }
   .about__text,
 .about .about-btns {
-    margin-left: -80px;
+    margin-left: 0px;
   }
   .about__photo {
     background-size: 70%;
   }
   .about__photo img {
-    height: 500px;
+    height: 100%;
   }
 }
 @media (max-width: 1015px) {
@@ -1432,23 +1432,34 @@ a:hover {
 @media (max-width: 900px) {
   .about__inner {
     padding-bottom: 80px;
+    height: auto;
   }
   .about__col {
     width: 100%;
+    max-height: 620px;
   }
   .about__col:last-child {
-    padding: 0;
+    width: 100%;
+    padding: 30px 0 0;
+    margin: 0 auto;
     text-align: center;
   }
   .about__photo {
+    max-height: 620px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-size: 330px;
+    background-size: 520px;
     background-position: center bottom;
+  }
+  .about__photo img {
+    max-height: 620px;
   }
   .about__text,
 .about .about-btns {
@@ -1457,10 +1468,8 @@ a:hover {
 }
 @media (max-width: 510px) {
   .about__photo {
-    background-size: 270px;
-  }
-  .about__photo img {
-    height: 400px;
+    width: 100%;
+    background-size: 400px;
   }
 }
 @media (max-width: 420px) {
@@ -1475,10 +1484,8 @@ a:hover {
     overflow: scroll;
   }
   .about__photo {
-    background-size: 200px;
-  }
-  .about__photo img {
-    height: 300px;
+    background-size: 320px;
+    height: 450px;
   }
 }
 @media (max-width: 900px) {

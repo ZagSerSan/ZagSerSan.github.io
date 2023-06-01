@@ -115,6 +115,9 @@ a:hover {
 .nav__link:first-child {
   margin-left: 0;
 }
+.nav__link.cv {
+  display: none;
+}
 .nav__link:not(button):before {
   content: "";
   position: absolute;
@@ -137,6 +140,9 @@ a:hover {
 }
 .nav__link.active:before {
   width: 100%;
+}
+.nav .btn-black {
+  display: none;
 }
 
 .btn-black {
@@ -251,16 +257,32 @@ a:hover {
   .nav__link {
     margin-left: 0;
   }
-  .nav__link:not(button) {
+  .nav__link.cv {
+    display: block;
+  }
+  .nav__link:not(.btn-black) {
     font-size: 24px;
     margin-bottom: 70px;
   }
+  .nav__link.btn-black {
+    margin-right: 20px;
+    display: none;
+  }
+}
+@media (max-width: 760px) and (max-width: 440px) {
+  .nav__link.btn-black {
+    margin-right: 0;
+  }
+}
+@media (max-width: 760px) {
   .nav.active {
     width: 70vw;
     opacity: 1;
     -webkit-transition: width 0.2s linear, opacity 0.2s linear;
     transition: width 0.2s linear, opacity 0.2s linear;
   }
+}
+@media (max-width: 760px) {
   .burger {
     display: block;
   }
@@ -277,30 +299,14 @@ a:hover {
     -webkit-transform: rotateZ(-45deg);
             transform: rotateZ(-45deg);
   }
-  button.nav__link {
-    margin-left: 0;
-    margin-right: 30px;
-  }
 }
 @media (max-width: 440px) {
   .nav.active {
     width: 90vw;
   }
-  .nav__link:not(button) {
+  .nav__link {
     font-size: 20px;
     margin-bottom: 50px;
-  }
-  button.nav__link {
-    position: fixed;
-    top: 22px;
-    right: 13%;
-    z-index: 3;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s linear;
-    transition: opacity 0.2s linear;
-  }
-  button.nav__link.show {
-    opacity: 1;
   }
 }
 .wrapper {

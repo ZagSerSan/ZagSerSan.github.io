@@ -30,6 +30,13 @@
 <body>   
 <div class="wrapper">
    <svg style="display: none;">
+      <symbol id="webpack" viewBox="-17 0 290 290">
+         <g>
+            <polygon fill="#FFFFFF" points="128 0.0483018868 256 72.4528302 256 217.310189 128 289.714717 0 217.310189 0 72.4528302"></polygon>
+            <path d="M233.153208,212.286792 L132.250566,269.427925 L132.250566,224.990189 L195.139623,190.357736 L233.153208,212.286792 Z M240.060377,206.055849 L240.060377,86.6535849 L203.157736,107.954717 L203.157736,184.754717 L240.060377,206.055849 Z M22.4603774,212.286792 L123.363019,269.379623 L123.363019,224.941887 L60.4739623,190.357736 L22.4603774,212.286792 L22.4603774,212.286792 Z M15.5532075,206.055849 L15.5532075,86.6535849 L52.4558491,107.954717 L52.4558491,184.754717 L15.5532075,206.055849 L15.5532075,206.055849 Z M19.8520755,78.925283 L123.363019,20.3833962 L123.363019,63.3720755 L57.0445283,99.84 L56.5132075,100.129811 L19.8520755,78.925283 L19.8520755,78.925283 Z M235.713208,78.925283 L132.250566,20.3833962 L132.250566,63.3720755 L198.520755,99.8883019 L199.052075,100.178113 L235.713208,78.925283 L235.713208,78.925283 Z" fill="#8ED6FB"></path>
+            <path d="M123.363019,214.846792 L61.3433962,180.697358 L61.3433962,113.123019 L123.363019,148.914717 L123.363019,214.846792 L123.363019,214.846792 Z M132.250566,214.846792 L194.270189,180.74566 L194.270189,113.123019 L132.250566,148.914717 L132.250566,214.846792 Z M65.4973585,105.298113 L127.806792,71.0520755 L190.067925,105.298113 L127.806792,141.234717 L65.4973585,105.298113 L65.4973585,105.298113 Z" fill="#1C78C0"></path>
+         </g>
+      </symbol>
       <symbol id="1st" viewBox="0 0 511.999 511.999">
          <rect x="223.319" y="356.221" style="fill:#ECF0F1;" width="65.362" height="56.647"/>
          <g>
@@ -324,6 +331,15 @@
                <time datetime="2022-11-23">2023</time>
             </div>
          </div>
+         <!-- TEMP PROJECT -->
+         <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_7">
+            <img class="portfolio-item__image" src="img/works/7-usersTable/preview.gif" alt="preview">
+            <div class="portfolio-item__suptitle">CATEGORY: App</div>
+            <div class="portfolio-item__title">
+               Social Users Table
+               <time datetime="2022-11-23">2023</time>
+            </div>
+         </div>
          
       </div><!-- /.portfolio -->
       <!-- <button type="button" id="loadmoreworks" class="work__btn btn-black">LOAD MORE WORK</button> -->
@@ -613,7 +629,7 @@
          </div>
          <div class="modal-work__textbox">
             <p class="modal-work__text">I must say right away that this calculator is written very scary, because it was my first platform for learning JavaScript. But despite this, it turned out to implement some of the conceived functions and they work, but there are also bugs. In the future, after further training, I want to redo it.</p>
-            <p class="modal-work__text">Сразу скажу, что данный калькулятор написан очень страшно, потому что это было моей первой площадкой для изучения JavaScript. Но несмотря на это, всё же некоторые задуманные функции получилось реализовать и они работают, но также присутствуют баги. В дальнейшем, после повышения квалификации, я хочу переделать его.</p>
+            <!-- <p class="modal-work__text">Сразу скажу, что данный калькулятор написан очень страшно, потому что это было моей первой площадкой для изучения JavaScript. Но несмотря на это, всё же некоторые задуманные функции получилось реализовать и они работают, но также присутствуют баги. В дальнейшем, после повышения квалификации, я хочу переделать его.</p> -->
          </div>
          <div class="modal-work__btnbox">
             <div class="modal-work__btnbox-prev">
@@ -657,7 +673,7 @@
                <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_5" data-prev="modal_4">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_5" data-next="modal_1">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_5" data-next="modal_6">next</button>
             </div>
          </div>
       </div>
@@ -720,8 +736,8 @@
             <svg><use href="#html"></use></svg>
             <svg><use href="#css"></use></svg>
             <svg><use href="#javascript"></use></svg>
-            <svg><use href="#1st"></use></svg>
-            <!-- <svg class="react"><use href="#react"></use></svg> -->
+            <svg class="webpack"><use href="#webpack"></use></svg>
+            <svg class="cup"><use href="#1st"></use></svg>
          </div>
          <div class="modal-work__client">
             <a href="portfolio/APP/contectsMenu/index.html" target="_blank">Open website</a>
@@ -736,7 +752,61 @@
                <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_6" data-prev="modal_5">previous</button>
             </div>
             <div class="modal-work__btnbox-next">
-               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_6" data-next="modal_1">next</button>
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_6" data-next="modal_7">next</button>
+            </div>
+         </div>
+      </div>
+   </div><!-- /modal-work -->
+
+   <!--? Users Table (pending) -->
+   <div class="modal-work" id="modal_7">
+      <!-- <div class="modal-work" id="modal_1"> -->
+      
+      <button type="button" class="modal-work__btn-close" id="btn_work_close">
+         <svg><use href="#close"></use></svg>
+      </button>
+
+      <div class="modal-work__preview">
+         <div class="slider">
+
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/7-usersTable/slide_1.png" alt="slide-1">
+               </div>
+            </div>
+            <div>
+               <div class="modal-work__preview-item">
+                  <img src="img/works/7-usersTable/slide_2.png" alt="slide-2">
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+      <div class="modal-work__content">
+         <h3 class="modal-work__projectname">Users Table</h3>
+         <h4 class="modal-work__category">CATEGORY: App <span>|</span> 2023</h4>
+         <div class="modal-work__used-stack">
+            <svg><use href="#html"></use></svg>
+            <svg><use href="#css"></use></svg>
+            <svg><use href="#javascript"></use></svg>
+            <svg class="webpack"><use href="#webpack"></use></svg>
+            <svg class="react"><use href="#react"></use></svg>
+         </div>
+         <div class="modal-work__client">
+            <!-- <a href="portfolio/APP/contectsMenu/index.html" target="_blank">Open website</a> -->
+            <a href="https://github.com/ZagSerSan/cp_fast-company.git" target="_blank">View/run on Github</a>
+         </div>
+         <div class="modal-work__textbox">
+            <p class="modal-work__text">The project was created in the process of studying at the Junior Frontend course from Vladilen Minima at the Result School. The creation process is relevant at the current time. At work, I learn react technology, webpack, eslint and libraries like Lodash, router. This is a new and valuable experience of working and gaining development skills. There will also be a production version.</p>
+            <!-- <p class="modal-work__text">Проект был создан в процессе обучения на курсе "Junior Frontend" от Владилена Минима в Result School. Процесс создания актуален на текущий момент времени. При работе я учу технологию react, webpack, eslint и библиотеки типа lodash, router. Это новый и ценный опыт работы и получения навыков разработки. Также будет продакшн версия.</p> -->
+         </div>
+         <div class="modal-work__btnbox">
+            <div class="modal-work__btnbox-prev">
+               <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_7" data-prev="modal_6">previous</button>
+            </div>
+            <div class="modal-work__btnbox-next">
+               <button class="modal-work__btn" id="btn_next" data-openmodal="modal_7" data-next="modal_1">next</button>
             </div>
          </div>
       </div>

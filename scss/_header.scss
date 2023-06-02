@@ -55,7 +55,7 @@
 		&.cv {
 			display: none;
 		}
-		&:not(button):before {
+		&:not(.btn-black):before {
 			content: "";
 			position: absolute;
 			bottom: -4px;

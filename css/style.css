@@ -118,7 +118,7 @@ a:hover {
 .nav__link.cv {
   display: none;
 }
-.nav__link:not(button):before {
+.nav__link:not(.btn-black):before {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -1099,7 +1099,7 @@ a:hover {
 .modal-work__content {
   position: relative;
   width: 35%;
-  padding: 46px 92px 14px 25px;
+  padding: 46px 40px 14px 25px;
 }
 .modal-work__projectname {
   font-family: "Montserrat", sans-serif;
@@ -1128,7 +1128,7 @@ a:hover {
   width: 30px;
   margin-right: 5px;
 }
-.modal-work__used-stack svg:last-child {
+.modal-work__used-stack svg.cup {
   margin-left: 30px;
 }
 .modal-work__used-stack svg.scss {
@@ -1141,6 +1141,12 @@ a:hover {
   height: 80px;
   width: 80px;
   margin: -25px 0;
+  margin-right: 5px;
+}
+.modal-work__used-stack svg.webpack {
+  height: 40px;
+  width: 40px;
+  margin: -5px 0;
   margin-right: 5px;
 }
 .modal-work__used-stack svg.react {
@@ -1567,6 +1573,10 @@ a:hover {
   }
   .modal-work__content {
     width: 40%;
+  }
+  .modal-work__content .modal-work__textbox {
+    max-height: 300px;
+    overflow: auto;
   }
 }
 @media (max-width: 900px) {

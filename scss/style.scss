@@ -693,7 +693,7 @@ $mw: 1180;
    &__content {
       position: relative;
       width: 35%;
-      padding: 46px 92px 14px 25px;
+      padding: 46px 40px 14px 25px;
    }
    &__projectname {
       @include fontFWSC("Montserrat", 700, 32px, #2b2a2c);
@@ -715,10 +715,9 @@ $mw: 1180;
          width: 30px;
          margin-right: 5px;
 
-         &:last-child {
+         &.cup {
             margin-left: 30px;
          }
-
          &.scss {
             height: 40px;
             width: 40px;
@@ -729,6 +728,12 @@ $mw: 1180;
             height: 80px;
             width: 80px;
             margin: -25px 0;
+            margin-right: 5px;
+         }
+         &.webpack {
+            height: 40px;
+            width: 40px;
+            margin: -5px 0;
             margin-right: 5px;
          }
          &.react {
@@ -1153,6 +1158,11 @@ $mw: 1180;
       }
       &__content {
          width: 40%;
+
+         .modal-work__textbox {
+            max-height: 300px;
+            overflow: auto;
+         }
       }
    }
 }

@@ -996,7 +996,6 @@ a:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 100%;
 }
 .modal-work__preview .slider {
   position: relative;
@@ -1129,6 +1128,9 @@ a:hover {
   width: 30px;
   margin-right: 5px;
 }
+.modal-work__used-stack svg:last-child {
+  margin-left: 30px;
+}
 .modal-work__used-stack svg.scss {
   height: 40px;
   width: 40px;
@@ -1162,6 +1164,7 @@ a:hover {
   font-style: italic;
 }
 .modal-work__client a {
+  margin-right: 10px;
   text-decoration: underline;
 }
 .modal-work__client a:hover {

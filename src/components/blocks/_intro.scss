@@ -1,0 +1,98 @@
+.intro {
+  &__inner {
+    height: 600px;
+    max-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px #f1f1f1 solid;
+    padding-top: 90px;
+  }
+}
+.intro-content {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__greeting {
+    @include fontFWSC("Montserrat", 300, 32px, #2b2a2c);
+    margin-bottom: 7px;
+  }
+  &__name {
+    @include fontFWSC("Montserrat", 700, 45px, #2b2a2c);
+    margin-bottom: 12px;
+  }
+  &__prof {
+    @include fontFWSC("Montserrat", 400, 18px, #6a696b);
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 18px 45px;
+    margin-right: 14px;
+    font-size: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.social {
+  display: flex;
+  margin-bottom: 35px;
+  position: relative;
+  &__item {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #ccc;
+    transition:
+      bottom 0.1s linear,
+      box-shadow 0.1s linear;
+    svg {
+      width: 70%;
+      height: 70%;
+      fill: #fff;
+    }
+    &.facebook {
+      background-color: #3a5898;
+    }
+    &.instagram {
+      background: linear-gradient(45deg, #fb8a2e 0%, #c62f94 100%);
+    }
+    &.viber {
+      background-color: #7d3daf;
+    }
+    &.telegram {
+      background-color: #37aee2;
+    }
+    &.github {
+      background-color: #161616;
+    }
+    &.linkedin {
+      background-color: #0a66c2;
+    }
+
+    &:hover {
+      bottom: 5px;
+      box-shadow: 2px 2px 5px #6a696b;
+    }
+  }
+}
+.intro-photo {
+  max-height: 100%;
+  width: 50%;
+  // min-width: 55%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 70px;
+  background: #fff url(../img/intro/bg.png) right no-repeat;
+  img {
+    display: block;
+    width: auto;
+    height: 100%;
+  }
+}

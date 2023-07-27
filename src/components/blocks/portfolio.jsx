@@ -12,54 +12,63 @@ import socialUsersTable_preview from '../../img/works/usersTable/preview.gif'
 
 const works = [
    {
+      id: 1,
       name: 'ActiveBox',
       img_src: activebox_preview,
       category: 'Lending',
       date: '2022-11-23'
    },
    {
+      id: 2,
       name: 'MoGo',
       img_src: mogo_preview,
       category: 'Lending',
       date: '2022-11-23'
    },
    {
+      id: 3,
       name: 'Designer Portfolio',
       img_src: designerPortfolio_preview,
       category: 'Lending',
       date: '2022-11-23'
    },
    {
+      id: 4,
       name: 'Custom Calculator',
       img_src: calculator_preview,
       category: 'App',
       date: '2022-11-23'
    },
    {
+      id: 5,
       name: 'Todo list',
       img_src: todoList_preview,
       category: 'App',
       date: '2022-11-23'
    },
    {
+      id: 6,
       name: 'Contects Menu',
       img_src: contectsMenu_preview,
       category: 'App',
       date: '2022-11-23'
    },
    {
+      id: 7,
       name: 'Weather Widget',
       img_src: weatherWidget_preview,
       category: 'App',
       date: '2022-11-23'
    },
    {
+      id: 8,
       name: 'Tic-Tac-Toe',
       img_src: ticTacToe_preview,
       category: 'App',
       date: '2022-11-23'
    },
    {
+      id: 9,
       name: 'Social Users Table',
       img_src: socialUsersTable_preview,
       category: 'App',
@@ -74,7 +83,7 @@ const Portfolio = () => {
            <div className="filter">
               <a href="" data-filter className="filter__link active">All</a>
               <a href="" data-filter className="filter__link">Lending</a>
-              <a href="#app" data-filter className="filter__link">App</a>
+              <a href="" data-filter className="filter__link">App</a>
            </div>
            
            <div className="portfolio">

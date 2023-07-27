@@ -20,7 +20,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
   <!--todo__temp -->
-  <!-- 
+  <!-- todo ПЕРЕДЕЛАТЬ ПОРТФОЛИО 
     todoCSS_1 = 442
     1.2 сделать первый айтем слайд this-сайта в портфолио 3 
     todo_3 попробовать сделать длинее окно просмотра слайдера (media 400px)
@@ -332,8 +332,26 @@
                     <time datetime="2022-11-23">2023</time>
                  </div>
               </div>
+              <!-- weather widget -->
+              <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_9">
+                  <img class="portfolio-item__image" src="src/img/works/6-contectsMenu/preview.png" alt="preview">
+                  <div class="portfolio-item__suptitle">CATEGORY: App</div>
+                  <div class="portfolio-item__title">
+                     Weather Widget
+                     <time datetime="2023-07-03">2023</time>
+                  </div>
+               </div>
+               <!-- tic-tac-toe -->
+              <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_8">
+                  <img class="portfolio-item__image" src="src/img/works/tic-tac-toe/preview.png" alt="preview">
+                  <div class="portfolio-item__suptitle">CATEGORY: App</div>
+                  <div class="portfolio-item__title">
+                     Tic-Tac-Toe
+                     <time datetime="2023-07-20">2023</time>
+                  </div>
+               </div>
               <!-- TEMP PROJECT -->
-              <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_7">
+              <div class="portfolio-item" id="app" data-filter="#app" data-modal="modal_9">
                  <img class="portfolio-item__image" src="src/img/works/7-usersTable/preview.gif" alt="preview">
                  <div class="portfolio-item__suptitle">CATEGORY: App</div>
                  <div class="portfolio-item__title">
@@ -753,14 +771,50 @@
                     <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_6" data-prev="modal_5">previous</button>
                  </div>
                  <div class="modal-work__btnbox-next">
-                    <button class="modal-work__btn" id="btn_next" data-openmodal="modal_6" data-next="modal_7">next</button>
+                    <button class="modal-work__btn" id="btn_next" data-openmodal="modal_6" data-next="modal_9">next</button>
                  </div>
               </div>
            </div>
         </div><!-- /modal-work -->
      
-        <!--? Users Table (pending) -->
+        <!--? Custom Calculator -->
         <div class="modal-work" id="modal_7">
+            
+            <button type="button" class="modal-work__btn-close" id="btn_work_close">
+               <svg><use href="#close"></use></svg>
+            </button>
+      
+            <div class="modal-work__preview flex--center calculatop">
+               <img src="src/img/works/4-calculator/preview.png" alt="image">
+            </div>
+            <div class="modal-work__content">
+               <h3 class="modal-work__projectname">Tic-Tac-Toe</h3>
+               <h4 class="modal-work__category">CATEGORY: App<span>|</span> 2023</h4>
+               <div class="modal-work__used-stack">
+                  <svg><use href="#html"></use></svg>
+                  <svg class="scss"><use href="#scss"></use></svg>
+                  <svg><use href="#javascript"></use></svg>
+               </div>
+               <div class="modal-work__client">
+                  <a href="https://github.com/ZagSerSan/" target="_blank">View/run on Github</a>
+               </div>
+               <div class="modal-work__textbox">
+                  <p class="modal-work__text">I must say right away that this calculator is written very scary, because it was my first platform for learning JavaScript. But despite this, it turned out to implement some of the conceived functions and they work, but there are also bugs. In the future, after further training, I want to redo it.</p>
+                  <!-- <p class="modal-work__text">Сразу скажу, что данный калькулятор написан очень страшно, потому что это было моей первой площадкой для изучения JavaScript. Но несмотря на это, всё же некоторые задуманные функции получилось реализовать и они работают, но также присутствуют баги. В дальнейшем, после повышения квалификации, я хочу переделать его.</p> -->
+               </div>
+               <div class="modal-work__btnbox">
+                  <div class="modal-work__btnbox-prev">
+                     <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_7" data-prev="modal_6">previous</button>
+                  </div>
+                  <div class="modal-work__btnbox-next">
+                     <button class="modal-work__btn" id="btn_next" data-openmodal="modal_7" data-next="modal_8">next</button>
+                  </div>
+               </div>
+            </div>
+         </div><!-- /modal-work -->
+
+        <!--? Users Table (pending) -->
+        <div class="modal-work" id="modal_9">
            <!-- <div class="modal-work" id="modal_1"> -->
            
            <button type="button" class="modal-work__btn-close" id="btn_work_close">
@@ -804,10 +858,10 @@
               </div>
               <div class="modal-work__btnbox">
                  <div class="modal-work__btnbox-prev">
-                    <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_7" data-prev="modal_6">previous</button>
+                    <button class="modal-work__btn" id="btn_prev" data-openmodal="modal_9" data-prev="modal_6">previous</button>
                  </div>
                  <div class="modal-work__btnbox-next">
-                    <button class="modal-work__btn" id="btn_next" data-openmodal="modal_7" data-next="modal_1">next</button>
+                    <button class="modal-work__btn" id="btn_next" data-openmodal="modal_9" data-next="modal_1">next</button>
                  </div>
               </div>
            </div>

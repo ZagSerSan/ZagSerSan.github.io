@@ -101,7 +101,9 @@ $mw: 1180;
       height: 40px;
       margin-right: 10px;
       background-color: #ccc;
-      transition: bottom 0.1s linear, box-shadow 0.1s linear;
+      transition:
+         bottom 0.1s linear,
+         box-shadow 0.1s linear;
       svg {
          width: 70%;
          height: 70%;
@@ -210,7 +212,12 @@ $mw: 1180;
    border-radius: 10px;
    overflow: hidden;
    cursor: pointer;
-   transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear,
+   transition:
+      bottom 0.1s linear,
+      right 0.1s linear,
+      box-shadow 0.1s linear,
+      width 0.3s linear,
+      max-height 0.3s linear,
       font-size 0.3s linear;
    margin: 0 15px 30px;
    &:hover {
@@ -499,7 +506,9 @@ $mw: 1180;
 
    background-color: transparent;
    opacity: 0;
-   transition: background-color 0.3s linear, opacity 0.3s linear;
+   transition:
+      background-color 0.3s linear,
+      opacity 0.3s linear;
    &.display {
       display: flex;
    }
@@ -520,7 +529,9 @@ $mw: 1180;
    background-color: #fff;
    opacity: 0;
    transform: scale(0);
-   transition: transform 0.3s linear, opacity 0.3s linear;
+   transition:
+      transform 0.3s linear,
+      opacity 0.3s linear;
    &.display {
       display: flex;
    }
@@ -561,6 +572,9 @@ $mw: 1180;
    }
    &__preview {
       width: 65%;
+      img {
+         width: 100%;
+      }
       &.calculatop {
          background-color: #888888;
          img {

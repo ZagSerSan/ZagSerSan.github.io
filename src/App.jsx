@@ -6,14 +6,13 @@ import Portfolio from './components/blocks/portfolio'
 import './scss/app.css'
 
 function App() {
-
   return (
     <div className="wrapper">
-      <Header/>
-      <Intro/>
-      <Portfolio/>
-      <About/>
-      <Footer/>
+      <Header />
+      <Intro />
+      <Portfolio />
+      <About />
+      <Footer />
     </div>
   )
 }

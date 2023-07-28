@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap');
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   color: #6a696b;
@@ -18,10 +18,16 @@ body {
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0px auto;
   width: auto;
   line-height: 1;
@@ -48,19 +54,19 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
 .header.fixed {
@@ -69,7 +75,7 @@ a:hover {
   width: 100%;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 6px #4c4c4c;
-          box-shadow: 0px 4px 6px #4c4c4c;
+  box-shadow: 0px 4px 6px #4c4c4c;
 }
 
 .header-logo {
@@ -77,8 +83,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .header-logo img {
   display: block;
@@ -88,7 +94,7 @@ a:hover {
   padding-left: 10px;
 }
 .header-logo__name {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: #2b2a2c;
@@ -97,14 +103,14 @@ a:hover {
   margin-bottom: 4px;
 }
 .header-logo__prof {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 12px;
   color: #6a696b;
 }
 
 .nav__link {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #2b2a2c;
@@ -119,7 +125,7 @@ a:hover {
   display: none;
 }
 .nav__link:not(.btn-black):before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -146,7 +152,7 @@ a:hover {
 }
 
 .btn-black {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #2b2a2c;
@@ -163,7 +169,7 @@ a:hover {
   background-color: #2b2a2c;
   color: #fff;
   -webkit-box-shadow: 2px 2px 5px #2b2a2c;
-          box-shadow: 2px 2px 5px #2b2a2c;
+  box-shadow: 2px 2px 5px #2b2a2c;
 }
 
 .burger {
@@ -185,7 +191,7 @@ a:hover {
   position: relative;
 }
 .burger__icon:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 9px;
   left: 0;
@@ -193,13 +199,22 @@ a:hover {
   height: 3px;
   background-color: #2b2a2c;
   border-radius: 2px;
-  -webkit-transition: top 0.1s linear, -webkit-transform 0.1s linear;
-  transition: top 0.1s linear, -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear, top 0.1s linear;
-  transition: transform 0.1s linear, top 0.1s linear, -webkit-transform 0.1s linear;
+  -webkit-transition:
+    top 0.1s linear,
+    -webkit-transform 0.1s linear;
+  transition:
+    top 0.1s linear,
+    -webkit-transform 0.1s linear;
+  transition:
+    transform 0.1s linear,
+    top 0.1s linear;
+  transition:
+    transform 0.1s linear,
+    top 0.1s linear,
+    -webkit-transform 0.1s linear;
 }
 .burger__icon:after {
-  content: "";
+  content: '';
   position: absolute;
   top: -9px;
   left: 0;
@@ -207,10 +222,19 @@ a:hover {
   height: 3px;
   background-color: #2b2a2c;
   border-radius: 2px;
-  -webkit-transition: top 0.1s linear, -webkit-transform 0.1s linear;
-  transition: top 0.1s linear, -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear, top 0.1s linear;
-  transition: transform 0.1s linear, top 0.1s linear, -webkit-transform 0.1s linear;
+  -webkit-transition:
+    top 0.1s linear,
+    -webkit-transform 0.1s linear;
+  transition:
+    top 0.1s linear,
+    -webkit-transform 0.1s linear;
+  transition:
+    transform 0.1s linear,
+    top 0.1s linear;
+  transition:
+    transform 0.1s linear,
+    top 0.1s linear,
+    -webkit-transform 0.1s linear;
 }
 
 @media (max-width: 990px) {
@@ -234,11 +258,11 @@ a:hover {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     position: fixed;
     right: 0;
     top: 0;
@@ -247,12 +271,22 @@ a:hover {
     width: 0vw;
     overflow: hidden;
     opacity: 0;
-    background: -webkit-gradient(linear, left top, right top, from(#fff), to(#ccc));
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#fff),
+      to(#ccc)
+    );
     background: linear-gradient(90deg, #fff, #ccc);
     -webkit-box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.8);
-            box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.8);
-    -webkit-transition: width 0.2s linear, opacity 0.2s linear;
-    transition: width 0.2s linear, opacity 0.2s linear;
+    box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.8);
+    -webkit-transition:
+      width 0.2s linear,
+      opacity 0.2s linear;
+    transition:
+      width 0.2s linear,
+      opacity 0.2s linear;
   }
   .nav__link {
     margin-left: 0;
@@ -278,8 +312,12 @@ a:hover {
   .nav.active {
     width: 70vw;
     opacity: 1;
-    -webkit-transition: width 0.2s linear, opacity 0.2s linear;
-    transition: width 0.2s linear, opacity 0.2s linear;
+    -webkit-transition:
+      width 0.2s linear,
+      opacity 0.2s linear;
+    transition:
+      width 0.2s linear,
+      opacity 0.2s linear;
   }
 }
 @media (max-width: 760px) {
@@ -292,12 +330,12 @@ a:hover {
   .burger.active .burger__icon:after {
     top: 0;
     -webkit-transform: rotateZ(45deg);
-            transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
   }
   .burger.active .burger__icon::before {
     top: 0;
     -webkit-transform: rotateZ(-45deg);
-            transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
   }
 }
 @media (max-width: 440px) {
@@ -316,10 +354,10 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-bottom: 1px #f1f1f1 solid;
   padding-top: 90px;
 }
@@ -331,28 +369,28 @@ a:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .intro-content__greeting {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 32px;
   color: #2b2a2c;
   margin-bottom: 7px;
 }
 .intro-content__name {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 45px;
   color: #2b2a2c;
   margin-bottom: 12px;
 }
 .intro-content__prof {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #6a696b;
@@ -381,19 +419,28 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   margin-right: 10px;
   background-color: #ccc;
-  -webkit-transition: bottom 0.1s linear, -webkit-box-shadow 0.1s linear;
-  transition: bottom 0.1s linear, -webkit-box-shadow 0.1s linear;
-  transition: bottom 0.1s linear, box-shadow 0.1s linear;
-  transition: bottom 0.1s linear, box-shadow 0.1s linear, -webkit-box-shadow 0.1s linear;
+  -webkit-transition:
+    bottom 0.1s linear,
+    -webkit-box-shadow 0.1s linear;
+  transition:
+    bottom 0.1s linear,
+    -webkit-box-shadow 0.1s linear;
+  transition:
+    bottom 0.1s linear,
+    box-shadow 0.1s linear;
+  transition:
+    bottom 0.1s linear,
+    box-shadow 0.1s linear,
+    -webkit-box-shadow 0.1s linear;
 }
 .social__item svg {
   width: 70%;
@@ -421,7 +468,7 @@ a:hover {
 .social__item:hover {
   bottom: 5px;
   -webkit-box-shadow: 2px 2px 5px #6a696b;
-          box-shadow: 2px 2px 5px #6a696b;
+  box-shadow: 2px 2px 5px #6a696b;
 }
 
 .intro-photo {
@@ -432,8 +479,8 @@ a:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   padding-right: 70px;
   background: #fff url(../img/intro/bg.png) right no-repeat;
 }
@@ -456,7 +503,7 @@ a:hover {
   padding: 30px 0;
 }
 .filter__link {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #6a696b;
@@ -469,7 +516,7 @@ a:hover {
   margin-left: 0;
 }
 .filter__link:before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -498,10 +545,10 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   position: relative;
   margin: auto -20px;
 }
@@ -513,21 +560,46 @@ a:hover {
   width: 30%;
   max-height: 435px;
   -webkit-box-shadow: 0px 0px 5px;
-          box-shadow: 0px 0px 5px;
+  box-shadow: 0px 0px 5px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition: bottom 0.1s linear, right 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear, -webkit-box-shadow 0.1s linear;
-  transition: bottom 0.1s linear, right 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear, -webkit-box-shadow 0.1s linear;
-  transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear;
-  transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear, -webkit-box-shadow 0.1s linear;
+  -webkit-transition:
+    bottom 0.1s linear,
+    right 0.1s linear,
+    width 0.3s linear,
+    max-height 0.3s linear,
+    font-size 0.3s linear,
+    -webkit-box-shadow 0.1s linear;
+  transition:
+    bottom 0.1s linear,
+    right 0.1s linear,
+    width 0.3s linear,
+    max-height 0.3s linear,
+    font-size 0.3s linear,
+    -webkit-box-shadow 0.1s linear;
+  transition:
+    bottom 0.1s linear,
+    right 0.1s linear,
+    box-shadow 0.1s linear,
+    width 0.3s linear,
+    max-height 0.3s linear,
+    font-size 0.3s linear;
+  transition:
+    bottom 0.1s linear,
+    right 0.1s linear,
+    box-shadow 0.1s linear,
+    width 0.3s linear,
+    max-height 0.3s linear,
+    font-size 0.3s linear,
+    -webkit-box-shadow 0.1s linear;
   margin: 0 15px 30px;
 }
 .portfolio-item:hover {
   bottom: 5px;
   right: 5px;
   -webkit-box-shadow: 5px 5px 5px;
-          box-shadow: 5px 5px 5px;
+  box-shadow: 5px 5px 5px;
 }
 .portfolio-item.hide {
   width: 0;
@@ -540,7 +612,7 @@ a:hover {
   width: 100%;
 }
 .portfolio-item__suptitle {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 12px;
   color: #2b2a2c;
@@ -553,9 +625,9 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-family: "Montserrat", sans-serif;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #2b2a2c;
@@ -569,7 +641,7 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-bottom: 135px;
 }
 .about__col {
@@ -581,7 +653,7 @@ a:hover {
 }
 .about__photo {
   height: 100%;
-  background: url("../img/about/bg.png") no-repeat;
+  background: url('../img/about/bg.png') no-repeat;
   background-position: 20% 100%;
 }
 .about__photo img {
@@ -590,7 +662,7 @@ a:hover {
   margin: 0px auto;
 }
 .about__suptitle {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 45px;
   color: #2b2a2c;
@@ -599,7 +671,7 @@ a:hover {
   margin: 35px 0 25px;
 }
 .about__title {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 92px;
   color: #bbbbbb;
@@ -608,7 +680,7 @@ a:hover {
   margin-bottom: 35px;
 }
 .about__text {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #181818;
@@ -638,13 +710,13 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .footer__col:last-child {
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 
 .copyright {
@@ -656,8 +728,8 @@ a:hover {
 
 .social.footer {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 0;
 }
 .social.footer .social__item {
@@ -668,14 +740,20 @@ a:hover {
   -webkit-transition: fill 0.1s linear;
   transition: fill 0.1s linear;
 }
-.social.footer .social__item.telegram, .social.footer .social__item.viber, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter, .social.footer .social__item.github, .social.footer .social__item.linkedin {
+.social.footer .social__item.telegram,
+.social.footer .social__item.viber,
+.social.footer .social__item.facebook,
+.social.footer .social__item.instagram,
+.social.footer .social__item.twitter,
+.social.footer .social__item.github,
+.social.footer .social__item.linkedin {
   background-color: transparent;
   background: transparent;
 }
 .social.footer .social__item:hover {
   bottom: 0;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .social.footer .social__item:hover svg {
   fill: #fff;
@@ -710,17 +788,22 @@ a:hover {
   height: 100%;
   padding: 15px;
   overflow: hidden;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: transparent;
-  opacity: 0;
-  -webkit-transition: background-color 0.3s linear, opacity 0.3s linear;
-  transition: background-color 0.3s linear, opacity 0.3s linear;
+  -webkit-transition:
+    background-color 0.3s linear,
+    opacity 0.3s linear;
+  transition:
+    background-color 0.3s linear,
+    opacity 0.3s linear;
 }
 .modal-bg--work.display {
   display: -webkit-box;
@@ -738,17 +821,25 @@ a:hover {
   width: 100%;
   max-width: 1200px;
   min-height: 620px;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: #fff;
-  opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s linear;
-  transition: opacity 0.3s linear, -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear, opacity 0.3s linear;
-  transition: transform 0.3s linear, opacity 0.3s linear, -webkit-transform 0.3s linear;
+  -webkit-transition:
+    opacity 0.3s linear,
+    -webkit-transform 0.3s linear;
+  transition:
+    opacity 0.3s linear,
+    -webkit-transform 0.3s linear;
+  transition:
+    transform 0.3s linear,
+    opacity 0.3s linear;
+  transition:
+    transform 0.3s linear,
+    opacity 0.3s linear,
+    -webkit-transform 0.3s linear;
 }
 .modal-work.display {
   display: -webkit-box;
@@ -757,7 +848,7 @@ a:hover {
 }
 .modal-work.scale {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 .modal-work__btn-close {
@@ -779,12 +870,12 @@ a:hover {
 }
 .modal-work.trX_left {
   -webkit-transform: scale(0.6) translate3d(-50%, 20%, 0);
-          transform: scale(0.6) translate3d(-50%, 20%, 0);
+  transform: scale(0.6) translate3d(-50%, 20%, 0);
   opacity: 0;
 }
 .modal-work.trX_right {
   -webkit-transform: scale(0.6) translate3d(50%, 20%, 0);
-          transform: scale(0.6) translate3d(50%, 20%, 0);
+  transform: scale(0.6) translate3d(50%, 20%, 0);
   opacity: 0;
 }
 .modal-work .flex--center {
@@ -792,11 +883,11 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .modal-work__preview {
   width: 65%;
@@ -821,8 +912,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 .modal-work__preview .slider {
   position: relative;
@@ -839,7 +930,7 @@ a:hover {
   left: 20px;
   z-index: 2;
   -webkit-transform: translateY(-50%) rotateZ(45deg);
-          transform: translateY(-50%) rotateZ(45deg);
+  transform: translateY(-50%) rotateZ(45deg);
   border: 0;
   border-left: #5e5e5e 4px solid;
   border-bottom: #5e5e5e 4px solid;
@@ -863,7 +954,7 @@ a:hover {
   right: 20px;
   z-index: 2;
   -webkit-transform: translateY(-50%) rotateZ(-45deg);
-          transform: translateY(-50%) rotateZ(-45deg);
+  transform: translateY(-50%) rotateZ(-45deg);
   border: 0;
   border-bottom: #5e5e5e 4px solid;
   border-right: #5e5e5e 4px solid;
@@ -889,17 +980,23 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   width: 100%;
   height: 70px;
   padding: 0 0 30px;
   margin: 0;
   list-style: none;
-  background: -webkit-gradient(linear, left bottom, left top, from(#b6b6b6), to(transparent));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#b6b6b6),
+    to(transparent)
+  );
   background: linear-gradient(360deg, #b6b6b6 0%, transparent 100%);
 }
 .modal-work__preview .slick-dots:focus {
@@ -929,7 +1026,7 @@ a:hover {
   padding: 46px 40px 14px 25px;
 }
 .modal-work__projectname {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 32px;
   color: #2b2a2c;
@@ -937,7 +1034,7 @@ a:hover {
   margin-bottom: 7px;
 }
 .modal-work__category {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #6a696b;
@@ -983,14 +1080,14 @@ a:hover {
   margin-right: 5px;
 }
 .modal-work__client {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #2b2a2c;
   margin-bottom: 33px;
 }
 .modal-work__client span {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 14px;
   color: #6a696b;
@@ -1004,7 +1101,7 @@ a:hover {
   text-decoration: none;
 }
 .modal-work__text {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #2c2c2c;
@@ -1021,8 +1118,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 15px 27px;
 }
 .modal-work__btnbox-prev {
@@ -1030,7 +1127,7 @@ a:hover {
   padding-left: 5px;
 }
 .modal-work__btnbox-prev button {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #2b2a2c;
@@ -1040,13 +1137,13 @@ a:hover {
   cursor: pointer;
 }
 .modal-work__btnbox-prev button:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 0;
   z-index: 2;
   -webkit-transform: translateY(-50%) rotateZ(-45deg);
-          transform: translateY(-50%) rotateZ(-45deg);
+  transform: translateY(-50%) rotateZ(-45deg);
   width: 8px;
   height: 8px;
   border-top: 2px #b1b1b1 solid;
@@ -1058,7 +1155,7 @@ a:hover {
   cursor: pointer;
 }
 .modal-work__btnbox-next button {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #2b2a2c;
@@ -1068,13 +1165,13 @@ a:hover {
   cursor: pointer;
 }
 .modal-work__btnbox-next button:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   right: 0;
   z-index: 2;
   -webkit-transform: translateY(-50%) rotateZ(45deg);
-          transform: translateY(-50%) rotateZ(45deg);
+  transform: translateY(-50%) rotateZ(45deg);
   width: 8px;
   height: 8px;
   border-top: 2px #b1b1b1 solid;
@@ -1123,14 +1220,14 @@ a:hover {
     background: #fff url(../img/intro/bg.png) right -100px bottom no-repeat;
     background-size: 450px;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: auto;
     max-height: 1200px;
   }
@@ -1140,8 +1237,8 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     height: 100%;
     max-height: 400px;
     width: auto;
@@ -1151,8 +1248,8 @@ a:hover {
   .intro__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     background: none;
   }
   .intro-photo {
@@ -1161,8 +1258,8 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background: #fff url(../img/intro/bg.png) center bottom no-repeat;
     background-size: 400px;
   }
@@ -1172,8 +1269,8 @@ a:hover {
   }
   .social {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 @media (max-width: 560px) {
@@ -1224,7 +1321,7 @@ a:hover {
   }
   .social {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .social a {
     margin: 10px 6%;
@@ -1314,11 +1411,11 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background-size: 520px;
     background-position: center bottom;
   }
@@ -1380,8 +1477,8 @@ a:hover {
   .footer__col {
     width: 100%;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .footer__col:last-child {
     display: none;
@@ -1394,8 +1491,8 @@ a:hover {
   .footer__col {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .footer__col .social {
     margin-bottom: 10px;
@@ -1438,15 +1535,15 @@ a:hover {
 @media (max-width: 800px) {
   .modal-bg--work {
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     overflow: auto;
   }
   .modal-work {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     height: auto;
   }
   .modal-work__preview {

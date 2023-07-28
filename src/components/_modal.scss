@@ -9,12 +9,12 @@
   padding: 15px;
   overflow: hidden;
 
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: transparent;
-  opacity: 0;
+  // opacity: 0;
   transition:
     background-color 0.3s linear,
     opacity 0.3s linear;
@@ -32,12 +32,12 @@
   max-width: 1200px;
   min-height: 620px;
 
-  display: none;
+  display: flex;
   flex-wrap: wrap;
 
   background-color: #fff;
-  opacity: 0;
-  transform: scale(0);
+  // opacity: 0;
+  // transform: scale(0);
   transition:
     transform 0.3s linear,
     opacity 0.3s linear;
@@ -219,12 +219,12 @@
     padding: 46px 40px 14px 25px;
   }
   &__projectname {
-    @include fontFWSC("Montserrat", 700, 32px, #2b2a2c);
+    @include fontFWSC('Montserrat', 700, 32px, #2b2a2c);
     text-transform: uppercase;
     margin-bottom: 7px;
   }
   &__category {
-    @include fontFWSC("Montserrat", 400, 18px, #6a696b);
+    @include fontFWSC('Montserrat', 400, 18px, #6a696b);
     margin-bottom: 20px;
     text-transform: uppercase;
     span {
@@ -268,10 +268,10 @@
     }
   }
   &__client {
-    @include fontFWSC("Montserrat", 700, 16px, #2b2a2c);
+    @include fontFWSC('Montserrat', 700, 16px, #2b2a2c);
     margin-bottom: 33px;
     span {
-      @include fontFWSC("Montserrat", 300, 14px, #6a696b);
+      @include fontFWSC('Montserrat', 300, 14px, #6a696b);
       font-style: italic;
     }
     a {
@@ -283,7 +283,7 @@
     }
   }
   &__text {
-    @include fontFWSCL("Montserrat", 500, 16px, #2c2c2c, 1.6);
+    @include fontFWSCL('Montserrat', 500, 16px, #2c2c2c, 1.6);
     margin-bottom: 15px;
   }
   &__btnbox {
@@ -300,13 +300,13 @@
       position: relative;
       padding-left: 5px;
       button {
-        @include fontFWSC("Montserrat", 400, 14px, #2b2a2c);
+        @include fontFWSC('Montserrat', 400, 14px, #2b2a2c);
         text-transform: uppercase;
         background-color: transparent;
         border: none;
         cursor: pointer;
         &:before {
-          content: "";
+          content: '';
           position: absolute;
           top: 50%;
           left: 0;
@@ -325,13 +325,13 @@
       padding-right: 5px;
       cursor: pointer;
       button {
-        @include fontFWSC("Montserrat", 400, 14px, #2b2a2c);
+        @include fontFWSC('Montserrat', 400, 14px, #2b2a2c);
         text-transform: uppercase;
         background-color: transparent;
         border: none;
         cursor: pointer;
         &:before {
-          content: "";
+          content: '';
           position: absolute;
           top: 50%;
           right: 0;

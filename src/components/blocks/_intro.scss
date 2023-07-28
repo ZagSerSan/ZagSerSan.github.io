@@ -15,15 +15,15 @@
   flex-direction: column;
   justify-content: center;
   &__greeting {
-    @include fontFWSC("Montserrat", 300, 32px, #2b2a2c);
+    @include fontFWSC('Montserrat', 300, 32px, #2b2a2c);
     margin-bottom: 7px;
   }
   &__name {
-    @include fontFWSC("Montserrat", 700, 45px, #2b2a2c);
+    @include fontFWSC('Montserrat', 700, 45px, #2b2a2c);
     margin-bottom: 12px;
   }
   &__prof {
-    @include fontFWSC("Montserrat", 400, 18px, #6a696b);
+    @include fontFWSC('Montserrat', 400, 18px, #6a696b);
     margin-bottom: 20px;
   }
   button {

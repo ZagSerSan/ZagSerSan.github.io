@@ -9,7 +9,7 @@
   text-align: center;
   padding: 30px 0;
   &__link {
-    @include fontFWSC("Montserrat", 400, 14px, #6a696b);
+    @include fontFWSC('Montserrat', 400, 14px, #6a696b);
     margin-left: 33px;
     transition: font-weight 0.1s linear;
     position: relative;
@@ -18,7 +18,7 @@
     }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -4px;
       left: 0;
@@ -84,7 +84,7 @@
     width: 100%;
   }
   &__suptitle {
-    @include fontFWSC("Montserrat", 400, 12px, #2b2a2c);
+    @include fontFWSC('Montserrat', 400, 12px, #2b2a2c);
     text-transform: uppercase;
     margin: 18px 10px 0;
     text-align: left;
@@ -92,7 +92,7 @@
   &__title {
     display: flex;
     justify-content: space-between;
-    @include fontFWSC("Montserrat", 700, 16px, #2b2a2c);
+    @include fontFWSC('Montserrat', 700, 16px, #2b2a2c);
     text-transform: uppercase;
     margin: 16px 10px 15px;
   }

@@ -15,7 +15,7 @@
   }
   &__photo {
     height: 100%;
-    background: url("../img/about/bg.png") no-repeat;
+    background: url('../img/about/bg.png') no-repeat;
     background-position: 20% 100%;
     img {
       display: block;
@@ -24,17 +24,17 @@
     }
   }
   &__suptitle {
-    @include fontFWSCL("Montserrat", 700, 45px, #2b2a2c, 0.8);
+    @include fontFWSCL('Montserrat', 700, 45px, #2b2a2c, 0.8);
     text-transform: uppercase;
     margin: 35px 0 25px;
   }
   &__title {
-    @include fontFWSCL("Montserrat", 700, 92px, #bbbbbb, 0.8);
+    @include fontFWSCL('Montserrat', 700, 92px, #bbbbbb, 0.8);
     text-transform: uppercase;
     margin-bottom: 35px;
   }
   &__text {
-    @include fontFWSCL("Montserrat", 500, 16px, #181818, 1.7);
+    @include fontFWSCL('Montserrat', 500, 16px, #181818, 1.7);
     margin-bottom: 40px;
   }
 }

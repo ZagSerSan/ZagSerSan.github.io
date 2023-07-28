@@ -18,7 +18,7 @@ body {
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1,
@@ -54,19 +54,19 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 .header.fixed {
@@ -75,7 +75,7 @@ a:hover {
   width: 100%;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 6px #4c4c4c;
-  box-shadow: 0px 4px 6px #4c4c4c;
+          box-shadow: 0px 4px 6px #4c4c4c;
 }
 
 .header-logo {
@@ -83,8 +83,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header-logo img {
   display: block;
@@ -163,7 +163,7 @@ a:hover {
   background-color: #2b2a2c;
   color: #fff;
   -webkit-box-shadow: 2px 2px 5px #2b2a2c;
-  box-shadow: 2px 2px 5px #2b2a2c;
+          box-shadow: 2px 2px 5px #2b2a2c;
 }
 
 .burger {
@@ -193,19 +193,10 @@ a:hover {
   height: 3px;
   background-color: #2b2a2c;
   border-radius: 2px;
-  -webkit-transition:
-    top 0.1s linear,
-    -webkit-transform 0.1s linear;
-  transition:
-    top 0.1s linear,
-    -webkit-transform 0.1s linear;
-  transition:
-    transform 0.1s linear,
-    top 0.1s linear;
-  transition:
-    transform 0.1s linear,
-    top 0.1s linear,
-    -webkit-transform 0.1s linear;
+  -webkit-transition: top 0.1s linear, -webkit-transform 0.1s linear;
+  transition: top 0.1s linear, -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear, top 0.1s linear;
+  transition: transform 0.1s linear, top 0.1s linear, -webkit-transform 0.1s linear;
 }
 .burger__icon:after {
   content: "";
@@ -216,19 +207,10 @@ a:hover {
   height: 3px;
   background-color: #2b2a2c;
   border-radius: 2px;
-  -webkit-transition:
-    top 0.1s linear,
-    -webkit-transform 0.1s linear;
-  transition:
-    top 0.1s linear,
-    -webkit-transform 0.1s linear;
-  transition:
-    transform 0.1s linear,
-    top 0.1s linear;
-  transition:
-    transform 0.1s linear,
-    top 0.1s linear,
-    -webkit-transform 0.1s linear;
+  -webkit-transition: top 0.1s linear, -webkit-transform 0.1s linear;
+  transition: top 0.1s linear, -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear, top 0.1s linear;
+  transition: transform 0.1s linear, top 0.1s linear, -webkit-transform 0.1s linear;
 }
 
 @media (max-width: 990px) {
@@ -252,11 +234,11 @@ a:hover {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
     right: 0;
     top: 0;
@@ -265,22 +247,12 @@ a:hover {
     width: 0vw;
     overflow: hidden;
     opacity: 0;
-    background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#fff),
-      to(#ccc)
-    );
+    background: -webkit-gradient(linear, left top, right top, from(#fff), to(#ccc));
     background: linear-gradient(90deg, #fff, #ccc);
     -webkit-box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.8);
-    -webkit-transition:
-      width 0.2s linear,
-      opacity 0.2s linear;
-    transition:
-      width 0.2s linear,
-      opacity 0.2s linear;
+            box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.8);
+    -webkit-transition: width 0.2s linear, opacity 0.2s linear;
+    transition: width 0.2s linear, opacity 0.2s linear;
   }
   .nav__link {
     margin-left: 0;
@@ -292,12 +264,8 @@ a:hover {
   .nav.active {
     width: 70vw;
     opacity: 1;
-    -webkit-transition:
-      width 0.2s linear,
-      opacity 0.2s linear;
-    transition:
-      width 0.2s linear,
-      opacity 0.2s linear;
+    -webkit-transition: width 0.2s linear, opacity 0.2s linear;
+    transition: width 0.2s linear, opacity 0.2s linear;
   }
   .burger {
     display: block;
@@ -308,12 +276,12 @@ a:hover {
   .burger.active .burger__icon:after {
     top: 0;
     -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
   }
   .burger.active .burger__icon::before {
     top: 0;
     -webkit-transform: rotateZ(-45deg);
-    transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
   }
   button.nav__link {
     margin-left: 0;
@@ -367,10 +335,10 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px #f1f1f1 solid;
   padding-top: 90px;
 }
@@ -382,11 +350,11 @@ a:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .intro-content__greeting {
   font-family: "Montserrat", sans-serif;
@@ -432,28 +400,19 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40px;
   height: 40px;
   margin-right: 10px;
   background-color: #ccc;
-  -webkit-transition:
-    bottom 0.1s linear,
-    -webkit-box-shadow 0.1s linear;
-  transition:
-    bottom 0.1s linear,
-    -webkit-box-shadow 0.1s linear;
-  transition:
-    bottom 0.1s linear,
-    box-shadow 0.1s linear;
-  transition:
-    bottom 0.1s linear,
-    box-shadow 0.1s linear,
-    -webkit-box-shadow 0.1s linear;
+  -webkit-transition: bottom 0.1s linear, -webkit-box-shadow 0.1s linear;
+  transition: bottom 0.1s linear, -webkit-box-shadow 0.1s linear;
+  transition: bottom 0.1s linear, box-shadow 0.1s linear;
+  transition: bottom 0.1s linear, box-shadow 0.1s linear, -webkit-box-shadow 0.1s linear;
 }
 .social__item svg {
   width: 70%;
@@ -481,7 +440,7 @@ a:hover {
 .social__item:hover {
   bottom: 5px;
   -webkit-box-shadow: 2px 2px 5px #6a696b;
-  box-shadow: 2px 2px 5px #6a696b;
+          box-shadow: 2px 2px 5px #6a696b;
 }
 
 .intro-photo {
@@ -491,8 +450,8 @@ a:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   padding-right: 70px;
   background: #fff url(../img/intro/bg.png) right no-repeat;
 }
@@ -557,10 +516,10 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   margin: auto -20px;
 }
@@ -572,46 +531,21 @@ a:hover {
   width: 30%;
   max-height: 435px;
   -webkit-box-shadow: 0px 0px 5px;
-  box-shadow: 0px 0px 5px;
+          box-shadow: 0px 0px 5px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition:
-    bottom 0.1s linear,
-    right 0.1s linear,
-    width 0.3s linear,
-    max-height 0.3s linear,
-    font-size 0.3s linear,
-    -webkit-box-shadow 0.1s linear;
-  transition:
-    bottom 0.1s linear,
-    right 0.1s linear,
-    width 0.3s linear,
-    max-height 0.3s linear,
-    font-size 0.3s linear,
-    -webkit-box-shadow 0.1s linear;
-  transition:
-    bottom 0.1s linear,
-    right 0.1s linear,
-    box-shadow 0.1s linear,
-    width 0.3s linear,
-    max-height 0.3s linear,
-    font-size 0.3s linear;
-  transition:
-    bottom 0.1s linear,
-    right 0.1s linear,
-    box-shadow 0.1s linear,
-    width 0.3s linear,
-    max-height 0.3s linear,
-    font-size 0.3s linear,
-    -webkit-box-shadow 0.1s linear;
+  -webkit-transition: bottom 0.1s linear, right 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear, -webkit-box-shadow 0.1s linear;
+  transition: bottom 0.1s linear, right 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear, -webkit-box-shadow 0.1s linear;
+  transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear;
+  transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear, -webkit-box-shadow 0.1s linear;
   margin: 0 15px 30px;
 }
 .portfolio-item:hover {
   bottom: 5px;
   right: 5px;
   -webkit-box-shadow: 5px 5px 5px;
-  box-shadow: 5px 5px 5px;
+          box-shadow: 5px 5px 5px;
 }
 .portfolio-item.hide {
   width: 0;
@@ -637,8 +571,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -652,7 +586,7 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 135px;
 }
 .about__col {
@@ -734,7 +668,7 @@ a:hover {
   top: 50%;
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
   display: block;
 }
 .reviews-client__title {
@@ -786,10 +720,10 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 -15px;
 }
 .blog__link {
@@ -872,13 +806,13 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer__col:last-child {
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .copyright {
@@ -890,8 +824,8 @@ a:hover {
 
 .social.footer {
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 0;
 }
 .social.footer .social__item {
@@ -902,18 +836,13 @@ a:hover {
   -webkit-transition: fill 0.1s linear;
   transition: fill 0.1s linear;
 }
-.social.footer .social__item.behance,
-.social.footer .social__item.dribbble,
-.social.footer .social__item.linkedin,
-.social.footer .social__item.facebook,
-.social.footer .social__item.instagram,
-.social.footer .social__item.twitter {
+.social.footer .social__item.behance, .social.footer .social__item.dribbble, .social.footer .social__item.linkedin, .social.footer .social__item.facebook, .social.footer .social__item.instagram, .social.footer .social__item.twitter {
   background-color: transparent;
 }
 .social.footer .social__item:hover {
   bottom: 0;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 .social.footer .social__item:hover svg {
   fill: #fff;
@@ -950,11 +879,11 @@ a:hover {
   overflow: auto;
   display: none;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
@@ -970,20 +899,18 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #fff;
   padding: 30px;
   width: 100%;
   max-width: 900px;
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
-  transition:
-    transform 0.3s linear,
-    -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 .modal-hireme__btnbox {
   position: absolute;
@@ -1008,9 +935,7 @@ a:hover {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
-  transition:
-    transform 0.1s linear,
-    -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 .modal-hireme__btnbox div button svg {
   width: 100%;
@@ -1018,7 +943,7 @@ a:hover {
 }
 .modal-hireme__btnbox div button:hover {
   -webkit-transform: rotateZ(90deg);
-  transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
 }
 .modal-hireme__btn-close {
   position: absolute;
@@ -1036,9 +961,7 @@ a:hover {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
-  transition:
-    transform 0.1s linear,
-    -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 .modal-hireme__btn-close svg {
   width: 100%;
@@ -1046,7 +969,7 @@ a:hover {
 }
 .modal-hireme__btn-close:hover {
   -webkit-transform: rotateZ(90deg);
-  transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
 }
 .modal-hireme__col {
   min-width: 40%;
@@ -1057,11 +980,11 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .modal-hireme__col img {
   display: block;
@@ -1092,8 +1015,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 10px;
 }
 .modal-hireme__contacts-item svg {
@@ -1152,13 +1075,11 @@ a:hover {
   padding: 75px 15px;
   background-color: #fff;
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
-  transition:
-    transform 0.3s linear,
-    -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 .modal-resume__title {
   font-family: "Montserrat", sans-serif;
@@ -1181,7 +1102,7 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 768px;
   margin: 65px auto;
 }
@@ -1293,8 +1214,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 5px;
 }
 .education-skills-item__name {
@@ -1310,33 +1231,15 @@ a:hover {
   height: 6px;
 }
 .education-skills-item__level[data-skill="1"] {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(50%, #6a696b),
-    color-stop(50%, #efefef)
-  );
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #6a696b), color-stop(50%, #efefef));
   background: linear-gradient(90deg, #6a696b 50%, #efefef 50%);
 }
 .education-skills-item__level[data-skill="2"] {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(90%, #6a696b),
-    color-stop(90%, #efefef)
-  );
+  background: -webkit-gradient(linear, left top, right top, color-stop(90%, #6a696b), color-stop(90%, #efefef));
   background: linear-gradient(90deg, #6a696b 90%, #efefef 90%);
 }
 .education-skills-item__level[data-skill="3"] {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(80%, #6a696b),
-    color-stop(80%, #efefef)
-  );
+  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #6a696b), color-stop(80%, #efefef));
   background: linear-gradient(90deg, #6a696b 80%, #efefef 80%);
 }
 
@@ -1353,11 +1256,11 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
@@ -1377,30 +1280,21 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #fff;
   opacity: 0;
-  -webkit-transition:
-    opacity 0.3s linear,
-    -webkit-transform 0.3s linear;
-  transition:
-    opacity 0.3s linear,
-    -webkit-transform 0.3s linear;
-  transition:
-    transform 0.3s linear,
-    opacity 0.3s linear;
-  transition:
-    transform 0.3s linear,
-    opacity 0.3s linear,
-    -webkit-transform 0.3s linear;
+  -webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s linear;
+  transition: opacity 0.3s linear, -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear, opacity 0.3s linear;
+  transition: transform 0.3s linear, opacity 0.3s linear, -webkit-transform 0.3s linear;
 }
 .modal-work.trX_left {
   -webkit-transform: scale(0.4) translateX(-50%);
-  transform: scale(0.4) translateX(-50%);
+          transform: scale(0.4) translateX(-50%);
 }
 .modal-work.trX_right {
   -webkit-transform: scale(0.4) translateX(50%);
-  transform: scale(0.4) translateX(50%);
+          transform: scale(0.4) translateX(50%);
 }
 .modal-work__preview {
   width: 65%;
@@ -1410,8 +1304,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 620px;
 }
 @media (max-width: 800px) {
@@ -1439,7 +1333,7 @@ a:hover {
   left: 20px;
   z-index: 2;
   -webkit-transform: translateY(-50%) rotateZ(45deg);
-  transform: translateY(-50%) rotateZ(45deg);
+          transform: translateY(-50%) rotateZ(45deg);
   border: 0;
   border-left: #5e5e5e 4px solid;
   border-bottom: #5e5e5e 4px solid;
@@ -1463,7 +1357,7 @@ a:hover {
   right: 20px;
   z-index: 2;
   -webkit-transform: translateY(-50%) rotateZ(-45deg);
-  transform: translateY(-50%) rotateZ(-45deg);
+          transform: translateY(-50%) rotateZ(-45deg);
   border: 0;
   border-bottom: #5e5e5e 4px solid;
   border-right: #5e5e5e 4px solid;
@@ -1486,7 +1380,7 @@ a:hover {
   bottom: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1582,8 +1476,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 15px 27px;
 }
 .modal-work__btnbox-prev {
@@ -1607,7 +1501,7 @@ a:hover {
   left: 0;
   z-index: 2;
   -webkit-transform: translateY(-50%) rotateZ(-45deg);
-  transform: translateY(-50%) rotateZ(-45deg);
+          transform: translateY(-50%) rotateZ(-45deg);
   width: 8px;
   height: 8px;
   border-top: 2px #b1b1b1 solid;
@@ -1635,7 +1529,7 @@ a:hover {
   right: 0;
   z-index: 2;
   -webkit-transform: translateY(-50%) rotateZ(45deg);
-  transform: translateY(-50%) rotateZ(45deg);
+          transform: translateY(-50%) rotateZ(45deg);
   width: 8px;
   height: 8px;
   border-top: 2px #b1b1b1 solid;
@@ -1662,8 +1556,8 @@ a:hover {
   .intro__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     background: none;
   }
   .intro-photo {
@@ -1672,8 +1566,8 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: #fff url(../img/intro/bg.png) center no-repeat;
   }
   .intro-content {
@@ -1683,8 +1577,8 @@ a:hover {
   }
   .intro-content .social {
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (max-width: 560px) {
@@ -1812,8 +1706,8 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-size: 330px;
     background-position: center bottom;
   }
@@ -1876,8 +1770,8 @@ a:hover {
   .footer__col {
     width: 100%;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footer__col:last-child {
     display: none;
@@ -1890,8 +1784,8 @@ a:hover {
   .footer__col {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .footer__col .social {
     margin-bottom: 10px;
@@ -1980,7 +1874,7 @@ a:hover {
   }
   .modal-resume .education-skills-item {
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-bottom: 0;
   }
   .modal-resume .education-skills-item__level {
@@ -2003,8 +1897,8 @@ a:hover {
   }
   .modal-resume .education-skills-item {
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .experiense {
     width: 100%;
@@ -2031,11 +1925,11 @@ a:hover {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (max-width: 460px) {
@@ -2077,8 +1971,8 @@ a:hover {
   .modal-work {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 700px;
   }
   .modal-work__preview {

@@ -139,7 +139,7 @@ const Portfolio = () => {
 
         <div className="portfolio">
           {Object.keys(works).map((work) => (
-            <WorkItem workItem={works[work]} />
+            <WorkItem key={works[work].id} workItem={works[work]} />
           ))}
         </div>
         {/* <button type="button" id="loadmoreworks" className="work__btn btn-black">LOAD MORE WORK</button> */}

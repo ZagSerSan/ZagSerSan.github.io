@@ -2,7 +2,7 @@ import IconSVG from "../iconSVG"
 
 const Intro = () => {
   return (
-    <div className="intro" id="intro">
+    <div className="intro">
       <div className="container">
         <div className="intro__inner">
           <div className="intro-content">

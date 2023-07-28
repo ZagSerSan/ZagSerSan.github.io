@@ -1,3 +1,5 @@
+import IconSVG from "./iconSVG"
+
 const Modal = ({ workItem, handleShow }) => {
   console.log(workItem)
   const { name, category, date, description } = workItem
@@ -10,9 +12,7 @@ const Modal = ({ workItem, handleShow }) => {
           type="button"
           className="modal-work__btn-close"
         >
-          <svg>
-            <use href="#close"></use>
-          </svg>
+          <IconSVG iconName='close'/>
         </button>
 
         <div className="modal-work__preview">
@@ -84,7 +84,7 @@ const Modal = ({ workItem, handleShow }) => {
             </a>
           </div>
           <div className="modal-work__textbox">
-            <p className="modal-work__text"></p>
+            <p className="modal-work__text">{description.en}</p>
           </div>
           {/* <div className="modal-work__btnbox">
                 <div className="modal-work__btnbox-prev">

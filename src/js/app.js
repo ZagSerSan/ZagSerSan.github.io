@@ -2,16 +2,7 @@
 // todo_1) модальные окна
 
 //? ============ BURGER ==================================================
-let burger = document.getElementById('burgerJS')
-let nav = document.getElementById('navJS')
-//  button hireme in media440px
-// let btnHeader_hierme = document.querySelector('.btnHeaderJS');
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active')
-  nav.classList.toggle('active')
-  // btnHeader_hierme.classList.toggle('show');
-})
 
 //? ============ FIXED HEADER =============================================
 let header

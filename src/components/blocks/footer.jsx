@@ -11,18 +11,11 @@ const Footer = () => {
             </div>
             <div className="social footer">
               <a
-                href="https://www.facebook.com/profile.php?id=100036791829059"
+                href="https://www.linkedin.com/in/zagsersan/"
                 target="_blank"
-                className="social__item facebook"
+                className="social__item linkedin"
               >
-                <IconSVG iconName='facebook'/>
-              </a>
-              <a
-                href="https://www.instagram.com/zagsersan/"
-                target="_blank"
-                className="social__item instagram"
-              >
-                <IconSVG iconName='instagram'/>
+                <IconSVG iconName='mail'/>
               </a>
               <a
                 href="https://t.me/ZagSerSan"
@@ -38,7 +31,20 @@ const Footer = () => {
               >
                 <IconSVG iconName='viber'/>
               </a>
-
+              <a
+                href="https://www.facebook.com/profile.php?id=100036791829059"
+                target="_blank"
+                className="social__item facebook"
+              >
+                <IconSVG iconName='facebook'/>
+              </a>
+              <a
+                href="https://www.instagram.com/zagsersan/"
+                target="_blank"
+                className="social__item instagram"
+              >
+                <IconSVG iconName='instagram'/>
+              </a>
               <a
                 href="https://github.com/ZagSerSan"
                 target="_blank"

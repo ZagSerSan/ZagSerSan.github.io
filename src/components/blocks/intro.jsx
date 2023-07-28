@@ -12,18 +12,11 @@ const Intro = () => {
               <p className="intro-content__prof">Frontend developer</p>
               <div className="social">
                 <a
-                  href="https://www.facebook.com/profile.php?id=100036791829059"
+                  href="https://mailto:yan.steys1997@gmail.com"
                   target="_blank"
-                  className="social__item facebook"
+                  className="social__item linkedin"
                 >
-                  <IconSVG iconName='facebook'/>
-                </a>
-                <a
-                  href="https://www.instagram.com/zagsersan/"
-                  target="_blank"
-                  className="social__item instagram"
-                >
-                  <IconSVG iconName='instagram'/>
+                  <IconSVG iconName='mail'/>
                 </a>
                 <a
                   href="https://t.me/ZagSerSan"
@@ -38,6 +31,20 @@ const Intro = () => {
                   className="social__item viber"
                 >
                   <IconSVG iconName='viber'/>
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100036791829059"
+                  target="_blank"
+                  className="social__item facebook"
+                >
+                  <IconSVG iconName='facebook'/>
+                </a>
+                <a
+                  href="https://www.instagram.com/zagsersan/"
+                  target="_blank"
+                  className="social__item instagram"
+                >
+                  <IconSVG iconName='instagram'/>
                 </a>
                 <a
                   href="https://github.com/ZagSerSan"

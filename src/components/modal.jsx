@@ -1,8 +1,10 @@
-import IconSVG from "./iconSVG"
+import IconSVG from './iconSVG'
+import Slider from 'slider-moon'
+import 'slider-moon/dist/style.css'
 
 const Modal = ({ workItem, handleShow }) => {
-  console.log(workItem)
-  const { name, category, date, description } = workItem
+  // console.log(workItem)
+  const { name, category, date, modal_images, description } = workItem
 
   return (
     <div className="modal-bg--work bg" id="modal_bg">
@@ -16,40 +18,26 @@ const Modal = ({ workItem, handleShow }) => {
         </button>
 
         <div className="modal-work__preview">
-          <div className="slider">
-            <div>
-              <div className="modal-work__preview-item">
-                <img
-                  src="src/img/works/1-activebox/slide_1.jpg"
-                  alt="slide-1"
-                />
-              </div>
+          <Slider
+            slideClass={'my-slider'}
+            infinite={true}
+            bullets={false}
+            arrowsNav={true}
+            animation={'scale'}
+            callback={() => {
+              console.log('here');
+            }}
+          >
+            <div className='slider my-slider'>
+              <ul className='slider-wrapper'>
+                {modal_images.map((item) => (
+                  <li key={item}>
+                    <img src={item} />
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div>
-              <div className="modal-work__preview-item">
-                <img
-                  src="src/img/works/1-activebox/slide_2.jpg"
-                  alt="slide-2"
-                />
-              </div>
-            </div>
-            <div>
-              <div className="modal-work__preview-item">
-                <img
-                  src="src/img/works/1-activebox/slide_3.jpg"
-                  alt="slide-3"
-                />
-              </div>
-            </div>
-            <div>
-              <div className="modal-work__preview-item last-slide--align">
-                <img
-                  src="src/img/works/1-activebox/slide_4.jpg"
-                  alt="slide-4"
-                />
-              </div>
-            </div>
-          </div>
+          </Slider>
         </div>
 
         <div className="modal-work__content">
@@ -77,7 +65,7 @@ const Modal = ({ workItem, handleShow }) => {
               Open website
             </a>
             <a
-              href="https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/1-activebox"
+              href="https://github.com/ZagSerSan/ZagSerSan.github.io/src/portfolio/1-activebox"
               target="_blank"
             >
               View files

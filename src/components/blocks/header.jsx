@@ -9,14 +9,6 @@ const Header = () => {
       window.scrollY > 400 ? setFixed(true) : setFixed(false)
   })
 
-  // console.log(scroll)
-  // const handleScroll = () => {
-  //   setScroll(window.scrollY);
-  // }
-
-  // button hireme in media440px
-  // let btnHeader_hierme = document.querySelector('.btnHeaderJS');
-
   const handleBurger = () => {
     burger.classList.toggle('active')
     nav.classList.toggle('active')

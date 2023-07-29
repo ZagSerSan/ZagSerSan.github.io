@@ -4,7 +4,7 @@ import 'slider-moon/dist/style.css'
 
 const Modal = ({ workItem, handleShow }) => {
   // console.log(workItem)
-  const { name, category, date, modal_images, description } = workItem
+  const { name, category, date, modal_images, description, website_link } = workItem
 
   return (
     <div className="modal-bg--work bg" id="modal_bg">
@@ -61,7 +61,7 @@ const Modal = ({ workItem, handleShow }) => {
             {/* <svg className="react"><use href="#react"></use></svg> */}
           </div>
           <div className="modal-work__client">
-            <a href="portfolio/1-activebox/index.html" target="_blank">
+            <a href={website_link ? website_link : 'not link'} target="_blank">
               Open website
             </a>
             <a

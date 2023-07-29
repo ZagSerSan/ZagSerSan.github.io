@@ -16,6 +16,7 @@ const works = [
     name: 'ActiveBox',
     category: 'Lending',
     date: '2022-11-23',
+    website_link: '../../src/portfolio/1-activebox/index.html',
     img_src: activebox_preview,
     modal_images: activebox_slides,
     description: {

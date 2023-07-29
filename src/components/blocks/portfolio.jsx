@@ -16,7 +16,7 @@ const works = [
     name: 'ActiveBox',
     category: 'Lending',
     date: '2022-11-23',
-    website_link: '../../src/portfolio/1-activebox/index.html',
+    website_link: '../../src/portfolio/lending/activebox/index.html',
     img_src: activebox_preview,
     modal_images: activebox_slides,
     description: {
@@ -30,6 +30,7 @@ const works = [
     name: 'MoGo',
     category: 'Lending',
     date: '2022-11-23',
+    website_link: '../../src/portfolio/lending/mogo/index.html',
     img_src: mogo_preview,
     modal_images: mogo_slides,
     description: {
@@ -43,6 +44,7 @@ const works = [
     name: 'Designer Portfolio',
     category: 'Lending',
     date: '2022-11-23',
+    website_link: '../../src/portfolio/lending/designer-portfolio/index.html',
     img_src: designerPortfolio_preview,
     modal_images: designerPortfolio_slides,
     description: {
@@ -56,6 +58,7 @@ const works = [
     name: 'Custom Calculator',
     category: 'App',
     date: '2022-11-23',
+    website_link: '../../src/portfolio/app/calculator/index.html',
     img_src: calculator_preview,
     modal_images: calculator_slide,
     description: {
@@ -69,10 +72,9 @@ const works = [
     name: 'Todo list',
     category: 'App',
     date: '2022-11-23',
+    website_link: '../../src/portfolio/app/todoList/index.html',
     img_src: todoList_preview,
-    modal_images: [
-
-    ],
+    modal_images: [todoList_preview],
     description: {
       en: 'The project was created in the process of studying at the Junior Frontend course from Vladilen Minima at the Result School. Gained new and valuable work experience and development skills.',
       ru: 'Проект был создан в процессе обучения на курсе "Junior Frontend" от Владилена Минима в Result School. Получил новый и ценный опыт работы и навыки разработки.',
@@ -84,10 +86,9 @@ const works = [
     name: 'Contects Menu',
     category: 'App',
     date: '2022-11-23',
+    website_link: '../../src/portfolio/app/contectsMenu/index.html',
     img_src: contectsMenu_preview,
-    modal_images: [
-
-    ],
+    modal_images: [contectsMenu_preview],
     description: {
       en: 'The project was created by our team of students on a course from Vladilen Minima at Result School. There was a team competition (hackathon) and the task was to create a context menu, which we coped with perfectly and took first place among the other participating teams. Gained valuable team experience and other development skills.',
       ru: 'Проект был создан нашей командой учеников на курсе от Владилена Минима в Result School. Было соревнование команд (хакатон) и заданием было создать контекстное меню, с чем мы справились отлично и заняли первое место среди других команд участников. Получил ценный опыт работы в команде и другие навыки разработки.',
@@ -99,9 +100,10 @@ const works = [
     name: 'Weather Widget',
     category: 'App',
     date: '2022-11-23',
+    website_link: '../../src/portfolio/app/weather-widget/',
     img_src: weatherWidget_preview,
     modal_images: [
-
+      weatherWidget_preview
     ],
     description: {
       en: 'I improved his skills independently developed a small project proposed during the course.',

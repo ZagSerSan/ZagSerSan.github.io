@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Modal from './modal'
 
-const WorkItem = ({ workItem }) => {
+const WorkItem = ({ workItem, workItem_id }) => {
   const [show, setShow] = useState(false)
   const handleShow = (modalId) => {
     setShow((prev) => !prev)

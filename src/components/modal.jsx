@@ -1,6 +1,7 @@
 import IconSVG from './iconSVG'
-import Slider from 'slider-moon'
-import 'slider-moon/dist/style.css'
+import ModalSlider from './modalSlider'
+// import Slider from 'slider-moon'
+// import 'slider-moon/dist/style.css'
 
 const Modal = ({ workItem, handleShow }) => {
   // console.log(workItem)
@@ -18,15 +19,18 @@ const Modal = ({ workItem, handleShow }) => {
         </button>
 
         <div className="modal-work__preview">
-          <Slider
+
+          <ModalSlider modal_images={modal_images}/>
+
+          {/* <Slider
             slideClass={'my-slider'}
             infinite={true}
-            bullets={false}
+            bullets={true}
             arrowsNav={true}
             animation={'scale'}
-            callback={() => {
-              console.log('here');
-            }}
+            // callback={() => {
+              // console.log('here');
+            // }}
           >
             <div className='slider my-slider'>
               <ul className='slider-wrapper'>
@@ -37,7 +41,7 @@ const Modal = ({ workItem, handleShow }) => {
                 ))}
               </ul>
             </div>
-          </Slider>
+          </Slider> */}
         </div>
 
         <div className="modal-work__content">

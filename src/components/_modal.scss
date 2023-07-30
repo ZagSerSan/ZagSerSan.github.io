@@ -36,6 +36,7 @@
   display: flex;
   flex-wrap: wrap;
 
+  text-align: left;
   background-color: #fff;
   // opacity: 0;
   // transform: scale(0);
@@ -82,9 +83,11 @@
   }
   &__preview {
     width: 65%;
-    img {
-      width: 100%;
-    }
+    max-height: 620px;
+    overflow: hidden;
+    // img {
+    //   width: 100%;
+    // }
     &.calculatop {
       background-color: #888888;
       img {

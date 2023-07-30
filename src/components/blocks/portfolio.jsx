@@ -4,11 +4,11 @@ import { activebox_preview, activebox_slides } from '../../img/works/activebox'
 import { mogo_preview, mogo_slides } from '../../img/works/mogo'
 import { designerPortfolio_preview, designerPortfolio_slides } from '../../img/works/designer-portfolio'
 import { calculator_preview, calculator_slide } from '../../img/works/calculator'
-import todoList_preview from '../../img/works/todoList/preview.png'
-import contectsMenu_preview from '../../img/works/contectsMenu/preview.png'
-import weatherWidget_preview from '../../img/works/weather-widget/preview.png'
-import ticTacToe_preview from '../../img/works/tic-tac-toe/preview.png'
-import socialUsersTable_preview from '../../img/works/usersTable/preview.gif'
+import { todoList_preview, todoList_slide } from '../../img/works/todoList'
+import { ticTacToe_preview, ticTacToe_slide } from '../../img/works/tic-tac-toe'
+import { weatherWidget_preview, weatherWidget_slide } from '../../img/works/weather-widget'
+import { contectsMenu_preview, contectsMenu_slide } from '../../img/works/contectsMenu'
+import { usersTable_preview, usersTable_slides } from '../../img/works/usersTable'
 
 const works = [
   {
@@ -74,7 +74,7 @@ const works = [
     date: '2022-11-23',
     website_link: '../../src/portfolio/app/todoList/index.html',
     img_src: todoList_preview,
-    modal_images: [todoList_preview],
+    modal_images: todoList_slide,
     description: {
       en: 'The project was created in the process of studying at the Junior Frontend course from Vladilen Minima at the Result School. Gained new and valuable work experience and development skills.',
       ru: 'Проект был создан в процессе обучения на курсе "Junior Frontend" от Владилена Минима в Result School. Получил новый и ценный опыт работы и навыки разработки.',
@@ -88,7 +88,7 @@ const works = [
     date: '2022-11-23',
     website_link: '../../src/portfolio/app/contectsMenu/index.html',
     img_src: contectsMenu_preview,
-    modal_images: [contectsMenu_preview],
+    modal_images: contectsMenu_slide,
     description: {
       en: 'The project was created by our team of students on a course from Vladilen Minima at Result School. There was a team competition (hackathon) and the task was to create a context menu, which we coped with perfectly and took first place among the other participating teams. Gained valuable team experience and other development skills.',
       ru: 'Проект был создан нашей командой учеников на курсе от Владилена Минима в Result School. Было соревнование команд (хакатон) и заданием было создать контекстное меню, с чем мы справились отлично и заняли первое место среди других команд участников. Получил ценный опыт работы в команде и другие навыки разработки.',
@@ -102,9 +102,7 @@ const works = [
     date: '2022-11-23',
     website_link: '../../src/portfolio/app/weather-widget/',
     img_src: weatherWidget_preview,
-    modal_images: [
-      weatherWidget_preview
-    ],
+    modal_images: weatherWidget_slide,
     description: {
       en: 'I improved his skills independently developed a small project proposed during the course.',
       ru: 'Я повышал свои навыки самостоятельно разрабатывал небольшой проект, предложенный на курсе..',
@@ -117,9 +115,7 @@ const works = [
     category: 'App',
     date: '2022-11-23',
     img_src: ticTacToe_preview,
-    modal_images: [
-
-    ],
+    modal_images: ticTacToe_slide,
     description: {
       en: 'I improved his skills independently developed a small project proposed during the course.',
       ru: 'Я повышал свои навыки самостоятельно разрабатывал небольшой проект, предложенный на курсе..',
@@ -131,10 +127,8 @@ const works = [
     name: 'Social Users Table',
     category: 'App',
     date: '2022-11-23',
-    img_src: socialUsersTable_preview,
-    modal_images: [
-
-    ],
+    img_src: usersTable_preview,
+    modal_images: usersTable_slides,
     description: {
       en: 'The project was created in the process of studying at the Junior Frontend course from Vladilen Minima at the Result School. The creation process is relevant at the current time. At work, I learn react technology, webpack, eslint and libraries like Lodash, router. This is a new and valuable experience of working and gaining development skills. There will also be a production version.',
       ru: 'Проект был создан в процессе обучения на курсе "Junior Frontend" от Владилена Минима в Result School. Процесс создания актуален на текущий момент времени. При работе я учу технологию react, webpack, eslint и библиотеки типа lodash, router. Это новый и ценный опыт работы и получения навыков разработки. Также будет продакшн версия.',

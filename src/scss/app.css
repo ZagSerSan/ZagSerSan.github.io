@@ -811,29 +811,18 @@ a:hover {
   max-height: 620px;
   overflow: hidden;
 }
-.modal-work__preview.calculatop {
-  background-color: #888888;
+.modal-work__preview .without-slide {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.modal-work__preview.calculatop img {
-  width: 80%;
-}
-.modal-work__preview.todo-list {
-  background-color: #fff;
-}
-.modal-work__preview.todo-list img {
-  width: 80%;
-}
-.modal-work__preview.lending {
-  background: url("/img/works/lending.png") no-repeat center;
-  background-size: cover;
-}
-.modal-work__preview.website {
-  background: url("/img/works/website.png") no-repeat center;
-  background-size: cover;
-}
-.modal-work__preview.int {
-  background: url("/img/works/interaction.png") no-repeat center;
-  background-size: cover;
+.modal-work__preview .without-slide img {
+  display: block;
+  width: 100%;
 }
 .modal-work__content {
   position: relative;

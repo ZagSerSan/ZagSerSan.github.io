@@ -85,33 +85,29 @@
     width: 65%;
     max-height: 620px;
     overflow: hidden;
-    // img {
-    //   width: 100%;
+
+    .without-slide {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    // &.lending {
+    //   background: url("/img/works/lending.png") no-repeat center;
+    //   background-size: cover;
     // }
-    &.calculatop {
-      background-color: #888888;
-      img {
-        width: 80%;
-      }
-    }
-    &.todo-list {
-      background-color: #fff;
-      img {
-        width: 80%;
-      }
-    }
-    &.lending {
-      background: url("/img/works/lending.png") no-repeat center;
-      background-size: cover;
-    }
-    &.website {
-      background: url("/img/works/website.png") no-repeat center;
-      background-size: cover;
-    }
-    &.int {
-      background: url("/img/works/interaction.png") no-repeat center;
-      background-size: cover;
-    }
+    // &.website {
+    //   background: url("/img/works/website.png") no-repeat center;
+    //   background-size: cover;
+    // }
+    // &.int {
+    //   background: url("/img/works/interaction.png") no-repeat center;
+    //   background-size: cover;
+    // }
   }
   &__content {
     position: relative;

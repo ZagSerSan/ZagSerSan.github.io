@@ -19,29 +19,12 @@ const Modal = ({ workItem, handleShow }) => {
         </button>
 
         <div className="modal-work__preview">
-
-          <ModalSlider modal_images={modal_images}/>
-
-          {/* <Slider
-            slideClass={'my-slider'}
-            infinite={true}
-            bullets={true}
-            arrowsNav={true}
-            animation={'scale'}
-            // callback={() => {
-              // console.log('here');
-            // }}
-          >
-            <div className='slider my-slider'>
-              <ul className='slider-wrapper'>
-                {modal_images.map((item) => (
-                  <li key={item}>
-                    <img src={item} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Slider> */}
+          {Array.isArray(modal_images)
+            ? <ModalSlider modal_images={modal_images}/>
+            : <div className="without-slide">
+                <img className='' src={modal_images} alt='preview' />
+              </div>
+          }
         </div>
 
         <div className="modal-work__content">

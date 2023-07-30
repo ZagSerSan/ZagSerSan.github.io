@@ -1,0 +1,1582 @@
+//* <МИКСИНЫ>===============================================================================================
+@import "mixins";
+//* <ШРИФТЫ>===============================================================================================
+//<Подключаем шрифты>=======================================================================================
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap");
+// font-family: 'Montserrat', sans-serif;
+//<Иконочные шрифты>==========================================================================================
+//<Шрифт по умолчанию>==========================================================================================
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: #6a696b;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+//* <ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1180;
+// $md1: $mw + 12;
+// $md2: 991.98;
+// $md3: 767.98;
+// $md4: 479.98;
+// $md5: 379.98;
+//* <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+//* <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "header";
+// @import "footer.scss";
+//* <ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: clip;
+}
+.empty-space {
+  height: 700px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+//* <ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+  max-width: $mw + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+//* <ОСНОВНОЙ БЛОК>====================================================================================================
+//todo -Intro -------------------
+.intro {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px #f1f1f1 solid;
+    padding-top: 90px;
+  }
+}
+.intro-content {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__greeting {
+    @include fontFWSC("Montserrat", 300, 32px, #2b2a2c);
+    margin-bottom: 7px;
+  }
+  &__name {
+    @include fontFWSC("Montserrat", 700, 45px, #2b2a2c);
+    margin-bottom: 12px;
+  }
+  &__prof {
+    @include fontFWSC("Montserrat", 400, 18px, #6a696b);
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 18px 45px;
+    margin-right: 14px;
+    font-size: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.social {
+  display: flex;
+  margin-bottom: 35px;
+  position: relative;
+  &__item {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #ccc;
+    transition:
+      bottom 0.1s linear,
+      box-shadow 0.1s linear;
+    svg {
+      width: 70%;
+      height: 70%;
+      fill: #fff;
+    }
+    &.behance {
+      background-color: #1869ff;
+    }
+    &.dribbble {
+      background-color: #e51a68;
+    }
+    &.linkedin {
+      background-color: #007bb6;
+    }
+    &.facebook {
+      background-color: #3a5898;
+    }
+    &.instagram {
+      background-color: #13578a;
+    }
+    &.twitter {
+      background-color: #56acef;
+    }
+
+    &:hover {
+      bottom: 5px;
+      box-shadow: 2px 2px 5px #6a696b;
+    }
+  }
+}
+.intro-photo {
+  width: 50%;
+  // min-width: 55%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 70px;
+  background: #fff url(../img/intro/bg.png) right no-repeat;
+  img {
+    display: block;
+    width: auto;
+    height: 100%;
+  }
+}
+
+//todo -work -------------------
+.work {
+  text-align: center;
+  padding: 0 0 125px;
+  &__btn {
+    margin: 20px 0 0;
+  }
+}
+.filter {
+  text-align: center;
+  padding: 30px 0;
+  &__link {
+    @include fontFWSC("Montserrat", 400, 14px, #6a696b);
+    margin-left: 33px;
+    transition: font-weight 0.1s linear;
+    position: relative;
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #2b2a2c;
+      transition: width 0.2s linear;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #000;
+      &:before {
+        width: 100%;
+      }
+    }
+    &.active {
+      color: #000;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto -20px;
+  // min-height: 1500px;
+}
+.portfolio-item {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  max-height: 435px;
+  box-shadow: 0px 0px 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    bottom 0.1s linear,
+    right 0.1s linear,
+    box-shadow 0.1s linear,
+    width 0.3s linear,
+    max-height 0.3s linear,
+    font-size 0.3s linear;
+  margin: 0 15px 30px;
+  &:hover {
+    bottom: 5px;
+    right: 5px;
+    box-shadow: 5px 5px 5px;
+  }
+  &.hide {
+    width: 0;
+    max-height: 0;
+    font-size: 0;
+    margin: 0;
+  }
+  &__image {
+    display: block;
+    width: 100%;
+  }
+  &__suptitle {
+    @include fontFWSC("Montserrat", 400, 12px, #2b2a2c);
+    text-transform: uppercase;
+    margin: 18px 10px 0;
+    text-align: left;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    @include fontFWSC("Montserrat", 700, 16px, #2b2a2c);
+    text-transform: uppercase;
+    margin: 16px 10px 15px;
+  }
+}
+
+//todo -about -------------------
+.about {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 135px;
+  }
+  &__col {
+    width: 50%;
+    &:last-child {
+      padding-left: 40px;
+    }
+  }
+  &__photo {
+    background: url("../img/about/bg.png") no-repeat;
+    background-position: 20% 100%;
+    img {
+      display: block;
+    }
+  }
+  &__suptitle {
+    @include fontFWSCL("Montserrat", 700, 45px, #2b2a2c, 0.8);
+    text-transform: uppercase;
+    margin: 35px 0 25px;
+  }
+  &__title {
+    @include fontFWSCL("Montserrat", 700, 92px, #dedede, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+  &__text {
+    @include fontFWSCL("Montserrat", 300, 12px, #717072, 2);
+    margin-bottom: 40px;
+  }
+}
+.about-btns {
+  &__item {
+    padding: 15px 50px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+//todo -reviesw -------------------
+.reviews {
+  &__text {
+    padding: 70px 0;
+    background: #332f30 url("../img/review/bg.png");
+    text-align: center;
+    p {
+      @include fontFWSCL("Montserrat", 200, 14px, #fff, 2.28);
+      max-width: 820px;
+    }
+  }
+}
+.reviews-client {
+  margin: -50px 0 0;
+  text-align: center;
+  &__photo {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto 14px;
+    border-radius: 50%;
+    border: 3px #efefef solid;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      display: block;
+    }
+  }
+  &__title {
+    @include fontFWSCL("Montserrat", 700, 14px, #2b2a2c, 0.8);
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    @include fontFWSCL("Montserrat", 300, 14px, #717072, 0.8);
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  &__ratting {
+    svg {
+      width: 15px;
+      height: 15px;
+      margin-right: 2px;
+    }
+  }
+}
+
+//todo -blog -------------------
+.blog {
+  &__inner {
+    text-align: center;
+    padding: 100px 0;
+  }
+  &__title {
+    @include fontFWSCL("Montserrat", 700, 45px, #2b2a2c, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 17px;
+  }
+  &__subtitle {
+    @include fontFWSCL("Montserrat", 300, 18px, #717072, 0.8);
+    margin-bottom: 20px;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+  }
+  &__link {
+    text-align: right;
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.blog-item {
+  width: 30%;
+  margin: 35px 15px;
+  overflow: hidden;
+  text-align: left;
+  &__img {
+    position: relative;
+    margin-bottom: 23px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #2b2a2c;
+    padding: 19px;
+    @include fontFWSCL("Montserrat", 700, 16px, #fff, 1);
+    text-align: center;
+  }
+  &__title {
+    @include fontFWSCL("Montserrat", 700, 18px, #2b2a2c, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+  &__subtitle {
+    @include fontFWSCL("Montserrat", 400, 12px, #2b2a2c, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 27px;
+  }
+  &__text {
+    @include fontFWSCL("Montserrat", 300, 12px, #717072, 2);
+    margin-bottom: 37px;
+  }
+}
+
+//todo -footer -------------------
+.footer {
+  background-color: #2b2a2c;
+  &__inner {
+    display: flex;
+    padding: 14px 0;
+  }
+  &__col {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      justify-content: end;
+    }
+  }
+}
+.copyright {
+  padding-right: 14px;
+  margin-right: 17px;
+  border-right: 1px #413f41 solid;
+  color: #8d8d8e;
+}
+.social.footer {
+  align-items: center;
+  margin-bottom: 0;
+  .social__item {
+    margin-right: 0;
+    svg {
+      fill: #8d8d8e;
+      transition: fill 0.1s linear;
+    }
+    &.behance,
+    &.dribbble,
+    &.linkedin,
+    &.facebook,
+    &.instagram,
+    &.twitter {
+      background-color: transparent;
+    }
+    &:hover {
+      bottom: 0;
+      box-shadow: none;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+.nav.footer {
+  .nav__link {
+    color: #8d8d8e;
+    margin-left: 19px;
+    transition: color 0.1s linear;
+    &:hover {
+      color: #fff;
+    }
+    &.btn-black {
+      background-color: #2b2a2c;
+      border-color: #8d8d8e;
+      transition: background-color 0.1s linear;
+      &:hover {
+        background-color: #3a393b;
+        color: #fff;
+      }
+    }
+  }
+}
+
+//todo -modal 'hire me' -------------------
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow: auto;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s linear;
+
+  &.show {
+    display: flex;
+  }
+}
+.modal-hireme {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+  transform: scale(0);
+  transition: transform 0.3s linear;
+
+  &__btnbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    height: 100%;
+    div {
+      position: relative;
+      height: 100%;
+      button {
+        position: sticky;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transition: transform 0.1s linear;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+        &:hover {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+  }
+  &__btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    // background-color: transparent;
+    background: radial-gradient(#fff 60%, #000 40%);
+    border-radius: 50%;
+    transition: transform 0.1s linear;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      transform: rotateZ(90deg);
+    }
+  }
+  &__col {
+    min-width: 40%;
+    &:last-child {
+      width: 60%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+    img {
+      display: block;
+      height: 100%;
+    }
+  }
+  &__title {
+    @include fontFWSCL("Montserrat", 700, 45px, #2b2a2c, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    @include fontFWSCL("Montserrat", 400, 16px, #2b2a2c, 0.8);
+    text-transform: uppercase;
+  }
+  &__contacts {
+    margin: 35px 0 45px;
+  }
+  &__contacts-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    a {
+      @include fontFWSC("Montserrat", 300, 14px, #2b2a2c);
+    }
+  }
+}
+.form {
+  &__title {
+    @include fontFWSC("Montserrat", 700, 14px, #2b2a2c);
+    margin-bottom: 10px;
+  }
+  input,
+  textarea {
+    @include fontFWSC("Montserrat", 300, 14px, #2b2a2c);
+    width: 100%;
+    border: 1px solid rgba(112, 112, 112, 0.3);
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  textarea {
+    resize: none;
+    height: 200px;
+  }
+  .align-right {
+    text-align: right;
+  }
+  button {
+    @include fontFWSC("Montserrat", 400, 16px, #2b2a2c);
+    padding: 18px 55px;
+    border: 1px solid #6a696b;
+  }
+}
+
+//todo -modal 'resume' -------------------
+.modal-resume {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
+  padding: 75px 15px;
+  background-color: #fff;
+  transform: scale(0);
+  transition: transform 0.3s linear;
+
+  &__title {
+    @include fontFWSC("Montserrat", 700, 45px, #2b2a2c);
+    text-transform: uppercase;
+    margin-bottom: 54px;
+  }
+  &__btn {
+    font-size: 16px;
+    padding: 16px 27px;
+    min-width: 170px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 768px;
+    margin: 65px auto;
+  }
+}
+.experiense {
+  text-align: right;
+  width: 50%;
+  padding-right: 48px;
+  border-right: 1px #000 solid;
+  &__title {
+    @include fontFWSC("Montserrat", 700, 18px, #2b2a2c);
+    text-transform: uppercase;
+    margin-bottom: 39px;
+  }
+}
+.experiense-item {
+  &:not(:last-child) {
+    margin-bottom: 39px;
+  }
+  &__year {
+    @include fontFWSC("Montserrat", 400, 14px, #2b2b2b);
+    text-decoration: underline;
+    margin-bottom: 12px;
+  }
+  &__workplace {
+    @include fontFWSC("Montserrat", 700, 16px, #2b2b2b);
+    margin-bottom: 3px;
+  }
+  &__prof {
+    @include fontFWSC("Montserrat", 300, 14px, #2b2a2c);
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+  &__about {
+    @include fontFWSCL("Montserrat", 300, 12px, #2b2a2c, 1.5);
+    margin-bottom: 12px;
+  }
+}
+.education {
+  text-align: left;
+  width: 50%;
+  padding-left: 48px;
+  &__title {
+    @include fontFWSC("Montserrat", 700, 18px, #2b2a2c);
+    text-transform: uppercase;
+    margin-bottom: 39px;
+  }
+}
+.education-item {
+  margin-bottom: 39px;
+  &__time {
+    @include fontFWSC("Montserrat", 400, 14px, #2b2b2b);
+    text-decoration: underline;
+    margin-bottom: 12px;
+  }
+  &__prof {
+    @include fontFWSC("Montserrat", 700, 16px, #2b2b2b);
+    margin-bottom: 3px;
+  }
+  &__learnplace {
+    @include fontFWSC("Montserrat", 300, 14px, #2b2a2c);
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+  &__text {
+    @include fontFWSCL("Montserrat", 300, 12px, #2b2a2c, 1.5);
+  }
+}
+.education-skills {
+  margin-bottom: 39px;
+}
+.education-skills-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  &__name {
+    @include fontFWSC("Montserrat", 300, 14px, #2b2a2c);
+  }
+  &__level {
+    margin-left: 18px;
+    font-size: 0;
+
+    width: 150px;
+    height: 6px;
+
+    &[data-skill="1"] {
+      background: linear-gradient(90deg, #6a696b 50%, #efefef 50%);
+    }
+    &[data-skill="2"] {
+      background: linear-gradient(90deg, #6a696b 90%, #efefef 90%);
+    }
+    &[data-skill="3"] {
+      background: linear-gradient(90deg, #6a696b 80%, #efefef 80%);
+    }
+  }
+}
+
+// todo_3
+
+//todo -modal 'work' -------------------
+.modal-bg--work {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s linear;
+
+  &.bg {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  &.hide {
+    display: none;
+  }
+}
+.modal-work {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 620px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: #fff;
+  opacity: 0;
+  transition:
+    transform 0.3s linear,
+    opacity 0.3s linear;
+
+  &.trX_left {
+    transform: scale(0.4) translateX(-50%);
+  }
+  &.trX_right {
+    transform: scale(0.4) translateX(50%);
+  }
+  &__preview {
+    width: 65%;
+    .last-slide--align {
+      // align bottom
+      display: flex;
+      align-items: flex-end;
+      height: 620px;
+      @media (max-width: 800px) {
+        height: 350px;
+      }
+      @media (max-width: 400px) {
+        height: 257px;
+      }
+    }
+    .slider {
+      position: relative;
+      height: 100%;
+      max-height: 620px;
+      overflow: clip;
+      img {
+        width: 100%;
+      }
+    }
+    .slick-prev {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      z-index: 2;
+      transform: translateY(-50%) rotateZ(45deg);
+      border: 0;
+      border-left: #5e5e5e 4px solid;
+      border-bottom: #5e5e5e 4px solid;
+      transition: border-color 0.2s linear;
+
+      font-size: 0;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
+      &:hover {
+        border-color: #ccc;
+      }
+    }
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      z-index: 2;
+      transform: translateY(-50%) rotateZ(-45deg);
+      border: 0;
+      border-bottom: #5e5e5e 4px solid;
+      border-right: #5e5e5e 4px solid;
+      transition: border-color 0.2s linear;
+
+      font-size: 0;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
+      &:hover {
+        border-color: #ccc;
+      }
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      display: flex;
+      padding: 0;
+      list-style: none;
+      &:focus {
+        outline: 0;
+      }
+      li {
+        width: 13px;
+        height: 13px;
+        margin: 0 10px 0 0;
+        &.slick-active {
+          button {
+            background-color: rgba(197, 197, 197, 0.6);
+          }
+        }
+      }
+      button {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 0;
+
+        font-size: 0;
+        line-height: 0;
+        padding: 0;
+        background-color: rgba(44, 44, 44, 0.6);
+      }
+    }
+    &.app {
+      background: url("/img/works/app.png") no-repeat center;
+      background-size: cover;
+    }
+    &.website {
+      background: url("/img/works/website.png") no-repeat center;
+      background-size: cover;
+    }
+    &.int {
+      background: url("/img/works/interaction.png") no-repeat center;
+      background-size: cover;
+    }
+  }
+  &__content {
+    position: relative;
+    width: 35%;
+    padding: 46px 92px 14px 25px;
+  }
+  &__projectname {
+    @include fontFWSC("Montserrat", 700, 32px, #2b2a2c);
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+  &__category {
+    @include fontFWSC("Montserrat", 400, 18px, #6a696b);
+    margin-bottom: 33px;
+    text-transform: uppercase;
+    span {
+      margin: 0 15px;
+    }
+  }
+  &__client {
+    @include fontFWSC("Montserrat", 700, 16px, #2b2a2c);
+    span {
+      @include fontFWSC("Montserrat", 300, 14px, #6a696b);
+      font-style: italic;
+    }
+    margin-bottom: 33px;
+  }
+  &__text {
+    @include fontFWSCL("Montserrat", 300, 12px, #6a696b, 2);
+    margin-bottom: 15px;
+  }
+  &__btnbox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 27px;
+    &-prev {
+      position: relative;
+      padding-left: 5px;
+      button {
+        @include fontFWSC("Montserrat", 400, 14px, #2b2a2c);
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          z-index: 2;
+          transform: translateY(-50%) rotateZ(-45deg);
+
+          width: 8px;
+          height: 8px;
+          border-top: 2px #b1b1b1 solid;
+          border-left: 2px #b1b1b1 solid;
+        }
+      }
+    }
+    &-next {
+      position: relative;
+      padding-right: 5px;
+      cursor: pointer;
+      button {
+        @include fontFWSC("Montserrat", 400, 14px, #2b2a2c);
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          z-index: 2;
+          transform: translateY(-50%) rotateZ(45deg);
+
+          width: 8px;
+          height: 8px;
+          border-top: 2px #b1b1b1 solid;
+          border-right: 2px #b1b1b1 solid;
+        }
+      }
+    }
+  }
+}
+
+//* <АДАПТИВ>====================================================================================================
+//? intro ----------------------------------
+@media (max-width: 990px) {
+  .intro__inner {
+    background: #fff url(../img/intro/bg.png) right -70px bottom no-repeat;
+  }
+  .intro-content {
+    width: auto;
+    button {
+      padding: 15px 30px;
+    }
+  }
+  .intro-photo {
+    width: auto;
+    padding-right: 0;
+    background: none;
+  }
+}
+@media (max-width: 800px) {
+  .intro__inner {
+    flex-direction: column-reverse;
+    background: none;
+  }
+  .intro-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #fff url(../img/intro/bg.png) center no-repeat;
+  }
+  .intro-content {
+    width: 100%;
+    text-align: center;
+    margin: 60px 0;
+    & .social {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .intro-photo {
+    background-size: cover;
+    img {
+      height: 400px;
+    }
+  }
+  .intro-content {
+    &__greeting {
+      font-size: 27px;
+    }
+    &__name {
+      font-size: 40px;
+    }
+    &__prof {
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 15px;
+    }
+    .social__item:last-child {
+      margin-right: 0;
+    }
+  }
+  .btn-black {
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .intro-photo {
+    img {
+      height: 300px;
+    }
+  }
+  .intro-content {
+    &__greeting {
+      font-size: 21px;
+    }
+    &__name {
+      font-size: 30px;
+    }
+    &__prof {
+      font-size: 14px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  .btn-black {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+//? work ----------------------------------
+@media (max-width: 900px) {
+  .work {
+    padding-bottom: 80px;
+  }
+  // position sticky
+  .filter {
+    position: sticky;
+    top: 75px;
+    z-index: 1;
+    background-color: #fff;
+    padding: 20px 0;
+    margin: 0px -20px;
+    border-bottom: 1px #f1f1f1 solid;
+  }
+  .portfolio-item {
+    width: 45%;
+    margin: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .portfolio-item {
+    width: 85%;
+    margin: 10px;
+    max-height: none;
+  }
+}
+@media (max-width: 400px) {
+  .portfolio-item {
+    width: 90%;
+  }
+  .filter__link {
+    margin-left: 18px;
+  }
+}
+//? about ----------------------------------
+@media (max-width: 1130px) {
+  .about {
+    &__suptitle {
+      font-size: 35px;
+    }
+    &__title {
+      font-size: 72px;
+    }
+    &__text,
+    .about-btns {
+      margin-left: -80px;
+    }
+    &__photo {
+      background-size: 70%;
+      img {
+        height: 500px;
+      }
+    }
+  }
+}
+@media (max-width: 1015px) {
+  .about {
+    &__suptitle {
+      font-size: 30px;
+    }
+    &__title {
+      font-size: 55px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .about {
+    &__inner {
+      padding-bottom: 80px;
+    }
+    &__col {
+      width: 100%;
+      &:last-child {
+        padding: 0;
+        text-align: center;
+      }
+    }
+    &__photo {
+      display: flex;
+      justify-content: center;
+      background-size: 330px;
+      background-position: center bottom;
+    }
+    &__text,
+    .about-btns {
+      margin-left: auto;
+    }
+  }
+}
+@media (max-width: 510px) {
+  .about {
+    &__photo {
+      background-size: 270px;
+      img {
+        height: 400px;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .about {
+    &__suptitle {
+      font-size: 23px;
+    }
+    &__title {
+      font-size: 43px;
+    }
+    &__text {
+      max-height: 350px;
+      overflow: scroll;
+    }
+    &__photo {
+      background-size: 200px;
+      img {
+        height: 300px;
+      }
+    }
+  }
+}
+//? reviews ----------------------------------
+@media (max-width: 900px) {
+  .reviews__text {
+    padding: 30px 20px 70px;
+  }
+}
+//? blog ----------------------------------
+@media (max-width: 910px) {
+  .blog-item {
+    width: 45%;
+  }
+  .blog__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 610px) {
+  .blog__inner {
+    padding-bottom: 80px;
+  }
+  .blog-item {
+    width: 90%;
+  }
+  .blog__title {
+    font-size: 35px;
+  }
+}
+//? footer ----------------------------------
+@media (max-width: 1010px) {
+  .footer {
+    &__col {
+      width: 100%;
+      justify-content: center;
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  .footer {
+    &__inner {
+      padding: 20px 0 30px;
+    }
+    &__col {
+      flex-direction: column-reverse;
+      .social {
+        margin-bottom: 10px;
+      }
+      .copyright {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0;
+        border-top: 1px #413f41 solid;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+//? modal ----------------------------------
+// hireme
+@media (max-width: 1000px) {
+  .modal-hireme {
+    // width: 80%;
+    &__col:last-child {
+      width: 50%;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 710px) {
+  .modal-hireme {
+    &__col {
+      width: 100%;
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .modal-hireme {
+    min-width: 290px;
+    padding: 20px 20px;
+    &__title {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+    &__subtitle {
+      font-size: 15px;
+      line-height: 1.3;
+    }
+    &__contacts {
+      margin: 25px 0 35px;
+    }
+    &__btn-close {
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+    }
+    .form {
+      textarea {
+        padding: 10px;
+        height: 90px;
+        max-height: 200px;
+        min-height: 40px;
+        resize: vertical;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      button {
+        font-size: 15px;
+        padding: 10px 30px;
+      }
+      input {
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// resume
+@media (max-width: 1000px) {
+  .modal-resume {
+    &__title {
+      font-size: 40px;
+    }
+    &__btn {
+      padding: 12px 17px;
+      font-size: 15px;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .modal-resume {
+    padding: 40px 15px;
+    &__title {
+      margin-bottom: 45px;
+    }
+    .education-skills-item {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      &__level {
+        margin: 10px 15px 20px;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .modal-resume {
+    padding: 50px 30px;
+    &__btn {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+    &__title {
+      font-size: 35px;
+    }
+    &__content {
+      margin-bottom: 20px;
+    }
+    .education-skills-item {
+      justify-content: center;
+    }
+  }
+  .experiense {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    border-right: 0;
+    border-bottom: 1px #000 solid;
+  }
+  .education {
+    width: 100%;
+    padding: 40px 0 0 0;
+    text-align: center;
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+  .education-item {
+    margin-bottom: 30px;
+  }
+  .education-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 460px) {
+  .modal-resume {
+    .modal-hireme__btn-close {
+      width: 30px;
+      height: 30px;
+    }
+    &__btns {
+      text-align: center;
+      // display: flex;
+      // flex-wrap: wrap;
+      button:first-child {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
+// work
+@media (max-width: 1200px) {
+  .modal-work {
+    &__content {
+      padding: 46px 25px 14px;
+    }
+    &__projectname {
+      padding-right: 45px;
+      line-height: 1;
+    }
+    &__preview {
+      width: 60%;
+    }
+    &__content {
+      width: 40%;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .modal-work {
+    &__projectname {
+      font-size: 28px;
+    }
+    &__category {
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .modal-work {
+    flex-direction: column;
+    height: 700px;
+    &__preview {
+      width: 100%;
+      height: 50%;
+    }
+    &__content {
+      width: 100%;
+      height: 50%;
+      padding: 20px 15px;
+    }
+    &__category {
+      margin-bottom: 25px;
+    }
+    &__client {
+      margin-bottom: 25px;
+    }
+    &__textbox {
+      overflow: auto;
+      max-height: 130px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .modal-work {
+    height: 570px;
+    min-height: 530px;
+    &__preview {
+      height: 45%;
+    }
+    &__content {
+      height: 55%;
+    }
+    &__projectname {
+      font-size: 20px;
+    }
+    &__category {
+      font-size: 14px;
+    }
+    &__client {
+      margin-bottom: 15px;
+    }
+    &__btnbox {
+      padding: 15px 15px;
+      button {
+        font-size: 13px;
+      }
+    }
+    .modal-hireme__btn-close {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media (max-height: 650px) {
+  .modal-work {
+    height: 530px;
+    &__projectname {
+      font-size: 16px;
+    }
+    &__category {
+      font-size: 13px;
+    }
+    &__client {
+      font-size: 15px;
+      margin-bottom: 10px;
+      span {
+        font-size: 14px;
+      }
+    }
+    &__textbox {
+      max-height: 110px;
+    }
+  }
+}
+
+//! it's no break points bellow
+/*//? Point 1 ----------------------------------
+   @media (max-width: $md1+px) {}
+//? Point 2 ----------------------------------
+   @media (max-width: $md2+px) {}
+//? Point 3 ----------------------------------
+   @media (max-width: $md3+px) {}
+//? Point 4 ----------------------------------
+   @media (max-width: $md4+px) {}
+//? Point 5 ----------------------------------
+   @media (max-width: $md5+px) {} */
+//* </ДОПОЛНИТЕЛЬНЫЙ ТЕСТОВЫЙ БЛОК>====================================================================================================
+// -Test---------------------------------
+// .test {
+//    padding: 40px 0;
+//    border-top: 1px #ccc solid;
+// }
+// .test__row {
+//    display: flex;
+//    justify-content: flex-start;
+//    flex-direction: row;
+//    flex-wrap: wrap;
+//    align-content: space-between;
+
+//    border: 2px solid red;
+//    height: 500px;
+// }
+// .test__string  {
+//    display: inline-flex;
+//    align-items: center;
+//    flex-direction: column;
+//    width: 300px;
+//    height: 100px;
+//    margin: 20px 10px;
+
+//    border: 1px solid rgb(0, 0, 0);
+//    background-color: #ccc;
+// }

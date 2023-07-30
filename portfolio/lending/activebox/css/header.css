@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*
+Стиль иконки бургера ()
+.burger {
+	display: none;
+	background: none;
+	padding: 13px 2px;
+	border: 0px;
+	font-size: 0;
+	cursor: pointer;
+	&__icon {
+		display: block;
+		width: 37px;
+		height: 3px;
+		background-color: #fff;
+		border-radius: 2px;
+
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 9px;
+			left: 0;
+			width: 37px;
+			height: 3px;
+			background-color: #fff;
+			border-radius: 2px;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: -9px;
+			left: 0;
+			width: 37px;
+			height: 3px;
+			background-color: #fff;
+			border-radius: 2px
+		}
+	}
+}
+*/

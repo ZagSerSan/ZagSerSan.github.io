@@ -1,0 +1,71 @@
+//todo подключить шрифт нормальный
+
+.root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+//=================================
+.nav {
+  li {
+    font-size: 20px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.main-table {
+  display: flex;
+  width: 100%;
+}
+
+.filter {
+  padding: 15px;
+}
+
+.content {
+  width: 100%;
+  padding-top: 15px;
+}
+.pagination-nav {
+  display: flex;
+  justify-content: center;
+}
+.clear-btn {
+  width: 100%;
+  margin: 8px 0 0 0;
+}
+.th {
+  cursor: pointer;
+  transition: background-color 0.1s linear;
+  &:hover {
+    background-color: #9a9cff44;
+  }
+}
+.sort_icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 3px;
+}
+
+svg.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+
+  transform: translate3d(-50%, -50%, 0) rotateZ(0deg);
+  height: 200px;
+  fill: rgb(152, 145, 255);
+
+  animation: 5s loader linear infinite;
+}
+@keyframes loader {
+  from {
+    transform: translate3d(-50%, -50%, 0) rotateZ(0deg);
+  }
+  to {
+    transform: translate3d(-50%, -50%, 0) rotateZ(-360deg);
+  }
+}

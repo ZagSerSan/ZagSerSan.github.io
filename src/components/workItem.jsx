@@ -3,15 +3,21 @@ import Modal from './modal'
 
 const WorkItem = ({ workItem, workItem_id }) => {
   const [show, setShow] = useState(false)
-  const handleShow = (modalId) => {
-    setShow((prev) => !prev)
+  const handleShow = () => {
+    if (show) {
+      setShow(false)
+      document.body.style.removeProperty('overflow')
+    } else {
+      setShow(true)
+      document.body.style = 'overflow: hidden;'
+    }
   }
 
   return (
     <>
       {show && <Modal {...{ workItem, handleShow }} />}
       <div
-        onClick={() => handleShow(workItem.id)}
+        onClick={handleShow}
         className="portfolio-item"
         id="lending"
         data-filter="#lending"

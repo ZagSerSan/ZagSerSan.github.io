@@ -1,11 +1,17 @@
 import IconSVG from './iconSVG'
 import ModalSlider from './modalSlider'
-// import Slider from 'slider-moon'
-// import 'slider-moon/dist/style.css'
 
 const Modal = ({ workItem, handleShow }) => {
-  // console.log(workItem)
   const { name, category, date, modal_images, description, website_link } = workItem
+
+  document.addEventListener('keydown', (event) => {
+    let key = event.key
+    if (key === 'Escape') {
+      handleShow()
+      key = ''
+      document.removeEventListener('keydown', handleShow)
+    }
+  })
 
   return (
     <div className="modal-bg--work bg" id="modal_bg">

@@ -1468,7 +1468,7 @@ a:hover {
 
 @media (max-width: 870px) {
   .intro-slider .slider-item-photo {
-    background: url("../../../src/assets/img/intro/slide-1.png");
+    background: url("./assets/slide-1-f3f429c3.png");
     background-size: cover;
   }
 
@@ -1738,7 +1738,6 @@ a:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
   background: linear-gradient(transparent 0%, #dcc1ab 90%);
   transition: height 0.2s ease 0s;
 }
@@ -1747,13 +1746,13 @@ a:hover {
   position: absolute;
   bottom: 90px;
   left: 50%;
-  z-index: 3;
   transform: translateX(-50%);
   display: flex;
   padding: 12px 22px;
   border: 1px #000 solid;
   border-radius: 30px;
   transition: background-color 0.2s ease 0s;
+  z-index: 1;
 }
 
 .grid button:hover {
@@ -1820,11 +1819,10 @@ a:hover {
 }
 
 .grid-item div:after {
-  content: url("../../../src/assets/img/works/open-outline.svg");
+  content: url("./assets/open-outline.svg");
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1870,7 +1868,7 @@ a:hover {
   position: fixed;
   top: 100%;
   left: 0;
-  z-index: 10;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7882352941);
@@ -1883,6 +1881,7 @@ a:hover {
 .modal-bg.show .modal-window {
   transform: scale(1);
   opacity: 1;
+  z-index: 100;
 }
 
 .modal-window {
@@ -1985,7 +1984,7 @@ a:hover {
 
 .modal-slider .slick-dots {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   z-index: 10;
   display: flex;
@@ -2086,6 +2085,31 @@ body {
 .hover\:bg-creamHover:hover{
   background-color: #dcc1ab91;
 }
+
+@media (max-width: 1090px){
+  .modal-slider .slick-list {
+    width: 100%;
+  }
+  .modal-slider .slick-dots {
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    bottom: 0;
+  }
+  .modal-slider .slick-dots button {
+    width: 100px;
+    height: 100%;
+  }
+  .modal-slider .slick-dots button {
+    margin: 0;
+  }
+  .modal-window button.close {
+    right: 0;
+  }
+  .modal-slider .slick-arrow.slick-next {right: 30px;}
+
+}
+
 
 @media (max-width: 1350px){
   .max-\[1350px\]\:py-\[100px\]{

@@ -1,8 +1,0 @@
-select,
-option {
-  cursor: pointer;
-}
-textarea.form-control {
-  min-height: 86px;
-  max-height: 200px;
-}

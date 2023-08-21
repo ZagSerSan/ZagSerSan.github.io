@@ -2109,7 +2109,7 @@ body {
     margin: 0;
   }
   .modal-window button.close {
-    right: 0;
+    right: 15px;
   }
   .modal-slider .slick-arrow.slick-next {right: 30px;}
 }

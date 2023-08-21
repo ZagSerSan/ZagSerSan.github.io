@@ -1970,6 +1970,23 @@ a:hover {
   color: #000;
 }
 
+@media (max-width: 1070px){
+  .modal-window {
+    width: 80%;
+  }
+}
+@media (max-width: 800px){
+  .modal-window {
+    width: 90%;
+  }
+}
+@media (max-width: 550px){
+  .modal-slider .slick-dots{
+    justify-content: start;
+  }
+}
+
+
 .modal-slider .slick-list {
   height: 100%;
   width: 90%;
@@ -1986,10 +2003,10 @@ a:hover {
 .modal-slider .slick-dots {
   position: absolute;
   bottom: 0;
-  right: 0;
+  /* right: 0; */
   z-index: 10;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   height: 100%;
   width: 10%;
